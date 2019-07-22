@@ -1,7 +1,7 @@
 {
-  "name": "vk-dark",
+  "name": "vk_dark",
   "version": "1.0.0",
-  "description": "dark theme for VK.com",
+  "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
     "build": "node build.js"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Dmitiry1921/VK-Dark.git"
   },
   "keywords": ["vk", "dark", "theme"],
-  "author": "Dmitiry1921",
+  "author": "Dmitriy1921",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Dmitiry1921/VK-Dark/issues"

@@ -1,13 +1,14 @@
 const fs = require('fs');
+const package = require('./package.json');
 
 let fileContent = fs.readFileSync("./less/tampermonkey_plugin.css", "utf8");
 
 let file = `// ==UserScript==
 // @name         VK Dark
 // @namespace    http://tampermonkey.net/
-// @version      beta 2.5
-// @description  Изменяет внешний вид Вконтакте на темный
-// @author       Dmitriy1921
+// @version      ${package.version}
+// @description  ${package.description}
+// @author       ${package.author}
 // @include      http://vk.com/*
 // @include      https://vk.com/*
 // @grant        none
