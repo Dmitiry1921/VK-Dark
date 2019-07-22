@@ -1,0 +1,20 @@
+{
+  "name": "vk-dark",
+  "version": "1.0.0",
+  "description": "dark theme for VK.com",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmitiry1921/VK-Dark.git"
+  },
+  "keywords": ["vk", "dark", "theme"],
+  "author": "Dmitiry1921",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmitiry1921/VK-Dark/issues"
+  },
+  "homepage": "https://github.com/Dmitiry1921/VK-Dark#readme"
+}
