@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.0.0
 // @description  Изменяет внешний вид Вконтакте на темный
-// @author       Dmitiry1921
+// @author       Dmitriy1921
 // @include      http://vk.com/*
 // @include      https://vk.com/*
 // @grant        none
@@ -83,7 +83,13 @@ body .summary_tab2:hover,
 body input.dark,
 body .sticker_hints_tt,
 body .deep_active .replies .reply_fakebox,
-body .like_share_emoji_wrap div[contenteditable=true] {
+body .like_share_emoji_wrap div[contenteditable=true],
+body .tt_default,
+body .tt_default_right,
+body .AudioPlaylistSnippet,
+body .ActionsMenu__inner,
+body .ui_actions_menu,
+body .ms_items_more {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -173,7 +179,6 @@ body #stats_cont h4,
 body .stats_head,
 body .graph_menu_item.graph_menu_item_sel,
 body .graph_menu_item.graph_menu_item_sel:hover,
-body .ui_actions_menu_item,
 body .feed_updates .explain,
 body .feed_update_row .post_author,
 body .ui_gallery_wall_cards .wall_card__title_link,
@@ -187,7 +192,12 @@ body .pedit_label_box,
 body .selector_container td.selector .token_inner,
 body .selector_container td.selector .token_prefix,
 body #pedit_result .msg_text,
-body .pedit_row_notice {
+body .pedit_row_notice,
+body .AudioPlaylistSnippet .ActionButton--shuffle__text,
+body .ActionsMenu__item,
+body .ui_actions_menu_item,
+body .notify_sources_tt_content .line_cell .info,
+body .notify_sources_tt_content .line_cell {
   color: #ffffff !important;
 }
 body .im-create,
@@ -218,7 +228,6 @@ body .article_ed_layer .article_ed_layer__header,
 body .article_layer .article_layer__content_footer,
 body .photos_edit_selection_header,
 body .pe_tabs_panel,
-body .ui_actions_menu,
 body .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_back,
 body .photo_upload_separator,
 body .wall_module .reply_box,
@@ -232,7 +241,15 @@ body .disabled.selector_container,
 body .selector_container td.selector .token_inner,
 body .selector_container td.selector .token_prefix,
 body .emoji_sticker_item.over,
-body .emoji_sticker_item:hover {
+body .emoji_sticker_item:hover,
+body .im-page--toolsw,
+body .AudioPlaylistSnippet .ActionButton--shuffle:hover,
+body .im-chat-input,
+body .ActionsMenu__item--hover,
+body .ActionsMenu__item:hover,
+body .ui_actions_menu_item:hover,
+body .media_selector .ms_items_more .ms_item:hover,
+body .notify_sources_tt_content .content:not(:hover) .line_cell.selected {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -251,9 +268,10 @@ body .page_photo.page_action_menu_groups .group_notification_settings .group_not
 body .page_actions_header,
 body .page_actions_item:hover:not(.grey_hoverable),
 body .tu_last:hover,
-body .ui_actions_menu_item:hover,
 body .im-page .im-page--mess-search,
-body .gifts_constr_option:hover {
+body .gifts_constr_option:hover,
+body .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected,
+body .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected {
   background-color: #626568 !important;
 }
 body div.fc_tab_txt,
@@ -587,7 +605,6 @@ body #stats_cont h4,
 body .stats_head,
 body .piechart_table tr td,
 body .stats_time_info,
-body .ui_actions_menu,
 body .feed_updates .wall_module .feed_row .post,
 body .photos_choose_bottom,
 body .deep_active.wl_post .replies .wl_replies_empty,
@@ -615,8 +632,53 @@ body .disabled.selector_container table.selector_table,
 body .selector_container table.selector_table,
 body .result_list,
 body .poster__open-btn-wrapper,
-body .sticker_hints_tt {
+body .sticker_hints_tt,
+body .tt_default,
+body .tt_default_right,
+body .im-page--toolsw,
+body .im-page--chat-header-in,
+body .ms_items_more {
   border-color: #242424 !important;
+}
+body .ActionsMenu__inner,
+body .ui_actions_menu {
+  border-color: #3b3f41 !important;
+}
+body .ui_actions_menu_sep {
+  border-top-color: #3b3f41 !important;
+}
+body .ActionsMenu__inner:before,
+body .ActionsMenu__inner:after {
+  border-bottom-color: #3b3f41 !important;
+}
+body .fc_tab_pointer:before,
+body .fc_tab_pointer:after {
+  border-left-color: #3b3f41 !important;
+}
+body .anyClassName {
+  border-right-color: #3b3f41 !important;
+}
+body .tt_default.tt_down:after,
+body .tt_default.tt_down:before,
+body .im-chat-input,
+body .ms_items_more_wrap.to_up .ms_items_more:before,
+body .ms_items_more_wrap.to_up .ms_items_more:after,
+body div.fc_tab_txt,
+body .feedback_row_wrap,
+body .feedback_row,
+body .feedback_sticky_row {
+  border-top-color: #242424 !important;
+}
+body .im-chat-input,
+body .ui_actions_menu:before,
+body .ui_actions_menu:after,
+body .tt_default.tt_up:before,
+body .notify_sources.tt_up:after,
+body .notify_sources.tt_up:before {
+  border-bottom-color: #242424 !important;
+}
+body .im-page .im-page--center-empty {
+  background-image: none;
 }
 body .audio_layer_container .audio_page_layout .audio_search {
   margin: -1px 20px 10px;
@@ -773,10 +835,6 @@ body .feedback_row_answer:after,
 body .feedback_row_answer:before,
 body #top_profile_menu:before,
 body #top_profile_menu:after {
-  border-bottom-color: #242424 !important;
-}
-body .ui_actions_menu:before,
-body .ui_actions_menu:after {
   border-bottom-color: #242424 !important;
 }
 body #top_notify_wrap {
@@ -942,6 +1000,13 @@ body .poster__slider-arrow._left {
 }
 body .article > h1 {
   color: #ffffff !important;
+}
+body #fc_ctabs_cont,
+body .fc_tab {
+  border: none!important;
+}
+body .chats_sp.fc_clist_search_icon {
+  margin: 10px 7px 0 0;
 }
 /*# sourceMappingURL=tampermonkey_plugin.css.map */`,
        head = document.head || document.getElementsByTagName('head')[0],

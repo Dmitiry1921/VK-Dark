@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85680d7a-13b8-4657-8303-e155bb39ca83" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="85680d7a-13b8-4657-8303-e155bb39ca83" name="Default Changelist" comment="Bug fix">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/less/tampermonkey_plugin.css" beforeDir="false" afterPath="$PROJECT_DIR$/less/tampermonkey_plugin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/less/tampermonkey_plugin.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/less/tampermonkey_plugin.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/less/tampermonkey_plugin.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/tampermonkey_plugin.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vkdark.user.js" beforeDir="false" afterPath="$PROJECT_DIR$/vkdark.user.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,29 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="119">
-                <caret line="7" selection-end-line="27" selection-end-column="98" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="25" selection-start-column="25" selection-end-column="25" />
+            <state relative-caret-position="340">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -49,8 +32,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vkdark.user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="138">
+              <caret line="51" column="1" lean-forward="true" selection-end-line="1024" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/tampermonkey_plugin.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="244" column="30" lean-forward="true" selection-start-line="244" selection-start-column="30" selection-end-line="244" selection-end-column="30" />
+              <folding>
+                <element signature="e#27544#28372#2" expanded="true" />
+                <element signature="e#28496#29771#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -67,6 +75,31 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>svg/</find>
+      <find>.tt_default, .tt_default_right</find>
+      <find>border-color</find>
+      <find>.sticker_hints_t</find>
+      <find>.tt_default</find>
+      <find>border-color: @line_1</find>
+      <find>.tt_default.tt_down:before</find>
+      <find>*line</find>
+      <find>*1</find>
+      <find>border-bottom-color</find>
+      <find>*l</find>
+      <find>.im-chat-input</find>
+      <find>*lin</find>
+      <find>//*border-top</find>
+      <find>.ActionsMenu__inner</find>
+      <find>*border-top</find>
+      <find>*li</find>
+      <find>*t</find>
+      <find>*2</find>
+      <find>*5</find>
+      <find>.ui_actions_menu</find>
+      <find>*border</find>
+      <find>//*border_2</find>
+      <find>//*border_1_top</find>
+      <find>//*tex</find>
+      <find>//*2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -75,12 +108,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/less/tampermonkey_plugin.less" />
         <option value="$PROJECT_DIR$/vkdark.user.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/build.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/less/tampermonkey_plugin.css" />
+        <option value="$PROJECT_DIR$/less/tampermonkey_plugin.less" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -177,7 +211,8 @@
       <option name="presentableId" value="Default" />
       <updated>1563801056343</updated>
       <workItem from="1563801057443" duration="2844000" />
-      <workItem from="1563885989493" duration="315000" />
+      <workItem from="1563885989493" duration="941000" />
+      <workItem from="1566996620225" duration="6954000" />
     </task>
     <task id="LOCAL-00001" summary="Create project on git">
       <created>1563802572216</created>
@@ -193,11 +228,25 @@
       <option name="project" value="LOCAL" />
       <updated>1563803046241</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ReadME.md create">
+      <created>1563886328218</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1563886328218</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ReadME.md create">
+      <created>1563886798199</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563886798199</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3159000" />
+    <option name="totallyTimeSpent" value="10739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -207,8 +256,8 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.46587217" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.46587217" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -227,30 +276,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create project on git" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create project on git" />
+    <MESSAGE value="ReadME.md create" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReadME.md create" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/less/tampermonkey_plugin.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/tampermonkey_plugin.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15283">
-          <caret line="899" column="3" lean-forward="true" selection-start-line="899" selection-start-column="3" selection-end-line="899" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="357">
+            <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -261,20 +297,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vkdark.user.js">
+    <entry file="file://$PROJECT_DIR$/less/tampermonkey_plugin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="281">
+          <caret line="402" column="17" lean-forward="true" selection-start-line="402" selection-start-column="17" selection-end-line="402" selection-end-column="17" />
+          <folding>
+            <element signature="e#28897#29725#2" expanded="true" />
+            <element signature="e#29850#31125#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="119">
-            <caret line="7" selection-end-line="27" selection-end-column="98" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vkdark.user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="51" column="1" lean-forward="true" selection-end-line="1024" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/tampermonkey_plugin.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="244" column="30" lean-forward="true" selection-start-line="244" selection-start-column="30" selection-end-line="244" selection-end-column="30" />
+          <folding>
+            <element signature="e#27544#28372#2" expanded="true" />
+            <element signature="e#28496#29771#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
         </state>
       </provider>
     </entry>

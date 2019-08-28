@@ -15,6 +15,7 @@
 @hover_1: rgba(0, 0, 0, 0.2) !important;
 
 @line_1: #242424 !important;
+@line_2: #3b3f41 !important;
 
 *::-webkit-scrollbar {
   width: 5px;
@@ -36,20 +37,22 @@
 }
 
 body {
-  background: rgba(26,26,26,1);
-  background: -moz-linear-gradient(left, rgba(26,26,26,1) 0%, rgba(36,36,36,1) 51%, rgba(26,26,26,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(26,26,26,1)), color-stop(51%, rgba(36,36,36,1)), color-stop(100%, rgba(26,26,26,1)));
-  background: -webkit-linear-gradient(left, rgba(26,26,26,1) 0%, rgba(36,36,36,1) 51%, rgba(26,26,26,1) 100%);
-  background: -o-linear-gradient(left, rgba(26,26,26,1) 0%, rgba(36,36,36,1) 51%, rgba(26,26,26,1) 100%);
-  background: -ms-linear-gradient(left, rgba(26,26,26,1) 0%, rgba(36,36,36,1) 51%, rgba(26,26,26,1) 100%);
-  background: linear-gradient(to right, rgba(26,26,26,1) 0%, rgba(36,36,36,1) 51%, rgba(26,26,26,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a1a1a', endColorstr='#1a1a1a', GradientType=1 );
+  background: rgba(26, 26, 26, 1);
+  background: -moz-linear-gradient(left, rgba(26, 26, 26, 1) 0%, rgba(36, 36, 36, 1) 51%, rgba(26, 26, 26, 1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(26, 26, 26, 1)), color-stop(51%, rgba(36, 36, 36, 1)), color-stop(100%, rgba(26, 26, 26, 1)));
+  background: -webkit-linear-gradient(left, rgba(26, 26, 26, 1) 0%, rgba(36, 36, 36, 1) 51%, rgba(26, 26, 26, 1) 100%);
+  background: -o-linear-gradient(left, rgba(26, 26, 26, 1) 0%, rgba(36, 36, 36, 1) 51%, rgba(26, 26, 26, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(26, 26, 26, 1) 0%, rgba(36, 36, 36, 1) 51%, rgba(26, 26, 26, 1) 100%);
+  background: linear-gradient(to right, rgba(26, 26, 26, 1) 0%, rgba(36, 36, 36, 1) 51%, rgba(26, 26, 26, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a1a1a', endColorstr='#1a1a1a', GradientType=1);
   color: @text_2;
+
   .page_block,
   .mv_info {
     color: @text_2;
     background: @bg_2;
     box-shadow: none;
+
     &.ui_rmenu {
       background: @bg_1;
     }
@@ -64,7 +67,7 @@ body {
   .page_actions_wrap,
   #top_profile_menu,
   .piechart_col_header th,
-  .ui_scroll_default_theme>.ui_scroll_bar_container>.ui_scroll_bar_outer>.ui_scroll_bar_inner,
+  .ui_scroll_default_theme > .ui_scroll_bar_container > .ui_scroll_bar_outer > .ui_scroll_bar_inner,
   .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_slide,
   .photos_choose_upload_area,
   .web_cam_photo,
@@ -84,7 +87,12 @@ body {
   input.dark,
   .sticker_hints_tt,
   .deep_active .replies .reply_fakebox,
-  .like_share_emoji_wrap div[contenteditable=true]
+  .like_share_emoji_wrap div[contenteditable=true],
+  .tt_default, .tt_default_right,
+  .AudioPlaylistSnippet,
+  .ActionsMenu__inner,
+  .ui_actions_menu,
+  .ms_items_more
     //*1 фон 1
   {
     background-color: @bg_1;
@@ -171,7 +179,6 @@ body {
   .top_profile_mrow,
   #stats_cont h4, .stats_head,
   .graph_menu_item.graph_menu_item_sel, .graph_menu_item.graph_menu_item_sel:hover,
-  .ui_actions_menu_item,
   .feed_updates .explain,
   .feed_update_row .post_author,
   .ui_gallery_wall_cards .wall_card__title_link,
@@ -183,11 +190,17 @@ body {
   .pedit_label, .pedit_label_box,
   .selector_container td.selector .token_inner, .selector_container td.selector .token_prefix,
   #pedit_result .msg_text,
-  .pedit_row_notice
-    //*test ТЕКСТЫ
+  .pedit_row_notice,
+  .AudioPlaylistSnippet .ActionButton--shuffle__text,
+  .ActionsMenu__item,
+  .ui_actions_menu_item,
+  .notify_sources_tt_content .line_cell .info,
+  .notify_sources_tt_content .line_cell
+    //*text ТЕКСТЫ
   {
     color: @text_2;
   }
+
   .im-create,
   .im-create .im-create--tabs,
   .ui_rmenu_item:hover,
@@ -216,7 +229,6 @@ body {
   .article_layer .article_layer__content_footer,
   .photos_edit_selection_header,
   .pe_tabs_panel,
-  .ui_actions_menu,
   .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_back,
   .photo_upload_separator,
   .wall_module .reply_box, .wall_module .reply_fakebox_wrap, .wall_module .reply_fakebox,
@@ -225,41 +237,53 @@ body {
   .result_list ul li.active,
   .disabled.selector_container,
   .selector_container td.selector .token_inner, .selector_container td.selector .token_prefix,
-  .emoji_sticker_item.over, .emoji_sticker_item:hover
+  .emoji_sticker_item.over, .emoji_sticker_item:hover,
+  .im-page--toolsw,
+  .AudioPlaylistSnippet .ActionButton--shuffle:hover,
+  .im-chat-input,
+  .ActionsMenu__item--hover, .ActionsMenu__item:hover,
+  .ui_actions_menu_item:hover,
+  .media_selector .ms_items_more .ms_item:hover,
+  .notify_sources_tt_content .content:not(:hover) .line_cell.selected,
+  .notify_sources_tt_content .line_cell:hover
     //*2 Фон
   {
     background-color: @bg_2;
   }
+
   //*3 фон
-  .top_profile_mrow:hover{
+  .top_profile_mrow:hover {
     background-color: @bg_2;
   }
+
   .wall_module .replies_list,
-  .ui_rmenu_sep
-  {
+  .ui_rmenu_sep {
     border-top: @bg_3;
   }
+
   .rb_box_wrap,
   .poster__view #poster-field-msg,
-  .article_snippet .article_snippet__read_btn
-  {
+  .article_snippet .article_snippet__read_btn {
     color: @text_10;
   }
+
   .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
   .page_actions_header,
   .page_actions_item:hover:not(.grey_hoverable),
   .tu_last:hover,
-  .ui_actions_menu_item:hover,
   .im-page .im-page--mess-search,
-  .gifts_constr_option:hover
+  .gifts_constr_option:hover,
+  .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected, .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected
     //*5 фон
   {
     background-color: @bg_5;
   }
+
   div.fc_tab_txt,
   .ui_tabs_header {
     background: none;
   }
+
   a.fc_contact_over,
   .chat_tab_wrap:hover,
   .ui_search_sugg_list .ui_search_suggestion_selected,
@@ -282,20 +306,22 @@ body {
   .top_notify_cont .feedback_row:not(.dld).hover, .top_notify_cont .feedback_row:not(.dld):hover,
   a.ts_contact.active, a.ts_search_link.active,
   .ListItem--active, .ListItem--can-be-hovered.ListItem--selectable:hover,
-  .article_ed_layer .article_ed_layer__list_item:not(.article_ed_layer__list_item_current):hover
-  {
+  .article_ed_layer .article_ed_layer__list_item:not(.article_ed_layer__list_item_current):hover {
     color: @text_2;
     background-color: @hover_1;
   }
+
   div.fc_clist_filter_wrap,
   .flat_button.ui_load_more_btn,
   .settings_block_footer {
     background: @bg_2;
     border-color: @line_1;
   }
+
   .fc_contact_name {
     color: @link_2;
   }
+
   a,
   .ui_rmenu_item,
   .ui_rmenu_subitem,
@@ -306,6 +332,7 @@ body {
   .page_media_poll .page_poll_row_percent {
     color: @link_1;
   }
+
   .im-page_classic.im-page .im-page--dcontent,
   .ui_grey_block,
   .ui_search,
@@ -326,6 +353,7 @@ body {
 
     }
   }
+
   .ui_search_sugg_list,
   .im-page .im-page--history-new-bar:after,
   .im-page .im-page--history-new-bar:before,
@@ -348,6 +376,7 @@ body {
     background-color: @bg_1;
     border-color: @bg_1;
   }
+
   .payments_money_transfer_comment {
     border-top: 1px solid @bg_2;
   }
@@ -356,9 +385,11 @@ body {
     color: @text_2;
     background: none !important;
   }
+
   .im_fwd_log_wrap, .im_wall_log_wrap {
     border-left: 1px solid @bg_1;
   }
+
   .profile_info_header,
   .im-page .im-page--history-new-bar > span,
   .photos_period_delimiter_fixed,
@@ -372,11 +403,13 @@ body {
   .online:after {
     border: 2px solid @bg_2;
   }
+
   #mail_box_editable {
     background: @bg_1;
     color: @text_2;
     border-color: @bg_1;
   }
+
   .page_block_header {
     background: @bg_2;
     color: @text_2;
@@ -386,6 +419,7 @@ body {
   .group_list_row {
     border-bottom: 1px solid @bg_1;
   }
+
   .audio_page_player.audio_page_player_fixed,
   .audio_page_layout .audio_friends_list,
   .audio_layer_container .audio_page_player,
@@ -427,6 +461,7 @@ body {
     border-color: @bg_1;
     background-color: @bg_2;
   }
+
   .im-mess .im-mess--post,
   .feedback_row_answer,
   .payments_money_transfer_amount_wrap,
@@ -439,14 +474,17 @@ body {
   .module {
     border: none;
   }
+
   .page_photos_module {
     padding: 5px;
     height: 135px;
   }
+
   .page_square_photo {
     height: 135px;
     width: 135px;
   }
+
   .audio_page_player .audio_page_player_title {
     color: inherit;
   }
@@ -486,10 +524,12 @@ body {
 
   #side_bar ol li .left_row {
     color: @link_1;
+
     &:hover {
       background: @hover_1;
     }
   }
+
   .nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered,
   .nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic,
   .nim-dialog:not(.nim-dialog_deleted):hover,
@@ -503,6 +543,7 @@ body {
     background: @hover_1;
     border-color: @bg_1;
   }
+
   .nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_classic.nim-dialog_unread,
   .nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_hovered,
   .nim-dialog:not(.nim-dialog_deleted).nim-dialog:hover,
@@ -583,7 +624,6 @@ body {
   #stats_cont h4, .stats_head,
   .piechart_table tr td,
   .stats_time_info,
-  .ui_actions_menu,
   .feed_updates .wall_module .feed_row .post,
   .photos_choose_bottom,
   .deep_active.wl_post .replies .wl_replies_empty, .deep_active.wl_post.wall_module .replies .wl_replies_empty, .deep_active.wl_post.wall_module .wl_replies_block_wrap .wl_replies_empty, .deep_active.wl_post .wl_replies_block_wrap .wl_replies_empty,
@@ -600,10 +640,78 @@ body {
   .selector_container table.selector_table,
   .result_list,
   .poster__open-btn-wrapper,
-  .sticker_hints_tt
-    //*line линии border-color
+  .sticker_hints_tt,
+  .tt_default, .tt_default_right,
+  .im-page--toolsw,
+  .im-page--chat-header-in,
+  .ms_items_more
+    //*line линии border_1
   {
     border-color: @line_1;
+  }
+
+
+  .ActionsMenu__inner,
+  .ui_actions_menu
+  //*border_2
+  {
+    border-color: @line_2;
+  }
+
+  .ui_actions_menu_sep
+  //*border_2_top
+  {
+    border-top-color: @line_2;
+  }
+
+  .ActionsMenu__inner:before,
+  .ActionsMenu__inner:after
+  //*border_2_bottom
+  {
+    border-bottom-color: @line_2;
+  }
+
+  .fc_tab_pointer:before,
+  .fc_tab_pointer:after
+  //*border_2_left
+  {
+    border-left-color: @line_2;
+  }
+
+  .anyClassName
+  //*border_2_right
+  {
+    border-right-color: @line_2;
+  }
+
+
+
+  .tt_default.tt_down:after,
+  .tt_default.tt_down:before,
+  .im-chat-input,
+  .ms_items_more_wrap.to_up .ms_items_more:before,
+  .ms_items_more_wrap.to_up .ms_items_more:after,
+  div.fc_tab_txt,
+  .feedback_row_wrap,
+  .feedback_row, .feedback_sticky_row
+    //*border_1_top
+  {
+    border-top-color: @line_1;
+  }
+
+
+  .im-chat-input,
+  .ui_actions_menu:before,
+  .ui_actions_menu:after,
+  .tt_default.tt_up:before,
+  .notify_sources.tt_up:after, .notify_sources.tt_up:before
+    //*border_1_bottom
+  {
+    border-bottom-color: @line_1;
+  }
+
+  .im-page .im-page--center-empty{
+    background-image: none;
   }
 
   .audio_layer_container .audio_page_layout .audio_search {
@@ -628,43 +736,53 @@ body {
     background-color: @bg_2;
     color: @link_2;
   }
+
   .copy_quote {
     border-left: 1px solid @line_1 !important;
   }
+
   .im-mess.im-mess_unread:not(.im-mess_light),
   .feed_new_posts:hover,
   .pv_like:hover {
     background-color: @hover_1;
   }
+
   .im-mess.im-mess_selected:last-child:before, .im-mess.im-mess_unread:last-child:before {
     background-color: @bg_5;
     content: none !important;
   }
+
   .im-page_classic.im-page .im-page--chat-input {
     border: none;
     margin-left: 0;
+
     .im-chat-input {
       background-color: @bg_5;
       box-shadow: 0 1px 0 0 @bg_5, 0 0 0 1px @bg_5;
     }
   }
+
   .im-chat-input .im-chat-input--txt-wrap {
     border: none !important;
     background: @bg_2;
   }
+
   .im-page_classic.im-page .im-page--header {
     border-top: none;
     border-left: none;
     border-right: none;
     margin-left: 0;
   }
+
   .wall_module .reply_fakebox,
   .tabbed_box .summary_tabs {
     border: none;
   }
+
   .wall_module .reply_form {
     background-color: @bg_2;
   }
+
   .im-page_classic.im-page .im-page--dialogs-search {
     box-shadow: 0 0 0 1px @line_1;
   }
@@ -673,49 +791,61 @@ body {
     background: none;
     border: solid 1px @line_1;
   }
+
   .audio_pl_snippet .audio_pl_snippet__info_title {
     color: @text_2;
   }
+
   .im-page_classic .im-page--chat-header {
     border-top: none;
+
     .im-page--toolsw {
       background-color: @bg_5;
       border: none;
     }
+
     .im-page--title-main-inner {
       color: @text_2;
     }
   }
+
   .im-page--back-btn:hover {
     background: @bg_2;
     color: @text_2;
   }
+
   .profile_info_edit, .box_title_wrap.box_grey,
   .eltt {
     background-color: @bg_2;
     color: @text_2;
   }
+
   .profile_info_header,
   .popup_box_container {
     & .im-mess-stack--lnk {
       color: @text_10;
     }
   }
+
   .im-mess.im-mess_selected + .im-mess:before, .im-mess.im-mess_unread + .im-mess:before {
     background: @bg_2;
     height: 0 !important;
   }
+
   .im-page_classic .im-page--chat-header {
     border: solid 1px @bg_5;
   }
+
   .im-page_classic .im-page--chat-header-in,
   .Button--mobile {
     box-shadow: none;
   }
+
   .im-page_classic.im-page .im-page--chat-body-abs,
-  .post_top_info_wall_guide, .post_top_info_wall_mention, .post_top_info_wall_reply{
+  .post_top_info_wall_guide, .post_top_info_wall_mention, .post_top_info_wall_reply {
     box-shadow: 0 1px 0 0 @bg_1, 0 0 0 1px @bg_1;
   }
+
   .friends_user_row,
   .post_full_like_wrap,
   .wl_replies_header,
@@ -724,9 +854,11 @@ body {
   .wall_module .wl_reply_form_fixed .reply_fakebox_wrap {
     border-top: 1px solid @bg_1;
   }
+
   .page_square_photo {
     margin: 0;
   }
+
   .audio_pl_edit_box .ape_add_audios_btn:hover, .audio_pl_edit_box .ape_add_pl_audios_btn:hover,
   .docs_choose_rows .docs_item:hover,
   .docs_choose_upload_area,
@@ -739,90 +871,109 @@ body {
     background-color: @bg_1;
     border-color: @bg_1;
   }
+
   .im-page--chat-header,
   .tabbed_box .summary_tab .summary_tab3:hover, .tabbed_box .summary_tab_sel .summary_tab3:hover, .tabbed_box .summary_tab_sel a:hover, .tabbed_box .summary_tab a:hover,
   .friends_import_row:hover {
     background: none;
   }
+
   .search_filters_minimized_text {
     background: @bg_2 url(https://vk.com/images/search_integration.png) no-repeat;
   }
+
   .info_msg {
     background: @bg_2 url(https://vk.com/images/icons/msg_info.png?1) no-repeat 12px 12px;
   }
+
   .feedback_row_answer:after,
   .feedback_row_answer:before,
   #top_profile_menu:before,
-  #top_profile_menu:after
-  {
+  #top_profile_menu:after {
     border-bottom-color: @bg_1;
   }
-  .ui_actions_menu:before,
-  .ui_actions_menu:after
-  {
-    border-bottom-color: @bg_1;
-  }
+
   #top_notify_wrap {
     border-color: @bg_2;
     background: @bg_2;
+
     &:before, &:after {
       border-bottom-color: @bg_2;
     }
   }
+
   .im-chat-input--scroll {
     background: @bg_2;
     border-radius: 5px;
+
     .im-fwd.im-fwd_msg {
       padding: 5px 7px;
     }
   }
+
   input.text.ts_input:focus {
     background-color: @bg_1;
     color: @text_2;
   }
+
   .msg_text {
     color: @line_1;
   }
+
   /**Календарь*/
+
   .bd_day_cell {
     background-color: @bg_2;
     border-color: @bg_1;
+
     &.holiday {
       background-color: @bg_1;
       border-color: @bg_2;
     }
+
     &.left {
       border-color: @bg_1;
     }
+
     &.today {
       border-color: @bg_1;
     }
 
   }
+
   .bd_arrow {
     background-color: @bg_1;
   }
+
   .bd_day_head {
     background-color: @bg_1;
     border-color: @bg_2;
   }
+
   /**Сообщение*/
+
   .msg {
     background-color: @bg_1;
     border-color: @bg_1;
   }
+
   /**Линии*/
+
   .settings_separated_row + .settings_separated_row:after {
     background-color: @bg_1;
   }
+
   /**SELECT*/
+
   .chat_cont_sh_bottom, .chat_cont_sh_top {
     background: linear-gradient(180deg, rgba(216, 223, 230, 0), @bg_2 80%);
   }
+
   input.text.ts_input,
   .poster__change-bkg-btn {
     background-color: @bg_1;
   }
+
   .top_nav_btn.active,
   .top_nav_btn:hover,
   .top_audio_player:hover,
@@ -830,50 +981,61 @@ body {
   .top_nav_link.active {
     background-color: rgba(36, 36, 36, 0.5);
   }
+
   #page_header_cont .back,
   .fc_tab_head,
-  .box_title_wrap
-  {
+  .box_title_wrap {
     background-color: #3c404b;
     background: -webkit-linear-gradient(#56585D, #2F3034);
     background: -moz-linear-gradient(#56585D, #2F3034);
     background: linear-gradient(#56585D, #2F3034);
     border-color: @bg_2;
   }
+
   .top_notify_cont ._notify_unread .feed_row:first-child .feedback_row_wrap {
     box-shadow: none;
   }
+
   .top_nav_btn#top_notify_btn .top_nav_btn_icon,
   .top_nav_btn#top_notify_btn:hover .top_nav_btn_icon {
     background-image: url('data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"20"%20height%3D"20"%20viewBox%3D"0%200%2020%2020"><path%20fill%3D"%23fff"%20fill-rule%3D"evenodd"%20d%3D"M8%2C18%20C6.64583333%2C18%205.5%2C17.3%205.5%2C16%20L10.5%2C16%20C10.5%2C17.3%209.35416667%2C18%208%2C18%20Z%20M13.9956933%2C11%20C13.9956933%2C12.5%2016%2C12.5%2016%2C13.5%20C16%2C14%2016%2C15%2013.8955984%2C15%20L1.98430985%2C15%20C-6.19060359e-13%2C15%20-1.62536651e-13%2C14%20-1.63424829e-13%2C13.5%20C-1.63369318e-13%2C12.5%201.98430985%2C12.5%202%2C11%20L2%2C8%20C2%2C4%204.09724901%2C1.5%207%2C1.1%20L7%2C1%20C7%2C0.4%207.5%2C5.74053187e-17%208%2C0%20C8.5%2C0%209%2C0.4%209%2C1%20L9%2C1.1%20C11.902751%2C1.5%2013.9956933%2C4%2013.9956933%2C8%20L13.9956933%2C11%20Z"%20transform%3D"translate(2%201)"%2F><%2Fsvg>');
   }
+
   .top_nav_btn#top_audio .top_nav_btn_icon,
   .top_nav_btn#top_audio:hover .top_nav_btn_icon {
     background-image: url('data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"20"%20height%3D"20"%20viewBox%3D"0%200%2020%2020"><path%20fill%3D"%23fff"%20fill-rule%3D"evenodd"%20d%3D"M14%2C11.1552322%20L14%2C5.5%20L7%2C7.5%20L7%2C15.2999878%20C7%2C15.2999878%206.99923979%2C15.2998738%206.99774901%2C15.2996427%20C6.99305423%2C16.449672%205.98201611%2C17.5525634%204.53840209%2C17.8858479%20C2.90786903%2C18.2622862%201.34293783%2C17.5143682%201.04303041%2C16.2153265%20C0.743122996%2C14.9162848%201.82180821%2C13.5580399%203.45234127%2C13.1816017%20C3.98965862%2C13.0575522%204.51985206%2C13.0556001%205%2C13.1552322%20L5%2C3.9955775%20C5%2C3.44483697%205.42843442%2C2.88315425%205.95693506%2C2.73901771%20L15.0430649%2C0.26098229%20C15.568787%2C0.117603555%2016%2C0.447563354%2016%2C0.999660731%20L16%2C13.2999878%20C15.999253%2C13.2998718%2015.9985027%2C13.2997528%2015.9977491%2C13.2996309%20C15.9930612%2C14.4496644%2014.9820211%2C15.5525622%2013.5384021%2C15.8858479%20C11.907869%2C16.2622862%2010.3429378%2C15.5143682%2010.0430304%2C14.2153265%20C9.743123%2C12.9162848%2010.8218082%2C11.5580399%2012.4523413%2C11.1816017%20C12.9896586%2C11.0575522%2013.5198521%2C11.0556001%2014%2C11.1552322%20Z"%20transform%3D"translate(1%201)"%2F><%2Fsvg>');
   }
+
   .top_audio_play__button,
   .top_audio_play__button:hover, .top_audio_play__button:hover:before,
   .top_audio_play__button:before {
     background-color: #ffffff;
   }
+
   #audio_layer_tt > .eltt_arrow_back .eltt_arrow {
     border-bottom-color: @bg_2;
   }
+
   .audio_page_player2.audio_page_player_fixed {
     box-shadow: 0 5px 10px @bg_1;
   }
+
   .top_notify_count,
   .top_nav_btn:hover .top_notify_count {
     border: 2px solid #484a4f;
   }
+
   /** ADB */
+
   #ads_left {
     display: none !important;
   }
+
   .im-replied {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 5px;
   }
+
   //Аудио ФОН
   .slider .slider_amount,
   .slider .slider_handler,
@@ -881,16 +1043,20 @@ body {
   .audio-msg-track .audio-msg-track--btn {
     background-color: @bg_audio;
   }
+
   .audio-msg-track .audio-msg-track--wave-wrapper .audio-msg-track--wave path {
     stroke: @bg_audio;
   }
+
   .slider .slider_back {
     background-color: #d1d6de;
   }
+
   //Аудио текст
   .audio_page_player_title_performer a {
     color: @bg_audio;
   }
+
   .audio_pl_snippet2 {
     .audio_pl_snippet2 .audio_pl_snippet__info_title,
     .audio_row .audio_row__performers a,
@@ -898,6 +1064,7 @@ body {
       color: @bg_audio;
     }
   }
+
   //Кнопки упраления
   //.audio_page_player2 .audio_page_player_prev .icon {
   //  background-image: url("../svg/audio_prev.svg");
@@ -939,10 +1106,12 @@ body {
   .ChatSettingsInfo {
     box-shadow: 0 1px 0 @bg_1;
   }
+
   .List--border,
   .ChatSettingsMembersWidget {
     box-shadow: 0 1px 0 @bg_1, 0 -1px 0 @bg_1;
   }
+
   .ListItem--active, .ListItem--can-be-hovered.ListItem--selectable:hover,
   .Tabs {
     border-color: @bg_1;
@@ -952,12 +1121,15 @@ body {
   .im-create.im-create_classic .im-create--table {
     box-shadow: 0 1px 0 0 @bg_1, 0 0 0 1px @bg_1;
   }
+
   .page_list_module .line_cell .desc_info, .page_list_module .line_cell .extra_info, .page_list_module .line_cell .info {
     padding: 4px 0 0 7px;
   }
+
   .poster__slider-arrow._right {
     box-shadow: -5px 0 5px 0 @bg_2;
   }
+
   .poster__slider-arrow._left {
     box-shadow: 5px 0 5px 0 @bg_2;
   }
@@ -967,6 +1139,17 @@ body {
     & > h1 {
       color: @text_2;
     }
+  }
+
+  #fc_ctabs_cont,
+  .fc_tab
+    //*border-none
+  {
+    border: none!important;
+  }
+
+  .chats_sp.fc_clist_search_icon{
+    margin: 10px 7px 0 0;
   }
 
 }
