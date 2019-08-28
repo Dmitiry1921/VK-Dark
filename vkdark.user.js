@@ -249,7 +249,8 @@ body .ActionsMenu__item--hover,
 body .ActionsMenu__item:hover,
 body .ui_actions_menu_item:hover,
 body .media_selector .ms_items_more .ms_item:hover,
-body .notify_sources_tt_content .content:not(:hover) .line_cell.selected {
+body .notify_sources_tt_content .content:not(:hover) .line_cell.selected,
+body .notify_sources_tt_content .line_cell:hover {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
