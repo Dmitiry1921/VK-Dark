@@ -78,7 +78,16 @@ body .tt_default_right,
 body .AudioPlaylistSnippet,
 body .ActionsMenu__inner,
 body .ui_actions_menu,
-body .ms_items_more {
+body .ms_items_more,
+body .media_link__label,
+body .feed_friends_recomm .ui_gallery_item:first-child,
+body .privacy_dropdown .header,
+body .privacy_dropdown .body,
+body .privacy_dropdown .l_item,
+body .privacy_dropdown .l_item_sel,
+body .Dropdown__in,
+body .emoji_tabs,
+body .emoji_bg {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -186,7 +195,20 @@ body .AudioPlaylistSnippet .ActionButton--shuffle__text,
 body .ActionsMenu__item,
 body .ui_actions_menu_item,
 body .notify_sources_tt_content .line_cell .info,
-body .notify_sources_tt_content .line_cell {
+body .notify_sources_tt_content .line_cell,
+body .privacy_dropdown .item_sel,
+body .privacy_dropdown .item_sel_plus,
+body .privacy_dropdown .item,
+body .privacy_dropdown .item_sel,
+body .privacy_dropdown .item_sel_plus,
+body .privacy_dropdown .header,
+body .privacy_dropdown .l_header .l_header_label,
+body .privacy_dropdown .l_item,
+body .privacy_dropdown .l_item_sel,
+body .page_media_event .page_media_event_name,
+body .Dropdown__in,
+body .audio_subscribe_promo__title,
+body .audio_subscribe_promo__text {
   color: #ffffff !important;
 }
 body .im-create,
@@ -239,7 +261,28 @@ body .ActionsMenu__item:hover,
 body .ui_actions_menu_item:hover,
 body .media_selector .ms_items_more .ms_item:hover,
 body .notify_sources_tt_content .content:not(:hover) .line_cell.selected,
-body .notify_sources_tt_content .line_cell:hover {
+body .notify_sources_tt_content .line_cell:hover,
+body .wall_module:not(.search_results) .post--with-likes:not(.post_copy):not(.post_btl):not(.post_wf):not(.post_fr_likes) .wall_text .media_link:last-child,
+body .privacy_dropdown .item_sel,
+body .privacy_dropdown .item_sel_plus,
+body .privacy_dropdown .l_header,
+body .privacy_dropdown .l_header .l_header_label,
+body .privacy_dropdown .l_item:hover,
+body .privacy_dropdown .l_item_sel:hover,
+body .thumbed_link__label,
+body .Dropdown__item:hover,
+body .mention_tt_actions,
+body .emoji_tt_wrap,
+body .emoji_tab_sel,
+body .emoji_tab_sel:hover,
+body .emoji_tab:hover,
+body .emoji_tabs_l_s:hover,
+body .emoji_tabs_r_s:hover,
+body .emoji_tabs_l_s,
+body .emoji_tabs_r_s,
+body .emoji_tab:hover,
+body .emoji_shop:hover,
+body .emoji_cat_title {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -627,14 +670,54 @@ body .tt_default,
 body .tt_default_right,
 body .im-page--toolsw,
 body .im-page--chat-header-in,
-body .ms_items_more {
+body .ms_items_more,
+body .Dropdown__in,
+body .audio_subscribe_promo,
+body .emoji_tt_wrap {
   border-color: #242424 !important;
 }
+body .tt_default.tt_down:after,
+body .tt_default.tt_down:before,
+body .im-chat-input,
+body .ms_items_more_wrap.to_up .ms_items_more:before,
+body .ms_items_more_wrap.to_up .ms_items_more:after,
+body div.fc_tab_txt,
+body .feedback_row_wrap,
+body .feedback_row,
+body .feedback_sticky_row,
+body .deep_active .post_replies_header,
+body .deep_active.wall_module .post_replies_header,
+body .mention_tt_actions,
+body .emoji_tt_wrap.tt_down:before,
+body .emoji_tt_wrap.tt_down:after {
+  border-top-color: #242424 !important;
+}
+body .wall_module .published_by_quote,
+body .wall_module .published_sec_quote {
+  border-left-color: #242424 !important;
+}
+body .border_1_right {
+  border-right-color: #242424 !important;
+}
+body .im-chat-input,
+body .ui_actions_menu:before,
+body .ui_actions_menu:after,
+body .tt_default.tt_up:before,
+body .notify_sources.tt_up:after,
+body .notify_sources.tt_up:before,
+body .Dropdown--b .Dropdown__in:after,
+body .Dropdown--b .Dropdown__in:before,
+body .Dropdown--b .Dropdown__in:after {
+  border-bottom-color: #242424 !important;
+}
 body .ActionsMenu__inner,
-body .ui_actions_menu {
+body .ui_actions_menu,
+body .privacy_dropdown .header,
+body .privacy_dropdown {
   border-color: #3b3f41 !important;
 }
-body .ui_actions_menu_sep {
+body .ui_actions_menu_sep,
+body .emoji_tt_wrap.emoji_shop_over.tt_down:after {
   border-top-color: #3b3f41 !important;
 }
 body .ActionsMenu__inner:before,
@@ -647,25 +730,6 @@ body .fc_tab_pointer:after {
 }
 body .anyClassName {
   border-right-color: #3b3f41 !important;
-}
-body .tt_default.tt_down:after,
-body .tt_default.tt_down:before,
-body .im-chat-input,
-body .ms_items_more_wrap.to_up .ms_items_more:before,
-body .ms_items_more_wrap.to_up .ms_items_more:after,
-body div.fc_tab_txt,
-body .feedback_row_wrap,
-body .feedback_row,
-body .feedback_sticky_row {
-  border-top-color: #242424 !important;
-}
-body .im-chat-input,
-body .ui_actions_menu:before,
-body .ui_actions_menu:after,
-body .tt_default.tt_up:before,
-body .notify_sources.tt_up:after,
-body .notify_sources.tt_up:before {
-  border-bottom-color: #242424 !important;
 }
 body .im-page .im-page--center-empty {
   background-image: none;
@@ -997,5 +1061,16 @@ body .fc_tab {
 }
 body .chats_sp.fc_clist_search_icon {
   margin: 10px 7px 0 0;
+}
+body .post_top_info_ads_group_members {
+  box-shadow: 0 0 0 1px #242424, 0 1px 0 0 #242424 !important;
+}
+body .ui_scroll_default_theme.ui_scroll_emoji_theme > .ui_scroll_overflow > .ui_scroll_shadow_bottom,
+body .ui_scroll_default_theme.ui_scroll_emoji_theme > .ui_scroll_overflow > .ui_scroll_shadow_top,
+body .emoji_tabs_l_sc,
+body .emoji_tabs_l_sc,
+body .emoji_tabs_r_sc,
+body .emoji_cats_title_helper:after {
+  background-image: none;
 }
 /*# sourceMappingURL=tampermonkey_plugin.css.map */

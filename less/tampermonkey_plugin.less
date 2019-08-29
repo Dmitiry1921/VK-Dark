@@ -92,7 +92,15 @@ body {
   .AudioPlaylistSnippet,
   .ActionsMenu__inner,
   .ui_actions_menu,
-  .ms_items_more
+  .ms_items_more,
+  .media_link__label,
+  .feed_friends_recomm .ui_gallery_item:first-child,
+  .privacy_dropdown .header,
+  .privacy_dropdown .body,
+  .privacy_dropdown .l_item, .privacy_dropdown .l_item_sel,
+  .Dropdown__in,
+  .emoji_tabs,
+  .emoji_bg
     //*1 фон 1
   {
     background-color: @bg_1;
@@ -195,7 +203,16 @@ body {
   .ActionsMenu__item,
   .ui_actions_menu_item,
   .notify_sources_tt_content .line_cell .info,
-  .notify_sources_tt_content .line_cell
+  .notify_sources_tt_content .line_cell,
+  .privacy_dropdown .item_sel, .privacy_dropdown .item_sel_plus,
+  .privacy_dropdown .item, .privacy_dropdown .item_sel, .privacy_dropdown .item_sel_plus,
+  .privacy_dropdown .header,
+  .privacy_dropdown .l_header .l_header_label,
+  .privacy_dropdown .l_item, .privacy_dropdown .l_item_sel,
+  .page_media_event .page_media_event_name,
+  .Dropdown__in,
+  .audio_subscribe_promo__title,
+  .audio_subscribe_promo__text
     //*text ТЕКСТЫ
   {
     color: @text_2;
@@ -245,7 +262,23 @@ body {
   .ui_actions_menu_item:hover,
   .media_selector .ms_items_more .ms_item:hover,
   .notify_sources_tt_content .content:not(:hover) .line_cell.selected,
-  .notify_sources_tt_content .line_cell:hover
+  .notify_sources_tt_content .line_cell:hover,
+  .wall_module:not(.search_results) .post--with-likes:not(.post_copy):not(.post_btl):not(.post_wf):not(.post_fr_likes) .wall_text .media_link:last-child,
+  .privacy_dropdown .item_sel, .privacy_dropdown .item_sel_plus,
+  .privacy_dropdown .l_header,
+  .privacy_dropdown .l_header .l_header_label,
+  .privacy_dropdown .l_item:hover, .privacy_dropdown .l_item_sel:hover,
+  .thumbed_link__label,
+  .Dropdown__item:hover,
+  .mention_tt_actions,
+  .emoji_tt_wrap,
+  .emoji_tab_sel, .emoji_tab_sel:hover,
+  .emoji_tab:hover,
+  .emoji_tabs_l_s:hover, .emoji_tabs_r_s:hover,
+  .emoji_tabs_l_s, .emoji_tabs_r_s,
+  .emoji_tab:hover,
+  .emoji_shop:hover,
+  .emoji_cat_title
     //*2 Фон
   {
     background-color: @bg_2;
@@ -644,46 +677,14 @@ body {
   .tt_default, .tt_default_right,
   .im-page--toolsw,
   .im-page--chat-header-in,
-  .ms_items_more
-    //*line линии border_1
+  .ms_items_more,
+  .Dropdown__in,
+  .audio_subscribe_promo,
+  .emoji_tt_wrap
+    //*border_1 //*line линии
   {
     border-color: @line_1;
   }
-
-
-  .ActionsMenu__inner,
-  .ui_actions_menu
-  //*border_2
-  {
-    border-color: @line_2;
-  }
-
-  .ui_actions_menu_sep
-  //*border_2_top
-  {
-    border-top-color: @line_2;
-  }
-
-  .ActionsMenu__inner:before,
-  .ActionsMenu__inner:after
-  //*border_2_bottom
-  {
-    border-bottom-color: @line_2;
-  }
-
-  .fc_tab_pointer:before,
-  .fc_tab_pointer:after
-  //*border_2_left
-  {
-    border-left-color: @line_2;
-  }
-
-  .anyClassName
-  //*border_2_right
-  {
-    border-right-color: @line_2;
-  }
-
 
 
   .tt_default.tt_down:after,
@@ -693,10 +694,26 @@ body {
   .ms_items_more_wrap.to_up .ms_items_more:after,
   div.fc_tab_txt,
   .feedback_row_wrap,
-  .feedback_row, .feedback_sticky_row
+  .feedback_row, .feedback_sticky_row,
+  .deep_active .post_replies_header, .deep_active.wall_module .post_replies_header,
+  .mention_tt_actions,
+  .emoji_tt_wrap.tt_down:before,
+  .emoji_tt_wrap.tt_down:after
     //*border_1_top
   {
     border-top-color: @line_1;
+  }
+
+  .wall_module .published_by_quote, .wall_module .published_sec_quote
+    //*border_1_left
+  {
+    border-left-color: @line_1;
+  }
+
+  .border_1_right
+    //*border_1_right
+  {
+    border-right-color: @line_1;
   }
 
 
@@ -704,10 +721,50 @@ body {
   .ui_actions_menu:before,
   .ui_actions_menu:after,
   .tt_default.tt_up:before,
-  .notify_sources.tt_up:after, .notify_sources.tt_up:before
+  .notify_sources.tt_up:after, .notify_sources.tt_up:before,
+  .Dropdown--b .Dropdown__in:after, .Dropdown--b .Dropdown__in:before,
+  .Dropdown--b .Dropdown__in:after
     //*border_1_bottom
   {
     border-bottom-color: @line_1;
+  }
+
+
+
+  .ActionsMenu__inner,
+  .ui_actions_menu,
+  .privacy_dropdown .header,
+  .privacy_dropdown
+    //*border_2
+  {
+    border-color: @line_2;
+  }
+
+  .ui_actions_menu_sep,
+  .emoji_tt_wrap.emoji_shop_over.tt_down:after
+    //*border_2_top
+  {
+    border-top-color: @line_2;
+  }
+
+  .ActionsMenu__inner:before,
+  .ActionsMenu__inner:after
+    //*border_2_bottom
+  {
+    border-bottom-color: @line_2;
+  }
+
+  .fc_tab_pointer:before,
+  .fc_tab_pointer:after
+    //*border_2_left
+  {
+    border-left-color: @line_2;
+  }
+
+  .anyClassName
+    //*border_2_right
+  {
+    border-right-color: @line_2;
   }
 
   .im-page .im-page--center-empty{
@@ -1150,6 +1207,20 @@ body {
 
   .chats_sp.fc_clist_search_icon{
     margin: 10px 7px 0 0;
+  }
+
+  .post_top_info_ads_group_members{
+    box-shadow: 0 0 0 1px @bg_1, 0 1px 0 0 @bg_1;
+  }
+
+
+  .ui_scroll_default_theme.ui_scroll_emoji_theme>.ui_scroll_overflow>.ui_scroll_shadow_bottom, .ui_scroll_default_theme.ui_scroll_emoji_theme>.ui_scroll_overflow>.ui_scroll_shadow_top,
+  .emoji_tabs_l_sc,
+  .emoji_tabs_l_sc, .emoji_tabs_r_sc,
+  .emoji_cats_title_helper:after
+    //*background-image
+  {
+    background-image: none;
   }
 
 }
