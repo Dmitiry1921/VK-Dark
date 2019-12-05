@@ -1086,6 +1086,10 @@ body .emoji_cats_title_helper:after {
 }
 body .ui_rmenu_count {
   float: left;
+  padding: 1px 0;
+}
+body .ui_rmenu_item {
+  padding: 0 5px 0 10px;
 }
 `,
        head = document.head || document.getElementsByTagName('head')[0],
