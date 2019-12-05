@@ -1084,7 +1084,10 @@ body .emoji_tabs_r_sc,
 body .emoji_cats_title_helper:after {
   background-image: none;
 }
-/*# sourceMappingURL=tampermonkey_plugin.css.map */`,
+body .ui_rmenu_count {
+  float: left;
+}
+`,
        head = document.head || document.getElementsByTagName('head')[0],
        style = document.createElement('style');
 

@@ -4,17 +4,26 @@
   "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
-    "build": "node build.js"
+    "prebuild": "lessc less/tampermonkey_plugin.less less/tampermonkey_plugin.css",
+    "build": " node build.js",
+    "start": "npm run prebuild && npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dmitiry1921/VK-Dark.git"
   },
-  "keywords": ["vk", "dark", "theme"],
+  "keywords": [
+    "vk",
+    "dark",
+    "theme"
+  ],
   "author": "Dmitriy1921",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Dmitiry1921/VK-Dark/issues"
   },
-  "homepage": "https://github.com/Dmitiry1921/VK-Dark#readme"
+  "homepage": "https://github.com/Dmitiry1921/VK-Dark#readme",
+  "dependencies": {
+    "less": "^3.10.3"
+  }
 }
