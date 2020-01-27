@@ -233,7 +233,8 @@ body ._audio_pl.audio_pl_top_audios .audio_row .audio_row__inner:before,
 body .Tabs__item--active > *,
 body .im_sticker_bl_name,
 body .im_stickers_my_tip,
-body .im_stickers_my_name {
+body .im_stickers_my_name,
+body .reply_submit_hint_opts .radiobtn {
   color: #ffffff !important;
 }
 body .im-create,
