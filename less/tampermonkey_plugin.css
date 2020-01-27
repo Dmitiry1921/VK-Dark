@@ -97,7 +97,11 @@ body .im-to-end__button,
 body .links-list__item:hover,
 body .PopupHeader,
 body .ChatSettingsMembersWidget__add:before,
-body .im_stickers_my_tip {
+body .im_stickers_my_tip,
+body .medadd_c_linkcon,
+body .scrollbar_inner,
+body .scrollbar_hovered,
+body .scrollbar_inner:hover {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -717,7 +721,8 @@ body .deep_active .post_replies_header,
 body .deep_active.wall_module .post_replies_header,
 body .mention_tt_actions,
 body .emoji_tt_wrap.tt_down:before,
-body .emoji_tt_wrap.tt_down:after {
+body .emoji_tt_wrap.tt_down:after,
+body .ui_actions_menu_top .ui_actions_menu:after {
   border-top-color: #242424 !important;
 }
 body .wall_module .published_by_quote,
@@ -745,7 +750,8 @@ body .privacy_dropdown {
   border-color: #3b3f41 !important;
 }
 body .ui_actions_menu_sep,
-body .emoji_tt_wrap.emoji_shop_over.tt_down:after {
+body .emoji_tt_wrap.emoji_shop_over.tt_down:after,
+body .ui_actions_menu_top .ui_actions_menu:before {
   border-top-color: #3b3f41 !important;
 }
 body .ActionsMenu__inner:before,

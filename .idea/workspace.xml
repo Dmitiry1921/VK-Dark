@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/less/tampermonkey_plugin.css" beforeDir="false" afterPath="$PROJECT_DIR$/less/tampermonkey_plugin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/less/tampermonkey_plugin.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/tampermonkey_plugin.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vkdark.user.js" beforeDir="false" afterPath="$PROJECT_DIR$/vkdark.user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,7 @@
       <workItem from="1566996620225" duration="7937000" />
       <workItem from="1567066771101" duration="4169000" />
       <workItem from="1575528351265" duration="2110000" />
-      <workItem from="1579880936701" duration="2809000" />
+      <workItem from="1579880936701" duration="3682000" />
     </task>
     <task id="LOCAL-00001" summary="Create project on git">
       <created>1563802572216</created>
