@@ -98,7 +98,17 @@ body .privacy_dropdown .l_item,
 body .privacy_dropdown .l_item_sel,
 body .Dropdown__in,
 body .emoji_tabs,
-body .emoji_bg {
+body .emoji_bg,
+body .video_choose_upload_area,
+body .video_add_external,
+body .video_choosebox_bottom,
+body .im-to-end:focus .im-to-end__button,
+body .im-to-end:hover .im-to-end__button,
+body .im-to-end__button,
+body .links-list__item:hover,
+body .PopupHeader,
+body .ChatSettingsMembersWidget__add:before,
+body .im_stickers_my_tip {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -219,7 +229,18 @@ body .privacy_dropdown .l_item_sel,
 body .page_media_event .page_media_event_name,
 body .Dropdown__in,
 body .audio_subscribe_promo__title,
-body .audio_subscribe_promo__text {
+body .audio_subscribe_promo__text,
+body .page_name,
+body h1.page_name,
+body .top_notify_cont,
+body .audio_pl_snippet2 .audio_pl_snippet__description,
+body .audio_page_layout .audio_recoms_blocks .recoms_special_block_title,
+body .audio_page_layout .audio_section__recoms .recoms_special_block_title,
+body ._audio_pl.audio_pl_top_audios .audio_row .audio_row__inner:before,
+body .Tabs__item--active > *,
+body .im_sticker_bl_name,
+body .im_stickers_my_tip,
+body .im_stickers_my_name {
   color: #ffffff !important;
 }
 body .im-create,
@@ -293,7 +314,8 @@ body .emoji_tabs_l_s,
 body .emoji_tabs_r_s,
 body .emoji_tab:hover,
 body .emoji_shop:hover,
-body .emoji_cat_title {
+body .emoji_cat_title,
+body .im_sticker_bl {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -314,8 +336,7 @@ body .page_actions_item:hover:not(.grey_hoverable),
 body .tu_last:hover,
 body .im-page .im-page--mess-search,
 body .gifts_constr_option:hover,
-body .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected,
-body .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected {
+body .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected {
   background-color: #626568 !important;
 }
 body div.fc_tab_txt,
@@ -684,7 +705,14 @@ body .im-page--chat-header-in,
 body .ms_items_more,
 body .Dropdown__in,
 body .audio_subscribe_promo,
-body .emoji_tt_wrap {
+body .emoji_tt_wrap,
+body .video_choosebox_bottom,
+body .audio_feed_post,
+body .im-to-end:focus .im-to-end__button,
+body .im-to-end:hover .im-to-end__button,
+body .im-to-end__button,
+body .ChatSettingsMembersWidget__add:before,
+body .im_stickers_my_row ~ .im_stickers_my_row {
   border-color: #242424 !important;
 }
 body .tt_default.tt_down:after,
@@ -1090,6 +1118,23 @@ body .ui_rmenu_count {
 }
 body .ui_rmenu_item {
   padding: 0 5px 0 10px;
+}
+body .im-page .im-page--dialogs {
+  float: right;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+body .im-page .im-page--history {
+  margin-left: 0;
+  margin-right: 317px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+body .im-page_classic.im-page .im-page--dialogs-footer {
+  box-shadow: none;
+}
+body .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected {
+  background-color: rgba(29, 29, 29, 0.5) !important;
 }
 `,
        head = document.head || document.getElementsByTagName('head')[0],

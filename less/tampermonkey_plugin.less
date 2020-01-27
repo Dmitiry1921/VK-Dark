@@ -100,7 +100,16 @@ body {
   .privacy_dropdown .l_item, .privacy_dropdown .l_item_sel,
   .Dropdown__in,
   .emoji_tabs,
-  .emoji_bg
+  .emoji_bg,
+  .video_choose_upload_area,
+  .video_add_external,
+  .video_choosebox_bottom,
+  .im-to-end:focus .im-to-end__button, .im-to-end:hover .im-to-end__button,
+  .im-to-end__button,
+  .links-list__item:hover,
+  .PopupHeader,
+  .ChatSettingsMembersWidget__add:before,
+  .im_stickers_my_tip
     //*1 фон 1
   {
     background-color: @bg_1;
@@ -212,7 +221,16 @@ body {
   .page_media_event .page_media_event_name,
   .Dropdown__in,
   .audio_subscribe_promo__title,
-  .audio_subscribe_promo__text
+  .audio_subscribe_promo__text,
+  .page_name, h1.page_name,
+  .top_notify_cont,
+  .audio_pl_snippet2 .audio_pl_snippet__description,
+  .audio_page_layout .audio_recoms_blocks .recoms_special_block_title, .audio_page_layout .audio_section__recoms .recoms_special_block_title,
+  ._audio_pl.audio_pl_top_audios .audio_row .audio_row__inner:before,
+  .Tabs__item--active>*,
+  .im_sticker_bl_name,
+  .im_stickers_my_tip,
+  .im_stickers_my_name
     //*text ТЕКСТЫ
   {
     color: @text_2;
@@ -278,7 +296,8 @@ body {
   .emoji_tabs_l_s, .emoji_tabs_r_s,
   .emoji_tab:hover,
   .emoji_shop:hover,
-  .emoji_cat_title
+  .emoji_cat_title,
+  .im_sticker_bl
     //*2 Фон
   {
     background-color: @bg_2;
@@ -306,7 +325,7 @@ body {
   .tu_last:hover,
   .im-page .im-page--mess-search,
   .gifts_constr_option:hover,
-  .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected, .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected
+  .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected
     //*5 фон
   {
     background-color: @bg_5;
@@ -680,7 +699,13 @@ body {
   .ms_items_more,
   .Dropdown__in,
   .audio_subscribe_promo,
-  .emoji_tt_wrap
+  .emoji_tt_wrap,
+  .video_choosebox_bottom,
+  .audio_feed_post,
+  .im-to-end:focus .im-to-end__button, .im-to-end:hover .im-to-end__button,
+  .im-to-end__button,
+  .ChatSettingsMembersWidget__add:before,
+  .im_stickers_my_row~.im_stickers_my_row
     //*border_1 //*line линии
   {
     border-color: @line_1;
@@ -1229,6 +1254,25 @@ body {
   }
   .ui_rmenu_item{
     padding: 0 5px 0 10px;
+  }
+  .im-page .im-page--dialogs{
+    float: right;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .im-page .im-page--history{
+    margin-left: 0;
+    margin-right: 317px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .im-page_classic.im-page .im-page--dialogs-footer{
+    box-shadow: none;
+  }
+
+  .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected{
+    background-color: rgba(29, 29, 29, 0.50) !important;
   }
 
 }
