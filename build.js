@@ -11,6 +11,7 @@ let file = `// ==UserScript==
 // @author       ${package.author}
 // @include      http://vk.com/*
 // @include      https://vk.com/*
+// @include      https://vkpay.io/*
 // @grant        none
 // ==/UserScript==
 (function() {

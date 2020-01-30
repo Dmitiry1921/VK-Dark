@@ -6,6 +6,7 @@
 // @author       Dmitriy1921
 // @include      http://vk.com/*
 // @include      https://vk.com/*
+// @include      https://vkpay.io/*
 // @grant        none
 // ==/UserScript==
 (function() {
@@ -119,7 +120,11 @@ body .market_item_photo_container,
 body .market_comments_header:hover,
 body .market_comments_header,
 body .wke_b:hover,
-body .mv_desc .can_edit:hover {
+body .mv_desc .can_edit:hover,
+body .EditableLabel:hover .EditableLabel__text,
+body .MainActions_action_3owFz:after,
+body .MainStatus_button_1p4_4,
+body .Button_block_2bjH0.Button_secondary_3vjw8 {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -273,7 +278,14 @@ body .market_comments_summary,
 body .page_block_sub_header,
 body .microdata_price,
 body .msg_text,
-body #mv_pl_tt .mv_tt_playlist {
+body #mv_pl_tt .mv_tt_playlist,
+body .MainActions_itemText_1gXiE,
+body .MainServices_text_2jbbb,
+body .MainPromos_item_3RzR1,
+body .MainHead_block_2hP2d .MainHead_balanceTitle_dHcnD,
+body .MainServices_icon_black_1bdck,
+body .MainStatus_button_1p4_4,
+body .HistoryListItem_amount_rPK5B {
   color: #ffffff !important;
 }
 body .im-create,
@@ -363,7 +375,12 @@ body .wke_page_title_cont,
 body .pages_header_info,
 body .pages_history_header_wrap,
 body #mv_pl_tt .mv_tt_add_playlist:hover,
-body #mv_pl_tt .mv_tt_add_playlist {
+body #mv_pl_tt .mv_tt_add_playlist,
+body .Panel_block_2RPF-,
+body .TopMenu_block_1KqlS,
+body .Panel_footer_epjyB,
+body .Panel_header_2eRoj,
+body .Page_contentPanel_3WDOJ {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -777,7 +794,15 @@ body .bookmark_footer,
 body .wke_controls,
 body .pages_header_info,
 body .pages_history_header_wrap,
-body #mv_pl_tt .mv_tt_add_playlist {
+body #mv_pl_tt .mv_tt_add_playlist,
+body .TopMenu_block_1KqlS,
+body .Panel_block_2RPF-,
+body .MainStatus_button_1p4_4,
+body .Panel_footer_epjyB,
+body .Panel_header_2eRoj,
+body .CardListItem_card_1rJmF,
+body .NumbersInput_item_2-aQb,
+body .ListItem_block_27maC {
   border-color: #242424 !important;
 }
 body .tt_default.tt_down:after,
@@ -1220,6 +1245,10 @@ body .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected {
 body .im-create.im-create_material {
   right: 0;
   position: absolute;
+}
+body .Panel_block_2RPF-,
+body .Page_contentPanel_3WDOJ {
+  box-shadow: 0 1px 0 0 #242424, 0 0 0 1px #242424 !important;
 }
 `,
        head = document.head || document.getElementsByTagName('head')[0],
