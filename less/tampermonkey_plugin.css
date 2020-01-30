@@ -23,11 +23,6 @@ body {
   background: linear-gradient(to right, #1a1a1a 0%, #242424 51%, #1a1a1a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a1a1a', endColorstr='#1a1a1a', GradientType=1);
   color: #ffffff !important;
-  /**Календарь*/
-  /**Сообщение*/
-  /**Линии*/
-  /**SELECT*/
-  /** ADB */
 }
 body .page_block,
 body .mv_info {
@@ -101,7 +96,18 @@ body .im_stickers_my_tip,
 body .medadd_c_linkcon,
 body .scrollbar_inner,
 body .scrollbar_hovered,
-body .scrollbar_inner:hover {
+body .scrollbar_inner:hover,
+body .friends_cur_filters .token,
+body .idd_popup .idd_items_content,
+body .idd_popup .idd_header_wrap,
+body .audio_pl_edit_box .ape_cover,
+body #audio_status_tt .audio_status_sep,
+body .audio_row__more_actions .audio_row__more_action:hover,
+body #groups_menu_items .groups_edit_menu_items .groups_edit_menu_item .groups_edit_menu_item_line,
+body .market_item_photo_container,
+body .market_comments_header:hover,
+body .market_comments_header,
+body .wke_b:hover {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -234,7 +240,27 @@ body .Tabs__item--active > *,
 body .im_sticker_bl_name,
 body .im_stickers_my_tip,
 body .im_stickers_my_name,
-body .reply_submit_hint_opts .radiobtn {
+body .reply_submit_hint_opts .radiobtn,
+body .ui_search_fltr_label,
+body .ui_search_fltr,
+body .friends_cur_filters .token,
+body .ui_search_fltr b,
+body .idd_popup .idd_item,
+body .idd_popup .idd_header,
+body .idd_wrap .idd_selected_value,
+body .audio_pl_edit_box .ape_cover_title,
+body .gtop_complex_message .gtop_content .gtop_header,
+body .gtop_complex_message .gtop_content .gtop_message,
+body #apps_layer .apps_header .apps_name,
+body #group_section_menu .module_body .ui_gallery .ui_gallery_item .groups_menu_item .groups_menu_item_title,
+body #groups_menu_promo .apps_group_catalog_promo_header,
+body .app_widget_list_row,
+body .market_item_title,
+body .market_item_price,
+body .market_comments_summary,
+body .page_block_sub_header,
+body .microdata_price,
+body .msg_text {
   color: #ffffff !important;
 }
 body .im-create,
@@ -309,7 +335,20 @@ body .emoji_tabs_r_s,
 body .emoji_tab:hover,
 body .emoji_shop:hover,
 body .emoji_cat_title,
-body .im_sticker_bl {
+body .im_sticker_bl,
+body .ui_search_fltr,
+body .idd_popup .idd_item.idd_hl,
+body #apps_layer .apps_header_wrapper,
+body #groups_menu_items .groups_edit_menu_items .group_apps_list_row_drag_wrapper,
+body .ui_ownblock:hover,
+body .market_item_content,
+body .bookmark_footer,
+body .wl_post_reply_form_forbidden,
+body .wpost_post,
+body .wke_controls,
+body .wke_page_title_cont,
+body .pages_header_info,
+body .pages_history_header_wrap {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -330,7 +369,7 @@ body .page_actions_item:hover:not(.grey_hoverable),
 body .tu_last:hover,
 body .im-page .im-page--mess-search,
 body .gifts_constr_option:hover,
-body .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected {
+body .audio_pl_edit_box .ape_pl_item:hover {
   background-color: #626568 !important;
 }
 body div.fc_tab_txt,
@@ -706,7 +745,23 @@ body .im-to-end:focus .im-to-end__button,
 body .im-to-end:hover .im-to-end__button,
 body .im-to-end__button,
 body .ChatSettingsMembersWidget__add:before,
-body .im_stickers_my_row ~ .im_stickers_my_row {
+body .im_stickers_my_row ~ .im_stickers_my_row,
+body .ui_search_fltr,
+body .friends_cur_filters,
+body .idd_popup,
+body .audio_pl_edit_box .ape_cover,
+body .audio_pl_edit_box .ape_pl_item:hover,
+body .audio_pl_edit_box .ape_pl_item .ape_pl_item_inner,
+body .post_publish,
+body .page_actions_separator,
+body .market_item_footer_wrap,
+body .market_item_footer_info,
+body .market_comments_summary,
+body .app_widget_list_row,
+body .bookmark_footer,
+body .wke_controls,
+body .pages_header_info,
+body .pages_history_header_wrap {
   border-color: #242424 !important;
 }
 body .tt_default.tt_down:after,
@@ -723,7 +778,9 @@ body .deep_active.wall_module .post_replies_header,
 body .mention_tt_actions,
 body .emoji_tt_wrap.tt_down:before,
 body .emoji_tt_wrap.tt_down:after,
-body .ui_actions_menu_top .ui_actions_menu:after {
+body .ui_actions_menu_top .ui_actions_menu:after,
+body .eltt.eltt_top.eltt_arrow_size_normal > .eltt_arrow_back,
+body .eltt.eltt_top.eltt_arrow_size_normal > .eltt_arrow_back .eltt_arrow {
   border-top-color: #242424 !important;
 }
 body .wall_module .published_by_quote,
@@ -733,6 +790,18 @@ body .wall_module .published_sec_quote {
 body .border_1_right {
   border-right-color: #242424 !important;
 }
+body .border_1_right,
+body .ui_search_fltr:before,
+body .ui_search_fltr:after,
+body .ms_items_more_wrap.to_down .ms_items_more:before,
+body .ms_items_more_wrap.to_down .ms_items_more:after,
+body .emoji_tt_wrap.tt_up:before,
+body .emoji_tt_wrap.tt_up:after {
+  border-bottom-color: #242424 !important;
+}
+body .im-page--dialogs-search .ui_search_input_block {
+  border-bottom: 1px solid #242424 !important;
+}
 body .im-chat-input,
 body .ui_actions_menu:before,
 body .ui_actions_menu:after,
@@ -741,7 +810,9 @@ body .notify_sources.tt_up:after,
 body .notify_sources.tt_up:before,
 body .Dropdown--b .Dropdown__in:after,
 body .Dropdown--b .Dropdown__in:before,
-body .Dropdown--b .Dropdown__in:after {
+body .Dropdown--b .Dropdown__in:after,
+body .eltt.eltt_bottom.eltt_arrow_size_normal > .eltt_arrow_back,
+body .eltt.eltt_bottom.eltt_arrow_size_normal > .eltt_arrow_back .eltt_arrow {
   border-bottom-color: #242424 !important;
 }
 body .ActionsMenu__inner,
@@ -1017,9 +1088,6 @@ body .top_audio_play__button:hover:before,
 body .top_audio_play__button:before {
   background-color: #ffffff;
 }
-body #audio_layer_tt > .eltt_arrow_back .eltt_arrow {
-  border-bottom-color: #3b3f41 !important;
-}
 body .audio_page_player2.audio_page_player_fixed {
   box-shadow: 0 5px 10px #242424 !important;
 }
@@ -1131,4 +1199,8 @@ body .im-page_classic.im-page .im-page--dialogs-footer {
 }
 body .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected {
   background-color: rgba(29, 29, 29, 0.5) !important;
+}
+body .im-create.im-create_material {
+  right: 0;
+  position: absolute;
 }

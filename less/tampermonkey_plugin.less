@@ -112,7 +112,18 @@ body {
   .im_stickers_my_tip,
   .medadd_c_linkcon,
   .scrollbar_inner,
-  .scrollbar_hovered, .scrollbar_inner:hover
+  .scrollbar_hovered, .scrollbar_inner:hover,
+  .friends_cur_filters .token,
+  .idd_popup .idd_items_content,
+  .idd_popup .idd_header_wrap,
+  .audio_pl_edit_box .ape_cover,
+  #audio_status_tt .audio_status_sep,
+  .audio_row__more_actions .audio_row__more_action:hover,
+  #groups_menu_items .groups_edit_menu_items .groups_edit_menu_item .groups_edit_menu_item_line,
+  .market_item_photo_container,
+  .market_comments_header:hover,
+  .market_comments_header,
+  .wke_b:hover
     //*1 фон 1
   {
     background-color: @bg_1;
@@ -234,7 +245,26 @@ body {
   .im_sticker_bl_name,
   .im_stickers_my_tip,
   .im_stickers_my_name,
-  .reply_submit_hint_opts .radiobtn
+  .reply_submit_hint_opts .radiobtn,
+  .ui_search_fltr_label,
+  .ui_search_fltr,
+  .friends_cur_filters .token,
+  .ui_search_fltr b,
+  .idd_popup .idd_item,
+  .idd_popup .idd_header,
+  .idd_wrap .idd_selected_value,
+  .audio_pl_edit_box .ape_cover_title,
+  .gtop_complex_message .gtop_content .gtop_header,
+  .gtop_complex_message .gtop_content .gtop_message,
+  #apps_layer .apps_header .apps_name,
+  #group_section_menu .module_body .ui_gallery .ui_gallery_item .groups_menu_item .groups_menu_item_title,
+  #groups_menu_promo .apps_group_catalog_promo_header,
+  .app_widget_list_row,
+  .market_item_title, .market_item_price,
+  .market_comments_summary,
+  .page_block_sub_header,
+  .microdata_price,
+  .msg_text
     //*text ТЕКСТЫ
   {
     color: @text_2;
@@ -301,7 +331,19 @@ body {
   .emoji_tab:hover,
   .emoji_shop:hover,
   .emoji_cat_title,
-  .im_sticker_bl
+  .im_sticker_bl,
+  .ui_search_fltr,
+  .idd_popup .idd_item.idd_hl,
+  #apps_layer .apps_header_wrapper,
+  #groups_menu_items .groups_edit_menu_items .group_apps_list_row_drag_wrapper,
+  .ui_ownblock:hover,
+  .market_item_content,
+  .bookmark_footer,
+  .wl_post_reply_form_forbidden,
+  .wpost_post,
+  .wke_controls,
+  .wke_page_title_cont,
+  .pages_header_info, .pages_history_header_wrap
     //*2 Фон
   {
     background-color: @bg_2;
@@ -329,7 +371,7 @@ body {
   .tu_last:hover,
   .im-page .im-page--mess-search,
   .gifts_constr_option:hover,
-  .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected
+  .audio_pl_edit_box .ape_pl_item:hover
     //*5 фон
   {
     background-color: @bg_5;
@@ -709,7 +751,22 @@ body {
   .im-to-end:focus .im-to-end__button, .im-to-end:hover .im-to-end__button,
   .im-to-end__button,
   .ChatSettingsMembersWidget__add:before,
-  .im_stickers_my_row~.im_stickers_my_row
+  .im_stickers_my_row~.im_stickers_my_row,
+  .ui_search_fltr,
+  .friends_cur_filters,
+  .idd_popup,
+  .audio_pl_edit_box .ape_cover,
+  .audio_pl_edit_box .ape_pl_item:hover,
+  .audio_pl_edit_box .ape_pl_item .ape_pl_item_inner,
+  .post_publish,
+  .page_actions_separator,
+  .market_item_footer_wrap,
+  .market_item_footer_info,
+  .market_comments_summary,
+  .app_widget_list_row,
+  .bookmark_footer,
+  .wke_controls,
+  .pages_header_info, .pages_history_header_wrap
     //*border_1 //*line линии
   {
     border-color: @line_1;
@@ -728,7 +785,9 @@ body {
   .mention_tt_actions,
   .emoji_tt_wrap.tt_down:before,
   .emoji_tt_wrap.tt_down:after,
-  .ui_actions_menu_top .ui_actions_menu:after
+  .ui_actions_menu_top .ui_actions_menu:after,
+  .eltt.eltt_top.eltt_arrow_size_normal>.eltt_arrow_back,
+  .eltt.eltt_top.eltt_arrow_size_normal>.eltt_arrow_back .eltt_arrow
     //*border_1_top
   {
     border-top-color: @line_1;
@@ -746,6 +805,22 @@ body {
     border-right-color: @line_1;
   }
 
+  .border_1_right,
+  .ui_search_fltr:before,
+  .ui_search_fltr:after,
+  .ms_items_more_wrap.to_down .ms_items_more:before,
+  .ms_items_more_wrap.to_down .ms_items_more:after,
+  .emoji_tt_wrap.tt_up:before,
+  .emoji_tt_wrap.tt_up:after
+    //*border_1_right
+  {
+    border-bottom-color: @line_1;
+  }
+
+  .im-page--dialogs-search .ui_search_input_block{
+    border-bottom: 1px solid @line_1;
+  }
+
 
   .im-chat-input,
   .ui_actions_menu:before,
@@ -753,8 +828,9 @@ body {
   .tt_default.tt_up:before,
   .notify_sources.tt_up:after, .notify_sources.tt_up:before,
   .Dropdown--b .Dropdown__in:after, .Dropdown--b .Dropdown__in:before,
-  .Dropdown--b .Dropdown__in:after
-
+  .Dropdown--b .Dropdown__in:after,
+  .eltt.eltt_bottom.eltt_arrow_size_normal>.eltt_arrow_back,
+  .eltt.eltt_bottom.eltt_arrow_size_normal>.eltt_arrow_back .eltt_arrow
     //*border_1_bottom
   {
     border-bottom-color: @line_1;
@@ -1009,8 +1085,6 @@ body {
     color: @line_1;
   }
 
-  /**Календарь*/
-
   .bd_day_cell {
     background-color: @bg_2;
     border-color: @bg_1;
@@ -1039,20 +1113,15 @@ body {
     border-color: @bg_2;
   }
 
-  /**Сообщение*/
-
   .msg {
     background-color: @bg_1;
     border-color: @bg_1;
   }
 
-  /**Линии*/
-
   .settings_separated_row + .settings_separated_row:after {
     background-color: @bg_1;
   }
 
-  /**SELECT*/
 
   .chat_cont_sh_bottom, .chat_cont_sh_top {
     background: linear-gradient(180deg, rgba(216, 223, 230, 0), @bg_2 80%);
@@ -1101,9 +1170,9 @@ body {
     background-color: #ffffff;
   }
 
-  #audio_layer_tt > .eltt_arrow_back .eltt_arrow {
-    border-bottom-color: @bg_2;
-  }
+  //#audio_layer_tt > .eltt_arrow_back .eltt_arrow {
+  //  border-bottom-color: @bg_2;
+  //}
 
   .audio_page_player2.audio_page_player_fixed {
     box-shadow: 0 5px 10px @bg_1;
@@ -1113,8 +1182,6 @@ body {
   .top_nav_btn:hover .top_notify_count {
     border: 2px solid #484a4f;
   }
-
-  /** ADB */
 
   #ads_left {
     display: none !important;
@@ -1280,6 +1347,11 @@ body {
 
   .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected{
     background-color: rgba(29, 29, 29, 0.50) !important;
+  }
+
+  .im-create.im-create_material{
+    right: 0;
+    position: absolute;
   }
 
 }

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85680d7a-13b8-4657-8303-e155bb39ca83" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/less/tampermonkey_plugin.css" beforeDir="false" afterPath="$PROJECT_DIR$/less/tampermonkey_plugin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/less/tampermonkey_plugin.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/tampermonkey_plugin.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vkdark.user.js" beforeDir="false" afterPath="$PROJECT_DIR$/vkdark.user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +55,7 @@
       <scripts>
         <script value="build" />
       </scripts>
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v12.13.0/bin/node" />
+      <node-interpreter value="node" />
       <package-manager value="npm" />
       <envs />
       <method v="2" />
@@ -78,6 +82,8 @@
       <workItem from="1567066771101" duration="4169000" />
       <workItem from="1575528351265" duration="2110000" />
       <workItem from="1579880936701" duration="3794000" />
+      <workItem from="1580387230139" duration="42000" />
+      <workItem from="1580387652483" duration="9275000" />
     </task>
     <task id="LOCAL-00001" summary="Create project on git">
       <created>1563802572216</created>
@@ -147,6 +153,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="179" key="#Configure_Path_Variables" timestamp="1580387249520">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Configure_Path_Variables/0.0.1920.1040@0.0.1920.1040" timestamp="1580387249520" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580392206167">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580392206167" />
+    <state width="1899" height="140" key="GridCell.Tab.0.bottom" timestamp="1580402674977">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="140" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580402674977" />
+    <state width="1899" height="140" key="GridCell.Tab.0.center" timestamp="1580402674977">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="140" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580402674977" />
+    <state width="1899" height="140" key="GridCell.Tab.0.left" timestamp="1580402674977">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="140" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580402674977" />
+    <state width="1899" height="140" key="GridCell.Tab.0.right" timestamp="1580402674977">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="140" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580402674977" />
     <state x="700" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579881096735">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
