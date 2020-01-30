@@ -118,7 +118,8 @@ body #groups_menu_items .groups_edit_menu_items .groups_edit_menu_item .groups_e
 body .market_item_photo_container,
 body .market_comments_header:hover,
 body .market_comments_header,
-body .wke_b:hover {
+body .wke_b:hover,
+body .mv_desc .can_edit:hover {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -271,7 +272,8 @@ body .market_item_price,
 body .market_comments_summary,
 body .page_block_sub_header,
 body .microdata_price,
-body .msg_text {
+body .msg_text,
+body #mv_pl_tt .mv_tt_playlist {
   color: #ffffff !important;
 }
 body .im-create,
@@ -359,7 +361,9 @@ body .wpost_post,
 body .wke_controls,
 body .wke_page_title_cont,
 body .pages_header_info,
-body .pages_history_header_wrap {
+body .pages_history_header_wrap,
+body #mv_pl_tt .mv_tt_add_playlist:hover,
+body #mv_pl_tt .mv_tt_add_playlist {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -772,7 +776,8 @@ body .app_widget_list_row,
 body .bookmark_footer,
 body .wke_controls,
 body .pages_header_info,
-body .pages_history_header_wrap {
+body .pages_history_header_wrap,
+body #mv_pl_tt .mv_tt_add_playlist {
   border-color: #242424 !important;
 }
 body .tt_default.tt_down:after,
@@ -903,7 +908,8 @@ body .im-page_classic.im-page .im-page--header {
   margin-left: 0;
 }
 body .wall_module .reply_fakebox,
-body .tabbed_box .summary_tabs {
+body .tabbed_box .summary_tabs,
+body #mv_pl_tt .mv_tt_private_only + .mv_tt_playlists {
   border: none;
 }
 body .wall_module .reply_form {

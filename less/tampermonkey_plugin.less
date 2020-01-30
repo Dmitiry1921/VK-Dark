@@ -123,7 +123,8 @@ body {
   .market_item_photo_container,
   .market_comments_header:hover,
   .market_comments_header,
-  .wke_b:hover
+  .wke_b:hover,
+  .mv_desc .can_edit:hover
     //*1 фон 1
   {
     background-color: @bg_1;
@@ -264,7 +265,8 @@ body {
   .market_comments_summary,
   .page_block_sub_header,
   .microdata_price,
-  .msg_text
+  .msg_text,
+  #mv_pl_tt .mv_tt_playlist
     //*text ТЕКСТЫ
   {
     color: @text_2;
@@ -343,7 +345,9 @@ body {
   .wpost_post,
   .wke_controls,
   .wke_page_title_cont,
-  .pages_header_info, .pages_history_header_wrap
+  .pages_header_info, .pages_history_header_wrap,
+  #mv_pl_tt .mv_tt_add_playlist:hover,
+  #mv_pl_tt .mv_tt_add_playlist
     //*2 Фон
   {
     background-color: @bg_2;
@@ -766,7 +770,8 @@ body {
   .app_widget_list_row,
   .bookmark_footer,
   .wke_controls,
-  .pages_header_info, .pages_history_header_wrap
+  .pages_header_info, .pages_history_header_wrap,
+  #mv_pl_tt .mv_tt_add_playlist
     //*border_1 //*line линии
   {
     border-color: @line_1;
@@ -940,7 +945,9 @@ body {
   }
 
   .wall_module .reply_fakebox,
-  .tabbed_box .summary_tabs {
+  .tabbed_box .summary_tabs,
+  #mv_pl_tt .mv_tt_private_only+.mv_tt_playlists
+  {
     border: none;
   }
 

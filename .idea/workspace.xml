@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/less/tampermonkey_plugin.css" beforeDir="false" afterPath="$PROJECT_DIR$/less/tampermonkey_plugin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/less/tampermonkey_plugin.less" beforeDir="false" afterPath="$PROJECT_DIR$/less/tampermonkey_plugin.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vkdark.user.js" beforeDir="false" afterPath="$PROJECT_DIR$/vkdark.user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +82,7 @@
       <workItem from="1575528351265" duration="2110000" />
       <workItem from="1579880936701" duration="3794000" />
       <workItem from="1580387230139" duration="42000" />
-      <workItem from="1580387652483" duration="9275000" />
+      <workItem from="1580387652483" duration="11210000" />
     </task>
     <task id="LOCAL-00001" summary="Create project on git">
       <created>1563802572216</created>
@@ -127,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567003677502</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Create version 0.0.5">
+      <created>1580402744830</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1580402744830</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +156,8 @@
     <MESSAGE value="Create project on git" />
     <MESSAGE value="ReadME.md create" />
     <MESSAGE value="Bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix" />
+    <MESSAGE value="Create version 0.0.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create version 0.0.5" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Configure_Path_Variables" timestamp="1580387249520">
@@ -161,22 +168,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580392206167" />
-    <state width="1899" height="140" key="GridCell.Tab.0.bottom" timestamp="1580402674977">
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1580402744095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="140" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580402674977" />
-    <state width="1899" height="140" key="GridCell.Tab.0.center" timestamp="1580402674977">
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580402744095" />
+    <state width="1899" height="244" key="GridCell.Tab.0.bottom" timestamp="1580408712090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="140" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580402674977" />
-    <state width="1899" height="140" key="GridCell.Tab.0.left" timestamp="1580402674977">
+    <state width="1899" height="244" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580408712090" />
+    <state width="1899" height="244" key="GridCell.Tab.0.center" timestamp="1580408712090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="140" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580402674977" />
-    <state width="1899" height="140" key="GridCell.Tab.0.right" timestamp="1580402674977">
+    <state width="1899" height="244" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580408712090" />
+    <state width="1899" height="244" key="GridCell.Tab.0.left" timestamp="1580408712090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="140" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580402674977" />
+    <state width="1899" height="244" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580408712090" />
+    <state width="1899" height="244" key="GridCell.Tab.0.right" timestamp="1580408712090">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="244" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580408712090" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1580402747119">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580402747119" />
     <state x="700" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579881096735">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
