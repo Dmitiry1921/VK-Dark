@@ -363,7 +363,8 @@ body {
   .TopMenu_block_1KqlS,
   .Panel_footer_epjyB,
   .Panel_header_2eRoj,
-  .Page_contentPanel_3WDOJ
+  .Page_contentPanel_3WDOJ,
+  .audio_page_layout .audio_search_wrapper
     //*2 Фон
   {
     background-color: @bg_2;
@@ -979,7 +980,11 @@ body {
     background-color: @bg_2;
   }
 
-  .im-page_classic.im-page .im-page--dialogs-search {
+  .im-page_classic.im-page .im-page--dialogs-search,
+  .page_block._audio_page_content_block:before,
+  .audio_page_layout .audio_block:before
+  //*box-shabow-1
+  {
     box-shadow: 0 0 0 1px @line_1;
   }
 

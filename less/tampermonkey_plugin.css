@@ -368,7 +368,8 @@ body .Panel_block_2RPF-,
 body .TopMenu_block_1KqlS,
 body .Panel_footer_epjyB,
 body .Panel_header_2eRoj,
-body .Page_contentPanel_3WDOJ {
+body .Page_contentPanel_3WDOJ,
+body .audio_page_layout .audio_search_wrapper {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -928,7 +929,9 @@ body #mv_pl_tt .mv_tt_private_only + .mv_tt_playlists {
 body .wall_module .reply_form {
   background-color: #3b3f41 !important;
 }
-body .im-page_classic.im-page .im-page--dialogs-search {
+body .im-page_classic.im-page .im-page--dialogs-search,
+body .page_block._audio_page_content_block:before,
+body .audio_page_layout .audio_block:before {
   box-shadow: 0 0 0 1px #242424 !important;
 }
 body .audio_pl_snippet {
