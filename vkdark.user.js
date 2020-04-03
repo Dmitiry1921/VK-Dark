@@ -1,12 +1,15 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    http://tampermonkey.net/
-// @version      0.0.6
+// @version      0.0.7
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @include      http://vk.com/*
 // @include      https://vk.com/*
 // @include      https://vkpay.io/*
+// @include      https://new.broadcast.vkforms.ru/*
+// @include      https://poll.vip243.vkforms.ru/*
+// @include      https://donate.vip243.vkforms.ru/*
 // @grant        none
 // ==/UserScript==
 (function() {
@@ -124,7 +127,9 @@ body .mv_desc .can_edit:hover,
 body .EditableLabel:hover .EditableLabel__text,
 body .MainActions_action_3owFz:after,
 body .MainStatus_button_1p4_4,
-body .Button_block_2bjH0.Button_secondary_3vjw8 {
+body .Button_block_2bjH0.Button_secondary_3vjw8,
+body .Card__hr,
+body .wddi_over {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -285,7 +290,12 @@ body .MainPromos_item_3RzR1,
 body .MainHead_block_2hP2d .MainHead_balanceTitle_dHcnD,
 body .MainServices_icon_black_1bdck,
 body .MainStatus_button_1p4_4,
-body .HistoryListItem_amount_rPK5B {
+body .HistoryListItem_amount_rPK5B,
+body .Mailings_desktop .GroupPage__description,
+body .Button--secondary__29JKy,
+body .Card h1,
+body .Card__header,
+body .Input__label {
   color: #ffffff !important;
 }
 body .im-create,
@@ -381,7 +391,13 @@ body .TopMenu_block_1KqlS,
 body .Panel_footer_epjyB,
 body .Panel_header_2eRoj,
 body .Page_contentPanel_3WDOJ,
-body .audio_page_layout .audio_search_wrapper {
+body .audio_page_layout .audio_search_wrapper,
+body .CatalogBlock--divided,
+body .Mailings_desktop .GroupPage__footer,
+body .Button--secondary__29JKy,
+body .DesktopRoot,
+body .Card,
+body .wddi {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -393,7 +409,8 @@ body .ui_rmenu_sep {
 }
 body .rb_box_wrap,
 body .poster__view #poster-field-msg,
-body .article_snippet .article_snippet__read_btn {
+body .article_snippet .article_snippet__read_btn,
+body .article_snippet .article_snippet__action_btn_text {
   color: #000000 !important;
 }
 body .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -803,7 +820,13 @@ body .Panel_footer_epjyB,
 body .Panel_header_2eRoj,
 body .CardListItem_card_1rJmF,
 body .NumbersInput_item_2-aQb,
-body .ListItem_block_27maC {
+body .ListItem_block_27maC,
+body .Mailings_desktop .GroupPage__footer,
+body #apps_layer .apps_header_wrapper,
+body .post_actions_btns,
+body .wddi,
+body .wddi_over,
+body .wdd_list {
   border-color: #242424 !important;
 }
 body .tt_default.tt_down:after,
@@ -860,7 +883,8 @@ body .eltt.eltt_bottom.eltt_arrow_size_normal > .eltt_arrow_back .eltt_arrow {
 body .ActionsMenu__inner,
 body .ui_actions_menu,
 body .privacy_dropdown .header,
-body .privacy_dropdown {
+body .privacy_dropdown,
+body .apps_footer {
   border-color: #3b3f41 !important;
 }
 body .ui_actions_menu_sep,
@@ -986,7 +1010,9 @@ body .im-page_classic .im-page--chat-header {
   border: solid 1px #626568 !important;
 }
 body .im-page_classic .im-page--chat-header-in,
-body .Button--mobile {
+body .Button--mobile,
+body .CatalogBlock--divided:before,
+body .Mailings_desktop .GroupPage__footer {
   box-shadow: none;
 }
 body .im-page_classic.im-page .im-page--chat-body-abs,
@@ -1204,7 +1230,8 @@ body .article > h1 {
   color: #ffffff !important;
 }
 body #fc_ctabs_cont,
-body .fc_tab {
+body .fc_tab,
+body .Card {
   border: none!important;
 }
 body .chats_sp.fc_clist_search_icon {

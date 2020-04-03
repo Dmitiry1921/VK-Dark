@@ -12,6 +12,9 @@ let file = `// ==UserScript==
 // @include      http://vk.com/*
 // @include      https://vk.com/*
 // @include      https://vkpay.io/*
+// @include      https://new.broadcast.vkforms.ru/*
+// @include      https://poll.vip243.vkforms.ru/*
+// @include      https://donate.vip243.vkforms.ru/*
 // @grant        none
 // ==/UserScript==
 (function() {
