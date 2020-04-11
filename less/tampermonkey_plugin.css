@@ -115,7 +115,8 @@ body .MainStatus_button_1p4_4,
 body .Button_block_2bjH0.Button_secondary_3vjw8,
 body .Card__hr,
 body .wddi_over,
-body .im-page.im-page_classic.im-page_group .im-group-online {
+body .im-page.im-page_classic.im-page_group .im-group-online,
+body .media_voting_option {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -282,7 +283,9 @@ body .Button--secondary__29JKy,
 body .Card h1,
 body .Card__header,
 body .Input__label,
-body .im-aside-notice-promo.group-messages-notify-block .im-aside-notice--title {
+body .im-aside-notice-promo.group-messages-notify-block .im-aside-notice--title,
+body .media_voting_question,
+body .media_voting_option_text {
   color: #ffffff !important;
 }
 body .im-create,
@@ -387,7 +390,8 @@ body .Card,
 body .wddi,
 body .audio_page_player2 .audio_page_player_status.audio_page_player_btn_enabled .btn_icon,
 body .im-aside-notice,
-body .im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner {
+body .im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner,
+body .media_voting {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -443,7 +447,7 @@ body a.ts_contact.active,
 body a.ts_search_link.active,
 body .ListItem--active,
 body .ListItem--can-be-hovered.ListItem--selectable:hover,
-body .article_ed_layer .article_ed_layer__list_item:not(.article_ed_layer__list_item_current):hover {
+body .article_ed_layer .article_ed_layer__list_item:not(.article_ed_layer__list_item_current):hover .media_voting_can_vote.media_voting_clickable_option .media_voting_option_wrap:not(.media_voting_option_selected):hover .media_voting_option {
   color: #ffffff !important;
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
@@ -959,7 +963,8 @@ body .im-page_classic.im-page .im-page--dialogs-search,
 body .page_block._audio_page_content_block:before,
 body .audio_page_layout .audio_block:before,
 body .im-aside-notice,
-body .im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner {
+body .im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner,
+body .media_voting {
   box-shadow: 0 0 0 1px #242424 !important;
 }
 body .audio_pl_snippet {
