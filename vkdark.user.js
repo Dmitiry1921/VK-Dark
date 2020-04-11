@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    http://tampermonkey.net/
-// @version      0.0.7
+// @version      0.0.8
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @include      http://vk.com/*
@@ -129,7 +129,8 @@ body .MainActions_action_3owFz:after,
 body .MainStatus_button_1p4_4,
 body .Button_block_2bjH0.Button_secondary_3vjw8,
 body .Card__hr,
-body .wddi_over {
+body .wddi_over,
+body .im-page.im-page_classic.im-page_group .im-group-online {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -295,7 +296,8 @@ body .Mailings_desktop .GroupPage__description,
 body .Button--secondary__29JKy,
 body .Card h1,
 body .Card__header,
-body .Input__label {
+body .Input__label,
+body .im-aside-notice-promo.group-messages-notify-block .im-aside-notice--title {
   color: #ffffff !important;
 }
 body .im-create,
@@ -397,7 +399,10 @@ body .Mailings_desktop .GroupPage__footer,
 body .Button--secondary__29JKy,
 body .DesktopRoot,
 body .Card,
-body .wddi {
+body .wddi,
+body .audio_page_player2 .audio_page_player_status.audio_page_player_btn_enabled .btn_icon,
+body .im-aside-notice,
+body .im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -967,7 +972,9 @@ body .wall_module .reply_form {
 }
 body .im-page_classic.im-page .im-page--dialogs-search,
 body .page_block._audio_page_content_block:before,
-body .audio_page_layout .audio_block:before {
+body .audio_page_layout .audio_block:before,
+body .im-aside-notice,
+body .im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner {
   box-shadow: 0 0 0 1px #242424 !important;
 }
 body .audio_pl_snippet {
