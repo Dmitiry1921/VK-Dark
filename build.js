@@ -3,35 +3,32 @@ const package = require('./package.json');
 
 let fileContent = fs.readFileSync("./less/tampermonkey_plugin.css", "utf8");
 
-let file = `// ==UserScript==
+let meta = `// ==UserScript==
 // @name         VK Dark
 // @namespace    http://tampermonkey.net/
 // @version      ${package.version}
 // @description  ${package.description}
 // @author       ${package.author}
+// @downloadURL  ${package.downloadURL}
+// @updateURL    ${package.updateURL}
+// @supportURL   ${package.supportURL}
+// @homepage     ${package.homepage}
 // @include      http://vk.com/*
 // @include      https://vk.com/*
 // @include      https://vkpay.io/*
 // @include      https://new.broadcast.vkforms.ru/*
 // @include      https://poll.vip243.vkforms.ru/*
 // @include      https://donate.vip243.vkforms.ru/*
-// @grant        none
-// ==/UserScript==
-(function() {
-   var css = \`${fileContent}\`,
-       head = document.head || document.getElementsByTagName('head')[0],
-       style = document.createElement('style');
+// @grant        GM_addStyle
+// @grant        GM_registerMenuCommand
+// @grant        GM_unregisterMenuCommand
+// @run-at       document-end
+// ==/UserScript==`;
 
-    head.appendChild(style);
-
-    style.type = 'text/css';
-    if (style.styleSheet){
-        // This is required for IE8 and below.
-        style.styleSheet.cssText = css;
-    } else {
-        style.appendChild(document.createTextNode(css));
-    }
-})();
+const script = `
+const css = \`${fileContent}\`;
+GM_addStyle(css);
 `;
 
-fs.writeFileSync("./vkdark.user.js", file);
+fs.writeFileSync("./vkdark.user.js", meta+script);
+fs.writeFileSync("./vkdark.meta.js", meta);

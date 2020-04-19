@@ -4,16 +4,22 @@
 // @version      0.0.8
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
+// @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
+// @updateURL    https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.meta.js
+// @supportURL   https://vk.com/dmitriy1921
+// @homepage     https://github.com/Dmitiry1921/VK-Dark#readme
 // @include      http://vk.com/*
 // @include      https://vk.com/*
 // @include      https://vkpay.io/*
 // @include      https://new.broadcast.vkforms.ru/*
 // @include      https://poll.vip243.vkforms.ru/*
 // @include      https://donate.vip243.vkforms.ru/*
-// @grant        none
+// @grant        GM_addStyle
+// @grant        GM_registerMenuCommand
+// @grant        GM_unregisterMenuCommand
+// @run-at       document-end
 // ==/UserScript==
-(function() {
-   var css = `*::-webkit-scrollbar {
+const css = `*::-webkit-scrollbar {
   width: 5px;
   max-height: 5px;
   background-color: #242424 !important;
@@ -131,7 +137,9 @@ body .Button_block_2bjH0.Button_secondary_3vjw8,
 body .Card__hr,
 body .wddi_over,
 body .im-page.im-page_classic.im-page_group .im-group-online,
-body .media_voting_option {
+body .media_voting_option,
+body .sticker_hints_arrow.sticker_left,
+body .sticker_hints_arrow.sticker_right {
   background-color: #242424 !important;
 }
 body .disabled.selector_container,
@@ -300,7 +308,10 @@ body .Card__header,
 body .Input__label,
 body .im-aside-notice-promo.group-messages-notify-block .im-aside-notice--title,
 body .media_voting_question,
-body .media_voting_option_text {
+body .media_voting_option_text,
+body .mott_text,
+body .verified_tt_text,
+body .tt_w .tt_text {
   color: #ffffff !important;
 }
 body .im-create,
@@ -406,7 +417,9 @@ body .wddi,
 body .audio_page_player2 .audio_page_player_status.audio_page_player_btn_enabled .btn_icon,
 body .im-aside-notice,
 body .im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner,
-body .media_voting {
+body .media_voting,
+body .im-page_classic.im-page .im-chat-history-resize,
+body .audio_row__more_actions .audio_row__more_action {
   background-color: #3b3f41 !important;
 }
 body .top_profile_mrow:hover {
@@ -428,7 +441,8 @@ body .page_actions_item:hover:not(.grey_hoverable),
 body .tu_last:hover,
 body .im-page .im-page--mess-search,
 body .gifts_constr_option:hover,
-body .audio_pl_edit_box .ape_pl_item:hover {
+body .audio_pl_edit_box .ape_pl_item:hover,
+body .im-navigation--to-end .im-navigation__button {
   background-color: #626568 !important;
 }
 body div.fc_tab_txt,
@@ -870,7 +884,8 @@ body .ui_search_fltr:after,
 body .ms_items_more_wrap.to_down .ms_items_more:before,
 body .ms_items_more_wrap.to_down .ms_items_more:after,
 body .emoji_tt_wrap.tt_up:before,
-body .emoji_tt_wrap.tt_up:after {
+body .emoji_tt_wrap.tt_up:after,
+body .tt_default.tt_up:after {
   border-bottom-color: #242424 !important;
 }
 body .im-page--dialogs-search .ui_search_input_block {
@@ -1243,7 +1258,8 @@ body .article > h1 {
 }
 body #fc_ctabs_cont,
 body .fc_tab,
-body .Card {
+body .Card,
+body .sticker_hints_arrow {
   border: none!important;
 }
 body .chats_sp.fc_clist_search_icon {
@@ -1292,17 +1308,5 @@ body .Panel_block_2RPF-,
 body .Page_contentPanel_3WDOJ {
   box-shadow: 0 1px 0 0 #242424, 0 0 0 1px #242424 !important;
 }
-`,
-       head = document.head || document.getElementsByTagName('head')[0],
-       style = document.createElement('style');
-
-    head.appendChild(style);
-
-    style.type = 'text/css';
-    if (style.styleSheet){
-        // This is required for IE8 and below.
-        style.styleSheet.cssText = css;
-    } else {
-        style.appendChild(document.createTextNode(css));
-    }
-})();
+`;
+GM_addStyle(css);
