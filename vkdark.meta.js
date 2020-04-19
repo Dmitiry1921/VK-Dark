@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         VK Dark
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/
 // @version      0.0.9
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921

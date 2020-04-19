@@ -5,7 +5,7 @@ let fileContent = fs.readFileSync("./less/tampermonkey_plugin.css", "utf8");
 
 let meta = `// ==UserScript==
 // @name         VK Dark
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/
 // @version      ${package.version}
 // @description  ${package.description}
 // @author       ${package.author}
@@ -26,6 +26,10 @@ let meta = `// ==UserScript==
 // ==/UserScript==`;
 
 const script = `
+// Пункт меню, добавляется после старта браузера
+// GM_registerMenuCommand('Разработчик', () => {
+//     console.log('GM_registerMenuCommand is work');
+// });
 const css = \`${fileContent}\`;
 GM_addStyle(css);
 `;

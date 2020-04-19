@@ -6,7 +6,8 @@
   "scripts": {
     "prebuild": "lessc less/tampermonkey_plugin.less less/tampermonkey_plugin.css",
     "build": " node build.js",
-    "start": "npm run prebuild && npm run build"
+    "start": "npm run prebuild && npm run build",
+    "fixuniq": "npm run prebuild && npm run build && node getUnicCSS.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "downloadURL": "https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js",
   "supportURL": "https://vk.com/dmitriy1921",
   "dependencies": {
+    "css": "^2.2.4",
     "less": "^3.10.3"
   }
 }
