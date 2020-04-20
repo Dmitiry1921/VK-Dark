@@ -36,3 +36,5 @@ GM_addStyle(css);
 
 fs.writeFileSync("./vkdark.user.js", meta+script);
 fs.writeFileSync("./vkdark.meta.js", meta);
+
+

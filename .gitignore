@@ -4,4 +4,4 @@ less/tampermonkey_plugin.css
 package-lock.json
 .idea
 .idea/workspace.xml
-notUniq.json
+errors.json
