@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.2
+// @version      0.1.3
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -26,6 +26,9 @@ GM_registerMenuCommand('Github.com', () => {
 });
 GM_registerMenuCommand('Check Update', () => {
     GM_openInTab('https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js', {active: true, insert: true});
+});
+GM_registerMenuCommand('Сообщить об ошибке', () => {
+    GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 const css = `*::-webkit-scrollbar-thumb {
   border-radius: 50px;
@@ -1167,14 +1170,14 @@ a,
 }
 .im-page_classic.im-page .im-page--chat-body-abs,
 .im-page_classic.im-page .im-page--chat-input .im-chat-input,
-.im-page_classic.im-page .im-page--dialogs-footer {
+.im-page_classic.im-page .im-page--dialogs-footer,
+.Button--mobile {
   box-shadow: 0 1px 0 0 #1a1a1a, 0 0 0 1px #1a1a1a !important;
 }
 .im-mess.im-mess_selected + .im-mess:before,
 .im-mess.im-mess_unread + .im-mess:before {
   height: 0 !important;
 }
-.Button--mobile,
 .CatalogBlock--divided:before,
 .Mailings_desktop .GroupPage__footer,
 .top_notify_cont ._notify_unread .feed_row:first-child .feedback_row_wrap,
