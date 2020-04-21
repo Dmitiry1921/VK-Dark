@@ -8,9 +8,9 @@ const pckg = require('./package.json');
 //Создает файл css/vkdark.css
 require('./css_merge');
 
-const vkdark = fs.readFileSync("./css/vkdark.css", "utf8");
-let script = fs.readFileSync("./script.js", "utf8");
-let meta = fs.readFileSync("./meta.js", "utf8");
+const vkdark = fs.readFileSync("css/vkdark.css", "utf8");
+let script = fs.readFileSync("src/script.js", "utf8");
+let meta = fs.readFileSync("src/meta.js", "utf8");
 
 const VARIABLES = {
     vkdark,

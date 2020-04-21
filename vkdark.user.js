@@ -21,6 +21,9 @@
 // @run-at       document-end
 // ==/UserScript==
 // Пункт меню, добавляется после старта браузера
+GM_registerMenuCommand('Github.com', () => {
+    GM_openInTab('https://github.com/Dmitiry1921/VK-Dark#readme', {active: true, insert: true});
+});
 GM_registerMenuCommand('Check Update', () => {
     GM_openInTab('https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js', {active: true, insert: true});
 });
