@@ -1,0 +1,380 @@
+@import "_Variables";
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+}
+
+#page_header_cont .back, .fc_tab_head, .box_title_wrap,
+.im-page_classic.im-page .im-page--header,
+.im-page_classic .im-page--chat-header,
+.im-page_classic.im-page .im-page--chat-body-wrap-inner
+  //*line 0
+{
+  border-color: @line_0;
+}
+
+.audio_page_player.audio_page_player_fixed,
+.audio_page_layout .audio_friends_list,
+.audio_layer_container .audio_page_player,
+.im-page .im-page--history-new-bar,
+.box_body,
+.fc_msgs_unread,
+.pv_cont .narrow_column,
+.box_body .im_stickers_store_wrap .ui_tabs,
+.ap_layer .audio_pl_snippet .audio_pl_snippet__header_inner,
+.audio_pl_snippet .audio_pl_snippet__header,
+.photos_container .photos_row,
+.box_controls,
+.ts_cont_wrap,
+.feedback_row_wrap.unread:not(.feedback_row_touched),
+.pv_white_bg,
+.pva_period_fixed,
+.wk_history_tabs,
+.ChatSettings__content,
+.ChatSettingsInfo,
+.List,
+.ChatSettingsMembersWidget,
+.Button--mobile,
+.ChatSettingsInvitationLink,
+.ChatSettingsResetInvitationLink__text,
+.SubmitArea,
+.audio_pl_snippet2 .audio_shuffle_all_button:hover,
+.online:after,
+.online.mobile:after,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered .nim-dialog--photo .online.mobile:after,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic .nim-dialog--photo .online.mobile:after,
+.nim-dialog:not(.nim-dialog_deleted):hover .nim-dialog--photo .online.mobile:after,
+.ActionsMenu__inner,
+.ui_actions_menu,
+.privacy_dropdown .header,
+.privacy_dropdown,
+.apps_footer,
+#top_notify_wrap,
+.bd_day_cell.holiday,
+.bd_day_head,
+.top_notify_count,
+.top_nav_btn:hover .top_notify_count
+  //*border_color_2 //*line_2
+{
+  border-color: @line_2;
+}
+
+
+
+
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_classic.nim-dialog_unread,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_hovered,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog:hover,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered + .im-search-results-head,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered + .nim-dialog,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected + .im-search-results-head,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected + .nim-dialog,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic + .im-search-results-head,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic + .nim-dialog,
+.nim-dialog:not(.nim-dialog_deleted):hover + .im-search-results-head,
+.nim-dialog:not(.nim-dialog_deleted):hover + .nim-dialog,
+.nim-dialog .nim-dialog--content,
+#side_bar .more_div,
+.post_full_like_wrap,
+#ads_left.ads_left_empty + .left_menu_nav_wrap,
+.counts_module,
+.wide_column .page_top,
+.module,
+.wall_module .reply ~ .reply .dld, .wall_module .reply ~ .reply .reply_wrap,
+.im-page .im-page--dialogs-footer,
+.ui_tabs,
+.pv_author_block,
+.pv_comments,
+.feed_new_posts,
+.group_l_row,
+.group_l_row:last-child,
+.group_edit_row_sep,
+.media_preview_has_medias,
+.like_cont,
+.page_status_editor .editor,
+div.page_status_input,
+.top_notify_header,
+.friends_list_bl,
+.article_ed_layer .article_ed_layer__publish_settings .article_ed_layer__publish_settings_header,
+.settings_line,
+.settings_privacy_row,
+.settings_bl_row,
+.settings_apps .apps_settings_row_wrap,
+.settings_block_msg,
+.settings_table_row,
+.audio_pl_edit_box .ape_add_audios_btn, .audio_pl_edit_box .ape_add_pl_audios_btn,
+.audio_pl_edit_box .ape_header,
+.fakeinput:focus, div[contenteditable=true]:focus, input.big_text:focus, input.dark:focus, input.search:focus, input.text:focus, textarea:focus,
+.box_title_wrap.box_grey,
+.docs_choose_rows .docs_item,
+.audio_layer_container .audio_page__footer,
+.eltt,
+input.dark,
+.pedit_separator,
+.olist_botsh .box_controls,
+.info_msg,
+.feed_row ~ .feed_row .feedback_row, .feed_row ~ .feed_row .feedback_sticky_row, .feed_row ~ .feed_row_fb_hidden .feed_row:first-child .feedback_row, .feedback_sticky_rows:not(:empty) + .feed_row .feedback_row, .feedback_sticky_rows:not(:empty) + .feed_row .feedback_sticky_row,
+.ts_search_sep,
+.im-page-pinned,
+.top_notify_cont .top_notify_header,
+.tickets_post_field,
+.tu_row,
+.help_table_question,
+.help_tile_alert,
+.settings_history_table tr td,
+.media_selector .ms_item.ms_item_article,
+.audio_pl_snippet2 .audio_pl_snippet__header,
+.owner_photo_additional,
+.profile_info_block,
+#submit_post_box:not(.shown):not(.own_field) .poster__open-btn-wrapper,
+.poster__toolbar,
+.apps_i_panel,
+.apps_i_policy,
+.article_layer .article_layer__content_footer,
+.photos_edit_selection_header,
+.page_actions_wrap,
+.page_actions_inner,
+.tickets_header,
+.tickets_reply_row,
+.tickets_post_form__panel,
+.top_profile_sep,
+#top_profile_menu,
+#stats_cont h4, .stats_head,
+.piechart_table tr td,
+.stats_time_info,
+.feed_updates .wall_module .feed_row .post,
+.photos_choose_bottom,
+.deep_active.wl_post .replies .wl_replies_empty, .deep_active.wl_post.wall_module .replies .wl_replies_empty, .deep_active.wl_post.wall_module .wl_replies_block_wrap .wl_replies_empty, .deep_active.wl_post .wl_replies_block_wrap .wl_replies_empty,
+.deep_active .replies .reply_fakebox, .deep_active.wall_module .replies .reply_fakebox, .deep_active.wall_module .wl_replies_block_wrap .reply_fakebox, .deep_active .wl_replies_block_wrap .reply_fakebox,
+.deep_active .replies .replies_wrap_deep, .deep_active.wall_module .replies .replies_wrap_deep, .deep_active.wall_module .wl_replies_block_wrap .replies_wrap_deep, .deep_active .wl_replies_block_wrap .replies_wrap_deep,
+.im-page .im-page--mess-search,
+.mv_actions_block,
+.wall_module .reply_box, .wall_module .reply_fakebox_wrap,
+.mv_info_narrow_column,
+.gifts_section_row,
+.gifts_constr_steps_wrap,
+.box_msg, .box_msg_gray,
+.disabled.selector_container table.selector_table,
+.selector_container table.selector_table,
+.result_list,
+.poster__open-btn-wrapper,
+.sticker_hints_tt,
+.tt_default, .tt_default_right,
+.im-page--toolsw,
+.im-page--chat-header-in,
+.ms_items_more,
+.Dropdown__in,
+.audio_subscribe_promo,
+.emoji_tt_wrap,
+.video_choosebox_bottom,
+.audio_feed_post,
+.im-to-end:focus .im-to-end__button, .im-to-end:hover .im-to-end__button,
+.im-to-end__button,
+.ChatSettingsMembersWidget__add:before,
+.im_stickers_my_row ~ .im_stickers_my_row,
+.ui_search_fltr,
+.friends_cur_filters,
+.idd_popup,
+.audio_pl_edit_box .ape_cover,
+.audio_pl_edit_box .ape_pl_item:hover,
+.audio_pl_edit_box .ape_pl_item .ape_pl_item_inner,
+.post_publish,
+.page_actions_separator,
+.market_item_footer_wrap,
+.market_item_footer_info,
+.market_comments_summary,
+.app_widget_list_row,
+.bookmark_footer,
+.wke_controls,
+.pages_header_info, .pages_history_header_wrap,
+#mv_pl_tt .mv_tt_add_playlist,
+.TopMenu_block_1KqlS,
+.Panel_block_2RPF-,
+.MainStatus_button_1p4_4,
+.Panel_footer_epjyB,
+.Panel_header_2eRoj,
+.CardListItem_card_1rJmF,
+.NumbersInput_item_2-aQb,
+.ListItem_block_27maC,
+.Mailings_desktop .GroupPage__footer,
+#apps_layer .apps_header_wrapper,
+.post_actions_btns,
+.wddi, .wddi_over,
+.wdd_list,
+div.fc_clist_filter_wrap,
+.flat_button.ui_load_more_btn,
+.settings_block_footer,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic,
+.nim-dialog:not(.nim-dialog_deleted):hover,
+.im_msg_audiomsg .audio-msg-track:not(.audio-msg-player):hover,
+.flat_button.ui_load_more_btn:hover,
+.im-mess.im-mess_search:hover,
+.olist_item_wrap:hover,
+.feedback_row_clickable:not(.feedback_row_touched):hover,
+.feed_row ~ .feed_row .feedback_row_clickable:not(.feedback_row_touched):hover,
+.top_notify_show_all:hover,
+#side_bar ol li .left_row:hover,
+.fakeinput,
+div[contenteditable=true],
+input.big_text,
+input.search,
+input.text,
+textarea,
+.page_media_poll_wrap,
+.ui_tabs.ui_tabs_box,
+.im-mess .im-mess--post,
+.feedback_row_answer,
+.payments_money_transfer_amount_wrap,
+.top_notify_show_all,
+.im-mess.im-mess_light,
+.audio_page_layout .audio_page_separator,
+.audio_page_layout .has_friends_block .audio_page__rows_wrap,
+input.BlockSearchInput,
+.photos_container_edit_grid .photos_photo_edit_row_desc_placeholder,
+#mail_box_editable,
+.audio_pl_edit_box .ape_add_audios_btn:hover, .audio_pl_edit_box .ape_add_pl_audios_btn:hover,
+.docs_choose_rows .docs_item:hover,
+.docs_choose_upload_area,
+.docs_choose_upload_area:hover,
+.button_gray button.hover, .button_gray button:hover, .flat_button.secondary.hover, .flat_button.secondary:hover,
+.pv_cont .pv_can_edit:hover,
+em.ts_clist_hl,
+.audio_w_covers .audio_row.ui_gridsorter_moveable .audio_row_content,
+.bd_day_cell,
+.bd_day_cell.left,
+.bd_day_cell.today,
+.msg,
+.ListItem--active,
+.ListItem--can-be-hovered.ListItem--selectable:hover,
+.Tabs,
+.ui_search_sugg_list,
+.im-page .im-page--history-new-bar:after,
+.im-page .im-page--history-new-bar:before,
+.ListItem--border:before,
+.replies_open,
+.wr_header,
+.wall_module .page_media_thumbed_link,
+.button_gray button, .flat_button.secondary,
+.im_stickers_bl_wrap,
+.ap_layer_wrap .ap_layer__content,
+div.wdd,
+div.wdd.wdd_focused,
+.ui_search_new .ui_search_input_inner,
+.ui_search_new.ui_search_dark .ui_search_input_inner,
+.payments_money_transfer_comment,
+.payments_money_transfer_amount,
+.im_stickers_buy_header,
+.im-page .im-page--top-date-bar,
+.im-page_classic.im-page .im-page--dcontent,
+.ui_grey_block,
+.submit_post,
+.im_stickers_store_wrap .ui_tabs,
+.page_block_header,
+.audio_page_player2.audio_page_player_fixed,
+.audio_pl_snippet,
+.ui_search
+  //*border_1 //*line линии
+{
+  border-color: @line_1;
+}
+
+
+.tt_default.tt_down:after,
+.tt_default.tt_down:before,
+.im-chat-input,
+.ms_items_more_wrap.to_up .ms_items_more:before,
+.ms_items_more_wrap.to_up .ms_items_more:after,
+div.fc_tab_txt,
+.feedback_row_wrap,
+.feedback_row, .feedback_sticky_row,
+.deep_active .post_replies_header, .deep_active.wall_module .post_replies_header,
+.mention_tt_actions,
+.emoji_tt_wrap.tt_down:before,
+.emoji_tt_wrap.tt_down:after,
+.ui_actions_menu_top .ui_actions_menu:after,
+.eltt.eltt_top.eltt_arrow_size_normal > .eltt_arrow_back,
+.eltt.eltt_top.eltt_arrow_size_normal > .eltt_arrow_back .eltt_arrow,
+.friends_user_row,
+.post_full_like_wrap,
+.wl_replies_header,
+.wall_module.wl_post .reply .reply_wrap,
+.wall_module .wl_reply_form_fixed .reply_box,
+.wall_module .wl_reply_form_fixed .reply_fakebox_wrap
+  //*border_top_1
+{
+  border-top-color: @line_1;
+}
+
+.wall_module .published_by_quote, .wall_module .published_sec_quote,
+.im_fwd_log_wrap, .im_wall_log_wrap,
+.copy_quote
+  //*border_left_1
+{
+  border-left-color: @line_1;
+}
+
+.border_1_right
+  //*border_right_1
+{
+  border-right-color: @line_1;
+}
+
+
+.im-chat-input,
+.ui_actions_menu:before,
+.ui_actions_menu:after,
+.tt_default.tt_up:before,
+.notify_sources.tt_up:after, .notify_sources.tt_up:before,
+.Dropdown--b .Dropdown__in:after,
+.Dropdown--b .Dropdown__in:before,
+.eltt.eltt_bottom.eltt_arrow_size_normal > .eltt_arrow_back,
+.eltt.eltt_bottom.eltt_arrow_size_normal > .eltt_arrow_back .eltt_arrow,
+.border_1_right,
+.ui_search_fltr:before,
+.ui_search_fltr:after,
+.ms_items_more_wrap.to_down .ms_items_more:before,
+.ms_items_more_wrap.to_down .ms_items_more:after,
+.emoji_tt_wrap.tt_up:before,
+.emoji_tt_wrap.tt_up:after,
+.tt_default.tt_up:after,
+.im-page--dialogs-search .ui_search_input_block,
+.olist_item_wrap,
+.group_list_row,
+.feedback_row_answer:after,
+.feedback_row_answer:before,
+#top_profile_menu:before,
+#top_profile_menu:after
+  //*border_bottom_color_1
+{
+  border-bottom-color: @line_1;
+}
+
+
+.ui_actions_menu_sep,
+.emoji_tt_wrap.emoji_shop_over.tt_down:after,
+.ui_actions_menu_top .ui_actions_menu:before
+  //*border_2_top
+{
+  border-top-color: @line_2;
+}
+
+.ActionsMenu__inner:before,
+.ActionsMenu__inner:after
+  //*border_2_bottom
+{
+  border-bottom-color: @line_2;
+}
+
+.fc_tab_pointer:before,
+.fc_tab_pointer:after
+  //*border_2_left
+{
+  border-left-color: @line_2;
+}
+
+.anyClassName
+  //*border_2_right
+{
+  border-right-color: @line_2;
+}

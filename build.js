@@ -1,7 +1,10 @@
 const fs = require('fs');
 const package = require('./package.json');
 
-let fileContent = fs.readFileSync("./less/tampermonkey_plugin.css", "utf8");
+//Создает файл css/vkdark.css
+require('./css_merge');
+
+let vkdark = fs.readFileSync("./css/vkdark.css", "utf8");
 
 let meta = `// ==UserScript==
 // @name         VK Dark
@@ -30,7 +33,7 @@ const script = `
 // GM_registerMenuCommand('Разработчик', () => {
 //     console.log('GM_registerMenuCommand is work');
 // });
-const css = \`${fileContent}\`;
+const css = \`${vkdark}\`;
 GM_addStyle(css);
 `;
 

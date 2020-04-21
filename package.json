@@ -4,9 +4,13 @@
   "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
-    "prebuild": "lessc less/tampermonkey_plugin.less less/tampermonkey_plugin.css",
-    "build": " node build.js",
-    "start": "npm run prebuild && npm run build && node errorChecker.js"
+    "build-backgrounds": "lessc less/vkdark-backgrounds.less css/vkdark-backgrounds.css",
+    "build-borders": "lessc less/vkdark-borders.less css/vkdark-borders.css",
+    "build-colors": "lessc less/vkdark-colors.less css/vkdark-colors.css",
+    "build-all": "lessc less/vkdark_all.less css/vkdark_all.css",
+    "prebuild": "npm run build-all && npm run build-backgrounds && npm run build-borders && npm run build-colors",
+    "build": "node build.js",
+    "start": "npm run prebuild && npm run build && node error_checker.js"
   },
   "repository": {
     "type": "git",
