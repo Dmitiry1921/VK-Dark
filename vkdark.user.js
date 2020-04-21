@@ -17,12 +17,13 @@
 // @grant        GM_addStyle
 // @grant        GM_registerMenuCommand
 // @grant        GM_unregisterMenuCommand
+// @grant        GM_openInTab
 // @run-at       document-end
 // ==/UserScript==
 // Пункт меню, добавляется после старта браузера
-// GM_registerMenuCommand('Разработчик', () => {
-//     console.log('GM_registerMenuCommand is work');
-// });
+GM_registerMenuCommand('Check Update', () => {
+    GM_openInTab('https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js', {active: true, insert: true});
+});
 const css = `*::-webkit-scrollbar-thumb {
   border-radius: 50px;
 }
@@ -738,7 +739,8 @@ input.BlockSearchInput,
 .im-chat-input .im-chat-input--txt-wrap,
 #side_bar ol li .left_row:hover,
 .search_filters_minimized_text,
-.info_msg {
+.info_msg,
+.audio_pl_edit_box .ape_add_pl_audios_btn {
   background-color: #3b3f41 !important;
 }
 *::-webkit-scrollbar-thumb:hover {
@@ -1063,7 +1065,8 @@ input.text.ts_input:focus,
 .nim-dialog.nim-dialog_classic.nim-dialog_unread-out .nim-dialog--inner-text,
 .nim-dialog.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
 .mention_tt_row,
-.msg_text {
+.msg_text,
+.audio_pl_edit_box .ape_add_pl_audios_btn {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1139,7 +1142,8 @@ a,
 .ts_contact_name,
 .ChatSettingsMembersWidget__add,
 .im-fwd .im-fwd--title,
-.Select__control {
+.Select__control,
+.audio_pl_edit_box .ape_audio_item_wrap .ape_attach {
   color: #b0ccda !important;
 }
 .audio_layer_container .audio_page_layout .audio_search {
