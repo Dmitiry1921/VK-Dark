@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.0
+// @version      0.1.1
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -388,7 +388,8 @@ div.fc_tab_txt,
 }
 .ui_actions_menu_sep,
 .emoji_tt_wrap.emoji_shop_over.tt_down:after,
-.ui_actions_menu_top .ui_actions_menu:before {
+.ui_actions_menu_top .ui_actions_menu:before,
+.ui_rmenu_sep {
   border-top-color: #3b3f41 !important;
 }
 .ActionsMenu__inner:before,
@@ -401,6 +402,9 @@ div.fc_tab_txt,
 }
 .anyClassName {
   border-right-color: #3b3f41 !important;
+}
+.wall_module .replies_list {
+  border-top-color: #ffffff !important;
 }
 .fakeinput,
 div[contenteditable=true],
@@ -564,7 +568,10 @@ div.wdd.wdd_focused,
 .bd_day_cell.holiday,
 .settings_separated_row + .settings_separated_row:after,
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
-.ui_search_new.ui_search_dark .ui_search_button_search {
+.ui_search_new.ui_search_dark .ui_search_button_search,
+.wall_module .reply_box,
+.wall_module .reply_fakebox_wrap,
+.stories_link {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -675,13 +682,11 @@ div.fc_clist_filter_wrap,
 .mv_info,
 .top_profile_mrow:hover,
 .profile_info_header,
-.im-page .im-page--history-new-bar > span,
 .photos_period_delimiter_fixed,
 .tabbed_box .summary_tab_sel .summary_tab2,
 .audio_pl_edit_box .ape_header,
 .group_l_row,
 .audio_layer_container .audio_page_player,
-.im-page .im-page--history-new-bar,
 .box_body,
 .fc_msgs_unread,
 .pv_cont .narrow_column,
@@ -733,9 +738,7 @@ input.BlockSearchInput,
 .im-chat-input .im-chat-input--txt-wrap,
 #side_bar ol li .left_row:hover,
 .search_filters_minimized_text,
-.info_msg,
-.CatalogSection,
-.im-page_classic.im-page .im-page--chat-body-wrap-inner {
+.info_msg {
   background-color: #3b3f41 !important;
 }
 *::-webkit-scrollbar-thumb:hover {
@@ -751,7 +754,6 @@ input.BlockSearchInput,
 .im-navigation--to-end .im-navigation__button,
 .im-mess.im-mess_selected:last-child:before,
 .im-mess.im-mess_unread:last-child:before,
-.im-page_classic.im-page .im-page--chat-input .im-chat-input,
 *::-webkit-scrollbar-thumb,
 .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_back,
 .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_slide,
@@ -772,7 +774,12 @@ input.BlockSearchInput,
 .audio_page_player2.audio_page_player_fixed,
 .flat_button.secondary_dark,
 .ui_search,
-.ui_grey_block {
+.ui_grey_block,
+.CatalogBlock--divided,
+.im-page .im-page--history-new-bar,
+.im-page .im-page--history-new-bar > span,
+.im-page_classic.im-page .im-page--chat-body-wrap-inner,
+.im-page_classic.im-page .im-page--chat-input .im-chat-input {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -989,7 +996,6 @@ h1.page_name,
 .market_comments_summary,
 .page_block_sub_header,
 .microdata_price,
-.msg_text,
 #mv_pl_tt .mv_tt_playlist,
 .MainActions_itemText_1gXiE,
 .MainServices_text_2jbbb,
@@ -1056,7 +1062,8 @@ input.text.ts_input:focus,
 .im-page--title-main-inner,
 .nim-dialog.nim-dialog_classic.nim-dialog_unread-out .nim-dialog--inner-text,
 .nim-dialog.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
-.mention_tt_row {
+.mention_tt_row,
+.msg_text {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1073,10 +1080,6 @@ input.text.ts_input:focus,
 }
 .im-page--back-btn {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2216%22%20viewBox%3D%220%200%209%2016%22%20width%3D%229%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m8%2015.9c-.2%200-.4-.1-.6-.3l-7-7c-.3-.3-.3-.9%200-1.2l7-7c.3-.3.9-.3%201.2%200s.3.9%200%201.2l-6.4%206.4%206.4%206.4c.3.3.3.9%200%201.2-.2.2-.4.3-.6.3z%22%20fill%3D%22%23828a99%22%20opacity%3D%22.7%22%2F%3E%3C%2Fsvg%3E") !important;
-}
-.wall_module .replies_list,
-.ui_rmenu_sep {
-  border-top-color: #ffffff !important;
 }
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
 .ui_search_new.ui_search_dark .ui_search_button_search {
@@ -1134,7 +1137,9 @@ a,
 .deep_active .post_replies_header .post_replies_reorder,
 .deep_active.wall_module .post_replies_header .post_replies_reorder,
 .ts_contact_name,
-.ChatSettingsMembersWidget__add {
+.ChatSettingsMembersWidget__add,
+.im-fwd .im-fwd--title,
+.Select__control {
   color: #b0ccda !important;
 }
 .audio_layer_container .audio_page_layout .audio_search {
@@ -1144,36 +1149,36 @@ a,
 .im-mess.im-mess_unread:last-child:before {
   content: none !important;
 }
-.im-page_classic.im-page .im-page--chat-input .im-chat-input {
-  box-shadow: 0 1px 0 0 #626568, 0 0 0 1px #626568 !important;
-}
 .page_block._audio_page_content_block:before,
 .audio_page_layout .audio_block:before,
 .im-aside-notice,
 .im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner,
-.media_voting {
+.media_voting,
+.im-page_classic .im-page--chat-header-in {
   box-shadow: 0 0 0 1px #242424 !important;
 }
 .im-page_classic.im-page .im-page--dialogs-search {
   box-shadow: 0 0 0 1px #1a1a1a !important;
 }
+.im-page_classic.im-page .im-page--chat-body-abs,
+.im-page_classic.im-page .im-page--chat-input .im-chat-input,
+.im-page_classic.im-page .im-page--dialogs-footer {
+  box-shadow: 0 1px 0 0 #1a1a1a, 0 0 0 1px #1a1a1a !important;
+}
 .im-mess.im-mess_selected + .im-mess:before,
 .im-mess.im-mess_unread + .im-mess:before {
   height: 0 !important;
 }
-.im-page_classic .im-page--chat-header-in,
 .Button--mobile,
 .CatalogBlock--divided:before,
 .Mailings_desktop .GroupPage__footer,
 .top_notify_cont ._notify_unread .feed_row:first-child .feedback_row_wrap,
-.im-page_classic.im-page .im-page--dialogs-footer,
 .page_block,
 .mv_info,
 .CatalogBlock--divided:first-child:before,
 .CatalogSection:first-child:before {
   box-shadow: none;
 }
-.im-page_classic.im-page .im-page--chat-body-abs,
 .post_top_info_wall_guide,
 .post_top_info_wall_mention,
 .post_top_info_wall_reply,
@@ -1191,9 +1196,6 @@ a,
 }
 .im-chat-input--scroll .im-fwd.im-fwd_msg {
   padding: 5px 7px;
-}
-.msg_text {
-  color: #242424 !important;
 }
 .chat_cont_sh_bottom,
 .chat_cont_sh_top {
