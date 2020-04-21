@@ -350,7 +350,8 @@ div.fc_tab_txt,
 .wl_replies_header,
 .wall_module.wl_post .reply .reply_wrap,
 .wall_module .wl_reply_form_fixed .reply_box,
-.wall_module .wl_reply_form_fixed .reply_fakebox_wrap {
+.wall_module .wl_reply_form_fixed .reply_fakebox_wrap,
+.wall_module .replies_list {
   border-top-color: #242424 !important;
 }
 .wall_module .published_by_quote,
@@ -406,9 +407,6 @@ div.fc_tab_txt,
 }
 .anyClassName {
   border-right-color: #3b3f41 !important;
-}
-.wall_module .replies_list {
-  border-top-color: #ffffff !important;
 }
 .fakeinput,
 div[contenteditable=true],
