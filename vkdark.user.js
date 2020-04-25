@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.3
+// @version      0.1.4
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -38,7 +38,8 @@ const css = `*::-webkit-scrollbar-thumb {
 .box_title_wrap,
 .im-page_classic.im-page .im-page--header,
 .im-page_classic .im-page--chat-header,
-.im-page_classic.im-page .im-page--chat-body-wrap-inner {
+.im-page_classic.im-page .im-page--chat-body-wrap-inner,
+.Input[readonly] {
   border-color: #1a1a1a !important;
 }
 .audio_page_player.audio_page_player_fixed,
@@ -328,7 +329,8 @@ div.wdd.wdd_focused,
 .page_block_header,
 .audio_page_player2.audio_page_player_fixed,
 .audio_pl_snippet,
-.ui_search {
+.ui_search,
+#mv_publish {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -633,7 +635,6 @@ div.wdd.wdd_focused,
 .privacy_dropdown .l_header .l_header_label,
 .privacy_dropdown .l_item:hover,
 .privacy_dropdown .l_item_sel:hover,
-.thumbed_link__label,
 .Dropdown__item:hover,
 .mention_tt_actions,
 .emoji_tt_wrap,
@@ -667,7 +668,6 @@ div.wdd.wdd_focused,
 .Panel_footer_epjyB,
 .Panel_header_2eRoj,
 .Page_contentPanel_3WDOJ,
-.CatalogBlock--divided,
 .Mailings_desktop .GroupPage__footer,
 .Button--secondary__29JKy,
 .DesktopRoot,
@@ -686,7 +686,6 @@ div.fc_clist_filter_wrap,
 .settings_block_footer,
 .mv_info,
 .top_profile_mrow:hover,
-.profile_info_header,
 .photos_period_delimiter_fixed,
 .tabbed_box .summary_tab_sel .summary_tab2,
 .audio_pl_edit_box .ape_header,
@@ -732,7 +731,6 @@ input.BlockSearchInput,
 .apps_i_panel,
 .page_status_editor .editor,
 .im-page-pinned,
-.profile_info_edit,
 .box_title_wrap.box_grey,
 .eltt,
 .bd_day_cell,
@@ -744,7 +742,14 @@ input.BlockSearchInput,
 #side_bar ol li .left_row:hover,
 .search_filters_minimized_text,
 .info_msg,
-.audio_pl_edit_box .ape_add_pl_audios_btn {
+.audio_pl_edit_box .ape_add_pl_audios_btn,
+#mv_publish,
+.audio_pl_edit_box .ape_list_header,
+.thumbed_link__thumb,
+.thumbed_link--chat-invitation,
+.thumbed_link__label,
+.im-page_classic.im-page .im-chat-history-resize,
+.im-create {
   background-color: #3b3f41 !important;
 }
 *::-webkit-scrollbar-thumb:hover {
@@ -781,11 +786,16 @@ input.BlockSearchInput,
 .flat_button.secondary_dark,
 .ui_search,
 .ui_grey_block,
-.CatalogBlock--divided,
 .im-page .im-page--history-new-bar,
 .im-page .im-page--history-new-bar > span,
 .im-page_classic.im-page .im-page--chat-body-wrap-inner,
-.im-page_classic.im-page .im-page--chat-input .im-chat-input {
+.im-page_classic.im-page .im-page--chat-input .im-chat-input,
+.CatalogBlock--divided,
+.CatalogSection,
+.profile_info_header,
+.profile_info_edit,
+.im-create .im-create--table > div,
+.Input[readonly] {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1070,7 +1080,10 @@ input.text.ts_input:focus,
 .nim-dialog.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
 .mention_tt_row,
 .msg_text,
-.audio_pl_edit_box .ape_add_pl_audios_btn {
+.audio_pl_edit_box .ape_add_pl_audios_btn,
+.tt_default,
+.tt_default_right,
+.Input[readonly] {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1078,7 +1091,8 @@ input.text.ts_input:focus,
 .article_snippet .article_snippet__read_btn,
 .article_snippet .article_snippet__action_btn_text,
 .profile_info_header .im-mess-stack--lnk,
-.popup_box_container .im-mess-stack--lnk {
+.popup_box_container .im-mess-stack--lnk,
+.audio_pl_edit_box .ape_audio_item_wrap .audio_row em {
   color: #000000 !important;
 }
 *::-webkit-scrollbar {
@@ -1147,7 +1161,9 @@ a,
 .ChatSettingsMembersWidget__add,
 .im-fwd .im-fwd--title,
 .Select__control,
-.audio_pl_edit_box .ape_audio_item_wrap .ape_attach {
+.audio_pl_edit_box .ape_audio_item_wrap .ape_attach,
+.page_counter:hover .label,
+.im-page--title-reconnect {
   color: #b0ccda !important;
 }
 .audio_layer_container .audio_page_layout .audio_search {
