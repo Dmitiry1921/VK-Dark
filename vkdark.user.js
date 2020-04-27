@@ -1167,7 +1167,8 @@ a,
 .Select__control,
 .audio_pl_edit_box .ape_audio_item_wrap .ape_attach,
 .page_counter:hover .label,
-.im-page--title-reconnect {
+.im-page--title-reconnect,
+.audio_row__more_actions .audio_row__more_action {
   color: #b0ccda !important;
 }
 .audio_layer_container .audio_page_layout .audio_search {
