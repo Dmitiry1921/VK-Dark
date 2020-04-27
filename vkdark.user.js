@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.4
+// @version      0.1.5
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -578,7 +578,8 @@ div.wdd.wdd_focused,
 .ui_search_new.ui_search_dark .ui_search_button_search,
 .wall_module .reply_box,
 .wall_module .reply_fakebox_wrap,
-.stories_link {
+.stories_link,
+.CatalogSection {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -749,7 +750,11 @@ input.BlockSearchInput,
 .thumbed_link--chat-invitation,
 .thumbed_link__label,
 .im-page_classic.im-page .im-chat-history-resize,
-.im-create {
+.im-create,
+.deep_active .replies .reply_box_inner_wrap.fixed,
+.deep_active.wall_module .replies .reply_box_inner_wrap.fixed,
+.deep_active.wall_module .wl_replies_block_wrap .reply_box_inner_wrap.fixed,
+.deep_active .wl_replies_block_wrap .reply_box_inner_wrap.fixed {
   background-color: #3b3f41 !important;
 }
 *::-webkit-scrollbar-thumb:hover {
@@ -791,7 +796,6 @@ input.BlockSearchInput,
 .im-page_classic.im-page .im-page--chat-body-wrap-inner,
 .im-page_classic.im-page .im-page--chat-input .im-chat-input,
 .CatalogBlock--divided,
-.CatalogSection,
 .profile_info_header,
 .profile_info_edit,
 .im-create .im-create--table > div,
@@ -1181,7 +1185,8 @@ a,
 .im-page_classic .im-page--chat-header-in {
   box-shadow: 0 0 0 1px #242424 !important;
 }
-.im-page_classic.im-page .im-page--dialogs-search {
+.im-page_classic.im-page .im-page--dialogs-search,
+.CatalogBlock--divided:before {
   box-shadow: 0 0 0 1px #1a1a1a !important;
 }
 .im-page_classic.im-page .im-page--chat-body-abs,
