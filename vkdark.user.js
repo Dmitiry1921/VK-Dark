@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.5
+// @version      0.1.6
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -330,7 +330,8 @@ div.wdd.wdd_focused,
 .audio_page_player2.audio_page_player_fixed,
 .audio_pl_snippet,
 .ui_search,
-#mv_publish {
+#mv_publish,
+.help_table_questions {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -799,7 +800,8 @@ input.BlockSearchInput,
 .profile_info_header,
 .profile_info_edit,
 .im-create .im-create--table > div,
-.Input[readonly] {
+.Input[readonly],
+.help_table_question_visible {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1168,7 +1170,10 @@ a,
 .audio_pl_edit_box .ape_audio_item_wrap .ape_attach,
 .page_counter:hover .label,
 .im-page--title-reconnect,
-.audio_row__more_actions .audio_row__more_action {
+.audio_row__more_actions .audio_row__more_action,
+.im-replied--author-link,
+.nim-dialog.nim-dialog_typing .nim-dialog--typing,
+.tu_mem {
   color: #b0ccda !important;
 }
 .audio_layer_container .audio_page_layout .audio_search {
