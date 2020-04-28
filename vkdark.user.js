@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.7
+// @version      0.1.8
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -801,7 +801,8 @@ input.BlockSearchInput,
 .Input[readonly],
 .help_table_question_visible,
 .wall_module .reply_fakebox_wrap,
-.wall_module .reply_box {
+.wall_module .reply_box,
+.language_box_row:hover {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1173,7 +1174,8 @@ a,
 .audio_row__more_actions .audio_row__more_action,
 .im-replied--author-link,
 .nim-dialog.nim-dialog_typing .nim-dialog--typing,
-.tu_mem {
+.tu_mem,
+.language_box_row .language_box_row_label {
   color: #b0ccda !important;
 }
 .audio_layer_container .audio_page_layout .audio_search {
