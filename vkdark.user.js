@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.6
+// @version      0.1.7
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -331,7 +331,8 @@ div.wdd.wdd_focused,
 .audio_pl_snippet,
 .ui_search,
 #mv_publish,
-.help_table_questions {
+.help_table_questions,
+.docs_item {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -433,7 +434,6 @@ textarea,
 div.fc_tab_txt,
 .ui_tabs_header,
 .wdd_text,
-.wall_module .reply_fakebox_wrap,
 .wall_module .reply_form {
   background: none !important;
 }
@@ -577,8 +577,6 @@ div.wdd.wdd_focused,
 .settings_separated_row + .settings_separated_row:after,
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
 .ui_search_new.ui_search_dark .ui_search_button_search,
-.wall_module .reply_box,
-.wall_module .reply_fakebox_wrap,
 .stories_link,
 .CatalogSection {
   background-color: #242424 !important;
@@ -801,7 +799,9 @@ input.BlockSearchInput,
 .profile_info_edit,
 .im-create .im-create--table > div,
 .Input[readonly],
-.help_table_question_visible {
+.help_table_question_visible,
+.wall_module .reply_fakebox_wrap,
+.wall_module .reply_box {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1316,7 +1316,7 @@ a,
   padding: 1px 0;
 }
 .im-page .im-page--dialogs {
-  float: right;
+  float: right !important;
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
 }
