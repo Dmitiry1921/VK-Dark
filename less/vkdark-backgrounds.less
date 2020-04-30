@@ -154,7 +154,9 @@ div.wdd.wdd_focused,
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
 .ui_search_new.ui_search_dark .ui_search_button_search,
 .stories_link,
-.CatalogBlock__separator
+.CatalogBlock__separator,
+.Button--tertiary:not(.Button--disabled):focus, .Button--tertiary:not(.Button--disabled):hover,
+.Select__option--selected, .Select__option:hover
   //*1 фон 1 //*bg_1
 {
   background-color: @bg_1;
@@ -317,7 +319,9 @@ input.BlockSearchInput,
 .thumbed_link--chat-invitation,
 .thumbed_link__label,
 .im-page_classic.im-page .im-chat-history-resize, .im-create,
-.deep_active .replies .reply_box_inner_wrap.fixed, .deep_active.wall_module .replies .reply_box_inner_wrap.fixed, .deep_active.wall_module .wl_replies_block_wrap .reply_box_inner_wrap.fixed, .deep_active .wl_replies_block_wrap .reply_box_inner_wrap.fixed
+.deep_active .replies .reply_box_inner_wrap.fixed, .deep_active.wall_module .replies .reply_box_inner_wrap.fixed, .deep_active.wall_module .wl_replies_block_wrap .reply_box_inner_wrap.fixed, .deep_active .wl_replies_block_wrap .reply_box_inner_wrap.fixed,
+.Select--opened .Select__control,
+.Select__menu
   //*2 Фон
 {
   background-color: @bg_2;
@@ -334,7 +338,6 @@ input.BlockSearchInput,
 .im-page .im-page--mess-search,
 .gifts_constr_option:hover,
 .audio_pl_edit_box .ape_pl_item:hover,
-.im-navigation--to-end .im-navigation__button,
 .im-mess.im-mess_selected:last-child:before, .im-mess.im-mess_unread:last-child:before,
 *::-webkit-scrollbar-thumb,
 .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_back,
@@ -372,7 +375,8 @@ input.BlockSearchInput,
 .wall_module .reply_box,
 .language_box_row:hover,
 .tickets_thank_you_form,
-.CatalogSection
+.CatalogSection,
+.im-navigation--to-end .im-navigation__button
   //*6 фон
 {
   background-color: @bg_6;

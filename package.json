@@ -34,5 +34,13 @@
   "dependencies": {
     "css": "^2.2.4",
     "less": "^3.10.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "devDependencies": {
+    "husky": "^4.2.5"
   }
 }

@@ -334,7 +334,10 @@ div.wdd.wdd_focused,
 .help_table_questions,
 .docs_item,
 .tickets_thank_you_form,
-.CatalogSection__leftColumn {
+.CatalogSection__leftColumn,
+.Select--opened .Select__control,
+.Select__menu,
+.im-navigation__button {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -580,7 +583,11 @@ div.wdd.wdd_focused,
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
 .ui_search_new.ui_search_dark .ui_search_button_search,
 .stories_link,
-.CatalogBlock__separator {
+.CatalogBlock__separator,
+.Button--tertiary:not(.Button--disabled):focus,
+.Button--tertiary:not(.Button--disabled):hover,
+.Select__option--selected,
+.Select__option:hover {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -755,7 +762,9 @@ input.BlockSearchInput,
 .deep_active .replies .reply_box_inner_wrap.fixed,
 .deep_active.wall_module .replies .reply_box_inner_wrap.fixed,
 .deep_active.wall_module .wl_replies_block_wrap .reply_box_inner_wrap.fixed,
-.deep_active .wl_replies_block_wrap .reply_box_inner_wrap.fixed {
+.deep_active .wl_replies_block_wrap .reply_box_inner_wrap.fixed,
+.Select--opened .Select__control,
+.Select__menu {
   background-color: #3b3f41 !important;
 }
 *::-webkit-scrollbar-thumb:hover {
@@ -768,7 +777,6 @@ input.BlockSearchInput,
 .im-page .im-page--mess-search,
 .gifts_constr_option:hover,
 .audio_pl_edit_box .ape_pl_item:hover,
-.im-navigation--to-end .im-navigation__button,
 .im-mess.im-mess_selected:last-child:before,
 .im-mess.im-mess_unread:last-child:before,
 *::-webkit-scrollbar-thumb,
@@ -806,7 +814,8 @@ input.BlockSearchInput,
 .wall_module .reply_box,
 .language_box_row:hover,
 .tickets_thank_you_form,
-.CatalogSection {
+.CatalogSection,
+.im-navigation--to-end .im-navigation__button {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1096,7 +1105,9 @@ input.text.ts_input:focus,
 .tt_default_right,
 .Input[readonly],
 .PlaceholderSmall__title,
-.PlaceholderSmall__text {
+.PlaceholderSmall__text,
+.Button--tertiary:not(.Button--disabled):focus,
+.Button--tertiary:not(.Button--disabled):hover {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1182,7 +1193,11 @@ a,
 .nim-dialog.nim-dialog_typing .nim-dialog--typing,
 .tu_mem,
 .language_box_row .language_box_row_label,
-.Entity__title {
+.Entity__title,
+.Link,
+.Button--tertiary,
+.Select__menu .Select__group > .Select__title,
+.Select__option {
   color: #b0ccda !important;
 }
 .audio_layer_container .audio_page_layout .audio_search {
