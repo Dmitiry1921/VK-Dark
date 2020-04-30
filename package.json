@@ -1,6 +1,6 @@
 {
   "name": "vk_dark",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
@@ -37,7 +37,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm --no-git-tag-version version patch"
+      "pre-commit": "npm start && npm --no-git-tag-version version patch"
     }
   },
   "devDependencies": {
