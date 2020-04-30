@@ -37,7 +37,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "npm --no-git-tag-version version patch"
     }
   },
   "devDependencies": {
