@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.8
+// @version      0.1.9
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -332,7 +332,9 @@ div.wdd.wdd_focused,
 .ui_search,
 #mv_publish,
 .help_table_questions,
-.docs_item {
+.docs_item,
+.tickets_thank_you_form,
+.CatalogSection__leftColumn {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -578,7 +580,7 @@ div.wdd.wdd_focused,
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
 .ui_search_new.ui_search_dark .ui_search_button_search,
 .stories_link,
-.CatalogSection {
+.CatalogBlock__separator {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -802,7 +804,9 @@ input.BlockSearchInput,
 .help_table_question_visible,
 .wall_module .reply_fakebox_wrap,
 .wall_module .reply_box,
-.language_box_row:hover {
+.language_box_row:hover,
+.tickets_thank_you_form,
+.CatalogSection {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1175,7 +1179,8 @@ a,
 .im-replied--author-link,
 .nim-dialog.nim-dialog_typing .nim-dialog--typing,
 .tu_mem,
-.language_box_row .language_box_row_label {
+.language_box_row .language_box_row_label,
+.Entity__title {
   color: #b0ccda !important;
 }
 .audio_layer_container .audio_page_layout .audio_search {
