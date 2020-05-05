@@ -1,6 +1,6 @@
 {
   "name": "vk_dark",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
@@ -24,9 +24,9 @@
   "author": "Dmitriy1921",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dmitiry1921/VK-Dark/issues"
+    "url": "https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4"
   },
-  "homepage": "https://github.com/Dmitiry1921/VK-Dark#readme",
+  "homepage": "https://github.com/Dmitiry1921/VK-Dark/blob/master/README.md",
   "updateURL": "https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.meta.js",
   "downloadURL": "https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js",
   "icon": "https://github.com/Dmitiry1921/VK-Dark/raw/master/src/icon.svg",
