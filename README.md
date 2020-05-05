@@ -9,7 +9,7 @@
 **Установка**
 Возможно, вам будет интересно, сможете ли вы установить себе такой же? Конечно! Для этого нужно несколько простых вещей:
 
-1.	Установка расширения [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo "Tampermonkey")
+1.	Установка [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo "Tampermonkey")
 На официальном сайте нажимаем кнопку «скачать», после чего вы будите перенаправлены на каталог расширений для вашего браузера
 ![](https://pp.userapi.com/c840331/v840331406/88af7/u8G9_CHTVL4.jpg)
 2. После установки переходим к скачиванию самих файлов темного дизайна [VK Dark](https://github.com/Dmitiry1921/VK-Dark/releases "VK Dark")
