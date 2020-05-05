@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.16
+// @version      0.1.17
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -21,4 +21,5 @@
 // @grant        GM_unregisterMenuCommand
 // @grant        GM_openInTab
 // @run-at       document-end
+// @license      MIT
 // ==/UserScript==
