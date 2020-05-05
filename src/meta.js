@@ -21,5 +21,5 @@
 // @grant        GM_unregisterMenuCommand
 // @grant        GM_openInTab
 // @run-at       document-end
-// @license      MIT
+// @license MIT
 // ==/UserScript==
