@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.19
+// @version      0.1.15
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -14,6 +14,8 @@
 // @include      https://new.broadcast.vkforms.ru/*
 // @include      https://poll.vip243.vkforms.ru/*
 // @include      https://donate.vip243.vkforms.ru/*
+// @icon         https://github.com/Dmitiry1921/VK-Dark/raw/master/src/icon.svg
+// @icon64       https://github.com/Dmitiry1921/VK-Dark/raw/master/src/icon.svg
 // @grant        GM_addStyle
 // @grant        GM_registerMenuCommand
 // @grant        GM_unregisterMenuCommand
@@ -419,6 +421,9 @@ div.fc_tab_txt,
 }
 .anyClassName {
   border-right-color: #3b3f41 !important;
+}
+.story_feed_new_item.stories_feed_preview_item .stories_feed_preview_author .stories_feed_preview_authors_wrapper:after {
+  border-color: #b0ccda !important;
 }
 .fakeinput,
 div[contenteditable=true],
@@ -1107,7 +1112,9 @@ input.text.ts_input:focus,
 .PlaceholderSmall__title,
 .PlaceholderSmall__text,
 .Button--tertiary:not(.Button--disabled):focus,
-.Button--tertiary:not(.Button--disabled):hover {
+.Button--tertiary:not(.Button--disabled):hover,
+.im-chat-input--editing-head,
+.feed_blog_reminder_large .feed_blog_reminder_text {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1197,7 +1204,9 @@ a,
 .Link,
 .Button--tertiary,
 .Select__menu .Select__group > .Select__title,
-.Select__option {
+.Select__option,
+.feed_blog_reminder_large .feed_blog_reminder_title,
+.feed_blog_reminder_link {
   color: #b0ccda !important;
 }
 .audio_layer_container .audio_page_layout .audio_search {

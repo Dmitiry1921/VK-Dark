@@ -1,6 +1,6 @@
 {
   "name": "vk_dark",
-  "version": "0.1.19",
+  "version": "0.1.15",
   "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "build-colors": "lessc less/vkdark-colors.less css/vkdark-colors.css",
     "build-all": "lessc less/vkdark_all.less css/vkdark_all.css",
     "prebuild": "npm run build-all && npm run build-backgrounds && npm run build-borders && npm run build-colors",
-    "build": "node build.js",
+    "build": "npm --no-git-tag-version version patch && node build.js",
     "start": "npm run prebuild && npm run build && node error_checker.js"
   },
   "repository": {
@@ -29,18 +29,11 @@
   "homepage": "https://github.com/Dmitiry1921/VK-Dark#readme",
   "updateURL": "https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.meta.js",
   "downloadURL": "https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js",
+  "icon": "https://github.com/Dmitiry1921/VK-Dark/raw/master/src/icon.svg",
   "supportURL": "https://vk.com/dmitriy1921",
   "bugsLink": "https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4",
   "dependencies": {
     "css": "^2.2.4",
     "less": "^3.10.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm --no-git-tag-version version patch && npm start"
-    }
-  },
-  "devDependencies": {
-    "husky": "^4.2.5"
   }
 }

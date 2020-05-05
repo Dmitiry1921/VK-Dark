@@ -14,6 +14,8 @@
 // @include      https://new.broadcast.vkforms.ru/*
 // @include      https://poll.vip243.vkforms.ru/*
 // @include      https://donate.vip243.vkforms.ru/*
+// @icon         {{package.icon}}
+// @icon64       {{package.icon}}
 // @grant        GM_addStyle
 // @grant        GM_registerMenuCommand
 // @grant        GM_unregisterMenuCommand
