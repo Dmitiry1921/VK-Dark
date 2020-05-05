@@ -12,6 +12,7 @@
  Выберите браузер который используете:
 
 [![Google Chrome](https://github.com/Dmitiry1921/VK-Dark/raw/master/images/chrome.png)](https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo "Google Chrome") [![Safari](https://github.com/Dmitiry1921/VK-Dark/raw/master/images/safari.png)](https://apps.apple.com/us/app/tampermonkey/id1482490089 "Safari") [![Mozilla Firefox](https://github.com/Dmitiry1921/VK-Dark/raw/master/images/firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/ "Mozilla Firefox") [![Opera](https://github.com/Dmitiry1921/VK-Dark/raw/master/images/opera.png)](https://addons.opera.com/en/extensions/details/tampermonkey-beta/ "Opera") [![Microsoft Edge](https://github.com/Dmitiry1921/VK-Dark/raw/master/images/edge.png)](https://www.microsoft.com/store/apps/9NBLGGH5162S "Microsoft Edge")
+
 2. После установки переходим устаноке темного дизайна [VK Dark](https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js "VK Dark")
  Tampermonkey сразу же предложит установить его, нажимаем "Установить":
 ![](https://pp.userapi.com/c849132/v849132908/1da88e/Qn8psWiYPtc.jpg)
