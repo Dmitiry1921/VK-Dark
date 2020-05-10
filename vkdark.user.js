@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.21
+// @version      0.1.25
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -353,7 +353,9 @@ div.wdd.wdd_focused,
 .Select__option--selected,
 .Select__option:hover,
 .ui_search_new.ui_search_field_empty .ui_search_button_search,
-.disabled.selector_container {
+.disabled.selector_container,
+body.author_page_body,
+.author_page_layer {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -634,7 +636,8 @@ a.ts_search_link.active,
 .feedback_row_clickable:not(.feedback_row_touched):hover,
 .feed_row ~ .feed_row .feedback_row_clickable:not(.feedback_row_touched):hover,
 .top_notify_show_all:hover,
-body .im-page--back-btn:hover {
+body .im-page--back-btn:hover,
+.AuthorPageHeader__create:hover {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .slider .slider_amount,
@@ -682,6 +685,12 @@ body .im-page--back-btn:hover {
 }
 .im-page .im-page--center-empty {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEUAAABCBAMAAADzpgaiAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAADBQTFRFLS8w2eLr1d/p2OHq3OTs2+Ts3+fu1uDq1+Hq3ubt6O7z4Ofu2uPr3eXt4ujv5+zy4dLu0gAAANlJREFUeJzt1dENwiAQBuADjb4SJiCniS/GYZzIOEJHcAQncRRHkND2pNTjJ74Ze0l5oF852l44ohSG1XA0hE6YB2ICqWGHhWzNhP82ngMylrHxDbn4141x5Tg3fWHm48yYVOH5+J1pydW055Z3X8xiSmNqxvWmPMPTI1bO8N6UvSAzbjRFrPaTTX40dHbYbA7YpFMQmTiPjQ3Y0LXDhliMV8071y3vmtO/ISb2AjH3eaedJI/XeqfmFaNvTcw2YKN/BTG1eh0NXIa4u2BzhIT4gc0JE3pW7r0A8WQwWytMjx0AAAAASUVORK5CYII=');
+}
+.media_selector .ms_item:before {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAGdCAMAAAAln6ObAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAhNQTFRFAAAAsMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMzasMza8nTbZQAAALF0Uk5TAAmI1/C1OyCR0MB9CNP/9nHr1AqG8vHJwmBTrpYFsZsBmASrqJMD5oAuefkHSf2++sMQRiwCYyXFKXTKDOrfambilXymio7nbRVnCyLazzLo87sNXaN4lP5rOLj3Ud2NKMcXtNYv75Ac9T087HPbIfRHhUCLWe6/+838sGgjgzehtviz4MRkfxLL2TM6ROFLmkqZ0ldwuqnYzDGcXg+n5YlM4xMYoH6BetEbUCdUpEIeBAzcfgAABe9JREFUeJzd2ftD00YcAPBDW0GELygMnYotbFK1UOqjMjdwQzr3kFVndVbHZK08qoIWUGQoihsKWPGtU7YBOjfcpnN/4u6SXO57l3PiXrZ+f0iaD5d75XK5EEJy5s13uReQ3LyF+YsKiBk5hUCjqHgx2y0pMbEUcMwzcYmE8018TcIyE5dKuMzE1yVcbhW/AtlKy0j5Kts8XmIrT1shjJDKN8xzsVF9k9pqokRVnm+Nai8aawvBke06PyhYXbOQ1Yof5i4LiGZyrMX9wTE4Z9SenrteUxCNQghs2LhUQQ/AJhIqLpJwM8Bmuqt7C+MWgLcdPeH1vZPrQGfUVzRsfZe8N79xW73AbawqxiirENhg17xBYKONWwU22VgssCrMx5EXFR/yGPa+Uvft1BY56tr0wYdzaNFfxkcf73BY8ycQKVBs5y5agxrZNn5KbXdUsj3s4u8tl+wz1qJ5XkyhfZRi++X89hz4HFq+UAret3PHwQVqDSO7W790VPsfhjueoNtE/BDGOLQlSKIN4hjpcVt7G/uLojHVCGmPQaxdMV1KbZ7a0rX1zIRo6jCGbkcnsuRha5AH1lpy5CCeCODgUYamdXm6PV3Gr2MMjV/5RmPzjSw4diWO16Zqjye6oEegx5hhatksIbCbpOg2RboxalOKPBFqS8f1DIjKizj2zGZmT/T6rcYS4u/l6Acbwc9RauZzUJz+PHyZeWqbqe2QDI7KvhN5smw4Ge6ncy6W7lMDYhhb8RXvjkGE8CwsO31mCAYwBs4eqWT7IMYWa++fE54bPg9fK9jDatrChaWgB9+wKoxYxlPkMWyykKcoaS28cJGfLaXgIaXI6Oj1G5eiaB1G06AT8IqRD+xRrPZoXwPrVKTr6c4iFaWb4yWjX5gYNqW2ZsWt6Yix7eNl460bJDvqMxrkw8+NMWZslPtQWroyvJQOXR4B2C5wHOAI3U0AjAukC2e2pI0CHBZ4BWCC7q6K+4jGNXo0Eb1Oi7shcIgv64NDqE55FuKHPim5adjNHKlJdS5qHXVK4ycGYGBC7RFy0nfLYZkbTYW3VQrRPrypWNWwc94pZ++DFbJVs1lr2CtZyR1q31ZJFmULk1XyWpu03wW4U43lwNnuRMG9fOlinIkBLG7OrcdWydZKMCxnN2lcybiMnQZ+J51svu0G10oJt8Sp9S8nSrR/3/ODatkfbtAsyUF6W30uusHtRDX5nNDISUVx/LfQyPMQ26j1zJKYnJr2T09NYqocNee14Ci6uUZhcCZdn54ZhFFxbnCwj9TRB2nfYNDOYQpmCLnPOmgGpjhOQ9rCNExz9LPJ9z5MVdEJ2C+lJEMPWnFKI0+qSZynUToLXLq2nvoWaduezdGre+hrlwfPWl0oP/7/lH0O1KZ04iu4CtoUT634kTx0p+6lBS45v7nBQ35y/bz+rsBUDSntyCk7QW6lBM76Vq6CYgjndeHn6+Sj81d+ueJ+hP4BEw+y8Bpb+6lmda/cy1rUB0r5r2GtjbWopHIa5ibDIxn2+cJJ2X7td9244eqXNexqJqTZFZZw+hrbXptGNPe7I1uwX1g/eRWiF89LfA7yj4kEY3y2AtD0yAsgLlWLxxx4Wgw7USVI3ebPyFJUefza40wp4nTSQZkfa5wjEas2rZzDuAaLNSkvD2rwED3uWKlgGUCsh5WGrDIAsMKoA07ZaL7ZEunD2Gr2ZUiN5GJwvHjQR8KlU04kod/U19LsiBrjc5P5geUB/zrTaPX5/hhTC3nXFlyQbi5jF10PTtwLsKv4sIxJOlM9JkfLJLwO8ITu0hI+BpcX1dPK8/eWEvQvWetH1dmLTpR/a1F8aaPRKHWIZT3aPsvoiM5GUqnIrPRN7emI2Z6Rp8hivJUxW6MsXaj6jye0D0Z4DrPGlQ00jLLF5qyFEQPpxYzSfcTCFE95GdgnE4EhUvBw+QhCfroREVRQiN5JBvKCzCpZ1bcbpau8vpn6DsmOqHkghqJ9byLD9+Z14z9w5tZGdfuf4VW7XMdjd+54FVde20y1Q/4EU0GDeuX6MnYAAAAASUVORK5CYII=');
+}
+.media_selector .ms_item.ms_item_article:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24'%3E%3Crect id='backgroundrect' width='100%25' height='100%25' x='0' y='0' fill='none' stroke='none'/%3E%3Cg class='currentLayer' style=''%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath d='m0 0h24v24h-24z' id='svg_2' class='' opacity='0'/%3E%3Cpath d='m8 6v7c0 .5522847-.44771525 1-1 1s-1-.4477153-1-1v-7h-2c-.55228475 0-1-.44771525-1-1 0-.55228475.44771525-1 1-1h6c.5522847 0 1 .44771525 1 1 0 .55228475-.4477153 1-1 1zm4 6h8c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1h-8c-.5522847 0-1-.4477153-1-1s.4477153-1 1-1zm2-5h6c.5522847 0 1 .44771525 1 1s-.4477153 1-1 1h-6c-.5522847 0-1-.44771525-1-1s.4477153-1 1-1zm-8 10h14c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1h-14c-.55228475 0-1-.4477153-1-1s.44771525-1 1-1z' fill='%23b0ccda' id='svg_3' class='selected' fill-opacity='1'/%3E%3C/g%3E%3C/svg%3E") !important;
 }
 *::-webkit-scrollbar-thumb {
   border-radius: 50px;
@@ -993,7 +1002,10 @@ div.wdd.wdd_focused,
 .Select--opened .Select__control,
 .Select__menu,
 .im-navigation__button,
-.wpost_post {
+.wpost_post,
+.poster__btns-wrapper,
+.poster__toolbar-wrapper,
+.AuthorPageHeader__create {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -1333,7 +1345,8 @@ input.text.ts_input:focus,
 .search_filter_open,
 .search_filter_shut,
 .photos_container_edit_grid .photos_photo_edit_row_desc_placeholder,
-.photos_album_intro h1 {
+.photos_album_intro h1,
+.author_page_article_title {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1403,7 +1416,8 @@ a,
 .im-mess .im-mess--btn,
 .post_suggest .post_suggest__action_text,
 .wddi_text,
-.friends_import_header {
+.friends_import_header,
+.AuthorPageHeader__create {
   color: #b0ccda !important;
 }
 `;
