@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.18
+// @version      0.1.21
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -33,7 +33,657 @@ GM_registerMenuCommand('Check Update', () => {
 GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
-const css = `*::-webkit-scrollbar-thumb {
+const css = `*::-webkit-scrollbar {
+  width: 5px;
+  max-height: 5px;
+}
+.ui_search_new.ui_search_btn_large .ui_search_button_search,
+.ui_search_new.ui_search_dark .ui_search_button_search,
+.ui_search_new.ui_search_field_empty .ui_search_button_search {
+  margin-left: 1px;
+}
+.im-page_classic.im-page .im-page--chat-input,
+.im-page .im-page--history {
+  margin-left: 0 !important;
+}
+.page_photos_module,
+.page_square_photo {
+  height: 135px;
+}
+.page_photos_module {
+  padding: 5px;
+}
+.page_square_photo {
+  width: 135px;
+}
+.audio_page_player .audio_page_player_title {
+  color: inherit;
+}
+.audio_layer_container .audio_page_layout .audio_search {
+  margin: -1px 20px 10px;
+}
+.im-mess.im-mess_selected:last-child:before,
+.im-mess.im-mess_unread:last-child:before {
+  content: none !important;
+}
+.page_block._audio_page_content_block:before,
+.audio_page_layout .audio_block:before,
+.im-aside-notice,
+.im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner,
+.media_voting,
+.im-page_classic .im-page--chat-header-in {
+  box-shadow: 0 0 0 1px #242424 !important;
+}
+.im-page_classic.im-page .im-page--dialogs-search,
+.CatalogBlock--divided:before {
+  box-shadow: 0 0 0 1px #1a1a1a !important;
+}
+.im-page_classic.im-page .im-page--chat-body-abs,
+.im-page_classic.im-page .im-page--chat-input .im-chat-input,
+.im-page_classic.im-page .im-page--dialogs-footer,
+.Button--mobile {
+  box-shadow: 0 1px 0 0 #1a1a1a, 0 0 0 1px #1a1a1a !important;
+}
+.im-mess.im-mess_selected + .im-mess:before,
+.im-mess.im-mess_unread + .im-mess:before {
+  height: 0 !important;
+}
+.CatalogBlock--divided:before,
+.Mailings_desktop .GroupPage__footer,
+.top_notify_cont ._notify_unread .feed_row:first-child .feedback_row_wrap,
+.page_block,
+.mv_info,
+.CatalogBlock--divided:first-child:before,
+.CatalogSection:first-child:before {
+  box-shadow: none;
+}
+.post_top_info_wall_guide,
+.post_top_info_wall_mention,
+.post_top_info_wall_reply,
+.im-create.im-create_classic .im-create--table,
+.Panel_block_2RPF-,
+.Page_contentPanel_3WDOJ {
+  box-shadow: 0 1px 0 0 #242424, 0 0 0 1px #242424 !important;
+}
+.page_square_photo {
+  margin: 0;
+}
+.im-chat-input--scroll,
+.im-replied {
+  border-radius: 5px;
+}
+.im-chat-input--scroll .im-fwd.im-fwd_msg {
+  padding: 5px 7px;
+}
+.chat_cont_sh_bottom,
+.chat_cont_sh_top {
+  background: linear-gradient(180deg, rgba(216, 223, 230, 0), #3b3f41 80%) !important;
+}
+.audio_page_player2.audio_page_player_fixed,
+.audio_layer_container .audio_page_player_wrap {
+  box-shadow: 0 5px 10px #242424 !important;
+}
+#ads_left,
+.trg-b-banner,
+.feed_row ._ads_block_data_w.mailru-visibility-check {
+  display: none !important;
+}
+.audio_page_player_title_performer a,
+.audio_pl_snippet2 .audio_pl_snippet__info_title,
+.audio_row .audio_row__performers a,
+.audio_pl_snippet_info_maintitle {
+  color: #e82f94 !important;
+}
+.audio-msg-track .slider .slider_amount {
+  background: transparent !important;
+}
+.ChatSettingsInfo {
+  box-shadow: 0 1px 0 #242424 !important;
+}
+.List--border,
+.ChatSettingsMembersWidget {
+  box-shadow: 0 1px 0 #242424, 0 -1px 0 #242424 !important;
+}
+.page_list_module .line_cell .desc_info,
+.page_list_module .line_cell .extra_info,
+.page_list_module .line_cell .info {
+  padding: 4px 0 0 7px;
+}
+.poster__slider-arrow._right {
+  box-shadow: -5px 0 5px 0 #3b3f41 !important;
+}
+.poster__slider-arrow._left {
+  box-shadow: 5px 0 5px 0 #3b3f41 !important;
+}
+.chats_sp.fc_clist_search_icon {
+  margin: 10px 7px 0 0 !important;
+}
+.post_top_info_ads_group_members {
+  box-shadow: 0 0 0 1px #242424, 0 1px 0 0 #242424 !important;
+}
+.ui_rmenu_count {
+  float: left;
+  padding: 1px 0;
+}
+.im-page .im-page--dialogs {
+  float: right !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.im-page .im-page--history {
+  margin-right: 317px;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.im-create.im-create_material {
+  right: 0;
+  position: absolute;
+}
+.wall_module .post {
+  padding-top: 3px;
+}
+.fakeinput,
+div[contenteditable=true],
+input.big_text,
+input.search,
+input.text,
+textarea,
+.page_media_poll_wrap,
+.ui_tabs.ui_tabs_box,
+*::-webkit-scrollbar-track-piece,
+.im-page--chat-header,
+.tabbed_box .summary_tab .summary_tab3:hover,
+.tabbed_box .summary_tab_sel .summary_tab3:hover,
+.tabbed_box .summary_tab_sel a:hover,
+.tabbed_box .summary_tab a:hover,
+.friends_import_row:hover,
+.audio_pl_snippet,
+div.fc_tab_txt,
+.ui_tabs_header,
+.wdd_text,
+.wall_module .reply_form,
+.im-mess.im-mess_gift {
+  background: none !important;
+}
+body,
+.im-page_classic.im-page .im-chat-history-resize,
+.im-create,
+#profile_groups_link:hover {
+  background-color: #1a1a1a !important;
+}
+*::-webkit-scrollbar,
+.article_ed_layer,
+.article_layer,
+.article,
+.photos_container_edit_grid .photos_photo_edit_row,
+.pe_filter_thumb.pe_filter_selected,
+.pe_actions,
+.page_actions_wrap,
+#top_profile_menu,
+.piechart_col_header th,
+.ui_scroll_default_theme > .ui_scroll_bar_container > .ui_scroll_bar_outer > .ui_scroll_bar_inner,
+.audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_slide,
+.photos_choose_upload_area,
+.web_cam_photo,
+.photos_choose_bottom,
+.deep_active .replies .reply_field_wrap .reply_field,
+.deep_active .replies .wl_reply_form_wrap .reply_field_wrap .reply_field,
+.deep_active.wall_module .replies .reply_field_wrap .reply_field,
+.deep_active.wall_module .replies .wl_reply_form_wrap .reply_field_wrap .reply_field,
+.deep_active.wall_module .wl_replies_block_wrap .reply_field_wrap .reply_field,
+.deep_active.wall_module .wl_replies_block_wrap .wl_reply_form_wrap .reply_field_wrap .reply_field,
+.deep_active .wl_replies_block_wrap .reply_field_wrap .reply_field,
+.deep_active .wl_replies_block_wrap .wl_reply_form_wrap .reply_field_wrap .reply_field,
+#mv_comments_header,
+.gifts_box_header,
+.gifts_constr_preview,
+.wk_voting_option_bar,
+.result_list ul li.active,
+.selector_container,
+.result_list ul,
+.summary_tab2:hover,
+input.dark,
+.sticker_hints_tt,
+.deep_active .replies .reply_fakebox,
+.like_share_emoji_wrap div[contenteditable=true],
+.tt_default,
+.tt_default_right,
+.AudioPlaylistSnippet,
+.ActionsMenu__inner,
+.ui_actions_menu,
+.ms_items_more,
+.media_link__label,
+.feed_friends_recomm .ui_gallery_item:first-child,
+.privacy_dropdown .header,
+.privacy_dropdown .body,
+.privacy_dropdown .l_item,
+.privacy_dropdown .l_item_sel,
+.Dropdown__in,
+.emoji_tabs,
+.emoji_bg,
+.video_choose_upload_area,
+.video_add_external,
+.video_choosebox_bottom,
+.im-to-end:focus .im-to-end__button,
+.im-to-end:hover .im-to-end__button,
+.im-to-end__button,
+.links-list__item:hover,
+.PopupHeader,
+.ChatSettingsMembersWidget__add:before,
+.im_stickers_my_tip,
+.medadd_c_linkcon,
+.scrollbar_inner,
+.scrollbar_hovered,
+.scrollbar_inner:hover,
+.friends_cur_filters .token,
+.idd_popup .idd_items_content,
+.idd_popup .idd_header_wrap,
+.audio_pl_edit_box .ape_cover,
+#audio_status_tt .audio_status_sep,
+.audio_row__more_actions .audio_row__more_action:hover,
+#groups_menu_items .groups_edit_menu_items .groups_edit_menu_item .groups_edit_menu_item_line,
+.market_item_photo_container,
+.market_comments_header:hover,
+.market_comments_header,
+.wke_b:hover,
+.mv_desc .can_edit:hover,
+.EditableLabel:hover .EditableLabel__text,
+.MainActions_action_3owFz:after,
+.MainStatus_button_1p4_4,
+.Button_block_2bjH0.Button_secondary_3vjw8,
+.Card__hr,
+.wddi_over,
+.im-page.im-page_classic.im-page_group .im-group-online,
+.media_voting_option,
+.sticker_hints_arrow.sticker_left,
+.sticker_hints_arrow.sticker_right,
+.mv_info .ui_rmenu,
+.bd_arrow,
+.bd_day_head,
+.msg,
+input.text.ts_input,
+.poster__change-bkg-btn,
+input.text.ts_input:focus,
+.audio_pl_edit_box .ape_add_audios_btn:hover,
+.audio_pl_edit_box .ape_add_pl_audios_btn:hover,
+.docs_choose_rows .docs_item:hover,
+.docs_choose_upload_area,
+.docs_choose_upload_area:hover,
+.button_gray button.hover,
+.button_gray button:hover,
+.flat_button.secondary.hover,
+.flat_button.secondary:hover,
+textarea,
+.pv_cont .pv_can_edit:hover,
+em.ts_clist_hl,
+.audio_w_covers .audio_row.ui_gridsorter_moveable .audio_row_content,
+.ui_search_sugg_list,
+.im-page .im-page--history-new-bar:after,
+.im-page .im-page--history-new-bar:before,
+.ListItem--border:before,
+.replies_open,
+.wr_header,
+.wall_module .page_media_thumbed_link,
+.button_gray button,
+.flat_button.secondary,
+.im_stickers_bl_wrap,
+.ap_layer_wrap .ap_layer__content,
+div.wdd,
+div.wdd.wdd_focused,
+.ui_search_new .ui_search_input_inner,
+.ui_search_new.ui_search_dark .ui_search_input_inner,
+.payments_money_transfer_comment,
+.payments_money_transfer_amount,
+.im_stickers_buy_header,
+.im-page .im-page--top-date-bar,
+#mail_box_editable,
+.im-mess .im-mess--post,
+.feedback_row_answer,
+.payments_money_transfer_amount_wrap,
+.top_notify_show_all,
+.im-mess.im-mess_light,
+.bd_day_cell.holiday,
+.settings_separated_row + .settings_separated_row:after,
+.ui_search_new.ui_search_btn_large .ui_search_button_search,
+.ui_search_new.ui_search_dark .ui_search_button_search,
+.stories_link,
+.CatalogBlock__separator,
+.Button--tertiary:not(.Button--disabled):focus,
+.Button--tertiary:not(.Button--disabled):hover,
+.Select__option--selected,
+.Select__option:hover,
+.ui_search_new.ui_search_field_empty .ui_search_button_search,
+.disabled.selector_container {
+  background-color: #242424 !important;
+}
+.im-create .im-create--tabs,
+.ui_rmenu_item:hover,
+.ui_rmenu_subitem:hover,
+.ui_rmenu_item_sel,
+.ui_rmenu_item_sel:hover,
+.poster__toolbar,
+.poster__slider-arrow,
+.apps_i_wrap,
+.apps_i_policy,
+.apps_options_bar,
+.apps_footer,
+.audio_pl_snippet2,
+#fc_contacts,
+.fc_content,
+.chat_onl_inner,
+.fc_tab,
+.fc_tab_notify,
+#wk_box,
+.pv_author_block,
+.faq_tabs.ui_tabs,
+.tickets_post_field,
+.owner_photo_additional,
+.MessageForward__content,
+.article_ed_layer .article_ed_layer__header,
+.article_layer .article_layer__content_footer,
+.pe_tabs_panel,
+.photo_upload_separator,
+.wall_module .reply_fakebox,
+.tickets_header,
+.box_msg,
+.box_msg_gray,
+.result_list ul li.active,
+.selector_container td.selector .token_inner,
+.selector_container td.selector .token_prefix,
+.emoji_sticker_item.over,
+.emoji_sticker_item:hover,
+.im-page--toolsw,
+.AudioPlaylistSnippet .ActionButton--shuffle:hover,
+.im-chat-input,
+.ActionsMenu__item--hover,
+.ActionsMenu__item:hover,
+.ui_actions_menu_item:hover,
+.media_selector .ms_items_more .ms_item:hover,
+.notify_sources_tt_content .content:not(:hover) .line_cell.selected,
+.notify_sources_tt_content .line_cell:hover,
+.wall_module:not(.search_results) .post--with-likes:not(.post_copy):not(.post_btl):not(.post_wf):not(.post_fr_likes) .wall_text .media_link:last-child,
+.privacy_dropdown .item_sel,
+.privacy_dropdown .item_sel_plus,
+.privacy_dropdown .l_header,
+.privacy_dropdown .l_header .l_header_label,
+.privacy_dropdown .l_item:hover,
+.privacy_dropdown .l_item_sel:hover,
+.Dropdown__item:hover,
+.mention_tt_actions,
+.emoji_tt_wrap,
+.emoji_tab_sel,
+.emoji_tab_sel:hover,
+.emoji_tab:hover,
+.emoji_tabs_l_s:hover,
+.emoji_tabs_r_s:hover,
+.emoji_tabs_l_s,
+.emoji_tabs_r_s,
+.emoji_shop:hover,
+.emoji_cat_title,
+.im_sticker_bl,
+.ui_search_fltr,
+.idd_popup .idd_item.idd_hl,
+#apps_layer .apps_header_wrapper,
+#groups_menu_items .groups_edit_menu_items .group_apps_list_row_drag_wrapper,
+.ui_ownblock:hover,
+.market_item_content,
+.bookmark_footer,
+.wl_post_reply_form_forbidden,
+.wpost_post,
+.wke_controls,
+.wke_page_title_cont,
+.pages_header_info,
+.pages_history_header_wrap,
+#mv_pl_tt .mv_tt_add_playlist:hover,
+#mv_pl_tt .mv_tt_add_playlist,
+.Panel_block_2RPF-,
+.TopMenu_block_1KqlS,
+.Panel_footer_epjyB,
+.Panel_header_2eRoj,
+.Page_contentPanel_3WDOJ,
+.Mailings_desktop .GroupPage__footer,
+.Button--secondary__29JKy,
+.DesktopRoot,
+.Card,
+.wddi,
+.im-aside-notice,
+.im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner,
+.media_voting,
+.audio_row__more_actions .audio_row__more_action,
+.im-page_classic.im-page .im-page--dcontent,
+.submit_post,
+.im_stickers_store_wrap .ui_tabs,
+.page_block_header,
+div.fc_clist_filter_wrap,
+.flat_button.ui_load_more_btn,
+.settings_block_footer,
+.mv_info,
+.top_profile_mrow:hover,
+.photos_period_delimiter_fixed,
+.tabbed_box .summary_tab_sel .summary_tab2,
+.audio_pl_edit_box .ape_header,
+.group_l_row,
+.audio_layer_container .audio_page_player,
+.box_body,
+.fc_msgs_unread,
+.pv_cont .narrow_column,
+.box_body .im_stickers_store_wrap .ui_tabs,
+.ap_layer .audio_pl_snippet .audio_pl_snippet__header_inner,
+.audio_pl_snippet .audio_pl_snippet__header,
+.photos_container .photos_row,
+.box_controls,
+.ts_cont_wrap,
+.feedback_row_wrap.unread:not(.feedback_row_touched),
+.pv_white_bg,
+.pva_period_fixed,
+.wk_history_tabs,
+.ChatSettings__content,
+.ChatSettingsInfo,
+.List,
+.ChatSettingsMembersWidget,
+.Button--mobile,
+.ChatSettingsInvitationLink,
+.ChatSettingsResetInvitationLink__text,
+.SubmitArea,
+.audio_pl_snippet2 .audio_shuffle_all_button:hover,
+.audio_page_layout .audio_page_separator,
+input.BlockSearchInput,
+.photos_container_edit_grid .photos_photo_edit_row_desc_placeholder,
+.online.mobile:after,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered .nim-dialog--photo .online.mobile:after,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic .nim-dialog--photo .online.mobile:after,
+.nim-dialog:not(.nim-dialog_deleted):hover .nim-dialog--photo .online.mobile:after,
+.stl_active.over_fast #stl_bg,
+.wall_module .post_like:hover,
+.wall_module .post_reply:hover,
+.wall_module .post_share:hover,
+.audio_row:hover:not(.audio_row__current) .audio_row_content,
+.left_count_wrap,
+.mail_box_cont,
+#group_apps_list .group_apps_list_rows .group_apps_list_row .group_apps_edit,
+.apps_i_panel,
+.page_status_editor .editor,
+.im-page-pinned,
+.box_title_wrap.box_grey,
+.eltt,
+.bd_day_cell,
+.im-chat-input--scroll,
+#top_notify_wrap,
+.im-mess.im-mess_selected + .im-mess:before,
+.im-mess.im-mess_unread + .im-mess:before,
+.im-chat-input .im-chat-input--txt-wrap,
+#side_bar ol li .left_row:hover,
+.info_msg,
+.audio_pl_edit_box .ape_add_pl_audios_btn,
+#mv_publish,
+.audio_pl_edit_box .ape_list_header,
+.thumbed_link__thumb,
+.thumbed_link--chat-invitation,
+.thumbed_link__label,
+.im-page_classic.im-page .im-chat-history-resize,
+.im-create,
+.deep_active .replies .reply_box_inner_wrap.fixed,
+.deep_active.wall_module .replies .reply_box_inner_wrap.fixed,
+.deep_active.wall_module .wl_replies_block_wrap .reply_box_inner_wrap.fixed,
+.deep_active .wl_replies_block_wrap .reply_box_inner_wrap.fixed,
+.Select--opened .Select__control,
+.Select__menu {
+  background-color: #3b3f41 !important;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #e7e8ec !important;
+}
+.page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
+.page_actions_header,
+.page_actions_item:hover:not(.grey_hoverable),
+.tu_last:hover,
+.im-page .im-page--mess-search,
+.gifts_constr_option:hover,
+.audio_pl_edit_box .ape_pl_item:hover,
+.im-mess.im-mess_selected:last-child:before,
+.im-mess.im-mess_unread:last-child:before,
+*::-webkit-scrollbar-thumb,
+.audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_back,
+.audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_slide,
+.audio_page_player2 .audio_page_player_volume_slider.slider.slider_size_1 .slider_slide {
+  background-color: #626568 !important;
+}
+#page_header_cont .back,
+.fc_tab_head,
+.box_title_wrap,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected,
+.page_block,
+.im-page_classic .im-page--chat-header .im-page--toolsw,
+.audio_page_player2 .audio_page_player_status.audio_page_player_btn_enabled .btn_icon,
+.audio_page_layout .audio_search_wrapper,
+.audio_page_layout .has_friends_block .audio_page__rows_wrap,
+.audio_page_layout .audio_friends_list,
+.audio_page_player.audio_page_player_fixed,
+.audio_page_player2.audio_page_player_fixed,
+.flat_button.secondary_dark,
+.ui_search,
+.ui_grey_block,
+.im-page .im-page--history-new-bar,
+.im-page .im-page--history-new-bar > span,
+.im-page_classic.im-page .im-page--chat-body-wrap-inner,
+.im-page_classic.im-page .im-page--chat-input .im-chat-input,
+.CatalogBlock--divided,
+.profile_info_header,
+.profile_info_edit,
+.im-create .im-create--table > div,
+.Input[readonly],
+.help_table_question_visible,
+.wall_module .reply_fakebox_wrap,
+.wall_module .reply_box,
+.language_box_row:hover,
+.tickets_thank_you_form,
+.CatalogSection,
+.im-navigation--to-end .im-navigation__button,
+.search_filters_minimized_text,
+.friends_search_filters,
+.friends_search_import,
+.photos_edit_selection_header {
+  background-color: #2d2f30 !important;
+}
+.top_audio_play__button,
+.top_audio_play__button:hover,
+.top_audio_play__button:hover:before,
+.top_audio_play__button:before {
+  background-color: #ffffff !important;
+}
+a.fc_contact_over,
+.chat_tab_wrap:hover,
+.ui_search_sugg_list .ui_search_suggestion_selected,
+.nim-dialog.nim-dialog_classic.nim-dialog_unread-out .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_hovered.nim-dialog_unread-out .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_hovered.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic.nim-dialog_unread-out .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted):hover.nim-dialog_unread-out .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted):hover.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
+.audio_layer_container .audio_friend:hover,
+.audio_page__shuffle_all .audio_page__shuffle_all_button:hover,
+.im-mess.im-mess_selected:not(.im-mess_is_editing),
+.im-mess.im-mess_selected:not(.im-mess_is_editing):hover,
+.my_current_info:hover,
+.no_current_info:hover,
+.profile_more_info_link:hover,
+.audio_row.audio_row__current .audio_row_content,
+.tabbed_box .summary_tab_sel a:hover,
+.tabbed_box .summary_tab a:hover,
+.top_notify_cont .feedback_row:not(.dld).hover,
+.top_notify_cont .feedback_row:not(.dld):hover,
+a.ts_contact.active,
+a.ts_search_link.active,
+.ListItem--active,
+.ListItem--can-be-hovered.ListItem--selectable:hover,
+.article_ed_layer .article_ed_layer__list_item:not(.article_ed_layer__list_item_current):hover,
+.media_voting_can_vote.media_voting_clickable_option .media_voting_option_wrap:not(.media_voting_option_selected):hover .media_voting_option,
+.im-mess.im-mess_unread:not(.im-mess_light),
+.feed_new_posts:hover,
+.pv_like:hover,
+.im-replied,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic,
+.nim-dialog:not(.nim-dialog_deleted):hover,
+.im_msg_audiomsg .audio-msg-track:not(.audio-msg-player):hover,
+.flat_button.ui_load_more_btn:hover,
+.im-mess.im-mess_search:hover,
+.olist_item_wrap:hover,
+.feedback_row_clickable:not(.feedback_row_touched):hover,
+.feed_row ~ .feed_row .feedback_row_clickable:not(.feedback_row_touched):hover,
+.top_notify_show_all:hover,
+body .im-page--back-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+.slider .slider_amount,
+.slider .slider_handler,
+.audio_page_player2 .audio_page_player_play .icon,
+.audio-msg-track .audio-msg-track--btn {
+  background-color: #e82f94 !important;
+}
+.audio-msg-track .audio-msg-track--wave-wrapper .audio-msg-track--wave path {
+  stroke: #e82f94 !important;
+}
+.slider .slider_back {
+  background-color: #A9B7C5 !important;
+}
+.top_nav_btn.active,
+.top_nav_btn:hover,
+.top_audio_player:hover,
+.top_nav_link:hover,
+.top_nav_link.active {
+  background-color: rgba(36, 36, 36, 0.5) !important;
+}
+.top_nav_btn#top_notify_btn .top_nav_btn_icon,
+.top_nav_btn#top_notify_btn:hover .top_nav_btn_icon {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"20"%20height%3D"20"%20viewBox%3D"0%200%2020%2020"><path%20fill%3D"%23fff"%20fill-rule%3D"evenodd"%20d%3D"M8%2C18%20C6.64583333%2C18%205.5%2C17.3%205.5%2C16%20L10.5%2C16%20C10.5%2C17.3%209.35416667%2C18%208%2C18%20Z%20M13.9956933%2C11%20C13.9956933%2C12.5%2016%2C12.5%2016%2C13.5%20C16%2C14%2016%2C15%2013.8955984%2C15%20L1.98430985%2C15%20C-6.19060359e-13%2C15%20-1.62536651e-13%2C14%20-1.63424829e-13%2C13.5%20C-1.63369318e-13%2C12.5%201.98430985%2C12.5%202%2C11%20L2%2C8%20C2%2C4%204.09724901%2C1.5%207%2C1.1%20L7%2C1%20C7%2C0.4%207.5%2C5.74053187e-17%208%2C0%20C8.5%2C0%209%2C0.4%209%2C1%20L9%2C1.1%20C11.902751%2C1.5%2013.9956933%2C4%2013.9956933%2C8%20L13.9956933%2C11%20Z"%20transform%3D"translate(2%201)"%2F><%2Fsvg>');
+}
+.top_nav_btn#top_audio .top_nav_btn_icon,
+.top_nav_btn#top_audio:hover .top_nav_btn_icon {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"20"%20height%3D"20"%20viewBox%3D"0%200%2020%2020"><path%20fill%3D"%23fff"%20fill-rule%3D"evenodd"%20d%3D"M14%2C11.1552322%20L14%2C5.5%20L7%2C7.5%20L7%2C15.2999878%20C7%2C15.2999878%206.99923979%2C15.2998738%206.99774901%2C15.2996427%20C6.99305423%2C16.449672%205.98201611%2C17.5525634%204.53840209%2C17.8858479%20C2.90786903%2C18.2622862%201.34293783%2C17.5143682%201.04303041%2C16.2153265%20C0.743122996%2C14.9162848%201.82180821%2C13.5580399%203.45234127%2C13.1816017%20C3.98965862%2C13.0575522%204.51985206%2C13.0556001%205%2C13.1552322%20L5%2C3.9955775%20C5%2C3.44483697%205.42843442%2C2.88315425%205.95693506%2C2.73901771%20L15.0430649%2C0.26098229%20C15.568787%2C0.117603555%2016%2C0.447563354%2016%2C0.999660731%20L16%2C13.2999878%20C15.999253%2C13.2998718%2015.9985027%2C13.2997528%2015.9977491%2C13.2996309%20C15.9930612%2C14.4496644%2014.9820211%2C15.5525622%2013.5384021%2C15.8858479%20C11.907869%2C16.2622862%2010.3429378%2C15.5143682%2010.0430304%2C14.2153265%20C9.743123%2C12.9162848%2010.8218082%2C11.5580399%2012.4523413%2C11.1816017%20C12.9896586%2C11.0575522%2013.5198521%2C11.0556001%2014%2C11.1552322%20Z"%20transform%3D"translate(1%201)"%2F><%2Fsvg>');
+}
+.im-page--back-btn {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2216%22%20viewBox%3D%220%200%209%2016%22%20width%3D%229%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m8%2015.9c-.2%200-.4-.1-.6-.3l-7-7c-.3-.3-.3-.9%200-1.2l7-7c.3-.3.9-.3%201.2%200s.3.9%200%201.2l-6.4%206.4%206.4%206.4c.3.3.3.9%200%201.2-.2.2-.4.3-.6.3z%22%20fill%3D%22%23828a99%22%20opacity%3D%22.7%22%2F%3E%3C%2Fsvg%3E") !important;
+}
+#side_bar .left_icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='1071' style=''%3E%3Crect id='backgroundrect' width='100%25' height='100%25' x='0' y='0' fill='none' stroke='none'/%3E%3Cg class='currentLayer' style=''%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cg fill='%23b0ccda' id='svg_1' class='' fill-opacity='1'%3E%3Cpath d='M3.34 908.66a8 8 0 1111.32-11.32 8 8 0 01-11.32 11.32zm3.54-3.54a11.98 11.98 0 011.92 2.35c.32.46.8.47 1.12.03 0 0 1.9-1.67-.92-4.5-2.83-2.83-4.5-.92-4.5-.92-.46.28-.43.81.03 1.12 0 0 .93.5 2.35 1.92zm3.72-1.97c.32.46 1.12.44 1.8-.04.68-.47.97-1.22.66-1.68-.32-.45-1.13-.43-1.8.04-.68.48-.98 1.23-.66 1.68zm.8 2.28c.18.35.74.44 1.28.19s.83-.74.67-1.1c-.17-.36-.74-.44-1.27-.2-.54.26-.84.75-.67 1.1zm-4.85-4.86c.36.17.85-.13 1.1-.67s.16-1.1-.2-1.27c-.35-.17-.84.13-1.1.67-.24.53-.15 1.1.2 1.27zm2.3.83c.45.32 1.2.02 1.68-.65.47-.68.49-1.49.04-1.8-.46-.32-1.2-.03-1.68.65s-.5 1.48-.04 1.8zm.14-34.4a8 8 0 017.58 5.42 7.99 7.99 0 01-5 10.15c-.83.29-1.7.43-2.58.43a7.91 7.91 0 01-3.52-.83 7.94 7.94 0 01-4.04-4.6 7.99 7.99 0 015-10.14 7.96 7.96 0 012.56-.43zm.78 1.76c-3.27 2.49-3.5 5.31-3.5 6.12v.19l.18.05a3.76 3.76 0 001.19.21c.33 0 .65-.05.94-.16l.16-.06.01-.17c.09-1.13.61-3.35 3.19-5.52l.3-.26-.36-.17a6.7 6.7 0 00-1.56-.53l-.11-.02-.1.07-.34.25zm-6.92 3.66l-.07.16.13.12c.4.4 1.05 1 1.81 1.53l.35.24.06-.43a8.88 8.88 0 012.62-5.1l.63-.65-.88.2a6.64 6.64 0 00-4.65 3.93zm-.24 4.48l.1.06a10.41 10.41 0 005.24 1.68h.12a5.55 5.55 0 002.93-.83l.27-.18-.23-.23a8.2 8.2 0 00-1.57-1.19l-.12-.07-.12.06a3.76 3.76 0 01-1.59.34c-1.96 0-3.88-1.43-4.85-2.29l-.4-.34-.03.52c-.07.8 0 1.6.22 2.37l.03.1zm10.14 3.61l.16-.11-.06-.19a7.24 7.24 0 00-.69-1.42l-.14-.23-.22.16a6.73 6.73 0 01-3.85 1.13 9.9 9.9 0 01-3.54-.71l-1.06-.4.78.82a6.66 6.66 0 001.92 1.42 6.6 6.6 0 002.94.7 6.67 6.67 0 003.76-1.17zm2.44-3.02l.04-.1-.04-.1c-1.28-2.93-3.22-4.1-4.26-4.52l-.22-.1-.11.22c-.46.86-.6 1.59-.64 2.04l-.02.17.14.08a8.82 8.82 0 013.64 3.99l.18.38.26-.32a6.64 6.64 0 001.03-1.74zm0-2.69l.52.75-.05-.9a6.65 6.65 0 00-.34-1.8 6.66 6.66 0 00-1.87-2.82l-.16-.14-.17.13c-.57.44-1.07.9-1.49 1.38l-.23.26.32.14c.93.45 2.3 1.33 3.46 3zm-5.27-23.79l-.92-.89-.92.9a3.57 3.57 0 01-4.93 0 3.7 3.7 0 010-5.36l5.16-4.99a1 1 0 011.38 0l5.16 4.99a3.7 3.7 0 010 5.35 3.57 3.57 0 01-4.93 0zM7 855l2-4 2 4s-1 .5-2 .5-2-.5-2-.5zm4.82-36.9c1.7-5.76-3.27-8-3.27-8-.34 2.88-2.04 3.48-3.83 5-2.97 2.52-2.71 5-2.71 5-.22 3.84 4.88 5.52 4.88 5.52-2.33-4 1.1-6 1.1-6a6.4 6.4 0 004.21 6.48c7.1-3.64 2.08-11.24 2.08-11.24-.17 2.6-2.46 3.24-2.46 3.24zM3.47 765a.5.5 0 01-.5-.47l-.41-6.6a.35.35 0 01.6-.28L6.5 761l2.19-4.37a.35.35 0 01.62 0L11.5 761l3.35-3.35a.35.35 0 01.6.27l-.42 6.61a.5.5 0 01-.5.47H3.47zm.17 1h10.72c.22 0 .3.02.38.07a.45.45 0 01.2.19c.04.08.06.16.06.38v.72c0 .22-.02.3-.07.38a.45.45 0 01-.19.2c-.08.04-.16.06-.38.06H3.64c-.22 0-.3-.02-.38-.07a.45.45 0 01-.2-.19c-.04-.08-.06-.16-.06-.38v-.72c0-.22.02-.3.07-.38a.45.45 0 01.19-.2c.08-.04.16-.06.38-.06zm13.03 24.96l.05.11c.53.6.78 1.37.78 2.14 0 .85-.32 1.7-.98 2.32v1.76a.7.7 0 01-.7.71h-1.6a.7.7 0 01-.7-.7V796H4.48v1.3a.7.7 0 01-.7.7h-1.6a.7.7 0 01-.7-.7l-.02-1.82a3.14 3.14 0 01-.96-2.33 3.22 3.22 0 01.75-2.08l.05-.11c-.83-.07-1.3-.47-1.3-.98 0-.54.63-.98 1.4-.98.2 0 .44.05.69.15l.13-.3c.43-1.16 1-2.3 1.63-2.74 2.22-1.48 8.08-1.48 10.3 0 .64.43 1.2 1.57 1.63 2.74l.13.3a2 2 0 01.7-.15c.76 0 1.39.44 1.39.98 0 .52-.48.92-1.33.98zm-12.03-3.48c-.35.25-.8 1.27-1.2 2.52h11.23c-.4-1.25-.85-2.27-1.2-2.52-1.77-1.3-7.06-1.3-8.83 0zM3.6 792c-.77 0-1.4.44-1.4.98 0 .55.53.96 1.47.98.55.01 2.02.12 2.03-.08 0-1.16-1.33-1.88-2.1-1.88zm10.8 0c-.77 0-2.1.72-2.1 1.88.01.2 1.48.1 2.03.08.94-.02 1.47-.43 1.47-.98 0-.54-.62-.98-1.4-.98zM2.97 700h4.08c.33 0 .46.04.58.1a.68.68 0 01.28.28c.07.13.1.25.1.58v4.08c0 .33-.03.45-.1.58a.68.68 0 01-.28.28c-.13.07-.25.1-.58.1H2.96c-.33 0-.46-.04-.58-.1a.68.68 0 01-.28-.28c-.07-.13-.1-.25-.1-.58v-4.08c0-.33.03-.45.1-.58a.68.68 0 01.28-.28c.13-.07.25-.1.58-.1zm0 8h4.08c.33 0 .46.04.58.1a.68.68 0 01.28.28c.07.13.1.25.1.58v4.08c0 .33-.03.45-.1.58a.68.68 0 01-.28.28c-.13.07-.25.1-.58.1H2.96c-.33 0-.46-.04-.58-.1a.68.68 0 01-.28-.28c-.07-.13-.1-.25-.1-.58v-4.08c0-.33.03-.45.1-.58a.68.68 0 01.28-.28c.13-.07.25-.1.58-.1zm8 0h4.08c.33 0 .45.04.58.1a.68.68 0 01.28.28c.06.13.1.25.1.58v4.08c0 .33-.04.45-.1.58a.68.68 0 01-.28.28c-.13.07-.25.1-.58.1h-4.08c-.33 0-.46-.04-.58-.1a.68.68 0 01-.28-.28c-.07-.13-.1-.25-.1-.58v-4.08c0-.33.03-.45.1-.58a.68.68 0 01.28-.28c.13-.07.25-.1.58-.1zm2.72-8.56l2.88 2.88c.24.24.3.35.34.48.04.13.04.27 0 .4s-.1.24-.34.48l-2.88 2.88c-.24.24-.35.3-.48.34a.68.68 0 01-.4 0c-.13-.04-.24-.1-.48-.34l-2.88-2.88c-.24-.24-.3-.35-.34-.48a.68.68 0 010-.4c.04-.13.1-.24.34-.48l2.88-2.88c.24-.24.35-.3.48-.34a.68.68 0 01.4 0c.13.04.24.1.48.34zM8 741.93A7 7 0 012.07 736H1a1 1 0 110-2h1.07A7 7 0 018 728.07V727a1 1 0 112 0v1.07a7 7 0 015.93 5.93H17a1 1 0 110 2h-1.07a7 7 0 01-5.93 5.93V743a1 1 0 11-2 0v-1.07zM9 740a5 5 0 100-10 5 5 0 000 10zm0-3a2 2 0 110-4 2 2 0 010 4zm1.71-61.11c0 1.98 2.05 3.03 3.8 7 .56 1.26 2 3.11-5.51 3.11s-6.07-1.85-5.51-3.11c1.75-3.97 3.8-5.02 3.8-7v-2.33h-.43c-.24 0-.43-.18-.43-.4v-.77c0-.22.2-.39.43-.39h4.28c.24 0 .43.17.43.39v.78c0 .21-.2.39-.43.39h-.43v2.33zm1.74 8.07c.18-.05.25-.24.19-.41a9.55 9.55 0 00-1.02-2.03c-.45-.7-.13.32-1.3.32s-2.58-2.37-3.94-.32a9.46 9.46 0 00-1.01 2.03c-.07.17 0 .36.18.4.5.15 1.5.3 3.45.3 1.95 0 2.95-.15 3.45-.3zm2.32-58.54c-.73 1.16-3.03 2.01-5.77 2.01s-5.04-.85-5.77-2c-.15-.26-.23-.12-.23 0v1.7c0 1.66 2.69 3.37 6 3.37s6-1.71 6-3.37v-1.7c0-.12-.08-.26-.23 0zm0-4.36c-.7 1.03-3.02 1.78-5.77 1.78-2.75 0-5.06-.75-5.78-1.78-.14-.21-.22-.1-.22 0v2c0 1.5 2.69 2.73 6 2.73s6-1.22 6-2.72v-2.01c0-.1-.08-.21-.23 0zM9 615.5c-3.31 0-6 1-6 2.24v1.08c0 1.31 2.69 2.38 6 2.38s6-1.07 6-2.38v-1.08c0-1.23-2.69-2.24-6-2.24z' id='svg_2' fill='%23b0ccda'/%3E%3Cpath d='M14.77 624.92c-.73 1.16-3.03 2.01-5.77 2.01s-5.04-.85-5.77-2c-.15-.26-.23-.12-.23 0v1.7C3 628.3 5.69 630 9 630s6-1.71 6-3.37v-1.7c0-.12-.08-.26-.23 0zm0-4.36c-.7 1.03-3.02 1.78-5.77 1.78-2.75 0-5.06-.75-5.78-1.78-.14-.21-.22-.1-.22 0v2c0 1.5 2.69 2.73 6 2.73s6-1.22 6-2.72v-2.01c0-.1-.08-.21-.23 0zM9 615c-3.31 0-6 1-6 2.24v1.08c0 1.31 2.69 2.38 6 2.38s6-1.07 6-2.38v-1.08c0-1.23-2.69-2.24-6-2.24zm3.94 39c.1.53.2.77.46 1H5.03c.05-1.1 3.15-3 3.15-5.5-.53.5-2.76 1.29-3.15 1.5-.07.04-1.37-.7-1.57-1-.45-.65-.47-.75-.46-.88.03-.25.32-.37.48-.46.01 0 .86-.47 1.6-1.45.32-.76.57-1.4 1.84-2.03.48-.24.95-.42 1.28-.54a8.9 8.9 0 00-.55-1.64s.89.14 1.58.54c.55.32.93.9 1.05.96.32.15.8.01 2.1 1 2.62 2 1.13 4.98 1.12 5l-.56 3.5zm-9.3 1h10.72c.22 0 .3.02.38.07a.45.45 0 01.2.19c.04.08.06.16.06.38v1.72c0 .22-.02.3-.07.38a.45.45 0 01-.19.2c-.08.04-.16.06-.38.06H3.64c-.22 0-.3-.02-.38-.07a.45.45 0 01-.2-.19c-.04-.08-.06-.16-.06-.38v-1.72c0-.22.02-.3.07-.38a.45.45 0 01.19-.2c.08-.04.16-.06.38-.06zm11.2-56.92C14.46 599.55 13.2 602 9 602s-5.46-2.45-5.84-3.92l-1.02.09L3.87 595l2.25 2.81-.93.08c.29.76 1.01 1.76 2.81 2.03v-6.1a3 3 0 112 0v6.1c1.8-.27 2.52-1.27 2.8-2.03l-.92-.08 2.25-2.81 1.73 3.16-1.02-.1zM9 592a1 1 0 100-2 1 1 0 000 2zm-7.75-30.2a1 1 0 01.9-1.07l8.98-.79a1 1 0 011.08.9l.79 8.98a1 1 0 01-.9 1.08l-8.98.78a1 1 0 01-1.08-.9l-.79-8.98zM4 564a1 1 0 100-2 1 1 0 000 2zm3 3a1 1 0 100-2 1 1 0 000 2zm3 2a1 1 0 100-2 1 1 0 000 2zm3.93-4.18l2.2.2a1 1 0 01.9 1.07l-.79 8.97a1 1 0 01-1.07.91l-8.98-.79a1 1 0 01-.9-1.07l.08-1 8.22-.71a1 1 0 00.9-1.08l-.56-6.5zM1 542.52c0-.27.21-.5.49-.5h3.02c.27 0 .49.22.49.5v3.02c0 .27-.21.49-.49.49H1.49a.49.49 0 01-.49-.5v-3.02zm5 0c0-.27.21-.5.49-.5h3.02c.27 0 .49.22.49.5v3.02c0 .27-.21.49-.49.49H6.49a.49.49 0 01-.49-.5v-3.02zm5 0c0-.27.21-.5.49-.5h3.02c.27 0 .49.22.49.5v3.02c0 .27-.21.49-.49.49h-3.02a.49.49 0 01-.49-.5v-3.02zm-5-5c0-.27.21-.5.49-.5h3.02c.27 0 .49.22.49.5v3.02c0 .27-.21.49-.49.49H6.49a.49.49 0 01-.49-.5v-3.02zm5.55-4.15a.49.49 0 010-.69l2.13-2.13a.49.49 0 01.7 0l2.13 2.13a.49.49 0 010 .7l-2.14 2.13a.49.49 0 01-.69 0l-2.13-2.14zM1 537.51c0-.27.21-.49.49-.49h3.02c.27 0 .49.22.49.5v3.02c0 .27-.21.49-.49.49H1.49a.49.49 0 01-.49-.5v-3.02zm0-5c0-.27.21-.49.49-.49h3.02c.27 0 .49.22.49.5v3.02c0 .27-.21.49-.49.49H1.49a.49.49 0 01-.49-.5v-3.02zm5.04.71a.49.49 0 01.18-.67l2.62-1.5a.49.49 0 01.67.17l1.5 2.62a.49.49 0 01-.17.67L8.22 536a.49.49 0 01-.67-.17l-1.5-2.62zm6.42 2.9a.49.49 0 01.66-.18l2.62 1.51a.49.49 0 01.18.67l-1.51 2.62a.49.49 0 01-.67.18l-2.61-1.51a.49.49 0 01-.19-.67l1.52-2.62zM5 392v4l1.5-2 1.5 2v-4h5.5a1.5 1.5 0 011.5 1.5V404H4.5a.5.5 0 00-.5.5c0 .27.22.5.5.5H15v.5a.5.5 0 01-.5.5h-10a1.5 1.5 0 01-1.5-1.5v-11c0-.83.68-1.5 1.5-1.5H5zm3.96 28h1.08c.33 0 .45.04.58.1a.68.68 0 01.28.28c.07.13.1.25.1.58v11.08c0 .33-.04.45-.1.58a.68.68 0 01-.28.28c-.13.07-.25.1-.58.1H8.96c-.33 0-.46-.04-.58-.1a.68.68 0 01-.28-.28c-.07-.13-.1-.25-.1-.58v-11.08c0-.33.03-.46.1-.58a.68.68 0 01.28-.28c.13-.07.25-.1.58-.1zm-5 6.98h1.08c.33 0 .46.04.58.1a.68.68 0 01.28.29c.07.12.1.24.1.58v4.07c0 .34-.03.46-.1.58a.68.68 0 01-.28.28c-.13.07-.25.1-.58.1H3.96c-.33 0-.46-.03-.58-.1a.68.68 0 01-.28-.28c-.07-.12-.1-.24-.1-.58v-4.07c0-.34.03-.46.1-.58a.68.68 0 01.28-.29c.13-.06.25-.1.58-.1zm10-3.98h1.08c.33 0 .45.04.58.1a.68.68 0 01.28.28c.07.13.1.25.1.58v8.08c0 .33-.04.45-.1.58a.68.68 0 01-.28.28c-.13.07-.25.1-.58.1h-1.08c-.33 0-.46-.04-.58-.1a.68.68 0 01-.28-.28c-.07-.13-.1-.25-.1-.58v-8.08c0-.33.03-.45.1-.58a.68.68 0 01.28-.28c.13-.07.25-.1.58-.1zm-3.12 90.04c.41 3.52-.27 3.26-4.03 4.87-.72.3-.97-.2-.77-.74l.65-1.75-2.11-2.1-1.75.64c-.55.2-1.04-.05-.74-.76 1.6-3.77 1.35-4.45 4.87-4.04 0 0 4.05-5.75 8.69-5.11.1.01.17.05.2.1a.36.36 0 01.1.2c.64 4.64-5.1 8.7-5.1 8.7zm.82-4.7a1.25 1.25 0 101.76-1.77 1.25 1.25 0 00-1.76 1.77zM8 455v1h3v-1h5v5.01a1 1 0 01-1 .99H4a1 1 0 01-1-.99V455h5zm-6-3.99A1 1 0 013 450h13a1 1 0 011 1.01V454H2v-2.99zM7 450H5.5l1-2h6l1 2H12l-.5-1h-4l-.5 1zm2.61-142.28l1.56 4.4h3.89a.65.65 0 01.4 1.16l-3.22 2.42 1.2 4.45a.65.65 0 01-1.02.69L9 318.22l-3.42 2.62a.65.65 0 01-1.03-.69l1.2-4.45-3.2-2.42a.65.65 0 01.39-1.17h3.89l1.56-4.39a.65.65 0 011.22 0zM4.5 258c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5zm5 0c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5zm5 0c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5zm.46 88.48L12 345v-6l2.96-1.48v-.01a.5.5 0 01.5-.51h.04c.28 0 .5.23.5.51v8.98a.5.5 0 01-.5.51h-.05a.5.5 0 01-.49-.51v-.01zM8.16 345l.6 3.78a.95.95 0 01-.8 1.09 1 1 0 01-1.12-.82L6.16 345H5a3 3 0 010-6h6v6H8.17zM10 284.5V280l5 5h-4.5a.5.5 0 01-.5-.5zM4.28 280H9v4.72c0 .44.05.6.13.77.1.16.22.29.38.38.17.08.33.13.77.13H15v6.72c0 .44-.05.6-.13.77a.9.9 0 01-.38.38c-.17.08-.33.13-.77.13H4.28c-.44 0-.6-.05-.77-.13a.9.9 0 01-.38-.38c-.08-.17-.13-.33-.13-.77v-11.44c0-.44.05-.6.13-.77a.9.9 0 01.38-.38c.17-.08.33-.13.77-.13zM15.5 142.08c.85 0 1.6.76 1.49 1.63v7.65c0 .87-.75 1.64-1.6 1.64H2.6c-.85 0-1.6-.76-1.6-1.64v-7.43c0-.87.75-1.85 1.6-1.85h1.39c.32 0 .53-.22.64-.44l.53-1.2c.1-.22.42-.44.64-.44h6.5c.32 0 .53.22.64.44l.53 1.2c.1.22.43.44.64.44h1.39zM9 151c2.17 0 4-1.83 4-4s-1.83-4-4-4-4 1.83-4 4 1.83 4 4 4zm0-6.5c1.41 0 2.5 1.09 2.5 2.5s-1.09 2.5-2.5 2.5-2.5-1.09-2.5-2.5 1.09-2.5 2.5-2.5zm4 32.32V171l-6 2v7.5l-.08-.02c.13.92-.6 1.92-1.77 2.35-1.3.47-2.64.05-3-.93-.36-1 .4-2.17 1.7-2.64a3.14 3.14 0 011.16-.2.75.75 0 010-.06v-9.04L15 167v11.5l-.08-.01c-.03.81-.68 1.66-1.68 2.08-1.27.55-2.63.2-3.04-.77-.41-.96.29-2.18 1.56-2.72a3.12 3.12 0 011.24-.26zM12 210H6v-2H4v2H3a1 1 0 01-1-1v-12a1 1 0 011-1h1v2h2v-2h6v2h2v-2h1a1 1 0 011 1v12a1 1 0 01-1 1h-1v-2h-2v2zm-6-8v-2H4v2h2zm8 0v-2h-2v2h2zm-8 4v-2H4v2h2zm8 0v-2h-2v2h2zm2.77 26.25c.1.4 1 4.54-1.6 4.75-1.09.1-2.28-1.62-3.18-2.53-.8-1-1.7-1.5-3.09-1.5s-2.19.5-3.08 1.5c-.9.91-2.1 2.63-3.09 2.53-2.49-.1-1.6-4.34-1.5-4.75.4-2.22 1.8-6.25 4.59-6.25 0 0 .9.1 1.6.5 1.19.5 1.78.5 3.08 0a5.48 5.48 0 011.6-.5c2.88 0 4.17 3.93 4.67 6.25zM11 230.5c0 .27.22.5.5.5a.5.5 0 00.5-.5.5.5 0 00-.5-.5.5.5 0 00-.5.5zm2 0c0 .27.22.5.5.5a.5.5 0 00.5-.5.5.5 0 00-.5-.5.5.5 0 00-.5.5zm-7-.5v-.5a.5.5 0 00-1 0v.5h-.5a.5.5 0 000 1H5v.5a.5.5 0 001 0v-.5h.5a.5.5 0 000-1H6zM9 92c5.4 0 6 2.7 6 4.1 0 .7-.24.9-1.68.9H4.8c-1.44 0-1.8-.2-1.8-.9 0-1.5.6-4.1 6-4.1zm0-1c-1.66 0-3-1.17-3-3.5S7.34 84 9 84s3 1.17 3 3.5S10.66 91 9 91zm-8 32.1c0-1.5 0-4.1 5-4.1s5 2.7 5 4.1c0 .7-.2.9-1.4.9H2.5c-1.2 0-1.5-.2-1.5-.9zm11.59.9l.01-.28c0-1.37-.04-3.34-1.47-4.7L12 119c4.5 0 5 2.7 5 4.1 0 .7-.2.9-1.4.9h-3.01zM6 118c-1.1 0-2-.83-2-2.5s.9-2.5 2-2.5 2 .83 2 2.5-.9 2.5-2 2.5zm6 0c-1.1 0-2-.83-2-2.5s.9-2.5 2-2.5 2 .83 2 2.5-.9 2.5-2 2.5zm1.23-87.64C15.43 31.09 17 32.9 17 35c0 1.79-1.12 3.35-2.81 4.24.08.48.38 1.13.82 1.78-1.58 0-2.42-.42-2.89-1.1a7.2 7.2 0 01-2.06.02c2.6-1 4.44-3.23 4.44-5.94 0-1.37-.47-2.62-1.27-3.64zM5.88 38.9C5.4 39.6 4.57 40 2.98 40c.45-.64.75-1.29.83-1.76C2.12 37.35 1 35.78 1 34c0-2.76 2.69-5 6-5s6 2.24 6 5-2.69 5-6 5c-.38 0-.76-.03-1.12-.09zM9 70a2 2 0 01-2-2h4a2 2 0 01-2 2zm4.85-6s1.16.8 1.7 1.6c.96 1.3.31 1.4-1.18 1.4H3.63c-1.5 0-2.14-.1-1.18-1.4.54-.8 1.7-1.6 1.7-1.6v-3c0-2.6 1.19-4.5 3.66-5 0 0 0-1 1.19-1s1.18 1 1.18 1c2.21.5 3.67 2.4 3.67 5v3zM9.65.3c-.4-.4-1-.4-1.3 0L1.2 7.25c-.4.4-.2.7.3.7L3 8v5c0 1 0 1 1 1h2.5a.5.5 0 00.5-.5V10a2 2 0 014 0v3.5a.49.49 0 00.5.5H14c1 0 1 0 1-1V8l1.58-.06c.4-.1.6-.4.2-.7L9.65.3zM5 937H2a1 1 0 01-1-1v-9h2v6.5c0 .27.22.5.5.5H4v-10a1.01 1.01 0 011-1h10a1 1 0 011 1v11.5c0 .83-.68 1.5-1.5 1.5H5zm2-10.51v3.02c0 .28.22.49.5.49h5a.5.5 0 00.5-.49v-3.02a.49.49 0 00-.5-.49h-5a.5.5 0 00-.5.49zm0 5.01c0 .27.22.5.5.5h5a.5.5 0 000-1h-5a.5.5 0 00-.5.5zm0 2c0 .27.22.5.49.5h3.02a.5.5 0 00.49-.5.5.5 0 00-.49-.5H7.49a.5.5 0 00-.49.5zM5 953a4 4 0 118 0h.72c.44 0 .6.05.77.13.16.1.29.22.38.38.08.17.13.33.13.77v8.44c0 .44-.05.6-.13.77a.9.9 0 01-.38.38c-.17.08-.33.13-.77.13H4.28c-.44 0-.6-.05-.77-.13a.9.9 0 01-.38-.38c-.08-.16-.13-.33-.13-.77v-8.44c0-.44.05-.6.13-.77a.9.9 0 01.38-.38c.17-.08.33-.13.77-.13H5zm1.25 0h5.5a2.75 2.75 0 00-5.5 0zm1.66 20.64a4.12 4.12 0 012.18 0l.81-1.09a.75.75 0 111.2.9l-.7.94c.57.59.93 1.45 1.1 2.61h-7a4.54 4.54 0 011.1-2.6l-.7-.95a.75.75 0 111.2-.9l.81 1.09zm-3.6 5.33c.05-.33.11-.66.19-.97h9c.08.31.14.64.19.97l.53-.35a.25.25 0 00.11-.17l.43-2.57a.75.75 0 111.48.24l-.43 2.58c-.08.47-.35.9-.75 1.16l-1.26.84a13.2 13.2 0 01-.27 2.6l1.68 1.4c.3.25.52.6.6 1l.43 2.15a.75.75 0 11-1.47.3l-.44-2.16a.25.25 0 00-.08-.14l-1.17-.97c-.76 2.06-2.12 3.62-4.08 3.62s-3.32-1.56-4.08-3.62l-1.17.97a.25.25 0 00-.08.14l-.43 2.16a.75.75 0 11-1.48-.3l.43-2.15a1.75 1.75 0 01.6-1l1.68-1.4a13.2 13.2 0 01-.27-2.6l-1.26-.84a1.75 1.75 0 01-.75-1.16l-.43-2.58a.75.75 0 111.48-.24l.43 2.57a.25.25 0 00.1.17l.54.35zm-.97 35.69a8 8 0 1111.32-11.32 8 8 0 01-11.32 11.32zm7.43-3.9a2.5 2.5 0 110-3.52.86.86 0 001.05.14.68.68 0 00.18-1.02 2.79 2.79 0 00-.17-.19 4 4 0 100 5.66l.16-.19a.68.68 0 00-.18-1.01.86.86 0 00-1.04.13zM9 1045a8 8 0 110-16 8 8 0 010 16zm-5.79 16.02h.07l5.17 2.1c.13.05.27.1.42.13.09.02.18.02.28 0 .14-.03.28-.08.41-.13l5.16-2.1a.21.21 0 01.26.1.11.11 0 010 .09v6.83c.02.1.02.21 0 .31a.3.3 0 01-.12.17.72.72 0 01-.26.15l-5 2c-.13.06-.27.1-.42.13a.66.66 0 01-.27 0 2.24 2.24 0 01-.42-.12l-5-2a.72.72 0 01-.26-.16.39.39 0 01-.21-.14.81.81 0 010-.3v-6.85a.21.21 0 01.2-.22zm5.93-4c.15.02.29.07.42.13l5.26 2.09a.2.2 0 01.11.26.22.22 0 01-.1.12l-5.27 2.1c-.13.05-.27.1-.42.12a.66.66 0 01-.28 0 1.86 1.86 0 01-.41-.12l-5.26-2.1a.2.2 0 01-.11-.25.22.22 0 01.1-.12l5.27-2.1c.13-.06.27-.1.42-.13a.66.66 0 01.28 0zM9.5 1040a.5.5 0 000-1H8v-1h1.5c1.75 0 3-1 3-2.5s-1.27-2.49-3-2.49h-2a.5.5 0 00-.5.5v3.49h-.5a.5.5 0 00-.5.49c0 .27.22.5.5.5l.5.01v1.01h-.5a.5.5 0 00-.5.49c0 .28.22.5.5.5l.5.01v.49a.5.5 0 00.5.5.5.5 0 00.5-.51v-.49h1.5zm-1.5-6h1.5c1.5 0 2 .75 2 1.5s-.5 1.5-2 1.5H8v-3zm6.66-668.66a8 8 0 11-11.32 11.32 8 8 0 0111.32-11.32zm-8.13 8.13a3.5 3.5 0 104.95-4.95 3.5 3.5 0 00-4.95 4.95zm6.92-.07l1.5.8a6.76 6.76 0 000-6.4l-1.5.8c.81 1.5.81 3.3 0 4.8zm-1.25-8.34a6.76 6.76 0 00-6.4 0l.8 1.48a5.06 5.06 0 014.8 0l.8-1.48zm-9.14 2.74a6.76 6.76 0 000 6.4l1.49-.8a5.06 5.06 0 010-4.8l-1.5-.8zm2.74 9.14a6.76 6.76 0 006.4 0l-.8-1.48c-1.5.8-3.3.8-4.8 0l-.8 1.48zM9 475a8.01 8.01 0 010 16 8 8 0 010-16zm6.82 8c0-3-1.95-5.56-4.65-6.47-.17.2-.3.4-.28.53.18 1.83 1.42.46 1.67.73.86.95-1.62 1.28-.76 3 .41.83.9 1.06 1.6 1.07.7.01.95 1.2 1 1.7.06.5 0 1.77-.26 2.32-.25.55.02 1.07.27 1.27a6.8 6.8 0 001.41-4.15zm-7.76-6.76a6.84 6.84 0 00-5.43 4.31c.5.06 1.71.07 1.86.5.16.42-.53.87-.53 1.76 0 .98 1.27.97 1.27 1.72 0 .74.27 1.6.27 1.85S6.55 488 6.95 488c.39 0 .08-1.53.1-1.93.01-.27.19-1.07.24-1.25.34-1.28 1.6-1.15 1.9-1.92.91-2.43-1.96-2.57-2.35-2.7a2.69 2.69 0 00-1.3-.07c-.26.09-.76-.34-.76-.7 0-.35 1-1.06 1.3-1.56.31-.5.56-.42 1.13-.94.26-.24.69-.37.85-.69zm-1.2 13.24a6.8 6.8 0 005.9-.8c-.3-.54-1.41-.61-1.98-.57-.67.06-1.43.49-1.85.58-.48.1-.83.26-1.25.27-.37.02-.42.3-.83.52z' id='svg_3' fill='%23b0ccda'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.ui_scroll_default_theme.ui_scroll_emoji_theme > .ui_scroll_overflow > .ui_scroll_shadow_bottom,
+.ui_scroll_default_theme.ui_scroll_emoji_theme > .ui_scroll_overflow > .ui_scroll_shadow_top,
+.emoji_tabs_l_sc,
+.emoji_tabs_r_sc,
+.emoji_cats_title_helper:after {
+  background-image: none;
+}
+.ui_actions_menu_item.im-action:before {
+  background-image: url('data:image/png;base64,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');
+}
+.im-page .im-page--center-empty {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEUAAABCBAMAAADzpgaiAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAADBQTFRFLS8w2eLr1d/p2OHq3OTs2+Ts3+fu1uDq1+Hq3ubt6O7z4Ofu2uPr3eXt4ujv5+zy4dLu0gAAANlJREFUeJzt1dENwiAQBuADjb4SJiCniS/GYZzIOEJHcAQncRRHkND2pNTjJ74Ze0l5oF852l44ohSG1XA0hE6YB2ICqWGHhWzNhP82ngMylrHxDbn4141x5Tg3fWHm48yYVOH5+J1pydW055Z3X8xiSmNqxvWmPMPTI1bO8N6UvSAzbjRFrPaTTX40dHbYbA7YpFMQmTiPjQ3Y0LXDhliMV8071y3vmtO/ISb2AjH3eaedJI/XeqfmFaNvTcw2YKN/BTG1eh0NXIa4u2BzhIT4gc0JE3pW7r0A8WQwWytMjx0AAAAASUVORK5CYII=');
+}
+*::-webkit-scrollbar-thumb {
   border-radius: 50px;
 }
 #page_header_cont .back,
@@ -42,7 +692,10 @@ const css = `*::-webkit-scrollbar-thumb {
 .im-page_classic.im-page .im-page--header,
 .im-page_classic .im-page--chat-header,
 .im-page_classic.im-page .im-page--chat-body-wrap-inner,
-.Input[readonly] {
+.Input[readonly],
+.post_suggest,
+.search_row,
+.search_sep {
   border-color: #1a1a1a !important;
 }
 .audio_page_player.audio_page_player_fixed,
@@ -285,7 +938,6 @@ textarea,
 .audio_page_layout .audio_page_separator,
 .audio_page_layout .has_friends_block .audio_page__rows_wrap,
 input.BlockSearchInput,
-.photos_container_edit_grid .photos_photo_edit_row_desc_placeholder,
 #mail_box_editable,
 .audio_pl_edit_box .ape_add_audios_btn:hover,
 .audio_pl_edit_box .ape_add_pl_audios_btn:hover,
@@ -340,7 +992,8 @@ div.wdd.wdd_focused,
 .CatalogSection__leftColumn,
 .Select--opened .Select__control,
 .Select__menu,
-.im-navigation__button {
+.im-navigation__button,
+.wpost_post {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -403,7 +1056,12 @@ div.fc_tab_txt,
 .feedback_row_answer:after,
 .feedback_row_answer:before,
 #top_profile_menu:before,
-#top_profile_menu:after {
+#top_profile_menu:after,
+.gifts_box_rows .post,
+#top_notify_wrap:after,
+#top_notify_wrap:before,
+.post_suggest:after,
+.post_suggest:before {
   border-bottom-color: #242424 !important;
 }
 .ui_actions_menu_sep,
@@ -426,475 +1084,24 @@ div.fc_tab_txt,
 .story_feed_new_item.stories_feed_preview_item .stories_feed_preview_author .stories_feed_preview_authors_wrapper:after {
   border-color: #b0ccda !important;
 }
-.fakeinput,
-div[contenteditable=true],
-input.big_text,
-input.search,
-input.text,
-textarea,
-.page_media_poll_wrap,
-.ui_tabs.ui_tabs_box,
-*::-webkit-scrollbar-track-piece,
-.im-page--chat-header,
-.tabbed_box .summary_tab .summary_tab3:hover,
-.tabbed_box .summary_tab_sel .summary_tab3:hover,
-.tabbed_box .summary_tab_sel a:hover,
-.tabbed_box .summary_tab a:hover,
-.friends_import_row:hover,
-.audio_pl_snippet,
-div.fc_tab_txt,
-.ui_tabs_header,
-.wdd_text,
-.wall_module .reply_form {
-  background: none !important;
-}
-body,
-.im-page_classic.im-page .im-chat-history-resize,
-.im-create,
-#profile_groups_link:hover {
-  background-color: #1a1a1a !important;
-}
-*::-webkit-scrollbar,
-.article_ed_layer,
-.article_layer,
-.article,
-.photos_container_edit_grid .photos_photo_edit_row,
-.pe_filter_thumb.pe_filter_selected,
-.pe_actions,
-.page_actions_wrap,
-#top_profile_menu,
-.piechart_col_header th,
-.ui_scroll_default_theme > .ui_scroll_bar_container > .ui_scroll_bar_outer > .ui_scroll_bar_inner,
-.audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_slide,
-.photos_choose_upload_area,
-.web_cam_photo,
-.photos_choose_bottom,
-.deep_active .replies .reply_field_wrap .reply_field,
-.deep_active .replies .wl_reply_form_wrap .reply_field_wrap .reply_field,
-.deep_active.wall_module .replies .reply_field_wrap .reply_field,
-.deep_active.wall_module .replies .wl_reply_form_wrap .reply_field_wrap .reply_field,
-.deep_active.wall_module .wl_replies_block_wrap .reply_field_wrap .reply_field,
-.deep_active.wall_module .wl_replies_block_wrap .wl_reply_form_wrap .reply_field_wrap .reply_field,
-.deep_active .wl_replies_block_wrap .reply_field_wrap .reply_field,
-.deep_active .wl_replies_block_wrap .wl_reply_form_wrap .reply_field_wrap .reply_field,
-#mv_comments_header,
-.gifts_box_header,
-.gifts_constr_preview,
-.wk_voting_option_bar,
-.result_list ul li.active,
-.selector_container,
-.result_list ul,
-.summary_tab2:hover,
-input.dark,
-.sticker_hints_tt,
-.deep_active .replies .reply_fakebox,
-.like_share_emoji_wrap div[contenteditable=true],
-.tt_default,
-.tt_default_right,
-.AudioPlaylistSnippet,
-.ActionsMenu__inner,
-.ui_actions_menu,
-.ms_items_more,
-.media_link__label,
-.feed_friends_recomm .ui_gallery_item:first-child,
-.privacy_dropdown .header,
-.privacy_dropdown .body,
-.privacy_dropdown .l_item,
-.privacy_dropdown .l_item_sel,
-.Dropdown__in,
-.emoji_tabs,
-.emoji_bg,
-.video_choose_upload_area,
-.video_add_external,
-.video_choosebox_bottom,
-.im-to-end:focus .im-to-end__button,
-.im-to-end:hover .im-to-end__button,
-.im-to-end__button,
-.links-list__item:hover,
-.PopupHeader,
-.ChatSettingsMembersWidget__add:before,
-.im_stickers_my_tip,
-.medadd_c_linkcon,
-.scrollbar_inner,
-.scrollbar_hovered,
-.scrollbar_inner:hover,
-.friends_cur_filters .token,
-.idd_popup .idd_items_content,
-.idd_popup .idd_header_wrap,
-.audio_pl_edit_box .ape_cover,
-#audio_status_tt .audio_status_sep,
-.audio_row__more_actions .audio_row__more_action:hover,
-#groups_menu_items .groups_edit_menu_items .groups_edit_menu_item .groups_edit_menu_item_line,
-.market_item_photo_container,
-.market_comments_header:hover,
-.market_comments_header,
-.wke_b:hover,
-.mv_desc .can_edit:hover,
-.EditableLabel:hover .EditableLabel__text,
-.MainActions_action_3owFz:after,
-.MainStatus_button_1p4_4,
-.Button_block_2bjH0.Button_secondary_3vjw8,
-.Card__hr,
-.wddi_over,
-.im-page.im-page_classic.im-page_group .im-group-online,
-.media_voting_option,
-.sticker_hints_arrow.sticker_left,
-.sticker_hints_arrow.sticker_right,
-.mv_info .ui_rmenu,
-.bd_arrow,
-.bd_day_head,
-.msg,
-input.text.ts_input,
-.poster__change-bkg-btn,
-input.text.ts_input:focus,
-.audio_pl_edit_box .ape_add_audios_btn:hover,
-.audio_pl_edit_box .ape_add_pl_audios_btn:hover,
-.docs_choose_rows .docs_item:hover,
-.docs_choose_upload_area,
-.docs_choose_upload_area:hover,
-.button_gray button.hover,
-.button_gray button:hover,
-.flat_button.secondary.hover,
-.flat_button.secondary:hover,
-textarea,
-.pv_cont .pv_can_edit:hover,
-em.ts_clist_hl,
-.audio_w_covers .audio_row.ui_gridsorter_moveable .audio_row_content,
-.ui_search_sugg_list,
-.im-page .im-page--history-new-bar:after,
-.im-page .im-page--history-new-bar:before,
-.ListItem--border:before,
-.replies_open,
-.wr_header,
-.wall_module .page_media_thumbed_link,
-.button_gray button,
-.flat_button.secondary,
-.im_stickers_bl_wrap,
-.ap_layer_wrap .ap_layer__content,
-div.wdd,
-div.wdd.wdd_focused,
-.ui_search_new .ui_search_input_inner,
-.ui_search_new.ui_search_dark .ui_search_input_inner,
-.payments_money_transfer_comment,
-.payments_money_transfer_amount,
-.im_stickers_buy_header,
-.im-page .im-page--top-date-bar,
-#mail_box_editable,
-.im-mess .im-mess--post,
-.feedback_row_answer,
-.payments_money_transfer_amount_wrap,
-.top_notify_show_all,
-.im-mess.im-mess_light,
-.bd_day_cell.holiday,
-.settings_separated_row + .settings_separated_row:after,
-.ui_search_new.ui_search_btn_large .ui_search_button_search,
-.ui_search_new.ui_search_dark .ui_search_button_search,
-.stories_link,
-.CatalogBlock__separator,
-.Button--tertiary:not(.Button--disabled):focus,
-.Button--tertiary:not(.Button--disabled):hover,
-.Select__option--selected,
-.Select__option:hover {
-  background-color: #242424 !important;
-}
-.im-create .im-create--tabs,
-.ui_rmenu_item:hover,
-.ui_rmenu_subitem:hover,
-.ui_rmenu_item_sel,
-.ui_rmenu_item_sel:hover,
-.poster__toolbar,
-.poster__slider-arrow,
-.apps_i_wrap,
-.apps_i_policy,
-.apps_options_bar,
-.apps_footer,
-.audio_pl_snippet2,
-#fc_contacts,
-.fc_content,
-.chat_onl_inner,
+#fc_ctabs_cont,
 .fc_tab,
-.fc_tab_notify,
-#wk_box,
-.pv_author_block,
-.faq_tabs.ui_tabs,
-.tickets_post_field,
-.owner_photo_additional,
-.MessageForward__content,
-.article_ed_layer .article_ed_layer__header,
-.article_layer .article_layer__content_footer,
-.photos_edit_selection_header,
-.pe_tabs_panel,
-.photo_upload_separator,
-.wall_module .reply_fakebox,
-.tickets_header,
-.box_msg,
-.box_msg_gray,
-.result_list ul li.active,
-.disabled.selector_container,
-.selector_container td.selector .token_inner,
-.selector_container td.selector .token_prefix,
-.emoji_sticker_item.over,
-.emoji_sticker_item:hover,
-.im-page--toolsw,
-.AudioPlaylistSnippet .ActionButton--shuffle:hover,
-.im-chat-input,
-.ActionsMenu__item--hover,
-.ActionsMenu__item:hover,
-.ui_actions_menu_item:hover,
-.media_selector .ms_items_more .ms_item:hover,
-.notify_sources_tt_content .content:not(:hover) .line_cell.selected,
-.notify_sources_tt_content .line_cell:hover,
-.wall_module:not(.search_results) .post--with-likes:not(.post_copy):not(.post_btl):not(.post_wf):not(.post_fr_likes) .wall_text .media_link:last-child,
-.privacy_dropdown .item_sel,
-.privacy_dropdown .item_sel_plus,
-.privacy_dropdown .l_header,
-.privacy_dropdown .l_header .l_header_label,
-.privacy_dropdown .l_item:hover,
-.privacy_dropdown .l_item_sel:hover,
-.Dropdown__item:hover,
-.mention_tt_actions,
-.emoji_tt_wrap,
-.emoji_tab_sel,
-.emoji_tab_sel:hover,
-.emoji_tab:hover,
-.emoji_tabs_l_s:hover,
-.emoji_tabs_r_s:hover,
-.emoji_tabs_l_s,
-.emoji_tabs_r_s,
-.emoji_shop:hover,
-.emoji_cat_title,
-.im_sticker_bl,
-.ui_search_fltr,
-.idd_popup .idd_item.idd_hl,
-#apps_layer .apps_header_wrapper,
-#groups_menu_items .groups_edit_menu_items .group_apps_list_row_drag_wrapper,
-.ui_ownblock:hover,
-.market_item_content,
-.bookmark_footer,
-.wl_post_reply_form_forbidden,
-.wpost_post,
-.wke_controls,
-.wke_page_title_cont,
-.pages_header_info,
-.pages_history_header_wrap,
-#mv_pl_tt .mv_tt_add_playlist:hover,
-#mv_pl_tt .mv_tt_add_playlist,
-.Panel_block_2RPF-,
-.TopMenu_block_1KqlS,
-.Panel_footer_epjyB,
-.Panel_header_2eRoj,
-.Page_contentPanel_3WDOJ,
-.Mailings_desktop .GroupPage__footer,
-.Button--secondary__29JKy,
-.DesktopRoot,
 .Card,
-.wddi,
-.im-aside-notice,
-.im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner,
-.media_voting,
-.audio_row__more_actions .audio_row__more_action,
-.im-page_classic.im-page .im-page--dcontent,
-.submit_post,
-.im_stickers_store_wrap .ui_tabs,
-.page_block_header,
-div.fc_clist_filter_wrap,
-.flat_button.ui_load_more_btn,
-.settings_block_footer,
-.mv_info,
-.top_profile_mrow:hover,
-.photos_period_delimiter_fixed,
-.tabbed_box .summary_tab_sel .summary_tab2,
-.audio_pl_edit_box .ape_header,
-.group_l_row,
-.audio_layer_container .audio_page_player,
-.box_body,
-.fc_msgs_unread,
-.pv_cont .narrow_column,
-.box_body .im_stickers_store_wrap .ui_tabs,
-.ap_layer .audio_pl_snippet .audio_pl_snippet__header_inner,
-.audio_pl_snippet .audio_pl_snippet__header,
-.photos_container .photos_row,
-.box_controls,
-.ts_cont_wrap,
-.feedback_row_wrap.unread:not(.feedback_row_touched),
-.pv_white_bg,
-.pva_period_fixed,
-.wk_history_tabs,
-.ChatSettings__content,
-.ChatSettingsInfo,
-.List,
-.ChatSettingsMembersWidget,
-.Button--mobile,
-.ChatSettingsInvitationLink,
-.ChatSettingsResetInvitationLink__text,
-.SubmitArea,
-.audio_pl_snippet2 .audio_shuffle_all_button:hover,
-.audio_page_layout .audio_page_separator,
-input.BlockSearchInput,
-.photos_container_edit_grid .photos_photo_edit_row_desc_placeholder,
-.online.mobile:after,
-.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered .nim-dialog--photo .online.mobile:after,
-.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic .nim-dialog--photo .online.mobile:after,
-.nim-dialog:not(.nim-dialog_deleted):hover .nim-dialog--photo .online.mobile:after,
-.stl_active.over_fast #stl_bg,
-.wall_module .post_like:hover,
-.wall_module .post_reply:hover,
-.wall_module .post_share:hover,
-.audio_row:hover:not(.audio_row__current) .audio_row_content,
-.left_count_wrap,
-.mail_box_cont,
-#group_apps_list .group_apps_list_rows .group_apps_list_row .group_apps_edit,
-.apps_i_panel,
-.page_status_editor .editor,
+.sticker_hints_arrow,
 .im-page-pinned,
-.box_title_wrap.box_grey,
-.eltt,
-.bd_day_cell,
-.im-chat-input--scroll,
-#top_notify_wrap,
-.im-mess.im-mess_selected + .im-mess:before,
-.im-mess.im-mess_unread + .im-mess:before,
+.footer_wrap,
 .im-chat-input .im-chat-input--txt-wrap,
-#side_bar ol li .left_row:hover,
-.search_filters_minimized_text,
-.info_msg,
-.audio_pl_edit_box .ape_add_pl_audios_btn,
-#mv_publish,
-.audio_pl_edit_box .ape_list_header,
-.thumbed_link__thumb,
-.thumbed_link--chat-invitation,
-.thumbed_link__label,
-.im-page_classic.im-page .im-chat-history-resize,
-.im-create,
-.deep_active .replies .reply_box_inner_wrap.fixed,
-.deep_active.wall_module .replies .reply_box_inner_wrap.fixed,
-.deep_active.wall_module .wl_replies_block_wrap .reply_box_inner_wrap.fixed,
-.deep_active .wl_replies_block_wrap .reply_box_inner_wrap.fixed,
-.Select--opened .Select__control,
-.Select__menu {
-  background-color: #3b3f41 !important;
-}
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #e7e8ec !important;
-}
-.page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
-.page_actions_header,
-.page_actions_item:hover:not(.grey_hoverable),
-.tu_last:hover,
-.im-page .im-page--mess-search,
-.gifts_constr_option:hover,
-.audio_pl_edit_box .ape_pl_item:hover,
-.im-mess.im-mess_selected:last-child:before,
-.im-mess.im-mess_unread:last-child:before,
-*::-webkit-scrollbar-thumb,
-.audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_back,
-.audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_slide,
-.audio_page_player2 .audio_page_player_volume_slider.slider.slider_size_1 .slider_slide {
-  background-color: #626568 !important;
-}
-#page_header_cont .back,
-.fc_tab_head,
-.box_title_wrap,
-.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected,
-.page_block,
-.im-page_classic .im-page--chat-header .im-page--toolsw,
-.audio_page_player2 .audio_page_player_status.audio_page_player_btn_enabled .btn_icon,
-.audio_page_layout .audio_search_wrapper,
-.audio_page_layout .has_friends_block .audio_page__rows_wrap,
-.audio_page_layout .audio_friends_list,
-.audio_page_player.audio_page_player_fixed,
-.audio_page_player2.audio_page_player_fixed,
-.flat_button.secondary_dark,
-.ui_search,
-.ui_grey_block,
-.im-page .im-page--history-new-bar,
-.im-page .im-page--history-new-bar > span,
-.im-page_classic.im-page .im-page--chat-body-wrap-inner,
-.im-page_classic.im-page .im-page--chat-input .im-chat-input,
-.CatalogBlock--divided,
-.profile_info_header,
-.profile_info_edit,
-.im-create .im-create--table > div,
-.Input[readonly],
-.help_table_question_visible,
-.wall_module .reply_fakebox_wrap,
-.wall_module .reply_box,
-.language_box_row:hover,
-.tickets_thank_you_form,
-.CatalogSection,
-.im-navigation--to-end .im-navigation__button {
-  background-color: #2d2f30 !important;
-}
-.top_audio_play__button,
-.top_audio_play__button:hover,
-.top_audio_play__button:hover:before,
-.top_audio_play__button:before {
-  background-color: #ffffff !important;
-}
-a.fc_contact_over,
-.chat_tab_wrap:hover,
-.ui_search_sugg_list .ui_search_suggestion_selected,
-.nim-dialog.nim-dialog_classic.nim-dialog_unread-out .nim-dialog--inner-text,
-.nim-dialog.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
-.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_hovered.nim-dialog_unread-out .nim-dialog--inner-text,
-.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_hovered.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
-.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic.nim-dialog_unread-out .nim-dialog--inner-text,
-.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
-.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted):hover.nim-dialog_unread-out .nim-dialog--inner-text,
-.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted):hover.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
-.audio_layer_container .audio_friend:hover,
-.audio_page__shuffle_all .audio_page__shuffle_all_button:hover,
-.im-mess.im-mess_selected:not(.im-mess_is_editing),
-.im-mess.im-mess_selected:not(.im-mess_is_editing):hover,
-.my_current_info:hover,
-.no_current_info:hover,
-.profile_more_info_link:hover,
-.audio_row.audio_row__current .audio_row_content,
-.tabbed_box .summary_tab_sel a:hover,
-.tabbed_box .summary_tab a:hover,
-.top_notify_cont .feedback_row:not(.dld).hover,
-.top_notify_cont .feedback_row:not(.dld):hover,
-a.ts_contact.active,
-a.ts_search_link.active,
-.ListItem--active,
-.ListItem--can-be-hovered.ListItem--selectable:hover,
-.article_ed_layer .article_ed_layer__list_item:not(.article_ed_layer__list_item_current):hover,
-.media_voting_can_vote.media_voting_clickable_option .media_voting_option_wrap:not(.media_voting_option_selected):hover .media_voting_option,
-.im-mess.im-mess_unread:not(.im-mess_light),
-.feed_new_posts:hover,
-.pv_like:hover,
-.im-replied,
-.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered,
-.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic,
-.nim-dialog:not(.nim-dialog_deleted):hover,
-.im_msg_audiomsg .audio-msg-track:not(.audio-msg-player):hover,
-.flat_button.ui_load_more_btn:hover,
-.im-mess.im-mess_search:hover,
-.olist_item_wrap:hover,
-.feedback_row_clickable:not(.feedback_row_touched):hover,
-.feed_row ~ .feed_row .feedback_row_clickable:not(.feedback_row_touched):hover,
-.top_notify_show_all:hover,
-body .im-page--back-btn:hover {
-  background-color: rgba(0, 0, 0, 0.2) !important;
-}
-.slider .slider_amount,
-.slider .slider_handler,
-.audio_page_player2 .audio_page_player_play .icon,
-.audio-msg-track .audio-msg-track--btn {
-  background-color: #e82f94 !important;
-}
-.audio-msg-track .audio-msg-track--wave-wrapper .audio-msg-track--wave path {
-  stroke: #e82f94 !important;
-}
-.slider .slider_back {
-  background-color: #A9B7C5 !important;
-}
-.top_nav_btn.active,
-.top_nav_btn:hover,
-.top_audio_player:hover,
-.top_nav_link:hover,
-.top_nav_link.active {
-  background-color: rgba(36, 36, 36, 0.5);
+.module,
+.wall_module .reply_fakebox,
+.tabbed_box .summary_tabs,
+#mv_pl_tt .mv_tt_private_only + .mv_tt_playlists,
+.im-page--dialogs-search,
+.im-page_classic.im-page .im-page--chat-input,
+.ui_search_new.ui_search_btn_large .ui_search_button_search,
+._audio_page_player_wrap.audio_page_player_wrap.page_block,
+.ui_search_new.ui_search_field_empty .ui_search_button_search,
+.photos_container_edit_grid .photos_photo_edit_row_desc_placeholder {
+  border: none !important;
 }
 body,
 h2,
@@ -1116,7 +1323,17 @@ input.text.ts_input:focus,
 .Button--tertiary:not(.Button--disabled):focus,
 .Button--tertiary:not(.Button--disabled):hover,
 .im-chat-input--editing-head,
-.feed_blog_reminder_large .feed_blog_reminder_text {
+.feed_blog_reminder_large .feed_blog_reminder_text,
+.im-page-pinned--media,
+.top_profile_name,
+.ts_wrap .input_back_content,
+.events_card__title,
+.groups_nearest_event__title,
+.search_filter_main,
+.search_filter_open,
+.search_filter_shut,
+.photos_container_edit_grid .photos_photo_edit_row_desc_placeholder,
+.photos_album_intro h1 {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1127,34 +1344,6 @@ input.text.ts_input:focus,
 .popup_box_container .im-mess-stack--lnk,
 .audio_pl_edit_box .ape_audio_item_wrap .audio_row em {
   color: #000000 !important;
-}
-*::-webkit-scrollbar {
-  width: 5px;
-  max-height: 5px;
-}
-.im-page--back-btn {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2216%22%20viewBox%3D%220%200%209%2016%22%20width%3D%229%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m8%2015.9c-.2%200-.4-.1-.6-.3l-7-7c-.3-.3-.3-.9%200-1.2l7-7c.3-.3.9-.3%201.2%200s.3.9%200%201.2l-6.4%206.4%206.4%206.4c.3.3.3.9%200%201.2-.2.2-.4.3-.6.3z%22%20fill%3D%22%23828a99%22%20opacity%3D%22.7%22%2F%3E%3C%2Fsvg%3E") !important;
-}
-.ui_search_new.ui_search_btn_large .ui_search_button_search,
-.ui_search_new.ui_search_dark .ui_search_button_search {
-  margin-left: 1px;
-}
-.im-page_classic.im-page .im-page--chat-input,
-.im-page .im-page--history {
-  margin-left: 0 !important;
-}
-.page_photos_module,
-.page_square_photo {
-  height: 135px;
-}
-.page_photos_module {
-  padding: 5px;
-}
-.page_square_photo {
-  width: 135px;
-}
-.audio_page_player .audio_page_player_title {
-  color: inherit;
 }
 .nim-dialog .nim-dialog--name .nim-dialog--name-w,
 .audio_row .audio_row__performer,
@@ -1209,161 +1398,13 @@ a,
 .Select__option,
 .feed_blog_reminder_large .feed_blog_reminder_title,
 .feed_blog_reminder_link,
-#stl_text {
+#stl_text,
+.mem_pseudolink,
+.im-mess .im-mess--btn,
+.post_suggest .post_suggest__action_text,
+.wddi_text,
+.friends_import_header {
   color: #b0ccda !important;
-}
-.audio_layer_container .audio_page_layout .audio_search {
-  margin: -1px 20px 10px;
-}
-.im-mess.im-mess_selected:last-child:before,
-.im-mess.im-mess_unread:last-child:before {
-  content: none !important;
-}
-.page_block._audio_page_content_block:before,
-.audio_page_layout .audio_block:before,
-.im-aside-notice,
-.im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner,
-.media_voting,
-.im-page_classic .im-page--chat-header-in {
-  box-shadow: 0 0 0 1px #242424 !important;
-}
-.im-page_classic.im-page .im-page--dialogs-search,
-.CatalogBlock--divided:before {
-  box-shadow: 0 0 0 1px #1a1a1a !important;
-}
-.im-page_classic.im-page .im-page--chat-body-abs,
-.im-page_classic.im-page .im-page--chat-input .im-chat-input,
-.im-page_classic.im-page .im-page--dialogs-footer,
-.Button--mobile {
-  box-shadow: 0 1px 0 0 #1a1a1a, 0 0 0 1px #1a1a1a !important;
-}
-.im-mess.im-mess_selected + .im-mess:before,
-.im-mess.im-mess_unread + .im-mess:before {
-  height: 0 !important;
-}
-.CatalogBlock--divided:before,
-.Mailings_desktop .GroupPage__footer,
-.top_notify_cont ._notify_unread .feed_row:first-child .feedback_row_wrap,
-.page_block,
-.mv_info,
-.CatalogBlock--divided:first-child:before,
-.CatalogSection:first-child:before {
-  box-shadow: none;
-}
-.post_top_info_wall_guide,
-.post_top_info_wall_mention,
-.post_top_info_wall_reply,
-.im-create.im-create_classic .im-create--table,
-.Panel_block_2RPF-,
-.Page_contentPanel_3WDOJ {
-  box-shadow: 0 1px 0 0 #242424, 0 0 0 1px #242424 !important;
-}
-.page_square_photo {
-  margin: 0;
-}
-.im-chat-input--scroll,
-.im-replied {
-  border-radius: 5px;
-}
-.im-chat-input--scroll .im-fwd.im-fwd_msg {
-  padding: 5px 7px;
-}
-.chat_cont_sh_bottom,
-.chat_cont_sh_top {
-  background: linear-gradient(180deg, rgba(216, 223, 230, 0), #3b3f41 80%) !important;
-}
-.top_nav_btn#top_notify_btn .top_nav_btn_icon,
-.top_nav_btn#top_notify_btn:hover .top_nav_btn_icon {
-  background-image: url('data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"20"%20height%3D"20"%20viewBox%3D"0%200%2020%2020"><path%20fill%3D"%23fff"%20fill-rule%3D"evenodd"%20d%3D"M8%2C18%20C6.64583333%2C18%205.5%2C17.3%205.5%2C16%20L10.5%2C16%20C10.5%2C17.3%209.35416667%2C18%208%2C18%20Z%20M13.9956933%2C11%20C13.9956933%2C12.5%2016%2C12.5%2016%2C13.5%20C16%2C14%2016%2C15%2013.8955984%2C15%20L1.98430985%2C15%20C-6.19060359e-13%2C15%20-1.62536651e-13%2C14%20-1.63424829e-13%2C13.5%20C-1.63369318e-13%2C12.5%201.98430985%2C12.5%202%2C11%20L2%2C8%20C2%2C4%204.09724901%2C1.5%207%2C1.1%20L7%2C1%20C7%2C0.4%207.5%2C5.74053187e-17%208%2C0%20C8.5%2C0%209%2C0.4%209%2C1%20L9%2C1.1%20C11.902751%2C1.5%2013.9956933%2C4%2013.9956933%2C8%20L13.9956933%2C11%20Z"%20transform%3D"translate(2%201)"%2F><%2Fsvg>');
-}
-.top_nav_btn#top_audio .top_nav_btn_icon,
-.top_nav_btn#top_audio:hover .top_nav_btn_icon {
-  background-image: url('data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"20"%20height%3D"20"%20viewBox%3D"0%200%2020%2020"><path%20fill%3D"%23fff"%20fill-rule%3D"evenodd"%20d%3D"M14%2C11.1552322%20L14%2C5.5%20L7%2C7.5%20L7%2C15.2999878%20C7%2C15.2999878%206.99923979%2C15.2998738%206.99774901%2C15.2996427%20C6.99305423%2C16.449672%205.98201611%2C17.5525634%204.53840209%2C17.8858479%20C2.90786903%2C18.2622862%201.34293783%2C17.5143682%201.04303041%2C16.2153265%20C0.743122996%2C14.9162848%201.82180821%2C13.5580399%203.45234127%2C13.1816017%20C3.98965862%2C13.0575522%204.51985206%2C13.0556001%205%2C13.1552322%20L5%2C3.9955775%20C5%2C3.44483697%205.42843442%2C2.88315425%205.95693506%2C2.73901771%20L15.0430649%2C0.26098229%20C15.568787%2C0.117603555%2016%2C0.447563354%2016%2C0.999660731%20L16%2C13.2999878%20C15.999253%2C13.2998718%2015.9985027%2C13.2997528%2015.9977491%2C13.2996309%20C15.9930612%2C14.4496644%2014.9820211%2C15.5525622%2013.5384021%2C15.8858479%20C11.907869%2C16.2622862%2010.3429378%2C15.5143682%2010.0430304%2C14.2153265%20C9.743123%2C12.9162848%2010.8218082%2C11.5580399%2012.4523413%2C11.1816017%20C12.9896586%2C11.0575522%2013.5198521%2C11.0556001%2014%2C11.1552322%20Z"%20transform%3D"translate(1%201)"%2F><%2Fsvg>');
-}
-.audio_page_player2.audio_page_player_fixed,
-.audio_layer_container .audio_page_player_wrap {
-  box-shadow: 0 5px 10px #242424 !important;
-}
-#ads_left,
-.trg-b-banner,
-.feed_row ._ads_block_data_w.mailru-visibility-check {
-  display: none !important;
-}
-.audio_page_player_title_performer a,
-.audio_pl_snippet2 .audio_pl_snippet__info_title,
-.audio_row .audio_row__performers a,
-.audio_pl_snippet_info_maintitle {
-  color: #e82f94 !important;
-}
-.audio-msg-track .slider .slider_amount {
-  background: transparent !important;
-}
-.ChatSettingsInfo {
-  box-shadow: 0 1px 0 #242424 !important;
-}
-.List--border,
-.ChatSettingsMembersWidget {
-  box-shadow: 0 1px 0 #242424, 0 -1px 0 #242424 !important;
-}
-.page_list_module .line_cell .desc_info,
-.page_list_module .line_cell .extra_info,
-.page_list_module .line_cell .info {
-  padding: 4px 0 0 7px;
-}
-.poster__slider-arrow._right {
-  box-shadow: -5px 0 5px 0 #3b3f41 !important;
-}
-.poster__slider-arrow._left {
-  box-shadow: 5px 0 5px 0 #3b3f41 !important;
-}
-#fc_ctabs_cont,
-.fc_tab,
-.Card,
-.sticker_hints_arrow,
-.im-page-pinned,
-.footer_wrap,
-.im-chat-input .im-chat-input--txt-wrap,
-.module,
-.wall_module .reply_fakebox,
-.tabbed_box .summary_tabs,
-#mv_pl_tt .mv_tt_private_only + .mv_tt_playlists,
-.im-page--dialogs-search,
-.im-page_classic.im-page .im-page--chat-input,
-.ui_search_new.ui_search_btn_large .ui_search_button_search,
-._audio_page_player_wrap.audio_page_player_wrap.page_block {
-  border: none !important;
-}
-.chats_sp.fc_clist_search_icon {
-  margin: 10px 7px 0 0 !important;
-}
-.post_top_info_ads_group_members {
-  box-shadow: 0 0 0 1px #242424, 0 1px 0 0 #242424 !important;
-}
-.ui_scroll_default_theme.ui_scroll_emoji_theme > .ui_scroll_overflow > .ui_scroll_shadow_bottom,
-.ui_scroll_default_theme.ui_scroll_emoji_theme > .ui_scroll_overflow > .ui_scroll_shadow_top,
-.emoji_tabs_l_sc,
-.emoji_tabs_r_sc,
-.emoji_cats_title_helper:after,
-.im-page .im-page--center-empty {
-  background-image: none;
-}
-.ui_rmenu_count {
-  float: left;
-  padding: 1px 0;
-}
-.im-page .im-page--dialogs {
-  float: right !important;
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
-}
-.im-page .im-page--history {
-  margin-right: 317px;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-}
-.im-create.im-create_material {
-  right: 0;
-  position: absolute;
 }
 `;
 GM_addStyle(css);

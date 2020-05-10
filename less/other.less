@@ -1,0 +1,199 @@
+@import "_Variables";
+
+*::-webkit-scrollbar {
+  width: 5px;
+  max-height: 5px;
+}
+
+
+.ui_search_new.ui_search_btn_large .ui_search_button_search,
+.ui_search_new.ui_search_dark .ui_search_button_search,
+.ui_search_new.ui_search_field_empty .ui_search_button_search
+  //*margin-left_1px
+{
+  margin-left: 1px;
+}
+
+.im-page_classic.im-page .im-page--chat-input,
+.im-page .im-page--history {
+  margin-left: 0 !important;
+}
+
+
+.page_photos_module,
+.page_square_photo {
+  height: 135px;
+}
+
+.page_photos_module {
+  padding: 5px;
+}
+
+.page_square_photo {
+  width: 135px;
+}
+
+.audio_page_player .audio_page_player_title {
+  color: inherit;
+}
+
+.audio_layer_container .audio_page_layout .audio_search {
+  margin: -1px 20px 10px;
+}
+
+
+.im-mess.im-mess_selected:last-child:before, .im-mess.im-mess_unread:last-child:before {
+  content: none !important;
+}
+
+
+.page_block._audio_page_content_block:before,
+.audio_page_layout .audio_block:before,
+.im-aside-notice,
+.im-page.im-page_classic.im-page_group .im-group-online .im-group-online--inner,
+.media_voting,
+.im-page_classic .im-page--chat-header-in
+  //*box-shabow-1
+{
+  box-shadow: 0 0 0 1px @line_1 !important;
+}
+
+.im-page_classic.im-page .im-page--dialogs-search,
+.CatalogBlock--divided:before
+  //*box-shabow-0
+{
+  box-shadow: 0 0 0 1px @line_0;
+}
+.im-page_classic.im-page .im-page--chat-body-abs,
+.im-page_classic.im-page .im-page--chat-input .im-chat-input,
+.im-page_classic.im-page .im-page--dialogs-footer,
+.Button--mobile
+  //*box-shabow-0
+{
+  box-shadow: 0 1px 0 0 @line_0, 0 0 0 1px @line_0;
+}
+
+.im-mess.im-mess_selected + .im-mess:before, .im-mess.im-mess_unread + .im-mess:before {
+  height: 0 !important;
+}
+
+.CatalogBlock--divided:before,
+.Mailings_desktop .GroupPage__footer,
+.top_notify_cont ._notify_unread .feed_row:first-child .feedback_row_wrap,
+.page_block,
+.mv_info,
+.CatalogBlock--divided:first-child:before, .CatalogSection:first-child:before
+  //*box-shadow_none
+{
+  box-shadow: none;
+}
+
+//Фикс
+.post_top_info_wall_guide, .post_top_info_wall_mention, .post_top_info_wall_reply,
+.im-create.im-create_classic .im-create--table,
+.Panel_block_2RPF-,
+.Page_contentPanel_3WDOJ
+{
+  box-shadow: 0 1px 0 0 @line_1, 0 0 0 1px @line_1;
+}
+
+.page_square_photo {
+  margin: 0;
+}
+
+.im-chat-input--scroll,
+.im-replied {
+  border-radius: 5px;
+}
+
+.im-chat-input--scroll .im-fwd.im-fwd_msg {
+  padding: 5px 7px;
+}
+
+
+.chat_cont_sh_bottom, .chat_cont_sh_top {
+  background: linear-gradient(180deg, rgba(216, 223, 230, 0), @bg_2 80%);
+}
+
+
+.audio_page_player2.audio_page_player_fixed,
+.audio_layer_container .audio_page_player_wrap {
+  box-shadow: 0 5px 10px @bg_1;
+}
+
+#ads_left,
+.trg-b-banner,
+.feed_row ._ads_block_data_w.mailru-visibility-check {
+  display: none !important;
+}
+
+//Аудио текст
+.audio_page_player_title_performer a,
+.audio_pl_snippet2 .audio_pl_snippet__info_title,
+.audio_row .audio_row__performers a,
+.audio_pl_snippet_info_maintitle {
+  color: @bg_audio;
+}
+
+//Голосовые сообщения
+.audio-msg-track .slider .slider_amount {
+  background: transparent !important;
+}
+
+//Фикс линий в настройках беседы
+.ChatSettingsInfo {
+  box-shadow: 0 1px 0 @bg_1 !important;
+}
+
+.List--border,
+.ChatSettingsMembersWidget {
+  box-shadow: 0 1px 0 @bg_1, 0 -1px 0 @bg_1;
+}
+
+.page_list_module .line_cell .desc_info, .page_list_module .line_cell .extra_info, .page_list_module .line_cell .info {
+  padding: 4px 0 0 7px;
+}
+
+.poster__slider-arrow._right {
+  box-shadow: -5px 0 5px 0 @bg_2;
+}
+
+.poster__slider-arrow._left {
+  box-shadow: 5px 0 5px 0 @bg_2;
+}
+
+.chats_sp.fc_clist_search_icon {
+  margin: 10px 7px 0 0 !important;
+}
+
+.post_top_info_ads_group_members {
+  box-shadow: 0 0 0 1px @bg_1, 0 1px 0 0 @bg_1 !important;
+}
+
+
+.ui_rmenu_count {
+  float: left;
+  padding: 1px 0;
+}
+
+.im-page .im-page--dialogs {
+  float: right !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.im-page .im-page--history {
+  margin-right: 317px;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.im-create.im-create_material {
+  right: 0;
+  position: absolute;
+}
+
+.wall_module .post{
+  padding-top: 3px;
+}
+

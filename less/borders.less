@@ -8,7 +8,10 @@
 .im-page_classic.im-page .im-page--header,
 .im-page_classic .im-page--chat-header,
 .im-page_classic.im-page .im-page--chat-body-wrap-inner,
-.Input[readonly]
+.Input[readonly],
+.post_suggest,
+.search_row,
+.search_sep
   //*line 0
 {
   border-color: @line_0;
@@ -232,7 +235,6 @@ textarea,
 .audio_page_layout .audio_page_separator,
 .audio_page_layout .has_friends_block .audio_page__rows_wrap,
 input.BlockSearchInput,
-.photos_container_edit_grid .photos_photo_edit_row_desc_placeholder,
 #mail_box_editable,
 .audio_pl_edit_box .ape_add_audios_btn:hover, .audio_pl_edit_box .ape_add_pl_audios_btn:hover,
 .docs_choose_rows .docs_item:hover,
@@ -282,7 +284,8 @@ div.wdd.wdd_focused,
 .CatalogSection__leftColumn,
 .Select--opened .Select__control,
 .Select__menu,
-.im-navigation__button
+.im-navigation__button,
+.wpost_post
   //*border_1 //*line линии
 {
   border-color: @line_1;
@@ -354,7 +357,12 @@ div.fc_tab_txt,
 .feedback_row_answer:after,
 .feedback_row_answer:before,
 #top_profile_menu:before,
-#top_profile_menu:after
+#top_profile_menu:after,
+.gifts_box_rows .post,
+#top_notify_wrap:after,
+#top_notify_wrap:before,
+.post_suggest:after,
+.post_suggest:before
   //*border_bottom_color_1
 {
   border-bottom-color: @line_1;
@@ -394,4 +402,26 @@ div.fc_tab_txt,
 //*border-link
 {
   border-color: @link_1;
+}
+
+#fc_ctabs_cont,
+.fc_tab,
+.Card,
+.sticker_hints_arrow,
+.im-page-pinned,
+.footer_wrap,
+.im-chat-input .im-chat-input--txt-wrap,
+.module,
+.wall_module .reply_fakebox,
+.tabbed_box .summary_tabs,
+#mv_pl_tt .mv_tt_private_only + .mv_tt_playlists,
+.im-page--dialogs-search,
+.im-page_classic.im-page .im-page--chat-input,
+.ui_search_new.ui_search_btn_large .ui_search_button_search,
+._audio_page_player_wrap.audio_page_player_wrap.page_block,
+.ui_search_new.ui_search_field_empty .ui_search_button_search,
+.photos_container_edit_grid .photos_photo_edit_row_desc_placeholder
+  //*border-none
+{
+  border: none !important;
 }

@@ -1,16 +1,13 @@
 {
   "name": "vk_dark",
-  "version": "0.1.18",
+  "version": "0.1.21",
   "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
-    "build-backgrounds": "lessc less/vkdark-backgrounds.less css/vkdark-backgrounds.css",
-    "build-borders": "lessc less/vkdark-borders.less css/vkdark-borders.css",
-    "build-colors": "lessc less/vkdark-colors.less css/vkdark-colors.css",
-    "build-all": "lessc less/vkdark_all.less css/vkdark_all.css",
-    "prebuild": "npm run build-all && npm run build-backgrounds && npm run build-borders && npm run build-colors",
-    "build": "npm --no-git-tag-version version patch && node build.js",
-    "start": "npm run prebuild && npm run build && node error_checker.js"
+    "prebuild": "lessc less/vkdark.less css/vkdark.css",
+    "bump-version": "npm --no-git-tag-version version patch",
+    "build": "npm run bump-version && npm run prebuild && node build.js && node error_checker.js",
+    "start": "npm run prebuild && node build.js && node error_checker.js"
   },
   "repository": {
     "type": "git",

@@ -17,7 +17,8 @@ textarea,
 div.fc_tab_txt,
 .ui_tabs_header,
 .wdd_text,
-.wall_module .reply_form
+.wall_module .reply_form,
+.im-mess.im-mess_gift
   //*bg_none
 {
   background: none !important;
@@ -158,7 +159,9 @@ div.wdd.wdd_focused,
 .stories_link,
 .CatalogBlock__separator,
 .Button--tertiary:not(.Button--disabled):focus, .Button--tertiary:not(.Button--disabled):hover,
-.Select__option--selected, .Select__option:hover
+.Select__option--selected, .Select__option:hover,
+.ui_search_new.ui_search_field_empty .ui_search_button_search,
+.disabled.selector_container
   //*1 фон 1 //*bg_1
 {
   background-color: @bg_1;
@@ -189,14 +192,12 @@ div.wdd.wdd_focused,
 .MessageForward__content,
 .article_ed_layer .article_ed_layer__header,
 .article_layer .article_layer__content_footer,
-.photos_edit_selection_header,
 .pe_tabs_panel,
 .photo_upload_separator,
 .wall_module .reply_fakebox,
 .tickets_header,
 .box_msg, .box_msg_gray,
 .result_list ul li.active,
-.disabled.selector_container,
 .selector_container td.selector .token_inner, .selector_container td.selector .token_prefix,
 .emoji_sticker_item.over, .emoji_sticker_item:hover,
 .im-page--toolsw,
@@ -312,7 +313,6 @@ input.BlockSearchInput,
 .im-mess.im-mess_selected + .im-mess:before, .im-mess.im-mess_unread + .im-mess:before,
 .im-chat-input .im-chat-input--txt-wrap,
 #side_bar ol li .left_row:hover,
-.search_filters_minimized_text,
 .info_msg,
 .audio_pl_edit_box .ape_add_pl_audios_btn,
 #mv_publish,
@@ -378,7 +378,10 @@ input.BlockSearchInput,
 .language_box_row:hover,
 .tickets_thank_you_form,
 .CatalogSection,
-.im-navigation--to-end .im-navigation__button
+.im-navigation--to-end .im-navigation__button,
+.search_filters_minimized_text,
+.friends_search_filters, .friends_search_import,
+.photos_edit_selection_header
   //*6 фон
 {
   background-color: @bg_6;
@@ -434,7 +437,7 @@ a.ts_contact.active, a.ts_search_link.active,
 body .im-page--back-btn:hover
   //*hover_1
 {
-  background-color: @hover_1;
+  background-color: @hover_0;
 }
 
 //Аудио ФОН
@@ -452,11 +455,10 @@ body .im-page--back-btn:hover
 .slider .slider_back {
   background-color: @bg_3;
 }
-//TODO: remove color in code move it to variable
 .top_nav_btn.active,
 .top_nav_btn:hover,
 .top_audio_player:hover,
 .top_nav_link:hover,
 .top_nav_link.active {
-  background-color: rgba(36, 36, 36, 0.5);
+  background-color: @hover_1;
 }
