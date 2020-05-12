@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.1.26
+// @version      0.1.27
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -208,7 +208,8 @@ div.fc_tab_txt,
 body,
 .im-page_classic.im-page .im-chat-history-resize,
 .im-create,
-#profile_groups_link:hover {
+#profile_groups_link:hover,
+.gift_tt_show_all {
   background-color: #1a1a1a !important;
 }
 *::-webkit-scrollbar,
@@ -355,7 +356,8 @@ div.wdd.wdd_focused,
 .ui_search_new.ui_search_field_empty .ui_search_button_search,
 .disabled.selector_container,
 body.author_page_body,
-.author_page_layer {
+.author_page_layer,
+.gift_tt_show_all {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -704,7 +706,8 @@ body .im-page--back-btn:hover,
 .Input[readonly],
 .post_suggest,
 .search_row,
-.search_sep {
+.search_sep,
+.gift_tt_show_all {
   border-color: #1a1a1a !important;
 }
 .audio_page_player.audio_page_player_fixed,
@@ -1041,7 +1044,9 @@ div.fc_tab_txt,
 .copy_quote {
   border-left-color: #242424 !important;
 }
-.border_1_right {
+.border_1_right,
+.tt_default.tt_left:after,
+.tt_default.tt_left:before {
   border-right-color: #242424 !important;
 }
 .im-chat-input,
@@ -1346,7 +1351,8 @@ input.text.ts_input:focus,
 .search_filter_shut,
 .photos_container_edit_grid .photos_photo_edit_row_desc_placeholder,
 .photos_album_intro h1,
-.author_page_article_title {
+.author_page_article_title,
+.gift_tt_header {
   color: #ffffff !important;
 }
 .rb_box_wrap,
