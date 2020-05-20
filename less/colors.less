@@ -211,7 +211,14 @@ input.text.ts_input:focus,
 .photos_container_edit_grid .photos_photo_edit_row_desc_placeholder,
 .photos_album_intro h1,
 .author_page_article_title,
-.gift_tt_header
+.gift_tt_header,
+.medadd_c_linkhead:not(.medadd_inline_editing) .medadd_inline_edit_target,
+.AudioPlaylistSnippet h1.AudioPlaylistSnippet__title--main,
+.verification_box .verification_title,
+.audio_pl_edit_box .ape_add_audios_btn,
+.audio_row .audio_row__position,
+.mail_box_group_first_message,
+.PeerProfile__content
   //*text ТЕКСТЫ
 {
   color: @text_2;
@@ -227,4 +234,15 @@ input.text.ts_input:focus,
   //*text_10
 {
   color: @text_10;
+}
+
+
+//Аудио текст
+.audio_page_player_title_performer a,
+.audio_pl_snippet2 .audio_pl_snippet__info_title,
+.audio_row .audio_row__performers a,
+.audio_pl_snippet_info_maintitle,
+.audio_pl_snippet2 .audio_pl_snippet__action_btn_listen
+{
+  color: @bg_audio;
 }
