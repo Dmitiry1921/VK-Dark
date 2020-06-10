@@ -9,7 +9,6 @@ input.text,
 textarea,
 .page_media_poll_wrap,
 .ui_tabs.ui_tabs_box,
-*::-webkit-scrollbar-track-piece,
 .im-page--chat-header,
 .tabbed_box .summary_tab .summary_tab3:hover, .tabbed_box .summary_tab_sel .summary_tab3:hover, .tabbed_box .summary_tab_sel a:hover, .tabbed_box .summary_tab a:hover,
 .friends_import_row:hover,
@@ -18,24 +17,27 @@ div.fc_tab_txt,
 .ui_tabs_header,
 .wdd_text,
 .wall_module .reply_form,
-.im-mess.im-mess_gift
+.im-mess.im-mess_gift,
+.PageSection--gradient:before
   //*bg_none
 {
   background: none !important;
 }
 
 
+html,
 body,
 .im-page_classic.im-page .im-chat-history-resize,
 .im-create,
 #profile_groups_link:hover,
-.gift_tt_show_all
+.gift_tt_show_all,
+#page_wrap,
+.MassMentionWarning
 {
   background-color: @bg_0;
 }
 
 
-*::-webkit-scrollbar,
 .article_ed_layer,
 .article_layer,
 .article,
@@ -166,7 +168,11 @@ div.wdd.wdd_focused,
 body.author_page_body, .author_page_layer,
 .gift_tt_show_all,
 .article_layer .article_layer__content_footer,
-.audio_pl_edit_box .ape_add_audios_btn, .audio_pl_edit_box .ape_add_pl_audios_btn
+.audio_pl_edit_box .ape_add_audios_btn, .audio_pl_edit_box .ape_add_pl_audios_btn,
+.verification_alert.default,
+.wdd_hl,
+.payments_box_wide .payments_getvotes_method_opt:hover,
+.payments_box_wide .payments_box_menu .payments_getvotes_active_row, .payments_box_wide .payments_box_menu .payments_getvotes_active_row:hover
   //*1 фон 1 //*bg_1
 {
   background-color: @bg_1;
@@ -330,14 +336,20 @@ input.BlockSearchInput,
 .Select__menu,
 .medadd_inline_editable:hover,
 .settings_line.unfolded,
-.PeerProfile
+.PeerProfile,
+.wddi_over .wdd_hl,
+.Modal__header--blue,
+.MultiSelect__search,
+.BaseModal__content,
+.TokenInput__input,
+.Modal__footer,
+.EditorTabs__header,
+.StickersPanel__header,
+.StickersPanel__tab--recent,
+.settings_alert .header
   //*2 Фон
 {
   background-color: @bg_2;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: @bg_4;
 }
 
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -348,7 +360,6 @@ input.BlockSearchInput,
 .gifts_constr_option:hover,
 .audio_pl_edit_box .ape_pl_item:hover,
 .im-mess.im-mess_selected:last-child:before, .im-mess.im-mess_unread:last-child:before,
-*::-webkit-scrollbar-thumb,
 .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_back,
 .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_slide, .audio_page_player2 .audio_page_player_volume_slider.slider.slider_size_1 .slider_slide
   //*5 фон
@@ -388,7 +399,12 @@ input.BlockSearchInput,
 .im-navigation--to-end .im-navigation__button,
 .search_filters_minimized_text,
 .friends_search_filters, .friends_search_import,
-.photos_edit_selection_header
+.photos_edit_selection_header,
+.audio_pl_attach_preview,
+.fc_msgs,
+.PageNavigation_wrap,
+.im-top-banner,
+#payments_box_right_col
   //*6 фон
 {
   background-color: @bg_6;
@@ -397,7 +413,8 @@ input.BlockSearchInput,
 .top_audio_play__button,
 .top_audio_play__button:hover, .top_audio_play__button:hover:before,
 .top_audio_play__button:before,
-.article>cite:before, .article>cite:after
+.article>cite:before, .article>cite:after,
+.emoji_sticker_image
   //*bg_7
 {
   background-color: @bg_7;
@@ -443,7 +460,8 @@ a.ts_contact.active, a.ts_search_link.active,
 .feed_row ~ .feed_row .feedback_row_clickable:not(.feedback_row_touched):hover,
 .top_notify_show_all:hover,
 body .im-page--back-btn:hover,
-.AuthorPageHeader__create:hover
+.AuthorPageHeader__create:hover,
+.eltt .eltt_fancy_action:hover
   //*hover_1
 {
   background-color: @hover_0;
@@ -454,7 +472,7 @@ body .im-page--back-btn:hover,
 .slider .slider_handler,
 .audio_page_player2 .audio_page_player_play .icon,
 .audio-msg-track .audio-msg-track--btn,
-.ui_tabs.ui_tabs_sliding .ui_tabs_slider,
+._audio_page_content_block .ui_tabs.ui_tabs_sliding .ui_tabs_slider,
   .recoms_special_block_inner>.round_button,
 .PlaceholderSmall__actions>.flat_button
 {

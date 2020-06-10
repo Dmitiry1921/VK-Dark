@@ -1,22 +1,11 @@
 @import "_Variables";
 
-*::-webkit-scrollbar {
-  width: 5px;
-  max-height: 5px;
-}
-
-
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
 .ui_search_new.ui_search_dark .ui_search_button_search,
 .ui_search_new.ui_search_field_empty .ui_search_button_search
   //*margin-left_1px
 {
   margin-left: 1px;
-}
-
-.im-page_classic.im-page .im-page--chat-input,
-.im-page .im-page--history {
-  margin-left: 0 !important;
 }
 
 
@@ -83,7 +72,8 @@
 .top_notify_cont ._notify_unread .feed_row:first-child .feedback_row_wrap,
 .page_block,
 .mv_info,
-.CatalogBlock--divided:first-child:before, .CatalogSection:first-child:before
+.CatalogBlock--divided:first-child:before, .CatalogSection:first-child:before,
+.post_top_info_wall_like
   //*box-shadow_none
 {
   box-shadow: none;
@@ -98,7 +88,8 @@
   box-shadow: 0 1px 0 0 @line_1, 0 0 0 1px @line_1;
 }
 
-.page_square_photo {
+.page_square_photo
+{
   margin: 0;
 }
 
@@ -120,14 +111,6 @@
 .audio_page_player2.audio_page_player_fixed,
 .audio_layer_container .audio_page_player_wrap {
   box-shadow: 0 5px 10px @bg_1;
-}
-
-#ads_left,
-.trg-b-banner,
-.feed_row ._ads_block_data_w.mailru-visibility-check,
-.audio_promo
-{
-  display: none !important;
 }
 
 //Голосовые сообщения
@@ -167,24 +150,20 @@
 
 
 .ui_rmenu_count {
-  float: left;
   padding: 1px 0;
 }
 
-.im-page .im-page--dialogs {
-  float: right !important;
-  border-top-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
+.emoji_sticker_image{
+  border-radius: 3px;
 }
 
-.im-page .im-page--history {
-  margin-right: 317px;
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+.ui_rmenu_count
+{
+  float: left;
 }
 
-.im-create.im-create_material {
-  right: 0;
+.im-create.im-create_material
+{
   position: absolute;
 }
 

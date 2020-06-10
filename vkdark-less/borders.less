@@ -1,9 +1,5 @@
 @import "_Variables";
 
-*::-webkit-scrollbar-thumb {
-  border-radius: 50px;
-}
-
 #page_header_cont .back, .fc_tab_head, .box_title_wrap,
 .im-page_classic.im-page .im-page--header,
 .im-page_classic .im-page--chat-header,
@@ -12,7 +8,8 @@
 .post_suggest,
 .search_row,
 .search_sep,
-.gift_tt_show_all
+.gift_tt_show_all,
+.MassMentionWarning
   //*line 0
 {
   border-color: @line_0;
@@ -290,7 +287,9 @@ div.wdd.wdd_focused,
 .poster__btns-wrapper,
 .poster__toolbar-wrapper,
 .AuthorPageHeader__create,
-.article_layer .article_layer__content:before
+.article_layer .article_layer__content:before,
+.audio_pl_attach_preview,
+.bp_post
   //*border_1 //*line линии
 {
   border-color: @line_1;
@@ -318,7 +317,11 @@ div.fc_tab_txt,
 .wall_module.wl_post .reply .reply_wrap,
 .wall_module .wl_reply_form_fixed .reply_box,
 .wall_module .wl_reply_form_fixed .reply_fakebox_wrap,
-.wall_module .replies_list
+.wall_module .replies_list,
+.Modal__footer,
+.PhotoEditor__actions,
+.PageFooterWrap,
+.wide_column .topics_module .topic_row
   //*border_top_1
 {
   border-top-color: @line_1;
@@ -369,7 +372,15 @@ div.fc_tab_txt,
 #top_notify_wrap:after,
 #top_notify_wrap:before,
 .post_suggest:after,
-.post_suggest:before
+.post_suggest:before,
+.Modal__header--blue,
+.MultiSelect__search,
+.fc_tab_notify,
+.bt_header,
+#apps_user_warning_cont, .apps_options_bar,
+.EditorTabs__header,
+body.scrolled .PageNavigation_wrap,
+.pay-card-layout_type_vk .secure-information
   //*border_bottom_color_1
 {
   border-bottom-color: @line_1;
@@ -433,6 +444,17 @@ div.fc_tab_txt,
   border: none !important;
 }
 
-.ui_tab_sel, .ui_tab_sel:hover, .ui_tabs .ui_tab_sel, .ui_tabs .ui_tab_sel:hover, .ui_tabs_box .ui_tab_sel, .ui_tabs_box .ui_tab_sel:hover{
+._audio_page_content_block .ui_tab_sel,
+._audio_page_content_block .ui_tab_sel:hover,
+._audio_page_content_block .ui_tabs .ui_tab_sel,
+._audio_page_content_block .ui_tabs .ui_tab_sel:hover,
+._audio_page_content_block .ui_tabs_box .ui_tab_sel,
+._audio_page_content_block .ui_tabs_box .ui_tab_sel:hover{
   border-color: @bg_audio;
+}
+
+.fc_msgs
+//*6
+{
+border-color: @line_6;
 }

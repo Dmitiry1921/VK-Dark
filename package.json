@@ -1,10 +1,10 @@
 {
   "name": "vk_dark",
-  "version": "0.1.28",
+  "version": "0.2.0",
   "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
-    "prebuild": "lessc less/vkdark.less css/vkdark.css",
+    "prebuild": "lessc-each styles css",
     "bump-version": "npm --no-git-tag-version version patch",
     "build": "npm run bump-version && npm run prebuild && node build.js && node error_checker.js",
     "start": "npm run prebuild && node build.js && node error_checker.js"
@@ -31,6 +31,10 @@
   "bugsLink": "https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4",
   "dependencies": {
     "css": "^2.2.4",
-    "less": "^3.10.3"
+    "less": "^3.10.3",
+    "lessc-each": "^1.1.0"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^0.28.2"
   }
 }

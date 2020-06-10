@@ -3,7 +3,7 @@
 const css = require('css');
 const fs = require('fs');
 
-const readCSS = fs.readFileSync("./css/vkdark.css", "utf8");
+const readCSS = fs.readFileSync("./css/vkdark-main.css", "utf8");
 
 const parsedCSS = css.parse(readCSS);
 

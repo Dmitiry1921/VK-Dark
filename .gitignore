@@ -1,7 +1,7 @@
 /.idea
 /node_modules
 /css
-less/tampermonkey_plugin.css
+vkdark-less/tampermonkey_plugin.css
 package-lock.json
 .idea
 .idea/workspace.xml

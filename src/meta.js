@@ -11,15 +11,14 @@
 // @include      http://vk.com/*
 // @include      https://vk.com/*
 // @include      https://vkpay.io/*
-// @include      https://new.broadcast.vkforms.ru/*
-// @include      https://poll.vip243.vkforms.ru/*
-// @include      https://donate.vip243.vkforms.ru/*
+// @include      https://*.vkforms.ru/*
+// @exclude      https://vk.com/notifier.php?*
 // @icon         {{package.icon}}
 // @icon64       {{package.icon}}
 // @grant        GM_addStyle
 // @grant        GM_registerMenuCommand
 // @grant        GM_unregisterMenuCommand
 // @grant        GM_openInTab
-// @run-at       document-end
+// @run-at       document-start
 // @license MIT
 // ==/UserScript==
