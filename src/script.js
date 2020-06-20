@@ -85,7 +85,7 @@ GM_registerMenuCommand('Настройки', () => {
     const elMain = '.vk-dark.vk-dark-sittings-main-position';
     if(document.querySelector(elMain) !== null) return;
     //Добавляем блок на страницу
-    document.body.insertAdjacentHTML('beforeEnd', '{{settingsHTML}}');
+    document.body.insertAdjacentHTML('beforeEnd', `{{settingsHTML}}`);
     const main = document.querySelector(elMain);
     //Закрытие настроек
     function close() {
