@@ -35,6 +35,6 @@
     "lessc-each": "^1.1.0"
   },
   "devDependencies": {
-    "javascript-obfuscator": "^0.28.5"
+    "javascript-obfuscator": "^1.1.0"
   }
 }
