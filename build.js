@@ -1,7 +1,6 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const JSObfuscator = require('javascript-obfuscator');
 
 const {setVariable, inlineHTML, getDefaultStorageFromHTML} = require('./utils/general');
 
@@ -35,11 +34,6 @@ const VARIABLES = {
 meta = setVariable(meta, VARIABLES);
 script = setVariable(script, VARIABLES);
 
-try {
-    script = JSObfuscator.obfuscate(script, {compact: true})
-} catch(e) {
-    console.error('JSObfuscatorERROR', e)
-}
 
 fs.writeFileSync("./vkdark.user.js", meta+script);
 fs.writeFileSync("./vkdark.meta.js", meta);
