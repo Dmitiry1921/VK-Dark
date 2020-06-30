@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.2
+// @version      0.2.3
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -22,7 +22,6 @@
 // @run-at       document-start
 // @license MIT
 // ==/UserScript==
-
 // Пункт меню, добавляется после старта браузера
 const styles = {
     'vkdark-main': `.ui_search_new.ui_search_btn_large .ui_search_button_search,
@@ -544,8 +543,8 @@ input.BlockSearchInput,
 .im-audio-message-track,
 .docs_choose_dropbox_wrap,
 .notifications_new_events,
-.bt_reporter_row:hover,
-.line_value:hover {
+.group_api_url_desc,
+.groups_edit_event_log_controls {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -666,7 +665,10 @@ a.ts_search_link.active,
 .top_notify_show_all:hover,
 body .im-page--back-btn:hover,
 .AuthorPageHeader__create:hover,
-.eltt .eltt_fancy_action:hover {
+.eltt .eltt_fancy_action:hover,
+.groups_edit_event_log_item_main:hover,
+.bt_reporter_row:hover,
+.line_value:hover {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .slider .slider_amount,
@@ -1216,8 +1218,13 @@ body.scrolled .PageNavigation_wrap,
   border-color: #2d2f30 !important;
 }
 .bt_report_row,
-.group_tokens_row:last-child {
+.group_tokens_row:last-child,
+.groups_api_divider,
+.groups_edit_event_log_controls {
   border-bottom: 1px solid #3b3f41 !important;
+}
+.group_apps_edit {
+  border-top: 1px solid #3b3f41 !important;
 }
 .bt_tag_label,
 .page_load_photo {
@@ -1484,7 +1491,13 @@ input.text.ts_input:focus,
 .im-page--chat-input ._im_chat_input_w,
 .im-audio-message_recording,
 .verification_set_item_title,
-.bt_product_row_subtitle {
+.bt_product_row_subtitle,
+.apps_group_catalog_promo_header,
+.group_edit_label,
+.wall_reasons_list,
+.Input,
+.Input--left,
+.BlockSearchInput {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1891,4 +1904,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.2');
+console.info('VK Dark version: ', '0.2.3');
