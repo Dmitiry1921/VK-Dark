@@ -1,6 +1,6 @@
 {
   "name": "vk_dark",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
@@ -35,6 +35,6 @@
     "lessc-each": "^1.1.0"
   },
   "devDependencies": {
-    "javascript-obfuscator": "^0.28.5"
+    "javascript-obfuscator": "^1.1.0"
   }
 }
