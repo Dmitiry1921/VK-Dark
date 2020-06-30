@@ -33,8 +33,5 @@
     "css": "^2.2.4",
     "less": "^3.11.3",
     "lessc-each": "^1.1.0"
-  },
-  "devDependencies": {
-    "javascript-obfuscator": "^1.1.0"
   }
 }
