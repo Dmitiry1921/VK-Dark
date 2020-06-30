@@ -22,6 +22,7 @@
 // @run-at       document-start
 // @license MIT
 // ==/UserScript==
+
 // Пункт меню, добавляется после старта браузера
 const styles = {
     'vkdark-main': `.ui_search_new.ui_search_btn_large .ui_search_button_search,
