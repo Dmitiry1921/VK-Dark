@@ -29,7 +29,7 @@ Tampermonkey сразу же предложит установить его, н�
 
 #### Требования
 - node.js и пакеты
-- ``` css less lessc-each javascript-obfuscator ``` 
+- ``` css less lessc-each ``` 
 
 #### Собрать
 - ``` npm run-script start ```
