@@ -161,6 +161,9 @@ const styles = {
 .wall_module .post {
   padding-top: 3px;
 }
+.im-chat-input--text {
+  caret-color: #ffffff !important;
+}
 .fakeinput,
 div[contenteditable=true],
 input.big_text,
@@ -668,7 +671,8 @@ body .im-page--back-btn:hover,
 .eltt .eltt_fancy_action:hover,
 .groups_edit_event_log_item_main:hover,
 .bt_reporter_row:hover,
-.line_value:hover {
+.line_value:hover,
+.top_profile_vkconnect_row:hover {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .slider .slider_amount,
