@@ -11,6 +11,7 @@
 // @include      http://vk.com/*
 // @include      https://vk.com/*
 // @include      https://vkpay.io/*
+// @include      https://connect.vk.com/*
 // @include      https://*.vkforms.ru/*
 // @exclude      https://vk.com/notifier.php?*
 // @icon         https://github.com/Dmitiry1921/VK-Dark/raw/master/src/icon.svg
@@ -356,7 +357,9 @@ body.author_page_body,
 .im-dropbox--visible,
 .im-dropbox--rect,
 .im-dropbox--rect .dropbox_over,
-.bt_tag_label {
+.bt_tag_label,
+.PanelHeader .PanelHeader--android .PanelHeader--shadow .PanelHeader--vis .PanelHeader--no-left .PanelHeader--no-right,
+.View__panels {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -1594,7 +1597,8 @@ b a,
 .app_actions_menu_wrap,
 .wide_column .topics_module .topic_title,
 .topics_module .topic_inner_link,
-.payments_getvotes_method_title {
+.payments_getvotes_method_title,
+.profile_info_edit {
   color: #b0ccda !important;
 }
 `,
