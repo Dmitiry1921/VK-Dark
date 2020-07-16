@@ -357,9 +357,7 @@ body.author_page_body,
 .im-dropbox--visible,
 .im-dropbox--rect,
 .im-dropbox--rect .dropbox_over,
-.bt_tag_label,
-.PanelHeader .PanelHeader--android .PanelHeader--shadow .PanelHeader--vis .PanelHeader--no-left .PanelHeader--no-right,
-.View__panels {
+.bt_tag_label {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -1505,7 +1503,8 @@ input.text.ts_input:focus,
 .Input,
 .Input--left,
 .BlockSearchInput,
-.apps_feedRightAppsBlock.apps_feedRightAppsBlock_single_app .apps_feedRightAppsBlock__desc {
+.apps_feedRightAppsBlock.apps_feedRightAppsBlock_single_app .apps_feedRightAppsBlock__desc,
+.group_send_msg_status_block_status:hover {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1903,7 +1902,7 @@ GM_registerMenuCommand('Настройки', () => {
         document.body.removeChild(main);
     }
     document.querySelector('.vk-dark-close-settings').onclick = close;
-    //Клик мне поля закрывает окно.
+    //Клик вне поля закрывает окно.
     main.onclick = (e) => {if(main === e.target) close()}
     //Вешаем события onchange на пункты настроек
     document.querySelectorAll('.vk-dark-hidden-checkbox').forEach(element => element.onchange = (e) => setStorage(e.target.id, e.target.checked));

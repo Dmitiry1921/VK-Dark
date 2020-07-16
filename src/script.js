@@ -92,7 +92,7 @@ GM_registerMenuCommand('Настройки', () => {
         document.body.removeChild(main);
     }
     document.querySelector('.vk-dark-close-settings').onclick = close;
-    //Клик мне поля закрывает окно.
+    //Клик вне поля закрывает окно.
     main.onclick = (e) => {if(main === e.target) close()}
     //Вешаем события onchange на пункты настроек
     document.querySelectorAll('.vk-dark-hidden-checkbox').forEach(element => element.onchange = (e) => setStorage(e.target.id, e.target.checked));
