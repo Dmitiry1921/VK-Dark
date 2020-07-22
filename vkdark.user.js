@@ -548,7 +548,8 @@ input.BlockSearchInput,
 .docs_choose_dropbox_wrap,
 .notifications_new_events,
 .group_api_url_desc,
-.groups_edit_event_log_controls {
+.groups_edit_event_log_controls,
+.ProfileEditorVkconnect__notice {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
