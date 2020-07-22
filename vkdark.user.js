@@ -1504,7 +1504,9 @@ input.text.ts_input:focus,
 .Input--left,
 .BlockSearchInput,
 .apps_feedRightAppsBlock.apps_feedRightAppsBlock_single_app .apps_feedRightAppsBlock__desc,
-.group_send_msg_status_block_status:hover {
+.group_send_msg_status_block_status:hover,
+.settings_labeled_notice,
+.box_title_wrap.box_white .box_title {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1597,7 +1599,8 @@ b a,
 .wide_column .topics_module .topic_title,
 .topics_module .topic_inner_link,
 .payments_getvotes_method_title,
-.profile_info_edit {
+.profile_info_edit,
+.button_action_light {
   color: #b0ccda !important;
 }
 `,
