@@ -549,7 +549,8 @@ input.BlockSearchInput,
 .notifications_new_events,
 .group_api_url_desc,
 .groups_edit_event_log_controls,
-.ProfileEditorVkconnect__notice {
+.ProfileEditorVkconnect__notice,
+.audio_page_player__cover {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
