@@ -11,6 +11,7 @@
 // @include      http://vk.com/*
 // @include      https://vk.com/*
 // @include      https://vkpay.io/*
+// @include      https://connect.vk.com/*
 // @include      https://*.vkforms.ru/*
 // @exclude      https://vk.com/notifier.php?*
 // @icon         {{package.icon}}
