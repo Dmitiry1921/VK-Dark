@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.4
+// @version      0.2.5
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -195,7 +195,8 @@ body,
 #profile_groups_link:hover,
 .gift_tt_show_all,
 #page_wrap,
-.MassMentionWarning {
+.MassMentionWarning,
+[dir] .ui_rmenu_count.grey {
   background-color: #1a1a1a !important;
 }
 .article_ed_layer,
@@ -357,7 +358,10 @@ body.author_page_body,
 .im-dropbox--visible,
 .im-dropbox--rect,
 .im-dropbox--rect .dropbox_over,
-.bt_tag_label {
+.bt_tag_label,
+[dir] .BannerItem,
+.page_actions_item:hover:not(.grey_hoverable),
+[dir] #group_section_menu .module_body .ui_gallery .ui_gallery_item .groups_menu_item .groups_menu_item_image .groups_menu_item_image_content.groups_menu_item_placeholder {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -550,12 +554,12 @@ input.BlockSearchInput,
 .group_api_url_desc,
 .groups_edit_event_log_controls,
 .ProfileEditorVkconnect__notice,
-.audio_page_player__cover {
+.audio_page_player__cover,
+[dir] .DownloadedGameItem:hover {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
 .page_actions_header,
-.page_actions_item:hover:not(.grey_hoverable),
 .tu_last:hover,
 .im-page .im-page--mess-search,
 .gifts_constr_option:hover,
@@ -1118,7 +1122,9 @@ div.fc_tab_txt,
 .Modal__footer,
 .PhotoEditor__actions,
 .PageFooterWrap,
-.wide_column .topics_module .topic_row {
+.wide_column .topics_module .topic_row,
+[dir] .page_block #all_shown,
+[dir] .notifications_new_events {
   border-top-color: #242424 !important;
 }
 .wall_module .published_by_quote,
@@ -1171,7 +1177,9 @@ div.fc_tab_txt,
 .apps_options_bar,
 .EditorTabs__header,
 body.scrolled .PageNavigation_wrap,
-.pay-card-layout_type_vk .secure-information {
+.pay-card-layout_type_vk .secure-information,
+[dir] .page_block_header,
+[dir] .DownloadedGameItem {
   border-bottom-color: #242424 !important;
 }
 .ui_actions_menu_sep,
@@ -1508,7 +1516,10 @@ input.text.ts_input:focus,
 .apps_feedRightAppsBlock.apps_feedRightAppsBlock_single_app .apps_feedRightAppsBlock__desc,
 .group_send_msg_status_block_status:hover,
 .settings_labeled_notice,
-.box_title_wrap.box_white .box_title {
+.box_title_wrap.box_white .box_title,
+.BannerItem__title,
+[dir] .DownloadedGameItem__header,
+.DownloadedGameItem__description {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1602,7 +1613,8 @@ b a,
 .topics_module .topic_inner_link,
 .payments_getvotes_method_title,
 .profile_info_edit,
-.button_action_light {
+.button_action_light,
+.notifications_new_events {
   color: #b0ccda !important;
 }
 `,
@@ -1917,4 +1929,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.4');
+console.info('VK Dark version: ', '0.2.5');
