@@ -555,7 +555,7 @@ input.BlockSearchInput,
 .groups_edit_event_log_controls,
 .ProfileEditorVkconnect__notice,
 .audio_page_player__cover,
-[dir] .DownloadedGameItem:hover {
+.poster__cta-btn [dir] .DownloadedGameItem:hover {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -1519,7 +1519,9 @@ input.text.ts_input:focus,
 .box_title_wrap.box_white .box_title,
 .BannerItem__title,
 [dir] .DownloadedGameItem__header,
-.DownloadedGameItem__description {
+.DownloadedGameItem__description,
+.address_time_status_cur_time,
+.validation_device_info_name {
   color: #ffffff !important;
 }
 .rb_box_wrap,
