@@ -555,7 +555,8 @@ input.BlockSearchInput,
 .groups_edit_event_log_controls,
 .ProfileEditorVkconnect__notice,
 .audio_page_player__cover,
-.poster__cta-btn [dir] .DownloadedGameItem:hover {
+.poster__cta-btn [dir] .DownloadedGameItem:hover,
+.addresses_header {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -1179,7 +1180,8 @@ div.fc_tab_txt,
 body.scrolled .PageNavigation_wrap,
 .pay-card-layout_type_vk .secure-information,
 [dir] .page_block_header,
-[dir] .DownloadedGameItem {
+[dir] .DownloadedGameItem,
+.addresses_header {
   border-bottom-color: #242424 !important;
 }
 .ui_actions_menu_sep,
