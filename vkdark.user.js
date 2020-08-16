@@ -1816,7 +1816,11 @@ body {
   float: right !important;
 }
 `,
-    'menu-promo': `#ads_left {
+    'menu-promo': `/*
+  Скрывает рекламу под меню и в новостях
+*/
+#ads_left,
+.ads_ad_box {
   display: none !important;
 }
 `,
@@ -1835,11 +1839,17 @@ body {
   display: none !important;
 }
 `,
-    'right-apps-block': `.apps_feedRightAppsBlock__row {
+    'right-apps-block': `/*
+    Скрывает блок с рекламой игр
+*/
+.apps_feedRightAppsBlock__row {
   display: none !important;
 }
 `,
-    'popular-clips': `.ShortVideoFeedBlock {
+    'popular-clips': `/*
+    Скрывает блок с "Популярными клипами"
+*/
+.ShortVideoFeedBlock {
   display: none !important;
 }
 `,
