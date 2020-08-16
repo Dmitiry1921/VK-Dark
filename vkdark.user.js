@@ -1532,7 +1532,8 @@ input.text.ts_input:focus,
 .article_snippet .article_snippet__action_btn_text,
 .profile_info_header .im-mess-stack--lnk,
 .popup_box_container .im-mess-stack--lnk,
-.audio_pl_edit_box .ape_audio_item_wrap .audio_row em {
+.audio_pl_edit_box .ape_audio_item_wrap .audio_row em,
+.im-chat-input .im-chat-input--text * {
   color: #000000 !important;
 }
 .audio_page_player_title_performer a,
