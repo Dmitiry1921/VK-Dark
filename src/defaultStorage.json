@@ -5,5 +5,7 @@
   "dialog-friend_online": true,
   "audio-subscribe": true,
   "audio-promo": true,
+  "right-apps-block": false,
+  "popular-clips": false,
   "disable-all_promo": false
 }
