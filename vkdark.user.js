@@ -362,7 +362,8 @@ body.author_page_body,
 .bt_tag_label,
 [dir] .BannerItem,
 .page_actions_item:hover:not(.grey_hoverable),
-[dir] #group_section_menu .module_body .ui_gallery .ui_gallery_item .groups_menu_item .groups_menu_item_image .groups_menu_item_image_content.groups_menu_item_placeholder {
+[dir] #group_section_menu .module_body .ui_gallery .ui_gallery_item .groups_menu_item .groups_menu_item_image .groups_menu_item_image_content.groups_menu_item_placeholder,
+[dir] .ui_search_new .ui_search_button_search {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -1096,7 +1097,8 @@ div.wdd.wdd_focused,
 .article_layer .article_layer__content:before,
 .audio_pl_attach_preview,
 .bp_post,
-.docs_choose_dropbox_wrap {
+.docs_choose_dropbox_wrap,
+[dir] .ui_search_new .ui_search_button_search {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
