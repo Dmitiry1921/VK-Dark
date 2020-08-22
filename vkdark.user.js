@@ -559,7 +559,9 @@ input.BlockSearchInput,
 .audio_page_player__cover,
 .poster__cta-btn [dir] .DownloadedGameItem:hover,
 .addresses_header,
-.tt_w.top_notify_tt {
+.tt_w.top_notify_tt,
+.post_upload_dropbox,
+.post_upload_dropbox_inner {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -1529,7 +1531,9 @@ input.text.ts_input:focus,
 [dir] .DownloadedGameItem__header,
 .DownloadedGameItem__description,
 .address_time_status_cur_time,
-.validation_device_info_name {
+.validation_device_info_name,
+.post_upload_dropbox,
+.post_upload_dropbox_inner {
   color: #ffffff !important;
 }
 .rb_box_wrap,
