@@ -363,7 +363,8 @@ body.author_page_body,
 [dir] .BannerItem,
 .page_actions_item:hover:not(.grey_hoverable),
 [dir] #group_section_menu .module_body .ui_gallery .ui_gallery_item .groups_menu_item .groups_menu_item_image .groups_menu_item_image_content.groups_menu_item_placeholder,
-[dir] .ui_search_new .ui_search_button_search {
+[dir] .ui_search_new .ui_search_button_search,
+.article_snippet_mini_info_block {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -1533,7 +1534,8 @@ input.text.ts_input:focus,
 .address_time_status_cur_time,
 .validation_device_info_name,
 .post_upload_dropbox,
-.post_upload_dropbox_inner {
+.post_upload_dropbox_inner,
+.article_snippet_mini_title {
   color: #ffffff !important;
 }
 .rb_box_wrap,
