@@ -364,7 +364,9 @@ body.author_page_body,
 .page_actions_item:hover:not(.grey_hoverable),
 [dir] #group_section_menu .module_body .ui_gallery .ui_gallery_item .groups_menu_item .groups_menu_item_image .groups_menu_item_image_content.groups_menu_item_placeholder,
 [dir] .ui_search_new .ui_search_button_search,
-.article_snippet_mini_info_block {
+.article_snippet_mini_info_block,
+.bt_report_footer,
+.bt_comment_form_actions {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -1133,7 +1135,11 @@ div.fc_tab_txt,
 .PageFooterWrap,
 .wide_column .topics_module .topic_row,
 [dir] .page_block #all_shown,
-[dir] .notifications_new_events {
+[dir] .notifications_new_events,
+.bt_comment_form_actions,
+.bt_report_one_author,
+.bt_report_footer,
+.bt_report_one_info {
   border-top-color: #242424 !important;
 }
 .wall_module .published_by_quote,
@@ -1189,7 +1195,8 @@ body.scrolled .PageNavigation_wrap,
 .pay-card-layout_type_vk .secure-information,
 [dir] .page_block_header,
 [dir] .DownloadedGameItem,
-.addresses_header {
+.addresses_header,
+.bt_report_one_author {
   border-bottom-color: #242424 !important;
 }
 .ui_actions_menu_sep,
@@ -1535,7 +1542,8 @@ input.text.ts_input:focus,
 .validation_device_info_name,
 .post_upload_dropbox,
 .post_upload_dropbox_inner,
-.article_snippet_mini_title {
+.article_snippet_mini_title,
+.BugtrackerDevice__nameIn {
   color: #ffffff !important;
 }
 .rb_box_wrap,
