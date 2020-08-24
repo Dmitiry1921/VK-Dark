@@ -628,7 +628,8 @@ input.BlockSearchInput,
 .reply_replieable,
 ._post,
 .group_tokens_row,
-.group_page_block_footer {
+.group_page_block_footer,
+.group_l_row {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1260,7 +1261,8 @@ body.scrolled .PageNavigation_wrap,
   border-top: 1px solid #3b3f41 !important;
 }
 .bt_tag_label,
-.page_load_photo {
+.page_load_photo,
+#groups_edit_action_log_datepicker {
   color: #828282 !important;
 }
 body,
@@ -1543,7 +1545,8 @@ input.text.ts_input:focus,
 .post_upload_dropbox,
 .post_upload_dropbox_inner,
 .article_snippet_mini_title,
-.BugtrackerDevice__nameIn {
+.BugtrackerDevice__nameIn,
+.group_l_position {
   color: #ffffff !important;
 }
 .rb_box_wrap,
