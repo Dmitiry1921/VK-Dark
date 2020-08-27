@@ -197,7 +197,8 @@ body,
 .gift_tt_show_all,
 #page_wrap,
 .MassMentionWarning,
-[dir] .ui_rmenu_count.grey {
+[dir] .ui_rmenu_count.grey,
+.wdd_add2 {
   background-color: #1a1a1a !important;
 }
 .article_ed_layer,
@@ -366,7 +367,8 @@ body.author_page_body,
 [dir] .ui_search_new .ui_search_button_search,
 .article_snippet_mini_info_block,
 .bt_report_footer,
-.bt_comment_form_actions {
+.bt_comment_form_actions,
+.PeerProfile__container {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -690,7 +692,8 @@ body .im-page--back-btn:hover,
 .groups_edit_event_log_item_main:hover,
 .bt_reporter_row:hover,
 .line_value:hover,
-.top_profile_vkconnect_row:hover {
+.top_profile_vkconnect_row:hover,
+.VideoLayerInfo__description .can_edit:hover {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .slider .slider_amount,
@@ -1261,8 +1264,7 @@ body.scrolled .PageNavigation_wrap,
   border-top: 1px solid #3b3f41 !important;
 }
 .bt_tag_label,
-.page_load_photo,
-#groups_edit_action_log_datepicker {
+.page_load_photo {
   color: #828282 !important;
 }
 body,
@@ -1642,7 +1644,8 @@ b a,
 .payments_getvotes_method_title,
 .profile_info_edit,
 .button_action_light,
-.notifications_new_events {
+.notifications_new_events,
+.wdd_add2 {
   color: #b0ccda !important;
 }
 `,
