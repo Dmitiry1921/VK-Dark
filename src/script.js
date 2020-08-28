@@ -1,4 +1,5 @@
 // Пункт меню, добавляется после старта браузера
+// ShortVideoFeedBlock
 const styles = {
     'vkdark-main': `{{vkdark-main}}`,
     'settings': `{{settings}}`,
@@ -7,6 +8,8 @@ const styles = {
     'audio-promo': `{{audio-promo}}`,
     'audio-subscribe': `{{audio-subscribe}}`,
     'dialog-friend_online': `{{dialog-friend_online}}`,
+    'right-apps-block': `{{right-apps-block}}`,
+    'popular-clips': `{{popular-clips}}`,
 };
 const styleStorage = {};
 const storageName = `{{package.name}}`;

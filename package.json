@@ -31,7 +31,7 @@
   "bugsLink": "https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4",
   "dependencies": {
     "css": "^2.2.4",
-    "less": "^3.11.3",
+    "less": "^3.12.2",
     "lessc-each": "^1.1.0"
   }
 }

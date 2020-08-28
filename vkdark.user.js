@@ -24,6 +24,7 @@
 // @license MIT
 // ==/UserScript==
 // Пункт меню, добавляется после старта браузера
+// ShortVideoFeedBlock
 const styles = {
     'vkdark-main': `.ui_search_new.ui_search_btn_large .ui_search_button_search,
 .ui_search_new.ui_search_dark .ui_search_button_search,
@@ -196,7 +197,8 @@ body,
 .gift_tt_show_all,
 #page_wrap,
 .MassMentionWarning,
-[dir] .ui_rmenu_count.grey {
+[dir] .ui_rmenu_count.grey,
+.wdd_add2 {
   background-color: #1a1a1a !important;
 }
 .article_ed_layer,
@@ -361,7 +363,12 @@ body.author_page_body,
 .bt_tag_label,
 [dir] .BannerItem,
 .page_actions_item:hover:not(.grey_hoverable),
-[dir] #group_section_menu .module_body .ui_gallery .ui_gallery_item .groups_menu_item .groups_menu_item_image .groups_menu_item_image_content.groups_menu_item_placeholder {
+[dir] #group_section_menu .module_body .ui_gallery .ui_gallery_item .groups_menu_item .groups_menu_item_image .groups_menu_item_image_content.groups_menu_item_placeholder,
+[dir] .ui_search_new .ui_search_button_search,
+.article_snippet_mini_info_block,
+.bt_report_footer,
+.bt_comment_form_actions,
+.PeerProfile__container {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -555,7 +562,11 @@ input.BlockSearchInput,
 .groups_edit_event_log_controls,
 .ProfileEditorVkconnect__notice,
 .audio_page_player__cover,
-[dir] .DownloadedGameItem:hover {
+.poster__cta-btn [dir] .DownloadedGameItem:hover,
+.addresses_header,
+.tt_w.top_notify_tt,
+.post_upload_dropbox,
+.post_upload_dropbox_inner {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -618,7 +629,9 @@ input.BlockSearchInput,
 .reply_dived,
 .reply_replieable,
 ._post,
-.group_tokens_row {
+.group_tokens_row,
+.group_page_block_footer,
+.group_l_row {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -679,7 +692,8 @@ body .im-page--back-btn:hover,
 .groups_edit_event_log_item_main:hover,
 .bt_reporter_row:hover,
 .line_value:hover,
-.top_profile_vkconnect_row:hover {
+.top_profile_vkconnect_row:hover,
+.VideoLayerInfo__description .can_edit:hover {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .slider .slider_amount,
@@ -1092,7 +1106,8 @@ div.wdd.wdd_focused,
 .article_layer .article_layer__content:before,
 .audio_pl_attach_preview,
 .bp_post,
-.docs_choose_dropbox_wrap {
+.docs_choose_dropbox_wrap,
+[dir] .ui_search_new .ui_search_button_search {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -1124,7 +1139,11 @@ div.fc_tab_txt,
 .PageFooterWrap,
 .wide_column .topics_module .topic_row,
 [dir] .page_block #all_shown,
-[dir] .notifications_new_events {
+[dir] .notifications_new_events,
+.bt_comment_form_actions,
+.bt_report_one_author,
+.bt_report_footer,
+.bt_report_one_info {
   border-top-color: #242424 !important;
 }
 .wall_module .published_by_quote,
@@ -1179,7 +1198,9 @@ div.fc_tab_txt,
 body.scrolled .PageNavigation_wrap,
 .pay-card-layout_type_vk .secure-information,
 [dir] .page_block_header,
-[dir] .DownloadedGameItem {
+[dir] .DownloadedGameItem,
+.addresses_header,
+.bt_report_one_author {
   border-bottom-color: #242424 !important;
 }
 .ui_actions_menu_sep,
@@ -1238,7 +1259,8 @@ body.scrolled .PageNavigation_wrap,
 .groups_edit_event_log_controls {
   border-bottom: 1px solid #3b3f41 !important;
 }
-.group_apps_edit {
+.group_apps_edit,
+.group_page_block_footer {
   border-top: 1px solid #3b3f41 !important;
 }
 .bt_tag_label,
@@ -1519,7 +1541,14 @@ input.text.ts_input:focus,
 .box_title_wrap.box_white .box_title,
 .BannerItem__title,
 [dir] .DownloadedGameItem__header,
-.DownloadedGameItem__description {
+.DownloadedGameItem__description,
+.address_time_status_cur_time,
+.validation_device_info_name,
+.post_upload_dropbox,
+.post_upload_dropbox_inner,
+.article_snippet_mini_title,
+.BugtrackerDevice__nameIn,
+.group_l_position {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1615,7 +1644,8 @@ b a,
 .payments_getvotes_method_title,
 .profile_info_edit,
 .button_action_light,
-.notifications_new_events {
+.notifications_new_events,
+.wdd_add2 {
   color: #b0ccda !important;
 }
 `,
@@ -1808,7 +1838,11 @@ body {
   float: right !important;
 }
 `,
-    'menu-promo': `#ads_left {
+    'menu-promo': `/*
+  Скрывает рекламу под меню и в новостях
+*/
+#ads_left,
+.ads_ad_box {
   display: none !important;
 }
 `,
@@ -1827,6 +1861,20 @@ body {
   display: none !important;
 }
 `,
+    'right-apps-block': `/*
+    Скрывает блок с рекламой игр
+*/
+.apps_feedRightAppsBlock__row {
+  display: none !important;
+}
+`,
+    'popular-clips': `/*
+    Скрывает блок с "Популярными клипами"
+*/
+.ShortVideoFeedBlock {
+  display: none !important;
+}
+`,
 };
 const styleStorage = {};
 const storageName = `vk_dark`;
@@ -1837,6 +1885,8 @@ const defaultStorage = `{
     "dialog-friend_online": true,
     "audio-subscribe": true,
     "audio-promo": true,
+    "right-apps-block": false,
+    "popular-clips": false,
     "disable-all_promo": false
 }`;
 
@@ -1913,7 +1963,7 @@ GM_registerMenuCommand('Настройки', () => {
     const elMain = '.vk-dark.vk-dark-sittings-main-position';
     if(document.querySelector(elMain) !== null) return;
     //Добавляем блок на страницу
-    document.body.insertAdjacentHTML('beforeEnd', `<div class="vk-dark vk-dark-sittings-main-position"> <div class="vk-dark vk-dark-settings-container"> <h2 class="vk-dark vk-dark-main-header"> <div class="vk-dark-title">Настройки</div> <div class="vk-dark-close-settings"></div> </h2> <div class="vk-dark vk-dark-main-container"> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Основные</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="vkdark-main" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="vkdark-main" class="vk-dark vk-dark-settings-label"> Включить VK-Dark </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Меню</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="menu-promo" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="menu-promo" class="vk-dark vk-dark-settings-label"> Скрыть блок "Реклама" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Диалоги</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="dialog-float" class="vk-dark vk-dark-hidden-checkbox" /> <label for="dialog-float" class="vk-dark vk-dark-settings-label"> Расположить переписки справа </label> </div> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="dialog-friend_online" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="dialog-friend_online" class="vk-dark vk-dark-settings-label"> Скрыть блок чата с друзьями </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Аудиозаписи</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="audio-subscribe" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="audio-subscribe" class="vk-dark vk-dark-settings-label"> Скрыть блок "Подписка на музыку" </label> </div> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="audio-promo" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="audio-promo" class="vk-dark vk-dark-settings-label"> Скрыть блок "Промо" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Реклама</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="disable-all_promo" class="vk-dark vk-dark-hidden-checkbox" /> <label for="disable-all_promo" class="vk-dark vk-dark-settings-label"> Отключить всю рекламу на сайте </label> </div> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-support"> Вы можете <a href="https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4">связаться с нами</a> </div> </div></div>`);
+    document.body.insertAdjacentHTML('beforeEnd', `<div class="vk-dark vk-dark-sittings-main-position"> <div class="vk-dark vk-dark-settings-container"> <h2 class="vk-dark vk-dark-main-header"> <div class="vk-dark-title">Настройки</div> <div class="vk-dark-close-settings"></div> </h2> <div class="vk-dark vk-dark-main-container"> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Основные</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="vkdark-main" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="vkdark-main" class="vk-dark vk-dark-settings-label"> Включить VK-Dark </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Меню</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="menu-promo" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="menu-promo" class="vk-dark vk-dark-settings-label"> Скрыть блок "Реклама" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Общее</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="right-apps-block" class="vk-dark vk-dark-hidden-checkbox" /> <label for="right-apps-block" class="vk-dark vk-dark-settings-label"> Скрыть блок "Игры" </label> </div> </div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="popular-clips" class="vk-dark vk-dark-hidden-checkbox" /> <label for="popular-clips" class="vk-dark vk-dark-settings-label"> Скрыть блок "Популярные клипы" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Диалоги</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="dialog-float" class="vk-dark vk-dark-hidden-checkbox" /> <label for="dialog-float" class="vk-dark vk-dark-settings-label"> Расположить переписки справа </label> </div> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="dialog-friend_online" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="dialog-friend_online" class="vk-dark vk-dark-settings-label"> Скрыть блок чата с друзьями </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Аудиозаписи</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="audio-subscribe" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="audio-subscribe" class="vk-dark vk-dark-settings-label"> Скрыть блок "Подписка на музыку" </label> </div> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="audio-promo" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="audio-promo" class="vk-dark vk-dark-settings-label"> Скрыть блок "Промо" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Реклама</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="disable-all_promo" class="vk-dark vk-dark-hidden-checkbox" /> <label for="disable-all_promo" class="vk-dark vk-dark-settings-label"> Отключить всю рекламу на сайте </label> </div> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-support"> Вы можете <a href="https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4">связаться с нами</a> </div> </div></div>`);
     const main = document.querySelector(elMain);
     //Закрытие настроек
     function close() {
