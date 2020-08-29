@@ -92,7 +92,9 @@ const styles = {
 .post_top_info_wall_podcast,
 .post_top_info_wall_poll_vote,
 .post_top_info_wall_reply,
-.post_top_info_wall_vkgo {
+.post_top_info_wall_vkgo,
+.ShortVideoPost,
+.ShortVideoPage .page_block_h2 {
   box-shadow: none !important;
 }
 .post_top_info_wall_guide,
@@ -566,7 +568,8 @@ input.BlockSearchInput,
 .addresses_header,
 .tt_w.top_notify_tt,
 .post_upload_dropbox,
-.post_upload_dropbox_inner {
+.post_upload_dropbox_inner,
+.ShortVideoPage .page_block_h2 {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -631,7 +634,8 @@ input.BlockSearchInput,
 ._post,
 .group_tokens_row,
 .group_page_block_footer,
-.group_l_row {
+.group_l_row,
+.ShortVideoPost {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1548,7 +1552,9 @@ input.text.ts_input:focus,
 .post_upload_dropbox_inner,
 .article_snippet_mini_title,
 .BugtrackerDevice__nameIn,
-.group_l_position {
+.group_l_position,
+.ShortVideoStub__text,
+.ShortVideoStub__title {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1864,7 +1870,8 @@ body {
     'right-apps-block': `/*
     Скрывает блок с рекламой игр
 */
-.apps_feedRightAppsBlock__row {
+.apps_feedRightAppsBlock__row,
+.apps_feedRightAppsBlock__hide {
   display: none !important;
 }
 `,
