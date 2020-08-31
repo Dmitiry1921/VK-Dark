@@ -370,7 +370,8 @@ body.author_page_body,
 .article_snippet_mini_info_block,
 .bt_report_footer,
 .bt_comment_form_actions,
-.PeerProfile__container {
+.PeerProfile__container,
+.pv_comments_header {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -1651,7 +1652,10 @@ b a,
 .profile_info_edit,
 .button_action_light,
 .notifications_new_events,
-.wdd_add2 {
+.wdd_add2,
+.like_button_label,
+.like_button_count,
+.like_button_icon {
   color: #b0ccda !important;
 }
 `,
