@@ -570,7 +570,11 @@ input.BlockSearchInput,
 .tt_w.top_notify_tt,
 .post_upload_dropbox,
 .post_upload_dropbox_inner,
-.ShortVideoPage .page_block_h2 {
+.ShortVideoPage .page_block_h2,
+[dir] .mv_live_gifts_arrow_left,
+[dir] .mv_live_gifts_arrow_right,
+.mv_live_gifts_supercomment,
+.docs_panel {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -1555,7 +1559,8 @@ input.text.ts_input:focus,
 .BugtrackerDevice__nameIn,
 .group_l_position,
 .ShortVideoStub__text,
-.ShortVideoStub__title {
+.ShortVideoStub__title,
+.box_msg {
   color: #ffffff !important;
 }
 .rb_box_wrap,
