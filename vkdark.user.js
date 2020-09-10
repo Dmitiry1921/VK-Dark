@@ -574,7 +574,8 @@ input.BlockSearchInput,
 [dir] .mv_live_gifts_arrow_left,
 [dir] .mv_live_gifts_arrow_right,
 .mv_live_gifts_supercomment,
-.docs_panel {
+.docs_panel,
+.Button--secondary {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -1660,7 +1661,8 @@ b a,
 .wdd_add2,
 .like_button_label,
 .like_button_count,
-.like_button_icon {
+.like_button_icon,
+.Button--secondary {
   color: #b0ccda !important;
 }
 `,
