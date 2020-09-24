@@ -641,7 +641,9 @@ input.BlockSearchInput,
 .group_tokens_row,
 .group_page_block_footer,
 .group_l_row,
-.ShortVideoPost {
+.ShortVideoPost,
+#stats_cont.stats_cont_browse,
+.submit_post {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
