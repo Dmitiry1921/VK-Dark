@@ -92,7 +92,9 @@ const styles = {
 .post_top_info_wall_podcast,
 .post_top_info_wall_poll_vote,
 .post_top_info_wall_reply,
-.post_top_info_wall_vkgo {
+.post_top_info_wall_vkgo,
+.ShortVideoPost,
+.ShortVideoPage .page_block_h2 {
   box-shadow: none !important;
 }
 .post_top_info_wall_guide,
@@ -100,7 +102,10 @@ const styles = {
 .post_top_info_wall_reply,
 .im-create.im-create_classic .im-create--table,
 .Panel_block_2RPF-,
-.Page_contentPanel_3WDOJ {
+.Page_contentPanel_3WDOJ,
+.dev_page_block,
+#dev_left_nav,
+.dev_section_methods_wrap {
   box-shadow: 0 1px 0 0 #242424, 0 0 0 1px #242424 !important;
 }
 .page_square_photo {
@@ -368,7 +373,9 @@ body.author_page_body,
 .article_snippet_mini_info_block,
 .bt_report_footer,
 .bt_comment_form_actions,
-.PeerProfile__container {
+.PeerProfile__container,
+.pv_comments_header,
+#dev_top_input {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -566,7 +573,16 @@ input.BlockSearchInput,
 .addresses_header,
 .tt_w.top_notify_tt,
 .post_upload_dropbox,
-.post_upload_dropbox_inner {
+.post_upload_dropbox_inner,
+.ShortVideoPage .page_block_h2,
+[dir] .mv_live_gifts_arrow_left,
+[dir] .mv_live_gifts_arrow_right,
+.mv_live_gifts_supercomment,
+.docs_panel,
+.Button--secondary,
+.nav_selected,
+.wk_text blockquote,
+[dir] .dev_top_link.sel {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -631,7 +647,15 @@ input.BlockSearchInput,
 ._post,
 .group_tokens_row,
 .group_page_block_footer,
-.group_l_row {
+.group_l_row,
+.ShortVideoPost,
+#stats_cont.stats_cont_browse,
+.submit_post,
+.dev_page_block,
+#dev_left_nav,
+.dev_section_methods_wrap,
+.dev_page_narrow,
+#dev_top_nav_wrap {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -693,7 +717,10 @@ body .im-page--back-btn:hover,
 .bt_reporter_row:hover,
 .line_value:hover,
 .top_profile_vkconnect_row:hover,
-.VideoLayerInfo__description .can_edit:hover {
+.VideoLayerInfo__description .can_edit:hover,
+[dir] .dev_nav .nav:hover,
+[dir] .dev_top_link.sel:hover,
+.dev_methods_list_row:hover {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .slider .slider_amount,
@@ -1548,7 +1575,13 @@ input.text.ts_input:focus,
 .post_upload_dropbox_inner,
 .article_snippet_mini_title,
 .BugtrackerDevice__nameIn,
-.group_l_position {
+.group_l_position,
+.ShortVideoStub__text,
+.ShortVideoStub__title,
+.box_msg,
+.dev_page_block,
+.wk_header,
+.dev_methods_list_desc {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1645,7 +1678,12 @@ b a,
 .profile_info_edit,
 .button_action_light,
 .notifications_new_events,
-.wdd_add2 {
+.wdd_add2,
+.like_button_label,
+.like_button_count,
+.like_button_icon,
+.Button--secondary,
+.wk_sub_header {
   color: #b0ccda !important;
 }
 `,
@@ -1864,7 +1902,8 @@ body {
     'right-apps-block': `/*
     Скрывает блок с рекламой игр
 */
-.apps_feedRightAppsBlock__row {
+.apps_feedRightAppsBlock__row,
+.apps_feedRightAppsBlock__hide {
   display: none !important;
 }
 `,
