@@ -719,7 +719,8 @@ body .im-page--back-btn:hover,
 .top_profile_vkconnect_row:hover,
 .VideoLayerInfo__description .can_edit:hover,
 [dir] .dev_nav .nav:hover,
-[dir] .dev_top_link.sel:hover {
+[dir] .dev_top_link.sel:hover,
+.dev_methods_list_row:hover {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .slider .slider_amount,
@@ -1579,7 +1580,8 @@ input.text.ts_input:focus,
 .ShortVideoStub__title,
 .box_msg,
 .dev_page_block,
-.wk_header {
+.wk_header,
+.dev_methods_list_desc {
   color: #ffffff !important;
 }
 .rb_box_wrap,
