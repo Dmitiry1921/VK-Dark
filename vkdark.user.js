@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.7
+// @version      0.2.8
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -582,7 +582,8 @@ input.BlockSearchInput,
 .Button--secondary,
 .nav_selected,
 .wk_text blockquote,
-[dir] .dev_top_link.sel {
+[dir] .dev_top_link.sel,
+[dir] .TopSearch__input {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -655,7 +656,8 @@ input.BlockSearchInput,
 #dev_left_nav,
 .dev_section_methods_wrap,
 .dev_page_narrow,
-#dev_top_nav_wrap {
+#dev_top_nav_wrap,
+[dir] #page_header_cont {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1227,7 +1229,8 @@ body.scrolled .PageNavigation_wrap,
 [dir] .page_block_header,
 [dir] .DownloadedGameItem,
 .addresses_header,
-.bt_report_one_author {
+.bt_report_one_author,
+[dir] #page_header_cont {
   border-bottom-color: #242424 !important;
 }
 .ui_actions_menu_sep,
@@ -1581,7 +1584,8 @@ input.text.ts_input:focus,
 .box_msg,
 .dev_page_block,
 .wk_header,
-.dev_methods_list_desc {
+.dev_methods_list_desc,
+[dir] .TopSearch__input {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -2019,4 +2023,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.7');
+console.info('VK Dark version: ', '0.2.8');
