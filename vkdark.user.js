@@ -102,7 +102,10 @@ const styles = {
 .post_top_info_wall_reply,
 .im-create.im-create_classic .im-create--table,
 .Panel_block_2RPF-,
-.Page_contentPanel_3WDOJ {
+.Page_contentPanel_3WDOJ,
+.dev_page_block,
+#dev_left_nav,
+.dev_section_methods_wrap {
   box-shadow: 0 1px 0 0 #242424, 0 0 0 1px #242424 !important;
 }
 .page_square_photo {
@@ -371,7 +374,8 @@ body.author_page_body,
 .bt_report_footer,
 .bt_comment_form_actions,
 .PeerProfile__container,
-.pv_comments_header {
+.pv_comments_header,
+#dev_top_input {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -575,7 +579,10 @@ input.BlockSearchInput,
 [dir] .mv_live_gifts_arrow_right,
 .mv_live_gifts_supercomment,
 .docs_panel,
-.Button--secondary {
+.Button--secondary,
+.nav_selected,
+.wk_text blockquote,
+[dir] .dev_top_link.sel {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -643,7 +650,12 @@ input.BlockSearchInput,
 .group_l_row,
 .ShortVideoPost,
 #stats_cont.stats_cont_browse,
-.submit_post {
+.submit_post,
+.dev_page_block,
+#dev_left_nav,
+.dev_section_methods_wrap,
+.dev_page_narrow,
+#dev_top_nav_wrap {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -705,7 +717,9 @@ body .im-page--back-btn:hover,
 .bt_reporter_row:hover,
 .line_value:hover,
 .top_profile_vkconnect_row:hover,
-.VideoLayerInfo__description .can_edit:hover {
+.VideoLayerInfo__description .can_edit:hover,
+[dir] .dev_nav .nav:hover,
+[dir] .dev_top_link.sel:hover {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .slider .slider_amount,
@@ -1563,7 +1577,9 @@ input.text.ts_input:focus,
 .group_l_position,
 .ShortVideoStub__text,
 .ShortVideoStub__title,
-.box_msg {
+.box_msg,
+.dev_page_block,
+.wk_header {
   color: #ffffff !important;
 }
 .rb_box_wrap,
@@ -1664,7 +1680,8 @@ b a,
 .like_button_label,
 .like_button_count,
 .like_button_icon,
-.Button--secondary {
+.Button--secondary,
+.wk_sub_header {
   color: #b0ccda !important;
 }
 `,
