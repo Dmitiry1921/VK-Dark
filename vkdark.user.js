@@ -203,7 +203,9 @@ body,
 #page_wrap,
 .MassMentionWarning,
 [dir] .ui_rmenu_count.grey,
-.wdd_add2 {
+.wdd_add2,
+.CallParticipantList__list,
+[dir] .CallSnippet {
   background-color: #1a1a1a !important;
 }
 .article_ed_layer,
@@ -375,7 +377,10 @@ body.author_page_body,
 .bt_comment_form_actions,
 .PeerProfile__container,
 .pv_comments_header,
-#dev_top_input {
+#dev_top_input,
+[dir] .ModalHeader--blue,
+[dir] .ModalFooter,
+.ChatSettingsPresetPanel__preset--selected {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -541,8 +546,7 @@ input.BlockSearchInput,
 .thumbed_link__thumb,
 .thumbed_link--chat-invitation,
 .thumbed_link__label,
-.im-page_classic.im-page .im-chat-history-resize,
-.im-create,
+.im-page_classic.im-page .im-create,
 .deep_active .replies .reply_box_inner_wrap.fixed,
 .deep_active.wall_module .replies .reply_box_inner_wrap.fixed,
 .deep_active.wall_module .wl_replies_block_wrap .reply_box_inner_wrap.fixed,
@@ -657,7 +661,17 @@ input.BlockSearchInput,
 .dev_section_methods_wrap,
 .dev_page_narrow,
 #dev_top_nav_wrap,
-[dir] #page_header_cont {
+#page_header_cont,
+#payments_box .payments_about_votes,
+.payments_about_votes,
+.payments_getvotes_method_opt:hover,
+.payments_getvotes_method_opt.payments_getvotes_active_row,
+.CallManagementModal__content,
+.CallManagementModal__section,
+.CallSettings__cameraStub,
+.InputStub,
+.ChatSettings__content,
+.ChatSettingsPresetPanel {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -722,7 +736,9 @@ body .im-page--back-btn:hover,
 .VideoLayerInfo__description .can_edit:hover,
 [dir] .dev_nav .nav:hover,
 [dir] .dev_top_link.sel:hover,
-.dev_methods_list_row:hover {
+.dev_methods_list_row:hover,
+[dir=ltr] .ModalHeader--blue .ModalHeader__back:hover,
+[dir=ltr] .ModalHeader--blue .ModalHeader__back:focus {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 .slider .slider_amount,
@@ -821,7 +837,9 @@ body .im-page--back-btn:hover,
 .search_row,
 .search_sep,
 .gift_tt_show_all,
-.MassMentionWarning {
+.MassMentionWarning,
+[dir] .ModalHeader--blue,
+[dir] .ModalFooter {
   border-color: #1a1a1a !important;
 }
 .audio_page_player.audio_page_player_fixed,
@@ -864,7 +882,8 @@ body .im-page--back-btn:hover,
 .bd_day_cell.holiday,
 .bd_day_head,
 .top_notify_count,
-.top_nav_btn:hover .top_notify_count {
+.top_nav_btn:hover .top_notify_count,
+.settings_blb_row {
   border-color: #3b3f41 !important;
 }
 .nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_classic.nim-dialog_unread,
@@ -1127,7 +1146,11 @@ div.wdd.wdd_focused,
 .audio_pl_attach_preview,
 .bp_post,
 .docs_choose_dropbox_wrap,
-[dir] .ui_search_new .ui_search_button_search {
+[dir] .ui_search_new .ui_search_button_search,
+[dir] #payments_box .payments_about_votes,
+[dir] .payments_about_votes,
+[dir] .CallSnippet,
+[dir] .InputStub {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -1578,7 +1601,12 @@ input.text.ts_input:focus,
 .wk_header,
 .dev_methods_list_desc,
 [dir] .TopSearch__input,
-#side_bar .left_label {
+#side_bar .left_label,
+.links-list__title,
+.ListHeader__text,
+.CallBanner__title,
+.CallSnippet__title,
+.ChatSettingsPresetPanel {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -1680,7 +1708,9 @@ b a,
 .like_button_count,
 .like_button_icon,
 .Button--secondary,
-.wk_sub_header {
+.wk_sub_header,
+.links-list__domain,
+.ListAddControl {
   color: #b0ccda !important;
 }
 `,
