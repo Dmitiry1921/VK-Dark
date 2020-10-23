@@ -34,7 +34,9 @@ body,
 #page_wrap,
 .MassMentionWarning,
 [dir] .ui_rmenu_count.grey,
-.wdd_add2
+.wdd_add2,
+.CallParticipantList__list,
+[dir] .CallSnippet
 {
   background-color: @bg_0;
 }
@@ -191,7 +193,10 @@ body.author_page_body, .author_page_layer,
 .bt_comment_form_actions,
 .PeerProfile__container,
 .pv_comments_header,
-#dev_top_input
+#dev_top_input,
+[dir] .ModalHeader--blue,
+[dir] .ModalFooter, 
+.ChatSettingsPresetPanel__preset--selected
   //*1 фон 1 //*bg_1
 {
   background-color: @bg_1 !important;
@@ -349,7 +354,7 @@ input.BlockSearchInput,
 .thumbed_link__thumb,
 .thumbed_link--chat-invitation,
 .thumbed_link__label,
-.im-page_classic.im-page .im-chat-history-resize, .im-create,
+.im-page_classic.im-page .im-create,
 .deep_active .replies .reply_box_inner_wrap.fixed, .deep_active.wall_module .replies .reply_box_inner_wrap.fixed, .deep_active.wall_module .wl_replies_block_wrap .reply_box_inner_wrap.fixed, .deep_active .wl_replies_block_wrap .reply_box_inner_wrap.fixed,
 .Select--opened .Select__control,
 .Select__menu,
@@ -460,7 +465,17 @@ input.BlockSearchInput,
 .dev_section_methods_wrap,
 .dev_page_narrow,
 #dev_top_nav_wrap,
-[dir] #page_header_cont
+#page_header_cont, 
+#payments_box .payments_about_votes, 
+.payments_about_votes,
+.payments_getvotes_method_opt:hover, 
+.payments_getvotes_method_opt.payments_getvotes_active_row, 
+.CallManagementModal__content, 
+.CallManagementModal__section,
+.CallSettings__cameraStub,
+.InputStub,
+.ChatSettings__content, 
+.ChatSettingsPresetPanel
   //*6 фон
 {
   background-color: @bg_6 !important;
@@ -525,7 +540,9 @@ body .im-page--back-btn:hover,
 .VideoLayerInfo__description .can_edit:hover,
 [dir] .dev_nav .nav:hover,
 [dir] .dev_top_link.sel:hover,
-.dev_methods_list_row:hover
+.dev_methods_list_row:hover, 
+[dir=ltr] .ModalHeader--blue .ModalHeader__back:hover, 
+[dir=ltr] .ModalHeader--blue .ModalHeader__back:focus
   //*hover_1
 {
   background-color: @hover_0;
