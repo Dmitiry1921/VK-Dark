@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.16
+// @version      0.2.17
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -173,6 +173,9 @@ const styles = {
 }
 .nim-dialog.nim-dialog_pinned + .nim-dialog:not(.nim-dialog_pinned)::before {
   height: 2px !important;
+}
+[dir] .post_top_info_caption {
+  padding: 3px 0 6px 10px !important;
 }
 .fakeinput,
 div[contenteditable=true],
@@ -384,7 +387,12 @@ body.author_page_body,
 #dev_top_input,
 [dir] .ModalHeader--blue,
 [dir] .ModalFooter,
-.ChatSettingsPresetPanel__preset--selected {
+.ChatSettingsPresetPanel__preset--selected,
+[dir] .post_top_info_caption,
+[dir] .im-mess.im-mess_selected:not(.im-mess_is_editing) .post_top_info_caption,
+[dir] .im-mess.im-mess_light .post_top_info_caption,
+.im-mess--text .wall_post_cont,
+.im-mess--text ._wall_post_cont {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -1622,7 +1630,8 @@ input.text.ts_input:focus,
 .CallSnippet__title,
 .ChatSettingsPresetPanel,
 .ui_rmenu_subitem,
-.ui_rmenu_unread > span {
+.ui_rmenu_unread > span,
+.post_top_info_caption {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -2061,4 +2070,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.16');
+console.info('VK Dark version: ', '0.2.17');
