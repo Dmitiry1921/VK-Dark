@@ -1,6 +1,6 @@
 {
   "name": "vk_dark",
-  "version": "0.2.15",
+  "version": "0.2.17",
   "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
