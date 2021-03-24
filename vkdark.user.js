@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
@@ -27,6 +28,42 @@
 // ShortVideoFeedBlock
 const styles = {
     'vkdark-main': `.ui_search_new.ui_search_btn_large .ui_search_button_search,
+=======
+// ==UserScript==
+// @name         VK Dark
+// @namespace    https://github.com/
+// @version      0.2.19
+// @description  Изменяет внешний вид Вконтакте на темный
+// @author       Dmitriy1921
+// @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
+// @updateURL    https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.meta.js
+// @supportURL   https://vk.com/dmitriy1921
+// @homepage     https://github.com/Dmitiry1921/VK-Dark/blob/master/README.md
+// @include      http://vk.com/*
+// @include      https://vk.com/*
+// @include      https://vkpay.io/*
+// @include      https://connect.vk.com/*
+// @include      https://*.vkforms.ru/*
+// @exclude      https://vk.com/notifier.php?*
+// @icon         https://github.com/Dmitiry1921/VK-Dark/raw/master/src/icon.svg
+// @icon64       https://github.com/Dmitiry1921/VK-Dark/raw/master/src/icon.svg
+// @grant        GM_addStyle
+// @grant        GM_registerMenuCommand
+// @grant        GM_unregisterMenuCommand
+// @grant        GM_openInTab
+// @run-at       document-start
+// @license MIT
+// ==/UserScript==
+// Пункт меню, добавляется после старта браузера
+// ShortVideoFeedBlock
+const styles = {
+    'vkdark-main': `:root {
+  --steel_gray_20: #3b3f41 !important;
+  --steel_gray_80: #242424 !important;
+  --gray_900: #e1e3e6 !important;
+}
+.ui_search_new.ui_search_btn_large .ui_search_button_search,
+>>>>>>> master
 .ui_search_new.ui_search_dark .ui_search_button_search,
 .ui_search_new.ui_search_field_empty .ui_search_button_search {
   margin-left: 1px;
@@ -155,9 +192,6 @@ const styles = {
 }
 .ui_rmenu_count {
   padding: 1px 0;
-}
-.emoji_sticker_image {
-  border-radius: 3px;
 }
 .ui_rmenu_count {
   float: left;
@@ -604,8 +638,20 @@ input.BlockSearchInput,
 [dir] .dev_top_link.sel,
 [dir] .TopSearch__input,
 [dir] .PhotoTagCard,
+<<<<<<< HEAD
 .vk_au_msg_recognize_txt.vk_show,
 .vk_au_msg_recognize {
+=======
+[dir] .im_stickers_promo_banner,
+[dir] .im_stickers_bl_wrap,
+[dir] .StickerPackPreview__items,
+[dir] .StickerPackPreview__copyrights,
+[dir] .StickerPackPreview__styles,
+[dir] .StickerPackSettings__styles,
+[dir] .StickerPackSettings__stylePreview,
+.emoji_sticker_image,
+[dir] .DonutSubscribePopup__donatorAdvantages {
+>>>>>>> master
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -690,7 +736,8 @@ input.BlockSearchInput,
 .InputStub,
 .ChatSettings__content,
 .ChatSettingsPresetPanel,
-.post_top_info_caption {
+.post_top_info_caption,
+[dir] .ReplyBoxDonut {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -698,8 +745,7 @@ input.BlockSearchInput,
 .top_audio_play__button:hover:before,
 .top_audio_play__button:before,
 .article > cite:before,
-.article > cite:after,
-.emoji_sticker_image {
+.article > cite:after {
   background-color: #ffffff !important;
 }
 a.fc_contact_over,
@@ -803,9 +849,6 @@ body .im-page--back-btn:hover,
 [dir] .TopHomeLink--logoWithText {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='25' width='136' style=''%3E%3Crect id='backgroundrect' width='100%25' height='100%25' x='0' y='0' fill='none' stroke='none'/%3E%3Cg class='currentLayer' style=''%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath d='M0 11.5c0-5.42 0-8.13 1.68-9.82C3.37 0 6.08 0 11.5 0h1c5.42 0 8.13 0 9.82 1.68C24 3.37 24 6.08 24 11.5v1c0 5.42 0 8.13-1.68 9.82C20.63 24 17.92 24 12.5 24h-1c-5.42 0-8.13 0-9.82-1.68C0 20.63 0 17.92 0 12.5z' fill='%232787f5' id='svg_1'/%3E%3Cpath d='M6.5 7.5H4.75c-.5 0-.6.24-.6.5 0 .46.6 2.76 2.76 5.8 1.45 2.07 3.49 3.2 5.34 3.2 1.11 0 1.25-.25 1.25-.68v-1.57c0-.5.1-.6.46-.6.26 0 .7.13 1.74 1.13 1.19 1.19 1.38 1.72 2.05 1.72h1.75c.5 0 .75-.25.6-.74-.15-.5-.72-1.2-1.47-2.05-.4-.49-1.02-1-1.2-1.26-.26-.34-.2-.49 0-.78 0 0 2.13-3 2.35-4.03.11-.37 0-.64-.53-.64H17.5a.76.76 0 00-.76.5s-.9 2.16-2.15 3.57c-.41.41-.6.54-.82.54-.1 0-.27-.13-.27-.5V8.14c0-.44-.13-.64-.5-.64h-2.75c-.28 0-.45.2-.45.4 0 .42.64.52.7 1.7v2.58c0 .57-.1.67-.32.67-.6 0-2.04-2.18-2.9-4.67-.16-.48-.33-.68-.78-.68z' fill='%23fff' id='svg_3' class=''/%3E%3Cpath d='M66.86 12.5c0 3.24-2.43 5.5-5.78 5.5s-5.78-2.26-5.78-5.5S57.73 7 61.08 7s5.78 2.26 5.78 5.5zm-8.97 0c0 1.97 1.3 3.3 3.19 3.3s3.19-1.33 3.19-3.3c0-1.98-1.3-3.25-3.19-3.25s-3.19 1.28-3.19 3.25zm-17.14-.21c.95-.44 1.56-1.18 1.56-2.33 0-1.73-1.58-2.96-3.87-2.96h-5.27v11h5.5c2.37 0 4.02-1.29 4.02-3.05 0-1.33-.87-2.32-1.94-2.66zM35.6 9.01h2.83c.85 0 1.44.5 1.44 1.2s-.6 1.2-1.44 1.2h-2.83zM38.67 16h-3.06V13.3h3.06c.96 0 1.59.55 1.59 1.36s-.63 1.33-1.59 1.33zM51.84 18h3.19l-5.06-5.71L54.61 7h-2.9l-3.68 4.27h-.6V7H45v11h2.44v-4.38h.59zM76.47 7v4.34h-4.93V7H69.1v11h2.43v-4.44h4.93V18h2.43V7zM86.9 18h-2.44V9.22h-3.8V7H90.7v2.22h-3.8zm9.5-11c-2.11 0-3.91.89-4.52 2.8l2.24.37c.34-.67 1.05-1.2 2.15-1.2 1.33 0 2.06.84 2.17 2.28h-2.32c-3.23 0-4.79 1.42-4.79 3.45 0 2.05 1.59 3.3 3.78 3.3 1.8 0 3-.72 3.53-1.63l.5 1.63h1.76v-6.18c0-3.19-1.74-4.82-4.5-4.82zm-.72 9c-1.19 0-1.9-.5-1.9-1.4 0-.85.57-1.44 2.43-1.44h2.35c0 1.8-1.19 2.84-2.88 2.84zm17.99 2h-3.2l-3.8-4.38h-.6V18h-2.43V7h2.43v4.27h.6L110.34 7h2.9l-4.63 5.29zm3.88 0h2.43V9.22h3.8V7h-10.04v2.22h3.8zM130.1 7c3.34 0 5.56 2.4 5.56 5.37 0 .3-.02.55-.04.79h-8.54c.23 1.69 1.36 2.69 3.17 2.69 1.29 0 2.15-.4 2.68-1.2l2.29.39c-.88 2.01-2.83 2.96-5.12 2.96a5.28 5.28 0 01-5.51-5.5c0-3.12 2.17-5.5 5.51-5.5zm2.92 4.25c-.4-1.37-1.4-2.15-2.92-2.15-1.48 0-2.47.74-2.87 2.15z' fill='%23ffffff' id='svg_4' class='' fill-opacity='1'/%3E%3C/g%3E%3C/svg%3E");
 }
-.im-page .im-page--center-empty {
-  background-image: url(https://vk.com/images/icons/first_comment.png) !important;
-}
 .media_selector .ms_item.ms_item_article:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24'%3E%3Crect id='backgroundrect' width='100%25' height='100%25' x='0' y='0' fill='none' stroke='none'/%3E%3Cg class='currentLayer' style=''%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath d='m0 0h24v24h-24z' id='svg_2' class='' opacity='0'/%3E%3Cpath d='m8 6v7c0 .5522847-.44771525 1-1 1s-1-.4477153-1-1v-7h-2c-.55228475 0-1-.44771525-1-1 0-.55228475.44771525-1 1-1h6c.5522847 0 1 .44771525 1 1 0 .55228475-.4477153 1-1 1zm4 6h8c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1h-8c-.5522847 0-1-.4477153-1-1s.4477153-1 1-1zm2-5h6c.5522847 0 1 .44771525 1 1s-.4477153 1-1 1h-6c-.5522847 0-1-.44771525-1-1s.4477153-1 1-1zm-8 10h14c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1h-14c-.55228475 0-1-.4477153-1-1s.44771525-1 1-1z' fill='%23b0ccda' id='svg_3' class='selected' fill-opacity='1'/%3E%3C/g%3E%3C/svg%3E") !important;
 }
@@ -831,9 +874,11 @@ body .im-page--back-btn:hover,
 .ActionButton--shuffle:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath d='m16.25,6.5c-2.94,0 -4.4,2.3 -5.87,4.25c-1.3,1.7 -2.38,3.7 -4.13,3.75l-3,0l0,2l3,0c2.93,0 4.24,-2.6 5.7,-4.53c1.3,-1.74 2.46,-3.47 4.3,-3.47l1,0l0,-2l-1,0zm-6.06,1.84c-0.52,-0.46 -1.38,-1.1 -2.04,-1.38c-0.64,-0.3 -1.4,-0.46 -2.23,-0.46l-2.67,0l0,2l3,0c0.44,0 0.8,0.08 1.14,0.22c0.45,0.2 1.14,0.7 1.58,1.1l1.23,-1.48l-0.01,0zm6.06,6.16l1,0l0,2l-1,0c-1.77,0 -3.24,-1.08 -4.32,-2.15l1.23,-1.5c0.8,0.83 1.98,1.65 3.1,1.65l-0.01,0zm1,4l0,-6l4,3l-4,3zm0,-8l0,-6l4,3l-4,3z' fill='%23e82f94' fill-rule='evenodd' id='svg_1'/%3E%3C/g%3E%3C/svg%3E") !important;
 }
-.audio_pl_snippet2 .audio_pl_snippet__action_btn_listen:before,
-.audio_row .audio_row__play_btn {
+[dir] .audio_row .audio_row__play_btn {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Ccircle cx='12' cy='12' fill='%23e82f94' id='svg_2' r='12'/%3E%3Cpath d='m9.846,16.86c-0.467,0.303 -0.846,0.097 -0.846,-0.45l0,-8.822c0,-0.551 0.38,-0.752 0.846,-0.45l6.91,4.48c0.324,0.21 0.327,0.549 0,0.761l-6.91,4.48l0,0.001z' fill='%23FFF' id='svg_3'/%3E%3C/g%3E%3C/svg%3E") !important;
+}
+[dir] .audio_row.audio_row__playing .audio_row__play_btn {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cg id='svg_4'%3E%3Ccircle cx='12' cy='12' fill='%23e82f94' fill-opacity='0.91' id='svg_2' r='12'/%3E%3Cpath d='m8,7.596c0,-0.33 0.277,-0.596 0.607,-0.596l1.786,0c0.335,0 0.607,0.267 0.607,0.596l0,8.808a0.605,0.605 0 0 1 -0.607,0.596l-1.786,0a0.602,0.602 0 0 1 -0.607,-0.596l0,-8.808zm5,0c0,-0.33 0.277,-0.596 0.607,-0.596l1.786,0c0.335,0 0.607,0.267 0.607,0.596l0,8.808a0.605,0.605 0 0 1 -0.607,0.596l-1.786,0a0.602,0.602 0 0 1 -0.607,-0.596l0,-8.808z' fill='%23fff' id='svg_3'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
 }
 .audio_page_player2 .audio_page_player_repeat.audio_page_player_btn_enabled .btn_icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Слой_1' x='0px' y='0px' viewBox='0 0 24 24' style='enable-background:new 0 0 24 24;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23E82F94;%7D .st1%7Bfill:none;stroke:%23E82F94;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;%7D%0A%3C/style%3E%3Cpath class='st0' d='M15.8,4.1l3,2.5C19,6.8,19,7.1,18.9,7.3c0,0,0,0-0.1,0.1l-3,2.5c-0.2,0.2-0.5,0.1-0.7-0.1C15,9.7,15,9.6,15,9.5 v-5C15,4.2,15.2,4,15.5,4C15.6,4,15.7,4,15.8,4.1z M8.2,14.1l-3,2.5C5,16.8,5,17.1,5.1,17.3c0,0,0,0,0.1,0.1l3,2.5 c0.2,0.2,0.5,0.1,0.7-0.1C9,19.7,9,19.6,9,19.5v-5C9,14.2,8.8,14,8.5,14C8.4,14,8.3,14,8.2,14.1z'/%3E%3Cpath class='st1' d='M4,11c0-2.5,1.5-4,4-4h7.5 M21,13c0,2.5-1.5,4-4,4H8.5'/%3E%3C/svg%3E") !important;
@@ -1637,7 +1682,11 @@ input.text.ts_input:focus,
 .ChatSettingsPresetPanel,
 .ui_rmenu_subitem,
 .ui_rmenu_unread > span,
-.post_top_info_caption {
+.post_top_info_caption,
+.audio_restriction_box__title,
+.StickerPackPreview__title,
+.StickerStylesMenuItem__title,
+h1 {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -1740,7 +1789,8 @@ b a,
 .Button--secondary,
 .wk_sub_header,
 .links-list__domain,
-.ListAddControl {
+.ListAddControl,
+.StickerStylesMenuItem__price {
   color: #b0ccda !important;
 }
 `,
@@ -1984,6 +2034,7 @@ const defaultStorage = `{
     "right-apps-block": false,
     "popular-clips": false,
     "disable-all_promo": false
+<<<<<<< HEAD
 }`;
 
 // Работа с локальным хранилищем.
@@ -2077,3 +2128,98 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
 });
 
 console.info('VK Dark version: ', '0.2.17');
+=======
+}`;
+
+// Работа с локальным хранилищем.
+function getStorage(){
+    return JSON.parse(localStorage.getItem(storageName));
+}
+
+function mutationStorageAfterSave(key, value, storage){
+    switch (key) {
+        case 'disable-all_promo':
+            if(value) {
+                storage['audio-subscribe'] = true;
+                storage['audio-promo'] = true;
+                storage['menu-promo'] = true;
+            }
+            break;
+        case 'audio-subscribe':
+        case 'audio-promo':
+        case 'menu-promo':
+            if(!value) {
+                storage['disable-all_promo'] = false;
+            }
+            break;
+    }
+    return storage;
+}
+
+function setStorage(key, value) {
+    let storage = getStorage();
+    if(storage === null) {
+        storage = JSON.parse(defaultStorage);
+    }
+    storage = mutationStorageAfterSave(key, value, storage);
+    storage[key] = value;
+    localStorage.setItem(storageName, JSON.stringify(storage));
+    setStyles();
+    setCheckbox();
+}
+
+if(getStorage() === null) {
+    localStorage.setItem(storageName, defaultStorage);
+}
+function deleteAllStyles() {
+    Object.keys(styleStorage).forEach(key => styleStorage[key].remove());
+}
+
+function setStyles() {
+    //сначала удаляем стили.
+    deleteAllStyles();
+    const storage = getStorage();
+    Object.keys(storage).forEach(key => {
+        if(!!storage[key]) {
+            styleStorage[key] = GM_addStyle(styles[key]);
+        }
+    });
+}
+//Получаем состояние чекбоксов из сторейжа и проставляешь их значения
+function setCheckbox(){
+    const storage = getStorage();
+    Object.keys(storage).forEach(key => document.getElementById(key).checked = storage[key]);
+}
+
+GM_addStyle(styles['settings']);
+setStyles();
+
+GM_registerMenuCommand('Github.com', () => {
+    GM_openInTab('https://github.com/Dmitiry1921/VK-Dark/blob/master/README.md', {active: true, insert: true});
+});
+GM_registerMenuCommand('Check Update', () => {
+    GM_openInTab('https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js', {active: true, insert: true});
+});
+GM_registerMenuCommand('Настройки', () => {
+    const elMain = '.vk-dark.vk-dark-sittings-main-position';
+    if(document.querySelector(elMain) !== null) return;
+    //Добавляем блок на страницу
+    document.body.insertAdjacentHTML('beforeEnd', `<div class="vk-dark vk-dark-sittings-main-position"> <div class="vk-dark vk-dark-settings-container"> <h2 class="vk-dark vk-dark-main-header"> <div class="vk-dark-title">Настройки</div> <div class="vk-dark-close-settings"></div> </h2> <div class="vk-dark vk-dark-main-container"> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Основные</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="vkdark-main" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="vkdark-main" class="vk-dark vk-dark-settings-label"> Включить VK-Dark </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Меню</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="menu-promo" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="menu-promo" class="vk-dark vk-dark-settings-label"> Скрыть блок "Реклама" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Общее</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="right-apps-block" class="vk-dark vk-dark-hidden-checkbox" /> <label for="right-apps-block" class="vk-dark vk-dark-settings-label"> Скрыть блок "Игры" </label> </div> </div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="popular-clips" class="vk-dark vk-dark-hidden-checkbox" /> <label for="popular-clips" class="vk-dark vk-dark-settings-label"> Скрыть блок "Популярные клипы" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Диалоги</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="dialog-float" class="vk-dark vk-dark-hidden-checkbox" /> <label for="dialog-float" class="vk-dark vk-dark-settings-label"> Расположить переписки справа </label> </div> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="dialog-friend_online" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="dialog-friend_online" class="vk-dark vk-dark-settings-label"> Скрыть блок чата с друзьями </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Аудиозаписи</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="audio-subscribe" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="audio-subscribe" class="vk-dark vk-dark-settings-label"> Скрыть блок "Подписка на музыку" </label> </div> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="audio-promo" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="audio-promo" class="vk-dark vk-dark-settings-label"> Скрыть блок "Промо" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Реклама</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="disable-all_promo" class="vk-dark vk-dark-hidden-checkbox" /> <label for="disable-all_promo" class="vk-dark vk-dark-settings-label"> Отключить всю рекламу на сайте </label> </div> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-support"> Вы можете <a href="https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4">связаться с нами</a> </div> </div></div>`);
+    const main = document.querySelector(elMain);
+    //Закрытие настроек
+    function close() {
+        document.body.removeChild(main);
+    }
+    document.querySelector('.vk-dark-close-settings').onclick = close;
+    //Клик вне поля закрывает окно.
+    main.onclick = (e) => {if(main === e.target) close()}
+    //Вешаем события onchange на пункты настроек
+    document.querySelectorAll('.vk-dark-hidden-checkbox').forEach(element => element.onchange = (e) => setStorage(e.target.id, e.target.checked));
+    setCheckbox();
+});
+GM_registerMenuCommand('Сообщить об ошибке', () => {
+    GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
+});
+
+console.info('VK Dark version: ', '0.2.19');
+>>>>>>> master
