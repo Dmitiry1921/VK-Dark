@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-// ==UserScript==
-// @name         VK Dark
-// @namespace    https://github.com/
-// @version      0.2.17
-// @description  Изменяет внешний вид Вконтакте на темный
-// @author       Dmitriy1921
-// @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
-// @updateURL    https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.meta.js
-// @supportURL   https://vk.com/dmitriy1921
-// @homepage     https://github.com/Dmitiry1921/VK-Dark/blob/master/README.md
-// @include      http://vk.com/*
-// @include      https://vk.com/*
-// @include      https://vkpay.io/*
-// @include      https://connect.vk.com/*
-// @include      https://*.vkforms.ru/*
-// @exclude      https://vk.com/notifier.php?*
-// @icon         https://github.com/Dmitiry1921/VK-Dark/raw/master/src/icon.svg
-// @icon64       https://github.com/Dmitiry1921/VK-Dark/raw/master/src/icon.svg
-// @grant        GM_addStyle
-// @grant        GM_registerMenuCommand
-// @grant        GM_unregisterMenuCommand
-// @grant        GM_openInTab
-// @run-at       document-start
-// @license MIT
-// ==/UserScript==
-// Пункт меню, добавляется после старта браузера
-// ShortVideoFeedBlock
-const styles = {
-    'vkdark-main': `.ui_search_new.ui_search_btn_large .ui_search_button_search,
-=======
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
@@ -63,7 +32,6 @@ const styles = {
   --gray_900: #e1e3e6 !important;
 }
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
->>>>>>> master
 .ui_search_new.ui_search_dark .ui_search_button_search,
 .ui_search_new.ui_search_field_empty .ui_search_button_search {
   margin-left: 1px;
@@ -638,10 +606,6 @@ input.BlockSearchInput,
 [dir] .dev_top_link.sel,
 [dir] .TopSearch__input,
 [dir] .PhotoTagCard,
-<<<<<<< HEAD
-.vk_au_msg_recognize_txt.vk_show,
-.vk_au_msg_recognize {
-=======
 [dir] .im_stickers_promo_banner,
 [dir] .im_stickers_bl_wrap,
 [dir] .StickerPackPreview__items,
@@ -650,8 +614,8 @@ input.BlockSearchInput,
 [dir] .StickerPackSettings__styles,
 [dir] .StickerPackSettings__stylePreview,
 .emoji_sticker_image,
-[dir] .DonutSubscribePopup__donatorAdvantages {
->>>>>>> master
+[dir] .DonutSubscribePopup__donatorAdvantages .vk_au_msg_recognize_txt.vk_show,
+.vk_au_msg_recognize {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -2034,7 +1998,6 @@ const defaultStorage = `{
     "right-apps-block": false,
     "popular-clips": false,
     "disable-all_promo": false
-<<<<<<< HEAD
 }`;
 
 // Работа с локальным хранилищем.
@@ -2127,99 +2090,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.17');
-=======
-}`;
-
-// Работа с локальным хранилищем.
-function getStorage(){
-    return JSON.parse(localStorage.getItem(storageName));
-}
-
-function mutationStorageAfterSave(key, value, storage){
-    switch (key) {
-        case 'disable-all_promo':
-            if(value) {
-                storage['audio-subscribe'] = true;
-                storage['audio-promo'] = true;
-                storage['menu-promo'] = true;
-            }
-            break;
-        case 'audio-subscribe':
-        case 'audio-promo':
-        case 'menu-promo':
-            if(!value) {
-                storage['disable-all_promo'] = false;
-            }
-            break;
-    }
-    return storage;
-}
-
-function setStorage(key, value) {
-    let storage = getStorage();
-    if(storage === null) {
-        storage = JSON.parse(defaultStorage);
-    }
-    storage = mutationStorageAfterSave(key, value, storage);
-    storage[key] = value;
-    localStorage.setItem(storageName, JSON.stringify(storage));
-    setStyles();
-    setCheckbox();
-}
-
-if(getStorage() === null) {
-    localStorage.setItem(storageName, defaultStorage);
-}
-function deleteAllStyles() {
-    Object.keys(styleStorage).forEach(key => styleStorage[key].remove());
-}
-
-function setStyles() {
-    //сначала удаляем стили.
-    deleteAllStyles();
-    const storage = getStorage();
-    Object.keys(storage).forEach(key => {
-        if(!!storage[key]) {
-            styleStorage[key] = GM_addStyle(styles[key]);
-        }
-    });
-}
-//Получаем состояние чекбоксов из сторейжа и проставляешь их значения
-function setCheckbox(){
-    const storage = getStorage();
-    Object.keys(storage).forEach(key => document.getElementById(key).checked = storage[key]);
-}
-
-GM_addStyle(styles['settings']);
-setStyles();
-
-GM_registerMenuCommand('Github.com', () => {
-    GM_openInTab('https://github.com/Dmitiry1921/VK-Dark/blob/master/README.md', {active: true, insert: true});
-});
-GM_registerMenuCommand('Check Update', () => {
-    GM_openInTab('https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js', {active: true, insert: true});
-});
-GM_registerMenuCommand('Настройки', () => {
-    const elMain = '.vk-dark.vk-dark-sittings-main-position';
-    if(document.querySelector(elMain) !== null) return;
-    //Добавляем блок на страницу
-    document.body.insertAdjacentHTML('beforeEnd', `<div class="vk-dark vk-dark-sittings-main-position"> <div class="vk-dark vk-dark-settings-container"> <h2 class="vk-dark vk-dark-main-header"> <div class="vk-dark-title">Настройки</div> <div class="vk-dark-close-settings"></div> </h2> <div class="vk-dark vk-dark-main-container"> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Основные</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="vkdark-main" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="vkdark-main" class="vk-dark vk-dark-settings-label"> Включить VK-Dark </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Меню</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="menu-promo" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="menu-promo" class="vk-dark vk-dark-settings-label"> Скрыть блок "Реклама" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Общее</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="right-apps-block" class="vk-dark vk-dark-hidden-checkbox" /> <label for="right-apps-block" class="vk-dark vk-dark-settings-label"> Скрыть блок "Игры" </label> </div> </div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="popular-clips" class="vk-dark vk-dark-hidden-checkbox" /> <label for="popular-clips" class="vk-dark vk-dark-settings-label"> Скрыть блок "Популярные клипы" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Диалоги</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="dialog-float" class="vk-dark vk-dark-hidden-checkbox" /> <label for="dialog-float" class="vk-dark vk-dark-settings-label"> Расположить переписки справа </label> </div> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="dialog-friend_online" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="dialog-friend_online" class="vk-dark vk-dark-settings-label"> Скрыть блок чата с друзьями </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Аудиозаписи</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="audio-subscribe" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="audio-subscribe" class="vk-dark vk-dark-settings-label"> Скрыть блок "Подписка на музыку" </label> </div> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="audio-promo" class="vk-dark vk-dark-hidden-checkbox" checked/> <label for="audio-promo" class="vk-dark vk-dark-settings-label"> Скрыть блок "Промо" </label> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-group"> <div class="vk-dark vk-dark-row"> <div class="vk-dark vk-dark-cell-left">Реклама</div> <div class="vk-dark vk-dark-cell-right"> <div class="vk-dark vk-dark-settings-narrow-row"> <input type="checkbox" id="disable-all_promo" class="vk-dark vk-dark-hidden-checkbox" /> <label for="disable-all_promo" class="vk-dark vk-dark-settings-label"> Отключить всю рекламу на сайте </label> </div> </div> </div> </div> </div> <div class="vk-dark vk-dark-settings-support"> Вы можете <a href="https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4">связаться с нами</a> </div> </div></div>`);
-    const main = document.querySelector(elMain);
-    //Закрытие настроек
-    function close() {
-        document.body.removeChild(main);
-    }
-    document.querySelector('.vk-dark-close-settings').onclick = close;
-    //Клик вне поля закрывает окно.
-    main.onclick = (e) => {if(main === e.target) close()}
-    //Вешаем события onchange на пункты настроек
-    document.querySelectorAll('.vk-dark-hidden-checkbox').forEach(element => element.onchange = (e) => setStorage(e.target.id, e.target.checked));
-    setCheckbox();
-});
-GM_registerMenuCommand('Сообщить об ошибке', () => {
-    GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
-});
-
 console.info('VK Dark version: ', '0.2.19');
->>>>>>> master
