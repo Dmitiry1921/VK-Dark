@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.19
+// @version      0.2.20
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -30,6 +30,7 @@ const styles = {
   --steel_gray_20: #3b3f41 !important;
   --steel_gray_80: #242424 !important;
   --gray_900: #e1e3e6 !important;
+  --separator_common: #242424 !important;
 }
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
 .ui_search_new.ui_search_dark .ui_search_button_search,
@@ -697,7 +698,8 @@ input.BlockSearchInput,
 .ChatSettings__content,
 .ChatSettingsPresetPanel,
 .post_top_info_caption,
-[dir] .ReplyBoxDonut {
+[dir] .ReplyBoxDonut,
+[dir] #pv_box {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -2085,4 +2087,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.19');
+console.info('VK Dark version: ', '0.2.20');
