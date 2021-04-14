@@ -284,7 +284,8 @@ input.text.ts_input:focus,
 .audio_restriction_box__title,
 .StickerPackPreview__title,
 .StickerStylesMenuItem__title,
-h1
+h1,
+.im-chat-input .im-chat-input--text>span
   //*text ТЕКСТЫ
 {
   color: @text_2;
@@ -312,4 +313,9 @@ h1
 .audio_pl_snippet2 .audio_pl_snippet__action_btn_listen
 {
   color: @bg_audio;
+}
+
+.im-page--title-meta:not('online')
+{
+  color: @text_online;
 }

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.20
+// @version      0.2.21
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -1647,7 +1647,8 @@ input.text.ts_input:focus,
 .audio_restriction_box__title,
 .StickerPackPreview__title,
 .StickerStylesMenuItem__title,
-h1 {
+h1,
+.im-chat-input .im-chat-input--text > span {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -1666,6 +1667,9 @@ h1 {
 .audio_pl_snippet_info_maintitle,
 .audio_pl_snippet2 .audio_pl_snippet__action_btn_listen {
   color: #e82f94 !important;
+}
+.im-page--title-meta:not('online') {
+  color: #bbe6ac !important;
 }
 .nim-dialog .nim-dialog--name .nim-dialog--name-w,
 .audio_row .audio_row__performer,
@@ -1912,7 +1916,8 @@ body {
 .vk-dark-cell-left {
   color: #656565 !important;
 }
-.vk-dark-settings-support > a {
+.vk-dark-settings-support > a,
+.im-right-menu .im-right-menu--count {
   color: #b0ccda !important;
 }
 .vk-dark-cell-left,
@@ -2087,4 +2092,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.20');
+console.info('VK Dark version: ', '0.2.21');
