@@ -2,5 +2,4 @@
 /node_modules
 /css
 vkdark-less/tampermonkey_plugin.css
-package-lock.json
 errors.json

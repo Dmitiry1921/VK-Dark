@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.22
+// @version      0.2.23
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -100,7 +100,8 @@ const styles = {
 .post_top_info_wall_reply,
 .post_top_info_wall_vkgo,
 .ShortVideoPost,
-.ShortVideoPage .page_block_h2 {
+.ShortVideoPage .page_block_h2,
+[dir] .MarketCatalogLocationTooltip {
   box-shadow: none !important;
 }
 .post_top_info_wall_guide,
@@ -396,7 +397,11 @@ body.author_page_body,
 [dir] .im-mess.im-mess_selected:not(.im-mess_is_editing) .post_top_info_caption,
 [dir] .im-mess.im-mess_light .post_top_info_caption,
 .im-mess--text .wall_post_cont,
-.im-mess--text ._wall_post_cont {
+.im-mess--text ._wall_post_cont,
+[dir] .ReactionsMenu,
+[dir] .PostBottomAction,
+[dir] .lead_forms_app_error,
+[dir] .lead_forms_buttons_wrap {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -701,7 +706,14 @@ input.BlockSearchInput,
 .ChatSettingsPresetPanel,
 .post_top_info_caption,
 [dir] .ReplyBoxDonut,
-[dir] #pv_box {
+[dir] #pv_box,
+[dir] .PostShowMore,
+[dir] .MarketCatalogHeader,
+[dir] .MarketCatalogLocationTooltip,
+[dir] .MarketCatalogHeader--fixed,
+[dir] .MarketCatalogTabs,
+[dir] .MarketCatalogBlockBanner,
+[dir] .MarketCatalogBlockList {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1181,7 +1193,8 @@ div.wdd.wdd_focused,
 [dir] #payments_box .payments_about_votes,
 [dir] .payments_about_votes,
 [dir] .CallSnippet,
-[dir] .InputStub {
+[dir] .InputStub,
+[dir] .MarketCatalogHeader--fixed {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -1650,7 +1663,12 @@ input.text.ts_input:focus,
 .StickerPackPreview__title,
 .StickerStylesMenuItem__title,
 h1,
-.im-chat-input .im-chat-input--text > span {
+.im-chat-input .im-chat-input--text > span,
+[dir] .PostShowMore__text,
+.MarketCatalogLocationTooltip__title,
+.Button--link,
+.MarketCatalogProduct__price,
+.market_item_owner_name--no-href {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -2094,4 +2112,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.22');
+console.info('VK Dark version: ', '0.2.23');
