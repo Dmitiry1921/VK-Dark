@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.24
+// @version      0.2.25
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -401,7 +401,10 @@ body.author_page_body,
 [dir] .ReactionsMenu,
 [dir] .PostBottomAction,
 [dir] .lead_forms_app_error,
-[dir] .lead_forms_buttons_wrap {
+[dir] .lead_forms_buttons_wrap,
+[dir] .FlatButton--tertiary:not(.disable):hover,
+[dir] .FlatButton--tertiary:not(.disable):focus,
+[dir] .FlatButton--tertiary:active {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -1669,7 +1672,8 @@ h1,
 .MarketCatalogLocationTooltip__title,
 .Button--link,
 .MarketCatalogProduct__price,
-.market_item_owner_name--no-href {
+.market_item_owner_name--no-href,
+.FlatButton--tertiary {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -2113,4 +2117,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.24');
+console.info('VK Dark version: ', '0.2.25');
