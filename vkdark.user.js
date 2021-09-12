@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.28
+// @version      0.2.29
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -1681,7 +1681,9 @@ h1,
 .FlatButton--tertiary,
 .box_title,
 [dir] .ReportForm__categorySelectionHeader:not(:first-child),
-[dir] .ReportForm__categoryHeader:not(:first-child) {
+[dir] .ReportForm__categoryHeader:not(:first-child),
+.ReportForm__singleReasonText,
+.ReportForm__singleReasonTextWithComment {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -2125,4 +2127,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.28');
+console.info('VK Dark version: ', '0.2.29');
