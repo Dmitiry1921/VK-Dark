@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.30
+// @version      0.2.31
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -220,7 +220,10 @@ body,
 .wdd_add2,
 .CallParticipantList__list,
 [dir] .CallSnippet,
-[dir] .nim-dialog.nim-dialog_pinned + .nim-dialog:not(.nim-dialog_pinned)::before {
+[dir] .nim-dialog.nim-dialog_pinned + .nim-dialog:not(.nim-dialog_pinned)::before,
+[dir] .FlatButton--secondary,
+[dir] .FlatButton--secondary:not(.disable):hover,
+[dir] .vkuiActionSheet--desktop {
   background-color: #1a1a1a !important;
 }
 .article_ed_layer,
@@ -629,7 +632,8 @@ input.BlockSearchInput,
 [dir] .Select__control,
 [dir] .mv_playlist,
 [dir=ltr] .VideoRecomsItem,
-[dir] .im-page .im-page--dialogs-footer {
+[dir] .im-page .im-page--dialogs-footer,
+[dir] .ModalHeader {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -1684,7 +1688,10 @@ h1,
 [dir] .ReportForm__categorySelectionHeader:not(:first-child),
 [dir] .ReportForm__categoryHeader:not(:first-child),
 .ReportForm__singleReasonText,
-.ReportForm__singleReasonTextWithComment {
+.ReportForm__singleReasonTextWithComment,
+.SettingsListItem__title,
+.vkuiActionSheetItem--compact .vkuiActionSheetItem__container,
+.Settings__button {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -2128,4 +2135,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.30');
+console.info('VK Dark version: ', '0.2.31');

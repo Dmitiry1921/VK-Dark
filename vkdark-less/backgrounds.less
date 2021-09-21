@@ -38,7 +38,10 @@ body,
 .wdd_add2,
 .CallParticipantList__list,
 [dir] .CallSnippet,
-[dir] .nim-dialog.nim-dialog_pinned+.nim-dialog:not(.nim-dialog_pinned)::before
+[dir] .nim-dialog.nim-dialog_pinned+.nim-dialog:not(.nim-dialog_pinned)::before,
+[dir] .FlatButton--secondary,
+[dir] .FlatButton--secondary:not(.disable):hover,
+[dir] .vkuiActionSheet--desktop
 {
   background-color: @bg_0;
 }
@@ -417,7 +420,8 @@ input.BlockSearchInput,
 [dir] .Select__control,
 [dir] .mv_playlist,
 [dir=ltr] .VideoRecomsItem,
-[dir] .im-page .im-page--dialogs-footer
+[dir] .im-page .im-page--dialogs-footer,
+[dir] .ModalHeader
   //*2 Фон
 {
   background-color: @bg_2;
