@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.31
+// @version      0.2.32
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -101,7 +101,10 @@ const styles = {
 .post_top_info_wall_vkgo,
 .ShortVideoPost,
 .ShortVideoPage .page_block_h2,
-[dir] .MarketCatalogLocationTooltip {
+[dir] .MarketCatalogLocationTooltip,
+.FCPanel__list,
+.FCWindow,
+.FCThumb--wide .FCThumb__close {
   box-shadow: none !important;
 }
 .post_top_info_wall_guide,
@@ -205,7 +208,8 @@ div.fc_tab_txt,
 .wall_module .reply_form,
 .im-mess.im-mess_gift,
 .PageSection--gradient:before,
-[dir] .ui_gallery_wall_cards .wall_card {
+[dir] .ui_gallery_wall_cards .wall_card,
+.FCThumb--wide .FCThumb__close {
   background: none !important;
 }
 html,
@@ -633,7 +637,11 @@ input.BlockSearchInput,
 [dir] .mv_playlist,
 [dir=ltr] .VideoRecomsItem,
 [dir] .im-page .im-page--dialogs-footer,
-[dir] .ModalHeader {
+[dir] .ModalHeader,
+.FCPanel__add,
+.FCPanel__list,
+.FCThumb,
+.FCWindow {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -727,7 +735,13 @@ input.BlockSearchInput,
 [dir] .MarketCatalogHeader--fixed,
 [dir] .MarketCatalogTabs,
 [dir] .MarketCatalogBlockBanner,
-[dir] .MarketCatalogBlockList {
+[dir] .MarketCatalogBlockList,
+.FCPanel__add:hover::before,
+.FCPanel__add:focus::before,
+.FCConvoListItem:hover,
+.FCConvoListItem[aria-selected='true'],
+.ConvoMessage,
+.ConvoMessage--out {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1208,7 +1222,8 @@ div.wdd.wdd_focused,
 [dir] .payments_about_votes,
 [dir] .CallSnippet,
 [dir] .InputStub,
-[dir] .MarketCatalogHeader--fixed {
+[dir] .MarketCatalogHeader--fixed,
+.FCWindow {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -1245,7 +1260,8 @@ div.fc_tab_txt,
 .bt_report_one_author,
 .bt_report_footer,
 .bt_report_one_info,
-[dir] .feed_groups_recomm__all {
+[dir] .feed_groups_recomm__all,
+.FCWindow__footer {
   border-top-color: #242424 !important;
 }
 .wall_module .published_by_quote,
@@ -1307,7 +1323,8 @@ body.scrolled .PageNavigation_wrap,
 [dir] .deep_active .replies .replies_wrap_deep .reply_media_preview,
 [dir] .deep_active .wl_replies_block_wrap .replies_wrap_deep .reply_media_preview,
 [dir] .deep_active.wall_module .replies .replies_wrap_deep .reply_media_preview,
-[dir] .deep_active.wall_module .wl_replies_block_wrap .replies_wrap_deep .reply_media_preview {
+[dir] .deep_active.wall_module .wl_replies_block_wrap .replies_wrap_deep .reply_media_preview,
+.FCWindow__header {
   border-bottom-color: #242424 !important;
 }
 .ui_actions_menu_sep,
@@ -1691,7 +1708,26 @@ h1,
 .ReportForm__singleReasonTextWithComment,
 .SettingsListItem__title,
 .vkuiActionSheetItem--compact .vkuiActionSheetItem__container,
-.Settings__button {
+.Settings__button,
+.ConvoTitle,
+.MessageText,
+.AttachWall__message,
+[dir] input[type=text],
+[dir] input[type=submit],
+[dir] input[type=button],
+[dir] input[type=search],
+[dir] input[type=password],
+[dir] input[type~=text],
+[dir] input[type~=search],
+[dir] input[type~=password],
+[dir] input[type~=email],
+[dir] input.text,
+[dir] input.search,
+[dir] .fakeinput,
+[dir] textarea,
+[dir] input.big_text,
+[dir] input.file,
+[dir] div[contenteditable=true] {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -2135,4 +2171,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.31');
+console.info('VK Dark version: ', '0.2.32');

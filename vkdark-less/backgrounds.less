@@ -19,7 +19,8 @@ div.fc_tab_txt,
 .wall_module .reply_form,
 .im-mess.im-mess_gift,
 .PageSection--gradient:before,
-[dir] .ui_gallery_wall_cards .wall_card
+[dir] .ui_gallery_wall_cards .wall_card,
+.FCThumb--wide .FCThumb__close
   //*bg_none
 {
   background: none !important;
@@ -421,7 +422,11 @@ input.BlockSearchInput,
 [dir] .mv_playlist,
 [dir=ltr] .VideoRecomsItem,
 [dir] .im-page .im-page--dialogs-footer,
-[dir] .ModalHeader
+[dir] .ModalHeader,
+.FCPanel__add,
+.FCPanel__list,
+.FCThumb,
+.FCWindow
   //*2 Фон
 {
   background-color: @bg_2;
@@ -514,7 +519,11 @@ input.BlockSearchInput,
 [dir] .MarketCatalogHeader--fixed,
 [dir] .MarketCatalogTabs,
 [dir] .MarketCatalogBlockBanner,
-[dir] .MarketCatalogBlockList
+[dir] .MarketCatalogBlockList,
+.FCPanel__add:hover::before, .FCPanel__add:focus::before,
+.FCConvoListItem:hover, .FCConvoListItem[aria-selected='true'],
+.ConvoMessage,
+.ConvoMessage--out
   //*6 фон
 {
   background-color: @bg_6 !important;
