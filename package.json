@@ -4,7 +4,7 @@
   "description": "Изменяет внешний вид Вконтакте на темный",
   "main": "build.js",
   "scripts": {
-    "prebuild": "lessc-each styles css",
+    "prebuild": "node bin/less-each.js styles css",
     "bump-version": "npm --no-git-tag-version version patch",
     "build": "npm run bump-version && npm run prebuild && node build.js && node error_checker.js",
     "start": "npm run prebuild && node build.js && node error_checker.js"
@@ -30,8 +30,7 @@
   "supportURL": "https://vk.com/dmitriy1921",
   "bugsLink": "https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4",
   "dependencies": {
-    "css": "2.2.4",
-    "less": "3.13.1",
-    "lessc-each": "1.1.0"
+    "css": "3.0.0",
+    "less": "4.1.2"
   }
 }

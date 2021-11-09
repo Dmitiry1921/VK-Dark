@@ -1978,7 +1978,7 @@ body {
   border: 0;
   margin: 6px;
   cursor: pointer;
-  opacity: .7;
+  opacity: 0.7;
   right: 4px;
   top: 8px;
 }
