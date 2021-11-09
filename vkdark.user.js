@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.32
+// @version      0.2.33
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -31,6 +31,10 @@ const styles = {
   --steel_gray_80: #242424 !important;
   --gray_900: #e1e3e6 !important;
   --separator_common: #242424 !important;
+  --text_primary: #e1e3e6 !important;
+  --background_content: #3b3f41 !important;
+  --placeholder_icon_background_opaque: #242424 !important;
+  --button_secondary_background: #242424 !important;
 }
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
 .ui_search_new.ui_search_dark .ui_search_button_search,
@@ -104,7 +108,8 @@ const styles = {
 [dir] .MarketCatalogLocationTooltip,
 .FCPanel__list,
 .FCWindow,
-.FCThumb--wide .FCThumb__close {
+.FCThumb--wide .FCThumb__close,
+[dir] .PortalNavigationDropdown {
   box-shadow: none !important;
 }
 .post_top_info_wall_guide,
@@ -741,7 +746,10 @@ input.BlockSearchInput,
 .FCConvoListItem:hover,
 .FCConvoListItem[aria-selected='true'],
 .ConvoMessage,
-.ConvoMessage--out {
+.ConvoMessage--out,
+[dir] .audio_layer_container .ui_tabs,
+[dir] .video_showcase .page_header_wrap,
+[dir] .VideoLayout__aside {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -2171,4 +2179,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.32');
+console.info('VK Dark version: ', '0.2.33');
