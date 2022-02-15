@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.37
+// @version      0.2.38
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -440,7 +440,8 @@ body.author_page_body,
 [dir] .im_stickers_my_row.sort_taken,
 [dir] .im_stickers_my_row.sort_taken:last-child,
 [dir] .prefix_input_wrap,
-[dir] .SitesExamplesGalleryCard {
+[dir] .SitesExamplesGalleryCard,
+[dir] .Table__Cell--hasSort {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -679,7 +680,9 @@ input.BlockSearchInput,
 [dir] .flist_sel,
 [dir] .PhotoViewTopPanel,
 .settings_alert .text,
-.settings_alert .footer .cancel_btn:hover {
+.settings_alert .footer .cancel_btn:hover,
+[dir] .HeaderNotifier:hover,
+[dir] .HeaderNotifier.active {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -814,7 +817,9 @@ input.BlockSearchInput,
 [dir] .PrivacyModal__box,
 [dir] .datepicker_text,
 .settings_alert .header,
-.settings_alert .footer {
+.settings_alert .footer,
+[dir] .BudgetBalance,
+[dir] .BudgetStats {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1446,7 +1451,9 @@ body.scrolled .PageNavigation_wrap,
 [dir] .im_stickers_my_row.sort_taken:last-child,
 [dir] .prefix_input_border,
 [dir] .datepicker_control,
-.settings_alert .footer {
+.settings_alert .footer,
+[dir] .BudgetBalance,
+[dir] .BudgetStats {
   border: none !important;
 }
 ._audio_page_content_block .ui_tab_sel,
@@ -2282,4 +2289,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.37');
+console.info('VK Dark version: ', '0.2.38');
