@@ -10,7 +10,7 @@
 // @homepage     https://github.com/Dmitiry1921/VK-Dark/blob/master/README.md
 // @include      http://vk.com/*
 // @include      https://vk.com/*
-// @include      https://dev.vk.com/*
+// @include      https://static.vk.com/*
 // @include      https://vkpay.io/*
 // @include      https://connect.vk.com/*
 // @include      https://*.vkforms.ru/*
@@ -677,7 +677,9 @@ input.BlockSearchInput,
 [dir] .AppsCatalogSelectMenu,
 [dir] .ListItem--selectable,
 [dir] .flist_sel,
-[dir] .PhotoViewTopPanel {
+[dir] .PhotoViewTopPanel,
+.settings_alert .text,
+.settings_alert .footer .cancel_btn:hover {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -810,7 +812,9 @@ input.BlockSearchInput,
 .ui_search.ui_search_old,
 [dir] .choose_search_cont input,
 [dir] .PrivacyModal__box,
-[dir] .datepicker_text {
+[dir] .datepicker_text,
+.settings_alert .header,
+.settings_alert .footer {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -1441,7 +1445,8 @@ body.scrolled .PageNavigation_wrap,
 [dir] .im_stickers_my_row.sort_taken,
 [dir] .im_stickers_my_row.sort_taken:last-child,
 [dir] .prefix_input_border,
-[dir] .datepicker_control {
+[dir] .datepicker_control,
+.settings_alert .footer {
   border: none !important;
 }
 ._audio_page_content_block .ui_tab_sel,
@@ -1825,7 +1830,8 @@ h1,
 .ColorPanel__name,
 .AdsEasyPromoteModal + .vkui__portal-root .AdsEasyPromoteModal__AdBlockTitle,
 .ImageStatusPopup__description,
-.article_ed_layer .article_ed_layer__list_item .article_ed_layer__list_item_title {
+.article_ed_layer .article_ed_layer__list_item .article_ed_layer__list_item_title,
+.settings_alert .text {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -1937,7 +1943,9 @@ b a,
 .links-list__domain,
 .ListAddControl,
 .StickerStylesMenuItem__price,
-.help_table_question__ans_text .wk_hider_title {
+.help_table_question__ans_text .wk_hider_title,
+.settings_alert .footer .licenses_btn,
+.settings_alert .footer .cancel_btn {
   color: #b0ccda !important;
 }
 `,

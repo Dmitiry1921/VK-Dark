@@ -10,7 +10,7 @@
 // @homepage     https://github.com/Dmitiry1921/VK-Dark/blob/master/README.md
 // @include      http://vk.com/*
 // @include      https://vk.com/*
-// @include      https://dev.vk.com/*
+// @include      https://static.vk.com/*
 // @include      https://vkpay.io/*
 // @include      https://connect.vk.com/*
 // @include      https://*.vkforms.ru/*

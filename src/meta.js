@@ -10,6 +10,7 @@
 // @homepage     {{package.homepage}}
 // @include      http://vk.com/*
 // @include      https://vk.com/*
+// @include      https://static.vk.com/*
 // @include      https://vkpay.io/*
 // @include      https://connect.vk.com/*
 // @include      https://*.vkforms.ru/*
