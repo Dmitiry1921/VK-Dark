@@ -79,7 +79,9 @@
 .FCPanel__list,
 .FCWindow,
 .FCThumb--wide .FCThumb__close,
-[dir] .PortalNavigationDropdown
+[dir] .PortalNavigationDropdown,
+[dir] .Header,
+[dir] .landing_transparencyFooter
   //*box-shadow_none
 {
   box-shadow: none !important;
@@ -189,4 +191,8 @@
 
 .im-page .im-page--history{
   width: ~"calc(100% - 317px)";
+}
+
+[dir=ltr] .SideOfficeMenu__nav::after {
+  background: linear-gradient(rgba(255, 255, 255, 0), @bg_2 70%), 0 100%;
 }

@@ -20,7 +20,10 @@ div.fc_tab_txt,
 .im-mess.im-mess_gift,
 .PageSection--gradient:before,
 [dir] .ui_gallery_wall_cards .wall_card,
-.FCThumb--wide .FCThumb__close
+.FCThumb--wide .FCThumb__close,
+[dir] .selector_container table.selector_table,
+[dir] .flist_search_cont input.ui_search_field,
+[dir] .datepicker_control
   //*bg_none
 {
   background: none !important;
@@ -42,7 +45,10 @@ body,
 [dir] .nim-dialog.nim-dialog_pinned+.nim-dialog:not(.nim-dialog_pinned)::before,
 [dir] .FlatButton--secondary,
 [dir] .FlatButton--secondary:not(.disable):hover,
-[dir] .vkuiActionSheet--desktop
+[dir] .vkuiActionSheet--desktop,
+[dir] .landing_transparencyFooter,
+[dir] .im-mess.im-mess_gift,
+[dir] .stats_cont_browse_tile
 {
   background-color: @bg_0;
 }
@@ -211,7 +217,13 @@ body.author_page_body, .author_page_layer,
 [dir] .PostBottomAction,
 [dir] .lead_forms_app_error,
 [dir] .lead_forms_buttons_wrap,
-[dir] .FlatButton--tertiary:not(.disable):hover, [dir] .FlatButton--tertiary:not(.disable):focus, [dir] .FlatButton--tertiary:active
+[dir] .FlatButton--tertiary:not(.disable):hover, [dir] .FlatButton--tertiary:not(.disable):focus, [dir] .FlatButton--tertiary:active,
+[dir] .pretty-card,
+[dir] .Header,
+[dir] .author_page_up_hover .author_page_up,
+[dir] .im_stickers_my_row.sort_taken, [dir] .im_stickers_my_row.sort_taken:last-child,
+[dir] .prefix_input_wrap,
+[dir] .SitesExamplesGalleryCard
   //*1 фон 1 //*bg_1
 {
   background-color: @bg_1 !important;
@@ -427,7 +439,15 @@ input.BlockSearchInput,
 .FCPanel__list,
 .FCThumb,
 .FCWindow,
-.im-top-banner
+.im-top-banner,
+[dir] .Input,
+.HeaderSectionSwitcherDropdown__item>a,
+[dir] .SideOfficeMenu__link:focus, [dir] .SideOfficeMenu__link:hover,
+[dir] .StoriesArchive__selectFooter,
+[dir] .AppsCatalogSelectMenu,
+[dir] .ListItem--selectable,
+[dir] .flist_sel,
+[dir] .PhotoViewTopPanel
   //*2 Фон
 {
   background-color: @bg_2;
@@ -441,7 +461,9 @@ input.BlockSearchInput,
 .audio_pl_edit_box .ape_pl_item:hover,
 .im-mess.im-mess_selected:last-child:before, .im-mess.im-mess_unread:last-child:before,
 .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_back,
-.audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_slide, .audio_page_player2 .audio_page_player_volume_slider.slider.slider_size_1 .slider_slide
+.audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_slide, .audio_page_player2 .audio_page_player_volume_slider.slider.slider_size_1 .slider_slide,
+[dir] .JobsForm--apply #jobs_apply_upload_cont button:hover,
+.ListItem--can-be-hovered.ListItem--selectable:hover
   //*5 фон
 {
   background-color: @bg_5;
@@ -526,7 +548,36 @@ input.BlockSearchInput,
 .ConvoMessage--out,
 [dir] .audio_layer_container .ui_tabs,
 [dir] .video_showcase .page_header_wrap,
-[dir] .VideoLayout__aside
+[dir] .VideoLayout__aside,
+[dir] .mv_minimized #mv_layer.mv_layer--vertical #mv_box,
+[dir] .Breadcrumbs,
+[dir=ltr] .SideOfficeMenu,
+[dir] .SideOfficeMenu__link--active,
+[dir] .SideOfficeMenu__navList::after,
+[dir] .help_table_question__ans_text .wk_hider_box_opened,
+.Logo__colors,
+.Logo__colors_exception,
+.Colors .Brand__block,
+.Logo__right,
+.Logo__left .Brand__block,
+.Products__left,
+.Products__right,
+.Partners .Brand__block,
+.Header,
+[dir] .JobsForm--apply .JobsApplyUploadContent button,
+[dir] .FeedbackTitle,
+[dir] .FeedbackTooltip__wrapper,
+[dir] .cal_table,
+.BestFriendsSettingsBox__inner,
+[dir] .BestFriendsSettingsBox__header,
+[dir] .ColorPanelEnabledBox,
+[dir] .vkuiModalCardBase__container,
+[dir] .wk_wall_archive__tabs,
+[dir] .ImageStatusPopup,
+.ui_search.ui_search_old,
+[dir] .choose_search_cont input,
+[dir] .PrivacyModal__box,
+[dir] .datepicker_text
   //*6 фон
 {
   background-color: @bg_6 !important;
@@ -563,7 +614,6 @@ a.fc_contact_over,
 .tabbed_box .summary_tab_sel a:hover, .tabbed_box .summary_tab a:hover,
 .top_notify_cont .feedback_row:not(.dld).hover, .top_notify_cont .feedback_row:not(.dld):hover,
 a.ts_contact.active, a.ts_search_link.active,
-.ListItem--active, .ListItem--can-be-hovered.ListItem--selectable:hover,
 .article_ed_layer .article_ed_layer__list_item:not(.article_ed_layer__list_item_current):hover,
 .media_voting_can_vote.media_voting_clickable_option .media_voting_option_wrap:not(.media_voting_option_selected):hover .media_voting_option,
 .im-mess.im-mess_unread:not(.im-mess_light),

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         VK Dark
 // @namespace    https://github.com/
-// @version      0.2.36
+// @version      0.2.37
 // @description  Изменяет внешний вид Вконтакте на темный
 // @author       Dmitriy1921
 // @downloadURL  https://github.com/Dmitiry1921/VK-Dark/raw/master/vkdark.user.js
@@ -10,6 +10,7 @@
 // @homepage     https://github.com/Dmitiry1921/VK-Dark/blob/master/README.md
 // @include      http://vk.com/*
 // @include      https://vk.com/*
+// @include      https://dev.vk.com/*
 // @include      https://vkpay.io/*
 // @include      https://connect.vk.com/*
 // @include      https://*.vkforms.ru/*
@@ -27,6 +28,7 @@
 // ShortVideoFeedBlock
 const styles = {
     'vkdark-main': `:root {
+  --steel_gray_10: #626568 !important;
   --steel_gray_20: #3b3f41 !important;
   --steel_gray_80: #242424 !important;
   --gray_900: #e1e3e6 !important;
@@ -39,6 +41,7 @@ const styles = {
   --input_border: #1a1a1a !important;
   --content_tint_background: #2d2f30 !important;
   --background_light: #3b3f41 !important;
+  --content_negative_background: #7c3d3d;
 }
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
 .ui_search_new.ui_search_dark .ui_search_button_search,
@@ -109,7 +112,9 @@ const styles = {
 .FCPanel__list,
 .FCWindow,
 .FCThumb--wide .FCThumb__close,
-[dir] .PortalNavigationDropdown {
+[dir] .PortalNavigationDropdown,
+[dir] .Header,
+[dir] .landing_transparencyFooter {
   box-shadow: none !important;
 }
 .post_top_info_wall_guide,
@@ -192,6 +197,9 @@ const styles = {
 .im-page .im-page--history {
   width: calc(100% - 317px);
 }
+[dir=ltr] .SideOfficeMenu__nav::after {
+  background: linear-gradient(rgba(255, 255, 255, 0), #3b3f41 70%), 0 100% !important;
+}
 .fakeinput,
 div[contenteditable=true],
 input.big_text,
@@ -214,7 +222,10 @@ div.fc_tab_txt,
 .im-mess.im-mess_gift,
 .PageSection--gradient:before,
 [dir] .ui_gallery_wall_cards .wall_card,
-.FCThumb--wide .FCThumb__close {
+.FCThumb--wide .FCThumb__close,
+[dir] .selector_container table.selector_table,
+[dir] .flist_search_cont input.ui_search_field,
+[dir] .datepicker_control {
   background: none !important;
 }
 html,
@@ -232,7 +243,10 @@ body,
 [dir] .nim-dialog.nim-dialog_pinned + .nim-dialog:not(.nim-dialog_pinned)::before,
 [dir] .FlatButton--secondary,
 [dir] .FlatButton--secondary:not(.disable):hover,
-[dir] .vkuiActionSheet--desktop {
+[dir] .vkuiActionSheet--desktop,
+[dir] .landing_transparencyFooter,
+[dir] .im-mess.im-mess_gift,
+[dir] .stats_cont_browse_tile {
   background-color: #1a1a1a !important;
 }
 .article_ed_layer,
@@ -419,7 +433,14 @@ body.author_page_body,
 [dir] .lead_forms_buttons_wrap,
 [dir] .FlatButton--tertiary:not(.disable):hover,
 [dir] .FlatButton--tertiary:not(.disable):focus,
-[dir] .FlatButton--tertiary:active {
+[dir] .FlatButton--tertiary:active,
+[dir] .pretty-card,
+[dir] .Header,
+[dir] .author_page_up_hover .author_page_up,
+[dir] .im_stickers_my_row.sort_taken,
+[dir] .im_stickers_my_row.sort_taken:last-child,
+[dir] .prefix_input_wrap,
+[dir] .SitesExamplesGalleryCard {
   background-color: #242424 !important;
 }
 .im-create .im-create--tabs,
@@ -647,7 +668,16 @@ input.BlockSearchInput,
 .FCPanel__list,
 .FCThumb,
 .FCWindow,
-.im-top-banner {
+.im-top-banner,
+[dir] .Input,
+.HeaderSectionSwitcherDropdown__item > a,
+[dir] .SideOfficeMenu__link:focus,
+[dir] .SideOfficeMenu__link:hover,
+[dir] .StoriesArchive__selectFooter,
+[dir] .AppsCatalogSelectMenu,
+[dir] .ListItem--selectable,
+[dir] .flist_sel,
+[dir] .PhotoViewTopPanel {
   background-color: #3b3f41 !important;
 }
 .page_photo.page_action_menu_groups .group_notification_settings .group_notification_setting:hover,
@@ -660,7 +690,9 @@ input.BlockSearchInput,
 .im-mess.im-mess_unread:last-child:before,
 .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_back,
 .audio_page_player2 .audio_page_player_track_slider.slider.slider_size_1 .slider_slide,
-.audio_page_player2 .audio_page_player_volume_slider.slider.slider_size_1 .slider_slide {
+.audio_page_player2 .audio_page_player_volume_slider.slider.slider_size_1 .slider_slide,
+[dir] .JobsForm--apply #jobs_apply_upload_cont button:hover,
+.ListItem--can-be-hovered.ListItem--selectable:hover {
   background-color: #626568 !important;
 }
 #page_header_cont .back,
@@ -749,7 +781,36 @@ input.BlockSearchInput,
 .ConvoMessage--out,
 [dir] .audio_layer_container .ui_tabs,
 [dir] .video_showcase .page_header_wrap,
-[dir] .VideoLayout__aside {
+[dir] .VideoLayout__aside,
+[dir] .mv_minimized #mv_layer.mv_layer--vertical #mv_box,
+[dir] .Breadcrumbs,
+[dir=ltr] .SideOfficeMenu,
+[dir] .SideOfficeMenu__link--active,
+[dir] .SideOfficeMenu__navList::after,
+[dir] .help_table_question__ans_text .wk_hider_box_opened,
+.Logo__colors,
+.Logo__colors_exception,
+.Colors .Brand__block,
+.Logo__right,
+.Logo__left .Brand__block,
+.Products__left,
+.Products__right,
+.Partners .Brand__block,
+.Header,
+[dir] .JobsForm--apply .JobsApplyUploadContent button,
+[dir] .FeedbackTitle,
+[dir] .FeedbackTooltip__wrapper,
+[dir] .cal_table,
+.BestFriendsSettingsBox__inner,
+[dir] .BestFriendsSettingsBox__header,
+[dir] .ColorPanelEnabledBox,
+[dir] .vkuiModalCardBase__container,
+[dir] .wk_wall_archive__tabs,
+[dir] .ImageStatusPopup,
+.ui_search.ui_search_old,
+[dir] .choose_search_cont input,
+[dir] .PrivacyModal__box,
+[dir] .datepicker_text {
   background-color: #2d2f30 !important;
 }
 .top_audio_play__button,
@@ -785,8 +846,6 @@ a.fc_contact_over,
 .top_notify_cont .feedback_row:not(.dld):hover,
 a.ts_contact.active,
 a.ts_search_link.active,
-.ListItem--active,
-.ListItem--can-be-hovered.ListItem--selectable:hover,
 .article_ed_layer .article_ed_layer__list_item:not(.article_ed_layer__list_item_current):hover,
 .media_voting_can_vote.media_voting_clickable_option .media_voting_option_wrap:not(.media_voting_option_selected):hover .media_voting_option,
 .im-mess.im-mess_unread:not(.im-mess_light),
@@ -886,7 +945,9 @@ body .im-page--back-btn:hover,
 .ActionButton--shuffle:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath d='m16.25,6.5c-2.94,0 -4.4,2.3 -5.87,4.25c-1.3,1.7 -2.38,3.7 -4.13,3.75l-3,0l0,2l3,0c2.93,0 4.24,-2.6 5.7,-4.53c1.3,-1.74 2.46,-3.47 4.3,-3.47l1,0l0,-2l-1,0zm-6.06,1.84c-0.52,-0.46 -1.38,-1.1 -2.04,-1.38c-0.64,-0.3 -1.4,-0.46 -2.23,-0.46l-2.67,0l0,2l3,0c0.44,0 0.8,0.08 1.14,0.22c0.45,0.2 1.14,0.7 1.58,1.1l1.23,-1.48l-0.01,0zm6.06,6.16l1,0l0,2l-1,0c-1.77,0 -3.24,-1.08 -4.32,-2.15l1.23,-1.5c0.8,0.83 1.98,1.65 3.1,1.65l-0.01,0zm1,4l0,-6l4,3l-4,3zm0,-8l0,-6l4,3l-4,3z' fill='%23e82f94' fill-rule='evenodd' id='svg_1'/%3E%3C/g%3E%3C/svg%3E") !important;
 }
-[dir] .audio_row .audio_row__play_btn {
+[dir] .audio_row .audio_row__play_btn,
+[dir] .audio_pl_snippet2 .audio_pl_snippet__action_btn_listen:hover:before,
+[dir] .audio_pl_snippet2 .audio_pl_snippet__action_btn_listen:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Ccircle cx='12' cy='12' fill='%23e82f94' id='svg_2' r='12'/%3E%3Cpath d='m9.846,16.86c-0.467,0.303 -0.846,0.097 -0.846,-0.45l0,-8.822c0,-0.551 0.38,-0.752 0.846,-0.45l6.91,4.48c0.324,0.21 0.327,0.549 0,0.761l-6.91,4.48l0,0.001z' fill='%23FFF' id='svg_3'/%3E%3C/g%3E%3C/svg%3E") !important;
 }
 [dir] .audio_row.audio_row__playing .audio_row__play_btn {
@@ -1231,7 +1292,8 @@ div.wdd.wdd_focused,
 [dir] .CallSnippet,
 [dir] .InputStub,
 [dir] .MarketCatalogHeader--fixed,
-.FCWindow {
+.FCWindow,
+[dir] .Input {
   border-color: #242424 !important;
 }
 .tt_default.tt_down:after,
@@ -1269,7 +1331,8 @@ div.fc_tab_txt,
 .bt_report_footer,
 .bt_report_one_info,
 [dir] .feed_groups_recomm__all,
-.FCWindow__footer {
+.FCWindow__footer,
+[dir] .SideOfficeMenu__toggleButton {
   border-top-color: #242424 !important;
 }
 .wall_module .published_by_quote,
@@ -1281,7 +1344,8 @@ div.fc_tab_txt,
 }
 .border_1_right,
 .tt_default.tt_left:after,
-.tt_default.tt_left:before {
+.tt_default.tt_left:before,
+[dir=ltr] .SideOfficeMenu {
   border-right-color: #242424 !important;
 }
 .im-chat-input,
@@ -1332,7 +1396,8 @@ body.scrolled .PageNavigation_wrap,
 [dir] .deep_active .wl_replies_block_wrap .replies_wrap_deep .reply_media_preview,
 [dir] .deep_active.wall_module .replies .replies_wrap_deep .reply_media_preview,
 [dir] .deep_active.wall_module .wl_replies_block_wrap .replies_wrap_deep .reply_media_preview,
-.FCWindow__header {
+.FCWindow__header,
+[dir] .Breadcrumbs__list {
   border-bottom-color: #242424 !important;
 }
 .ui_actions_menu_sep,
@@ -1371,7 +1436,12 @@ body.scrolled .PageNavigation_wrap,
 .ui_search_new.ui_search_btn_large .ui_search_button_search,
 ._audio_page_player_wrap.audio_page_player_wrap.page_block,
 .ui_search_new.ui_search_field_empty .ui_search_button_search,
-.photos_container_edit_grid .photos_photo_edit_row_desc_placeholder {
+.photos_container_edit_grid .photos_photo_edit_row_desc_placeholder,
+[dir] .pretty-card__content,
+[dir] .im_stickers_my_row.sort_taken,
+[dir] .im_stickers_my_row.sort_taken:last-child,
+[dir] .prefix_input_border,
+[dir] .datepicker_control {
   border: none !important;
 }
 ._audio_page_content_block .ui_tab_sel,
@@ -1735,7 +1805,27 @@ h1,
 [dir] textarea,
 [dir] input.big_text,
 [dir] input.file,
-[dir] div[contenteditable=true] {
+[dir] div[contenteditable=true],
+.login_about_mobile,
+.login_mobile_info,
+[dir=ltr] .HeaderSectionSwitcher__buttonText,
+.Breadcrumb--bold,
+[dir] .SideOfficeMenu__link,
+.Preview__title,
+.BreadCrumb,
+.JobFullText,
+.ScrollElement__title,
+.BlogPageSideMenu__sectionHeader,
+.BlogPostThumb__text,
+.BlogPostThumb__title,
+.BlogPageSideMenu__text,
+.VideoLayerInfo__recommendedTitle,
+.VideoLiveCoderSettings__warning,
+.BestFriendsSettingsBox__sectionTitle,
+.ColorPanel__name,
+.AdsEasyPromoteModal + .vkui__portal-root .AdsEasyPromoteModal__AdBlockTitle,
+.ImageStatusPopup__description,
+.article_ed_layer .article_ed_layer__list_item .article_ed_layer__list_item_title {
   color: #e1e3e6 !important;
 }
 .rb_box_wrap,
@@ -1752,11 +1842,15 @@ h1,
 .audio_pl_snippet2 .audio_pl_snippet__info_title,
 .audio_row .audio_row__performers a,
 .audio_pl_snippet_info_maintitle,
-.audio_pl_snippet2 .audio_pl_snippet__action_btn_listen {
+.audio_pl_snippet2 .audio_pl_snippet__action_btn_listen,
+.audio_row .audio_row__play_btn .audio_row__play_btn_icon--pause,
+.audio_row .audio_row__play_btn .audio_row__play_btn_icon--play,
+.audio_pl_snippet2 .audio_shuffle_all_button .audio_pl_snippet__shuffle_all_icon,
+.audio_page_player2 .audio_page_player_icon--pause,
+.audio_page_player2 .audio_page_player_icon--play,
+.audio_page_player2 .audio_page_player_prev,
+.audio_page_player2 .audio_page_player_next {
   color: #e82f94 !important;
-}
-.im-page--title-meta:not('online') {
-  color: #bbe6ac !important;
 }
 .nim-dialog .nim-dialog--name .nim-dialog--name-w,
 .audio_row .audio_row__performer,
@@ -1842,7 +1936,8 @@ b a,
 .wk_sub_header,
 .links-list__domain,
 .ListAddControl,
-.StickerStylesMenuItem__price {
+.StickerStylesMenuItem__price,
+.help_table_question__ans_text .wk_hider_title {
   color: #b0ccda !important;
 }
 `,
@@ -2179,4 +2274,4 @@ GM_registerMenuCommand('Сообщить об ошибке', () => {
     GM_openInTab('https://vk.me/join/AJQ1d7U5CANH4MRXOBNPuzB4', {active: true, insert: true});
 });
 
-console.info('VK Dark version: ', '0.2.36');
+console.info('VK Dark version: ', '0.2.37');
